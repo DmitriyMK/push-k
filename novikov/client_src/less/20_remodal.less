@@ -1,0 +1,228 @@
+.remodal-overlay {
+
+    // background: rgba( 160, 159, 158, 0.8) !important;
+}
+
+
+.remodal-first {
+    padding-top: 95px;
+    text-align: center;
+    width: 376px;
+
+    @media @mobile {
+        max-width: 376px !important;
+        height: auto;
+        padding: 40px 15px;
+        margin: 0 auto;
+        text-align: center;
+        background: #f9fbfc;
+        border-radius: 10px;
+        
+    }
+    @media @tablet {
+
+        padding: 50px 15px;
+        max-width: 489px !important;
+        height: 487px;
+        text-align: left;
+        border-radius: 0px;
+        background: url('@{dir}form.png') no-repeat top center;
+        padding: 120px 0 0 109px;
+
+    }
+
+    .remodal-close {
+
+        @media @mobile {
+            color: #000 !important;
+        }
+        @media @tablet {
+            color: #fff !important;
+
+        }
+    }
+    &:before {
+        display: none;
+    }
+}
+
+
+
+
+
+.btn-remodal {
+    margin: 30px 0 0 15px;
+
+}
+
+
+
+
+
+
+.remodal-close { 
+    top: 5px !important;
+    right: 5px !important;
+    color: #fff !important;
+    font-weight: 900;
+    @media @mobile {
+     width: 10px !important;
+     height: 16px !important;
+ }
+ @media @tablet { 
+    width: 35px !important;
+    height: 30px !important;
+}
+&:before {
+    @media @mobile {
+        font-size: 30px !important;
+        top: -7px !important;
+        left: -12px !important;
+    }
+    @media @tablet { 
+        font-size: 50px !important;
+        top: -0px !important;
+        left: -0px !important;
+    }
+}
+}
+
+.remodal-common {
+    border-radius: 15px;
+    background: #fff;
+
+    padding: 30px 40px;
+
+    
+    // background: #3d4f4a;
+    // border: 2px solid #fff;
+    
+
+    @media @mobile {
+        max-width: 500px !important;
+        padding: 40px 15px;
+        margin: 0 auto;
+        text-align: center;
+        
+    }
+    @media @tablet {
+        padding: 40px 20px;
+        max-width: 450px !important;
+        text-align: center;
+    }
+    .remodal-close {
+        color: #000 !important;
+    }
+}
+
+
+
+.error-input{
+    clear: both;
+    float: left;
+    font-size: 13px;
+    padding-left: 93px;
+    color: #df3a3a;
+
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+#name-error {
+    font-size: 0 !important;
+}
+.input {
+    position: relative;
+}
+label {
+    position: absolute;
+    top: 0;
+    border: 0;
+    font-size: 0 !important;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+.formBox {
+    position: relative;
+    width: 334px;
+    min-height: 456px;
+    margin: auto;
+    padding: 90px 40px;
+    text-align: center;
+    z-index: 10;
+    background: url(../images/form-back.jpg)no-repeat center/cover;
+
+    &__title {
+        font-family: @ff2;
+        font-weight: 700;
+        font-size: 25px;    
+        color: @yellow;
+    }
+    &__text {
+        padding: 10px 0 24px 0;
+        font-size: 18px;
+        color: @yellow;
+    }
+
+    .inputWrap{
+        position: relative;
+        margin-bottom: 10px;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 30px;
+        }
+    }
+
+    .inputWrap:nth-of-type(1){
+        &:before {
+            .bg-user
+        }
+    }
+    .inputWrap:nth-of-type(2){
+        &:before {
+            .bg-phone
+        }
+    }
+
+    .form__line {
+        padding: 10px 50px;
+        width: 235px;
+        color: #967f2d;
+        outline: none!important;
+
+        background-image: -moz-linear-gradient( 90deg, rgb(237,242,248) 0%, rgb(251,253,255) 66%, rgb(255,255,255) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(237,242,248) 0%, rgb(251,253,255) 66%, rgb(255,255,255) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(237,242,248) 0%, rgb(251,253,255) 66%, rgb(255,255,255) 100%);
+        box-shadow: 0px 11px 1px 1.26px rgba(0, 0, 0, 0.27),inset 0 0 10px 0px rgba(59, 49, 64, 0.38);
+    }
+    .btn {
+        margin-top: 25px;
+        width: 235px;
+        border: none;
+    }
+}
+
+.thanks__title {
+    padding-bottom: 15px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+}
+.thanks__text {
+    display: block;
+    padding-bottom: 15px;
+    padding-left: 0;
+    font-size: 18px;
+    color: #000;
+}

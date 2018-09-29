@@ -1,0 +1,136 @@
+a {
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+  &:active, &:hover {
+    outline: 0;
+  }
+}
+
+img {
+  border: 0;
+}
+
+
+
+button, html input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input {
+  &[type="reset"], &[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+  }
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+  line-height: normal;
+  &[type="checkbox"], &[type="radio"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  &[type="number"] {
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+      height: auto;
+    }
+  }
+  &[type="search"] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    &::-webkit-search-cancel-button, &::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+  &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
+
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+img {
+  vertical-align: middle;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.container, .container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 2px;
+  padding-right: 3px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 725px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 945px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+// .clearfix {
+//   &:before, &:after {
+//     content: " ";
+//     display: table;
+//   }
+// }
+
+// .container {
+//   &:before, &:after {
+//     content: " ";
+//     display: table;
+//   }
+// }
+
+
+// .clearfix:after, .container:after, .container-fluid:after, .row:after {
+//   clear: both;
+// }

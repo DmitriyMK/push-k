@@ -1,0 +1,101 @@
+.slick-prev,
+.slick-next {
+	width: 50px;
+	height: 100%;
+	opacity: 1;
+	transition: opacity .3s linear;
+	z-index: 10;
+}
+
+
+.slick-prev {
+	bottom: -95px;
+	left: 0; 
+	.bg-arrow_left;
+	@media @tablet {
+		
+	}
+	@media @desktop {
+		left: 400px; 
+	}
+	@media @desktop-xl {
+		left: 410px; 
+	}
+}
+
+.slick-next {
+	bottom: -95px;
+	right: 0; 
+	.bg-arrow_right;
+	@media @tablet {
+		
+	}
+	@media @desktop {
+
+	}
+	@media @desktop-xl {
+		right: 30px; 
+	}
+}
+
+
+.slick-prev:before,
+.slick-next:before {
+	width: 61px; height: 37px;
+
+	box-shadow: 0px 15px 16.74px 1.26px rgba(0, 0, 0, 0.27);
+}
+
+.slick-dots {
+	display: inline-block!important;
+	left: 40px;
+	bottom: -40px;
+
+
+	border-image: transparent;
+
+	li {
+		margin: 4px 10px;
+		margin-bottom: 10px;
+
+		width: 13px;
+		height: 13px;
+
+		button {
+			background: @yellow;
+			display: block;
+			height: 5px;
+			width: 5px;
+			font-size: 0px;
+			color: #fff;
+			border: 2px solid transparent;
+			box-shadow: 0px 5px 7px 1px rgba(0, 45, 86, 0.15);
+			opacity: 0.75;
+			transition: all .3s linear;
+			&:before {
+				font-size: 0;
+				opacity: 0;
+				display: none;
+			}
+
+		}
+		&.slick-active button {
+			color: transparent;
+			opacity: 1;
+			border: 2px solid @yellow;
+			transform: scale(2);
+			@media @tablet {
+				background: #fff;
+			}
+		}
+	}
+}
+
+
+.slick-current, .slick-slide, .slick-active { 
+	outline: none!important;
+}
+.slick-dots li.slick-active button {
+	background: transparent;
+	color: transparent;
+}
