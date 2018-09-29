@@ -1,2 +1,2 @@
 # DmitriyMK.github.io
-Я так учусь)
+Push-k solutions. Made with fun and love)
