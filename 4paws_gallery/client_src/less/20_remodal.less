@@ -88,16 +88,13 @@
 }
 
 .remodal-common {
-
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    background: #fff;
+    border-radius: 0;
+    background: transparent;
 
     //  background: url('@{dir}product-1.png') no-repeat top center;  
     // background-position: 50% 50%;
 
-    padding: 30px 40px;
+    padding: 0;
 
     
     // background: #3d4f4a;
@@ -105,7 +102,7 @@
     
 
     @media @mobile {
-        max-width: 500px !important;
+        // max-width: 500px !important;
         padding: 40px 15px;
         margin: 0 auto;
         text-align: center;
@@ -113,7 +110,7 @@
     }
     @media @tablet {
         padding: 40px 20px;
-        max-width: 450px !important;
+        max-width: 80% !important;
         text-align: center;
     }
     .remodal-close {
@@ -123,110 +120,12 @@
 
 
 
-.error-input{
-    clear: both;
-    float: left;
-    font-size: 13px;
-    padding-left: 93px;
-    color: #df3a3a;
-
-    margin: 0 auto;
-    text-align: center;
-    
-}
-
-
-input:focus:required:invalid,
-textarea:focus:required:invalid {
-  // border: solid 0px rgba(222,78,0,.51) !important;
-  // border-bottom: 1px solid #909091;
-  
-}
-input:required:valid,
-textarea:required:valid {
-  // border: solid 0px rgba(222,78,0,.51) !important;
-  // border-bottom: 1px solid #909091;
-  
-}
-#name-error {
-    font-size: 0 !important;
-}
-.input {
-    position: relative;
-}
-label {
-    position: absolute;
-    top: 0;
-    border: 0;
-    font-size: 0 !important;
-    vertical-align: baseline;
-    margin: 0;
-    padding: 0;
-}
-
-
-
-
 
 .formBox {
     position: relative;
-    background: #fff;
-    padding: 30px 15px;
-    max-width: 400px;
+    background: transparent!important;
+    padding: 0;
+    // max-width: 400px;
     margin: 20px auto;
     text-align: center;
-    &__title {
-        
-    }
-    &__text {
-        
-    }
-
-    .form__line {
-        width: 100%;
-        padding-left: 15px;
-        padding-bottom: 7px;
-        border: none!important;     
-        outline: none;
-        font-size: 18px;
-    }
-    .btn {
-        margin: 15px 0 5px 0;
-        color: #fff;
-        &:hover {
-            color: #000;
-        }
-    } 
 }
-
-.video {
-    max-width: 780px;
-    iframe {
-        border: none;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-.thanks__title {
-    padding-bottom: 15px;
-    font-size: 22px;
-    font-weight: 700;
-    color: #000;
-    text-transform: uppercase;
-}
-.thanks__text {
-    display: block;
-    padding-bottom: 15px;
-    padding-left: 0;
-    font-size: 18px;
-    color: #000;
-}
-
-
-
-
-
-
-
-
