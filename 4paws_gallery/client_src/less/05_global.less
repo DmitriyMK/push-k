@@ -21,35 +21,28 @@
 	overflow: hidden; 
 }
 
-// video {
-// 	display: block;
-// 	max-width: 100%;
-// 	height: auto;
-// }
+video {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
 
-
-// .video-responsive { 
-// 	position: relative; 
-// 	padding-bottom: 56.25%; 
-// 	height: 0; 
-// 	overflow:hidden; 
-// } 
-
-// .video-responsive video  {
-// 	position: absolute; 
-// 	top: 0; 
-// 	left: 0; 
-// 	width: 100%;
-// 	height: 100%; 
-// }
 
 
 /* ONLY FOR IE11 */
 @media all and (-ms-high-contrast:none) {
-	
+	.footer {
+		&__list {
+			overflow: hidden;
+			a {
+				display: inline-block;
+				max-width: 100px;
+			}
+		}
+	}
 }
 
 /* ONLY FOR EDGE */
 @supports (-ms-ime-align:auto) {
-
+	
 }

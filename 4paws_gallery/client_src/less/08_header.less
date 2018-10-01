@@ -19,36 +19,131 @@
 
 
 .header {
-	background: url(../images/hero-image.jpg)no-repeat center/cover;
-	background-attachment: fixed;
-	min-height: 840px;
-	max-height: 1000px; 
+	position: relative;
+	background: url(../images/hero-image-sm.jpg)no-repeat center/cover;
+	
+	min-height: 480px;
+	max-height: 736px; 
 	height: 100vh;
 	color: #fff;
 
-	&__content {
-		padding: 150px 0;
-		margin-left: 15vh;
-		width: 670px;
-		text-align: center;
+	@media @mobile-land {
+		background: url(../images/hero-image.jpg)no-repeat center/cover;
+		min-height: inherit;
+		max-height: inherit; 
+	} 
+
+	@media @tablet {
+		min-height: 480px;
+		max-height: 850px; 
+		background: url(../images/hero-image-tablet.jpg)no-repeat right/cover;
 	}
+	@media @desktop {
+		min-height: 640px;
+		max-height: 768px; 
+		background: url(../images/hero-image.jpg)no-repeat center/cover;
+		background-attachment: fixed;
+	}
+	@media @desktop-xl {
+		
+	}
+	@media @desktop-xl-2 {
+		min-height: 840px;
+		max-height: 1000px; 
+	}
+
+	&__content {
+		padding: 60px 2vh;
+		max-width: 400px;
+		text-align: center;
+		margin: auto;
+		
+		@media @mobile-land {
+			padding: 40px 0;
+			max-width: 280px;
+			margin: 0;
+			margin-left: 5vw;
+		}
+
+		@media @tablet {
+			padding: 10vh 0;
+			width: 470px;
+			max-width: inherit;
+			margin: auto;
+		}
+		@media @desktop {
+			padding: 80px 0;
+			margin-left: 15vh;
+		}
+		@media @desktop-xl {
+			width: 570px;
+		}
+		@media @desktop-xl-2 {
+			padding: 150px 0;
+			width: 670px;
+		}
+	}
+
 	&__text {
-		padding: 20px 0;
-		font-size: 42px;
+		margin-top: 17vh;
+
+		padding-bottom: 10px;
+		font-size: 20px;
 		line-height: 1.4;
 		font-weight: 500;
+
+		@media @mobile-land {
+			margin-top: 0;
+			font-size: 18px;
+		}
+
+		@media @tablet {
+			padding: 10px 0;
+			font-size: 26px;
+		}
+		@media @desktop {
+			font-size: 30px;
+		}
+		@media @desktop-xl {
+			font-size: 38px;
+		}
+		@media @desktop-xl-2 {
+			font-size: 42px;
+			padding: 20px 0;
+		}
 	}
 	&__author {
-		font-size: 28px;
+		font-size: 20px;
 		font-weight: 400;
+
+		@media @mobile-land {
+			font-size: 18px;
+		}
+
+		@media @tablet {
+			font-size: 22px;
+		}
+		@media @desktop-xl {
+			font-size: 25px;
+		}
+		@media @desktop-xl-2 {
+			font-size: 28px;
+		}
 	}
 	&__arrow {
-		padding-bottom: 60px;
 		a {
-			display: block;
-			max-width: 89px;
-			margin: 0 auto;
-			animation: arrow-bounce 3s infinite;
+			display: none;
+			@media @desktop {
+				display: block;
+				position: absolute;
+				bottom: 35px;
+				left: 50%;
+				transition: translateX(-50%);
+				display: block;
+				max-width: 89px;
+				margin: 0 auto;
+				animation: arrow-bounce 3s infinite;
+			}
 		}
 	}
 }
