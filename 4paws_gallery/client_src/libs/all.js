@@ -47,13 +47,14 @@ $(document).ready(function() {
     var decimalY = e.clientY / window.innerHeight - 0.5;
 
     TweenMax.to(cardWrap, 0.5, {
-      rotationY: 10 * decimalX,
-      rotationX: -10 * decimalY,
+      rotationY: 5 * decimalX,
+      rotationX: -5 * decimalY,
       ease: Quad.easeOut,
       transformPerspective: 700,
       transformOrigin: "center"
     });
   };
+
 });
 
 window.console.log('Made with fun and love ❤️ Push-K solutions ❤️');
