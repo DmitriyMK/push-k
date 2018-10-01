@@ -1,0 +1,130 @@
+@media @mobile {
+
+}
+@media @tablet {
+
+}
+@media @desktop {
+
+}
+@media @desktop-xl {
+	
+}
+@media @desktop-xl-2 {
+
+}
+@media @desktop-xll {
+	
+}
+
+.about {
+	position: relative;
+	overflow: hidden;
+	&__decor {
+		position: absolute;
+		top: 200px;
+		left: 0;
+		width: 1913px;
+		height: 1139px;
+		background: url(../images/dots.png)no-repeat center/cover;
+	}
+	.container {
+		position: relative;
+		z-index: 10;
+	}
+
+	&__title {
+		padding-bottom: 50px;
+		text-align: center;
+		font-size: 41px;
+		font-weight: 700;
+	}
+	&__subtitle {
+		padding-bottom: 55px;
+		text-align: center;
+		font-size: 22.7px;
+	}
+	&__text {
+		padding: 0 50px;
+		padding-bottom: 10px;
+		font-size: 30px;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 50px;
+	}
+	&__time {
+		width: 16.6%;
+		margin-bottom: 5px;
+		text-decoration: none;
+		font-size: 22.5px;
+		transition: all .3s linear;
+	}
+
+	&__slider {
+		margin: 25px 0;
+		width: 100%;
+	}
+
+	&__slide {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__link {
+		width: 24%;
+		margin: 5px 0.5%;
+		overflow: hidden;
+		max-height: 220px;
+	}
+	&__img, video {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+	.current {
+		color: @orange;
+		font-weight: 500;
+	}
+
+	&__proposal {
+		padding-top: 50px;
+		font-size: 22.7px;
+		text-align: center;
+	}
+
+	&__btn {
+		display: table;
+		margin: 35px auto;
+		width: 300px;
+		border-radius: 35px;
+		background-color: @orange;
+		box-shadow: 0px 0px 34px 0px rgba(0, 0, 0, 0.3);
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 75px;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: background-color .3s linear;
+		&:hover {
+			background-color: darken(@orange, 10%)
+		}
+	}
+}
+
+.aboutInner {
+	padding: 45px 0;
+}
+.share {
+	p {
+		color: #fff;
+		font-weight: 700;
+		padding-bottom: 15px;
+	}
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+}

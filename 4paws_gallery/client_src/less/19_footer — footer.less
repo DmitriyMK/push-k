@@ -17,3 +17,39 @@
 	
 }
 
+.footer {
+	padding: 15px 0;
+	font-size: 18px;
+	color: #fff;
+	background: #0e1015;
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		img {
+			height: 70px;
+		}
+	}
+
+	svg {
+		max-width: 100%;
+		margin-right: 10px;
+		height: 50px;
+		fill: #fff;
+		transition: fill .3s linear; 
+		&:hover {
+			fill: @orange;
+		}
+	}
+
+	&__agency {
+		img {
+			margin-top: 5px;
+		}
+	}
+
+}
