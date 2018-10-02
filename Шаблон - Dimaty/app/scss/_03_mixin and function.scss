@@ -1,0 +1,17 @@
+@function em($pixels, $base: 16) {
+  @return #{$pixels/$base}em;
+}
+
+
+@function rem($val, $base: 16) {
+    // if it's a unitless number
+    @if type-of($val) == number and unitless($val) {
+        // don't convert 0
+        @if $val == 0 {
+            @return 0;
+        }
+        // assume its px and convert it to rem based on $base document font-size
+        @return #{$val / $base}rem;
+    }
+    @return $val;
+}

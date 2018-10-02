@@ -1,0 +1,116 @@
+@import "_02_vars.scss";
+@import "_03_mixin and function.scss";
+
+// Small devices (landscape phones, less than 768px)
+@media only screen and (max-width: 767.98px) {
+    .nav {
+        position: fixed;
+        z-index: 10000;
+        &__list {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            padding: 20vh 0;
+            .hide__mob {
+                display: none;
+            }
+        }
+        &__item {}
+        &__link {
+            display: block;
+            text-transform: uppercase;
+        }
+    }
+    .overlay {
+        position: absolute;
+        width: 220px;
+        height: 100vh;
+        top: 0;
+        left: -305px;
+        background: rgba(#343a3d, .9);
+        z-index: 1000;
+        .wrapper {
+            padding: 0;
+        }
+    }
+    .open {
+        transform: translateX(300px);
+        transition-duration: 0.3s;
+        position: fixed;
+    }
+    .burger {
+        width: 50px;
+        height: 50px;
+        transition: all 0.6s ease-in-out;
+        position: fixed;
+        z-index: 10000;
+        top: 30px;
+        left: 20px;
+        z-index: 10000;
+        background: transparent;
+        border: none;
+        outline: none;
+        display: block;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .burger i {
+        display: block;
+        width: 40px;
+        height: 2px;
+        background: $green;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s ease-in-out;
+    }
+    .burger i:before,
+    .burger i:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        background: $green;
+        width: 40px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s ease-in-out;
+    }
+    .burger i:before {
+        margin-top: -12px;
+    }
+    .burger i:after {
+        margin-top: 12px;
+    }
+    .burger:hover i:before {
+        margin-top: -14px;
+    }
+    .burger:hover i:after {
+        margin-top: 14px;
+    }
+    .burger.active i {
+        background: transparent;
+    }
+    .burger.active i:before,
+    .burger.active i:after {
+        left: -5px;
+        width: 50px;
+    }
+    .burger.active i:before {
+        transform: rotate(45deg);
+        top: 12px;
+    }
+    .burger.active i:after {
+        transform: rotate(-45deg);
+        top: -12px;
+    }
+    .burger.active:hover i:before,
+    .burger.active:hover i:after {
+        width: 60px;
+        margin: 0;
+        left: -10px;
+        top: 0;
+    }
+}
