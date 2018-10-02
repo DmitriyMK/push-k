@@ -1,14 +1,5 @@
-// MAIN 
-@import "_reset";
-@import "_vars";
-@import "_mixin and function";
-@import "_fonts";
-@import "_general";
-@import "_forms";
-
-
-// COMPONENTS
-@import "components/_keyframes.scss";
+@import "_vars.scss";
+@import "_mixin and function.scss";
 
 
 
