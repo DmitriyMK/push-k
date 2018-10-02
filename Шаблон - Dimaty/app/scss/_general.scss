@@ -30,8 +30,9 @@ button {
     width: 1170px;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 2px;
-    padding-right: 3px;
+    // padding-left: 2px;
+    // padding-right: 3px;
+
 
     @media only screen and (max-width: 991.98px) {
         width: 945px;
@@ -39,15 +40,12 @@ button {
     @media only screen and (max-width: 767.98px) {
         width: 725px;
     }
-    @media only screen and (max-width: 575.98px) {
-        width: 100%;
+    @media only screen and (max-width: 567.98px) {
+        width: 90%;
+        padding: 0 15px;
     }
 }
 
-
-.hide {
-    display: none;
-}
 
 // titles for semantics and structure HTML
 .offscreen {
@@ -68,23 +66,23 @@ button {
 .section__title {}
 
 
-.arr-down {
-    display: block;
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    display: block;
-    width: 40px;
-    animation: arrow-bounce 2s infinite;
-    z-index: 10;
-    &:hover {
-        animation-play-state: paused;
-    }
-}
+// .arr-down {
+//     display: block;
+//     position: absolute;
+//     bottom: 40px;
+//     left: 40px;
+//     display: block;
+//     width: 40px;
+//     animation: arrow-bounce 2s infinite;
+//     z-index: 10;
+//     &:hover {
+//         animation-play-state: paused;
+//     }
+// }
 
-.slider {
-    user-select: text;
-}
+// .slider {
+//     user-select: text;
+// }
 
 // .anchor {
 //     visibility: hidden;

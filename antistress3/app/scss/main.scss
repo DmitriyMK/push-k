@@ -2,15 +2,20 @@
 @import "_mixin and function.scss";
 
 
-// /* PLUGINS */
 
 
-// /* MAIN STYLE */
+header {
+	margin-top: 50vh;
+	position: relative;
+}
 
 
-
-
-// /* SECTION STYLE */
-
-
-
+@mixin align-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.center {
+	@include align-center;
+}
