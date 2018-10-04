@@ -1,0 +1,18 @@
+npm init
+
+npm i gulp --save-dev
+npm install gulp-sass --save-dev
+npm i browser-sync --save-dev
+npm i --save-dev gulp-concat gulp-uglifyjs
+npm i gulp-cssnano gulp-rename --save-dev
+npm i del --save-dev
+npm i gulp-imagemin imagemin-pngquant --save-dev
+npm i gulp-cache --save-dev
+npm i --save-dev gulp-autoprefixer
+npm install --save-dev node-bourbon
+npm install --save bourbon
+npm install gulp-sass-glob --save-dev
+npm i -g gulp-cli
+
+npm install gulp-clean-css --save-dev
+npm install --save-dev gulp-notify

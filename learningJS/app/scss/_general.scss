@@ -1,0 +1,60 @@
+@import "_vars.scss";
+@import "_mixin and function.scss";
+
+body {
+    padding-right: 0 !important;
+    font-family: $f1;
+    font-size: $fs;
+    font-weight: 400;
+    line-height: 1.2;
+    box-sizing: border-box;
+    color: #000;
+}
+
+a {
+    color: inherit;
+    outline: none!important;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none!important;
+}
+
+.wrapper {
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    // padding-left: 2px;
+    // padding-right: 3px;
+
+
+    @media only screen and (max-width: 991.98px) {
+        width: 945px;
+    }
+    @media only screen and (max-width: 767.98px) {
+        width: 725px;
+    }
+    @media only screen and (max-width: 567.98px) {
+        width: 90%;
+        padding: 0 15px;
+    }
+}
+
+
+// titles for semantics and structure HTML
+.offscreen {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden; 
+}
