@@ -157,6 +157,7 @@
 	&__img {
 		display: block;
 		max-width: 100%;
+		min-width: 280px;
 		height: auto;
 		margin: auto;
 	}
@@ -216,15 +217,23 @@
 }
 
 .move__img {
-	max-width: 720px;
+	max-width: 400px;
 	margin: auto;
+	@media @tablet {
+		margin-top: -40px;
+		max-width: 450px;
+	}
+	@media @desktop {
+		margin-top: 0;
+		max-width: 640px;
+	}
 	@media @desktop-xl-2 {
-		max-width: 920px;
+		max-width: 720px;
 	}
 }
 
 .arrBack {
-	
+
 	@media @desktop {
 		position: absolute;
 	}
@@ -240,7 +249,7 @@
 	margin-top: 0px;
 	
 	@media @desktop-xl {
-		margin-top: -190px;
+		margin-top: -150px;
 		padding-bottom: 40px;
 	}
 	@media @desktop-xl-2 {
