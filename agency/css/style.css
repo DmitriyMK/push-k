@@ -1518,3 +1518,17 @@ label{position:absolute;top:0;border:0;font-size:0 !important;vertical-align:bas
 .b-lazy.b-loaded {
 	opacity: 1;
 }
+
+.btn-orange {
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+    background-size: 200% auto;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ff512f), color-stop(51%, #f09819), to(#ff512f));
+    background-image: -webkit-linear-gradient(left, #ff512f 0%, #f09819 51%, #ff512f 100%);
+    background-image:      -o-linear-gradient(left, #ff512f 0%, #f09819 51%, #ff512f 100%);
+    background-image:         linear-gradient(to right, #ff512f 0%, #f09819 51%, #ff512f 100%);
+}
+.btn-orange:hover {
+    background-position: right center;
+}
