@@ -47,6 +47,8 @@
        }); 
     });
 
+    var bLazy = new Blazy();
+
 
 
         var position = $("#partners").offset();
@@ -101,54 +103,38 @@
           });
 
 
+        var bLazy = new Blazy();
 
 
-
-
-
-
-
-    $( ".btn-more-1" ).click(function() {
-         
+    $( ".btn-more-1" ).click(function() {         
           $( ".more-1" ).css("height", "auto");
           // $( ".more-1" ).animate({ height: "auto" }, 1000 );
           // $(".more-1").animateAuto({ height: "auto" }, 1000); 
           $( ".btn-more-1" ).css("display", "none");
           $( ".btn-more-2" ).css("display", "block");
-          $( ".more-1 .works-item" ).addClass('fadeInUp');
-          
-            
+          $( ".more-1 .works-item" ).addClass('fadeInUp');            
     });
-    $( ".btn-more-2" ).click(function() {
-         
+
+    $( ".btn-more-2" ).click(function() {     
           $( ".more-2" ).css("height", "auto");
           $( ".btn-more-2" ).css("display", "none");
           $( ".btn-more-3" ).css("display", "block");
           $( ".more-2 .works-item" ).addClass('fadeInUp');
-       
-            
     });
-    $( ".btn-more-3" ).click(function() {
-         
+
+    $( ".btn-more-3" ).click(function() {     
           $( ".more-3" ).css("height", "auto");
           $( ".btn-more-3" ).css("display", "none");
           $( ".btn-more-4" ).css("display", "block");
           $( ".more-3 .works-item" ).addClass('fadeInUp');
-       
-            
     });
 
     $( ".btn-more-4" ).click(function() {
-         
           $( ".more-4" ).css("height", "auto");
           $( ".btn-more-4" ).css("display", "none");
-          $( ".more-4 .works-item" ).addClass('fadeInUp');
-       
-            
+          $( ".more-4 .works-item" ).addClass('fadeInUp'); 
     });
 
-
-  
 
     $(document).ready(function(){
          $('.parallax').scrolly({bgParallax: true});
@@ -157,7 +143,6 @@
     
 
     $( "#modal-recieve-form-1" ).validate({
-            
             submitHandler: function() {
                 var th = $(".main-form-1");
                 $.ajax({
@@ -179,7 +164,6 @@
 
 
      $( "#modal-recieve-form-2" ).validate({
-            
             submitHandler: function() {
                 var th = $(".main-form-2");
                 $.ajax({
@@ -200,7 +184,6 @@
         });
 
      $( "#modal-recieve-form-3" ).validate({
-            
             submitHandler: function() {
                 var th = $(".main-form-3");
                 $.ajax({
@@ -221,7 +204,6 @@
         });
 
      $( "#modal-recieve-form-4" ).validate({
-            
             submitHandler: function() {
                 var th = $(".main-form-4");
                 $.ajax({
@@ -264,20 +246,13 @@
         });
 
 
-
-
-
       jQuery(function($){     
          $("#phone-1").mask("+38(999) 999-99-99");  
          $("#phone-2").mask("+38(999) 999-99-99"); 
          $("#phone-3").mask("+38(999) 999-99-99"); 
          $("#phone-4").mask("+38(999) 999-99-99"); 
          $("#phone-5").mask("+38(999) 999-99-99"); 
-       
-        
         }); 
-
-
 
 
 function initMap() {
