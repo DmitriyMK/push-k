@@ -45,7 +45,6 @@
 
 
 	<!-- LAZY LOAD CSS FOR NEW BROWSERS -->
-	<link rel="preload" href="./css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="./css/remodal.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="./css/remodal-default-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="./css/component.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -55,13 +54,15 @@
 
 	<!-- LAZY LOAD CSS FOR OLD BROWSERS -->
 	<noscript> 
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/remodal.css">
-		<link rel="stylesheet" href="css/remodal-default-theme.css">
-		<link rel="stylesheet" href="css/component.css">
-		<link rel="stylesheet" href="css/slicknav.css" />
-		<link rel="stylesheet" href="css/animate.min.css">
+		<link rel="stylesheet" href="./css/remodal.css">
+		<link rel="stylesheet" href="./css/remodal-default-theme.css">
+		<link rel="stylesheet" href="./css/component.css">
+		<link rel="stylesheet" href="./css/slicknav.css" />
+		<link rel="stylesheet" href="./css/animate.min.css">
 	</noscript>
+
+
+	<link rel="stylesheet" href="./css/style.css">
 
 
 	<!-- DEFER SCRIPT -->
