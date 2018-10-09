@@ -1575,6 +1575,12 @@ label{position:absolute;top:0;border:0;font-size:0 !important;vertical-align:bas
   height: 26px;
   width: 25px
 }
+
+.ico_item {
+  background-position: -142px -39px;
+  height: 14px;
+  width: 15px
+}
 /*END SPRITES*/
 
 .packages__item ul li {
@@ -1588,4 +1594,8 @@ label{position:absolute;top:0;border:0;font-size:0 !important;vertical-align:bas
 
 .packages__item ul li div {
     margin-right: 7px
+}
+
+.cooperation__block .cooperation-item .item-img {
+	max-height: 250px;
 }
