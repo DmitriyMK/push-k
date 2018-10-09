@@ -1533,7 +1533,7 @@ label{position:absolute;top:0;border:0;font-size:0 !important;vertical-align:bas
     background-position: right center;
 }
 
-
+/*SPRITES*/
 .ico_up, .ico_brif, .ico_youtube, .ico_google, .ico_fb, .ico_ok {
   display: inline-block;
   background-image: url(../images/spritebox-sprite.png);
@@ -1574,5 +1574,16 @@ label{position:absolute;top:0;border:0;font-size:0 !important;vertical-align:bas
   background-position: -117px -39px;
   height: 26px;
   width: 25px
+}
+/*END SPRITES*/
+
+.packages__item ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 10px
 }
 
