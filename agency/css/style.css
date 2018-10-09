@@ -422,7 +422,7 @@ ul{padding:0;margin:0;}
 li{list-style-type:none;}
 body{background:#fff;position:relative;z-index:1;padding-right:0 !important;}
 .btn-orange{width:265px;height:58px;-webkit-border-radius:29px;-moz-border-radius:29px;border-radius:29px;background-image:-webkit-linear-gradient(right, #ff8a2c, #ff6753);background-image:-moz-linear-gradient(right, #ff8a2c, #ff6753);background-image:-o-linear-gradient(right, #ff8a2c, #ff6753);background-image:-ms-linear-gradient(right, #ff8a2c, #ff6753);background-image:linear-gradient(to left, #ff6753, #ff8a2c);font-size:22px;color:#fff;font-weight:500;line-height:57px;}
-.btn-orange:hover{background-image:linear-gradient(to left, #ff8a2c, #ff6753);}
+/*.btn-orange:hover{background-image:linear-gradient(to left, #ff8a2c, #ff6753);*/}
 @media only screen and (min-width:640px){.btn-orange{width:340px;height:75px;-webkit-border-radius:38px;-moz-border-radius:38px;border-radius:38px;font-size:32px;line-height:74px;}
 }
 @media only screen and (min-width:768px){.btn-orange{width:265px;height:58px;-webkit-border-radius:29px;-moz-border-radius:29px;border-radius:29px;font-size:22px;line-height:57px;}
