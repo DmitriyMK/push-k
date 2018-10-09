@@ -1532,3 +1532,47 @@ label{position:absolute;top:0;border:0;font-size:0 !important;vertical-align:bas
 .btn-orange:hover {
     background-position: right center;
 }
+
+
+.ico_up, .ico_brif, .ico_youtube, .ico_google, .ico_fb, .ico_ok {
+  display: inline-block;
+  background-image: url(../images/spritebox-sprite.png);
+  background-repeat: no-repeat
+}
+
+.ico_up {
+  background-position: -0px -0px;
+  height: 70px;
+  width: 70px
+}
+
+.ico_brif {
+  background-position: -70px -0px;
+  height: 61px;
+  width: 47px
+}
+
+.ico_youtube {
+  background-position: -0px -70px;
+  height: 40px;
+  width: 40px
+}
+
+.ico_google {
+  background-position: -40px -70px;
+  height: 39px;
+  width: 40px
+}
+
+.ico_fb {
+  background-position: -117px -0px;
+  height: 39px;
+  width: 40px
+}
+
+.ico_ok {
+  background-position: -117px -39px;
+  height: 26px;
+  width: 25px
+}
+
