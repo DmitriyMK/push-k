@@ -29,65 +29,62 @@
     font-style: normal;
 }
 .ico_arr-down {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
     background-position: 0 0;
     height: 95px;
     width: 77px;
 }
-.ico_arr-left {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
+.ico_color_pokostovskiy {
     background-position: -77px 0;
+    height: 54px;
+    width: 58px;
+}
+.ico_color_marble {
+    background-position: -135px 0;
+    height: 54px;
+    width: 58px;
+}
+.ico_color_granite {
+    background-position: 0 -95px;
+    height: 54px;
+    width: 58px;
+}
+.ico_arr-left {
+    background-position: -58px -95px;
     height: 45px;
     width: 24px;
 }
 .ico_arr-right {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -77px -45px;
+    background-position: -82px -95px;
     height: 45px;
     width: 24px;
 }
 .ico_tel {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -101px 0;
+    background-position: -106px -95px;
     height: 42px;
     width: 24px;
 }
 .ico_phone {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -101px -42px;
+    background-position: -135px -54px;
     height: 23px;
     width: 23px;
 }
 .ico_user {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -101px -65px;
+    background-position: -158px -54px;
     height: 23px;
     width: 19px;
 }
-.ico_diameter {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: 0 -95px;
+.ico_weight {
+    background-position: -177px -54px;
     height: 16px;
     width: 16px;
 }
-.ico_weight {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -16px -95px;
+.ico_diameter {
+    background-position: -135px -77px;
     height: 16px;
     width: 16px;
 }
 .ico_height {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -120px -65px;
+    background-position: -151px -77px;
     height: 14px;
     width: 5px;
 }
@@ -143,6 +140,9 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+.wrapper {
+    max-width: 1920px;
 }
 .container, .container-fluid {
     margin-right: auto;
@@ -642,9 +642,7 @@ section {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -101px 0;
+    background-position: -106px -95px;
     height: 42px;
     width: 24px;
 }
@@ -693,6 +691,23 @@ section {
 }
 .pots {
     background: #f2f2f2;
+}
+.pots__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.pots__item {
+    width: 480px;
+    background: #fff;
+}
+.pots__item-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.pots__title {
+    text-align: center;
 }
 .remodal-first {
     padding-top: 95px;
@@ -995,18 +1010,14 @@ label {
 .slick-prev {
     top: 152px;
     left: -50px;
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -77px 0;
+    background-position: -58px -95px;
     height: 45px;
     width: 24px;
 }
 .slick-next {
     top: 213px;
     left: -50px;
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -77px -45px;
+    background-position: -82px -95px;
     height: 45px;
     width: 24px;
 }
