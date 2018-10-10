@@ -97,8 +97,14 @@
 	}
 
 	&__list {
+		position: relative;
 		display: flex;
 		flex-wrap: wrap;
+		padding: 0 15px;
+		
+		@media @tablet {
+			padding: 0 25px;
+		}
 
 		@media @desktop-xl {
 			padding: 0 50px;
@@ -126,6 +132,7 @@
 	&__slider {
 		margin: 15px 0;
 		width: 100%;
+		min-height: 50vh;
 		@media @desktop {
 			margin: 25px 0;
 		}
@@ -134,10 +141,13 @@
 	&__slide {
 		display: flex;
 		flex-wrap: wrap;
+		width: 100%;
 	}
+	
 	&__link {
 		width: 100%;
 		margin: 5px 0;
+
 		@media @mobile-land {
 			width: 49%;
 			margin: 5px 0.5%;
@@ -228,7 +238,7 @@
 		max-width: 640px;
 	}
 	@media @desktop-xl-2 {
-		max-width: 720px;
+		max-width: 760px;
 	}
 }
 
@@ -264,6 +274,14 @@
 .a2a_svg {
 	transition: all .3s linear;
 }
+
+.insta {
+	display: block;
+	width: 32px;
+	height: 32px;
+	background: #d6249f;
+  	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
 .button_download {
 	display: block;
 	width: 35px;
@@ -271,5 +289,49 @@
 	transition: opacity .3s linear;
 	&:hover {
 		opacity: .5;
+	}
+}
+.prev {
+	display: none;
+	@media @mobile-xl {
+		display: block;
+		left: -7px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 34px;
+		height: 34px;
+		background: url(../images/icons/arr-left.png);
+	}
+	@media @tablet {
+		left: -15px;
+	}
+	@media @desktop {
+		left: -20px;
+	}
+	@media @desktop-xl {
+		left: 0;
+	}
+}
+.next {
+	display: none;
+	@media @mobile-xl {
+		display: block;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: -7px;
+		width: 34px;
+		height: 34px;
+		background: url(../images/icons/arr-right.png);
+	}
+	@media @tablet {
+		right: -15px;
+	}
+	@media @desktop {
+		right: -20px;
+	}
+	@media @desktop-xl {
+		right: 0;
 	}
 }
