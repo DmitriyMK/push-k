@@ -39,6 +39,34 @@
 		color: #fff;
 	}
 }
+.btn-black {
+	position: relative;
+    overflow: hidden;
+	display: block;
+	padding: 12px 60px;
+	margin: 0 auto 30px auto;
+	color: #fff;
+	background: #000;
+
+	&:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -4.5em;
+        height: 100%;
+        width: 3em;
+        transform: skewX(-45deg) translateX(0);
+        background-color: rgba(255,255,255,0.5);
+    }
+
+    &:hover {
+        &:after {
+            transform: skewX(-45deg) translateX(20em);
+            transition: all .5s linear;
+        }
+    }
+}
 
 //  .scrollup {
 // 	width: 37px;

@@ -29,61 +29,85 @@
     font-style: normal;
 }
 .ico_arr-down {
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
     background-position: 0 0;
     height: 95px;
     width: 77px;
 }
-.ico_color_pokostovskiy {
+.ico_color_marble {
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
     background-position: -77px 0;
     height: 54px;
     width: 58px;
 }
-.ico_color_marble {
+.ico_color_pokostovskiy {
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
     background-position: -135px 0;
     height: 54px;
     width: 58px;
 }
 .ico_color_granite {
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
     background-position: 0 -95px;
     height: 54px;
     width: 58px;
 }
-.ico_arr-left {
+.ico_arr-right {
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
     background-position: -58px -95px;
     height: 45px;
     width: 24px;
 }
-.ico_arr-right {
+.ico_arr-left {
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
     background-position: -82px -95px;
     height: 45px;
     width: 24px;
 }
 .ico_tel {
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
     background-position: -106px -95px;
     height: 42px;
     width: 24px;
 }
 .ico_phone {
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
     background-position: -135px -54px;
     height: 23px;
     width: 23px;
 }
 .ico_user {
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
     background-position: -158px -54px;
     height: 23px;
     width: 19px;
 }
 .ico_weight {
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
     background-position: -177px -54px;
     height: 16px;
     width: 16px;
 }
 .ico_diameter {
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
     background-position: -135px -77px;
     height: 16px;
     width: 16px;
 }
 .ico_height {
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
     background-position: -151px -77px;
     height: 14px;
     width: 5px;
@@ -143,6 +167,7 @@ img {
 }
 .wrapper {
     max-width: 1920px;
+    margin: auto;
 }
 .container, .container-fluid {
     margin-right: auto;
@@ -488,6 +513,36 @@ template {
     background: #000;
     color: #fff;
 }
+.btn-black {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: 12px 60px;
+    margin: 0 auto 30px auto;
+    color: #fff;
+    background: #000;
+}
+.btn-black:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    height: 100%;
+    width: 3em;
+    -webkit-transform: skewX(-45deg) translateX(0);
+        -ms-transform: skewX(-45deg) translateX(0);
+            transform: skewX(-45deg) translateX(0);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.btn-black:hover:after {
+    -webkit-transform: skewX(-45deg) translateX(20em);
+        -ms-transform: skewX(-45deg) translateX(20em);
+            transform: skewX(-45deg) translateX(20em);
+    -webkit-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+}
 /* ONLY FOR IE11 */
 /* ONLY FOR EDGE */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -517,7 +572,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     }
 }
 a {
+    outline: none!important;
     color: inherit;
+}
+li {
+    list-style-type: none;
 }
 button {
     padding: 0;
@@ -526,6 +585,7 @@ button {
     color: inherit;
     background-color: transparent;
     cursor: pointer;
+    outline: none!important;
 }
 address {
     font-style: normal;
@@ -642,6 +702,8 @@ section {
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
     background-position: -106px -95px;
     height: 42px;
     width: 24px;
@@ -690,24 +752,157 @@ section {
             transform: translateX(-50%);
 }
 .pots {
+    padding-bottom: 0;
     background: #f2f2f2;
 }
 .pots__list {
+    padding-top: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .pots__item {
-    width: 480px;
+    -ms-flex-preferred-size: 24.5%;
+    flex-basis: 24.5%;
+    margin: 0.25%;
     background: #fff;
 }
 .pots__item-img {
+    padding-top: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    position: relative;
 }
 .pots__title {
+    padding: 30px 0;
     text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+.pots__link {
+    display: none;
+    visibility: hidden;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+    height: 246px;
+}
+.pots__link-active {
+    display: block;
+    visibility: visible;
+}
+.pots__img {
+    margin: auto;
+    max-width: 196px;
+}
+.pots__materials {
+    position: absolute;
+    right: 2%;
+}
+.pots__btn {
+    display: block;
+    width: 66px;
+    height: 62px;
+    margin-bottom: 6px;
+    border: 4px solid #fff;
+    -webkit-transition: border-color 0.3s linear;
+         -o-transition: border-color 0.3s linear;
+            transition: border-color 0.3s linear;
+}
+.pots__btn-active {
+    border-color: #888;
+}
+.pots__desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.pots__desc-item {
+    position: relative;
+    padding-left: 32px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #010101;
+}
+.pots__desc .pots-diameter:before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    -webkit-transform: translateY(-60%);
+        -ms-transform: translateY(-60%);
+            transform: translateY(-60%);
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -135px -77px;
+    height: 16px;
+    width: 16px;
+}
+.pots__desc .pots-height:before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    -webkit-transform: translateY(-60%);
+        -ms-transform: translateY(-60%);
+            transform: translateY(-60%);
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -151px -77px;
+    height: 14px;
+    width: 5px;
+}
+.pots__desc .pots-height {
+    padding-left: 27px;
+}
+.pots__desc .pots-weight:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-60%);
+        -ms-transform: translateY(-60%);
+            transform: translateY(-60%);
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -177px -54px;
+    height: 16px;
+    width: 16px;
+}
+.pots__price {
+    padding: 15px 0;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+.pots__price-accent {
+    color: #f00;
+}
+.urns {
+    position: relative;
+    margin-top: -0.25%;
+    background: url(../images/urn__back.jpg) no-repeat center / cover;
+    -webkit-box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.34);
+            box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.34);
+}
+.fences {
+    padding-bottom: 0;
+    background: #f2f2f2;
+}
+.arguments {
+    position: relative;
+    margin-top: -0.25%;
+    background: url(../images/argument__back.jpg) no-repeat center / cover;
 }
 .remodal-first {
     padding-top: 95px;
@@ -1010,14 +1205,18 @@ label {
 .slick-prev {
     top: 152px;
     left: -50px;
-    background-position: -58px -95px;
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -82px -95px;
     height: 45px;
     width: 24px;
 }
 .slick-next {
     top: 213px;
     left: -50px;
-    background-position: -82px -95px;
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -58px -95px;
     height: 45px;
     width: 24px;
 }
