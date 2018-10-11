@@ -21,7 +21,122 @@
 }
 
 .arguments {
-	position: relative;
 	margin-top: -0.25%;
 	background: url(../images/argument__back.jpg)no-repeat center/cover;
+
+	&__box {
+		position: relative;
+	}
+
+	&__item {
+		position: relative;
+		width: 362px;
+		height: 421px;
+		display: inline-block;
+
+		&:nth-of-type(1) {
+			text-align: right;
+			top: 45px;
+			left: 28px;
+			width: 310px;
+			height: 316px;
+			.arguments__titles {
+				position: absolute;
+				top: 93px;
+				left: 85px;
+			}
+			.arguments__text {
+				position: absolute;
+				top: 150px;
+				left: 30px;
+				width: 210px;
+			}
+		}
+		&:nth-of-type(2) {
+			top: 215px;
+			left: 90px;
+			z-index: 10;
+			.arguments__titles {
+				position: absolute;
+				top: 150px;
+				left: 90px;
+			}
+			.arguments__text {
+				position: absolute;
+				top: 200px;
+				left: 90px;
+				width: 205px;
+			}
+		}
+		&:nth-of-type(3) {
+			top: -18px;
+			left: -145px;
+			.arguments__titles {
+				position: absolute;
+				top: 160px;
+				left: 85px;
+			}
+			.arguments__text {
+				position: absolute;
+				top: 190px;
+				left: 85px;
+				width: 190px;
+			}
+		}
+		&:nth-of-type(4) {
+			top: -280px;
+			left: 800px;
+			.arguments__titles {
+				font-size: 24px;
+				position: absolute;
+				top: 160px;
+				left: 85px;
+			}
+			.arguments__text {
+				position: absolute;
+				top: 195px;
+				left: 85px;
+				width: 200px;
+			}
+		}
+		&:nth-of-type(5) {
+			top: -51px;
+			left: 567px;
+			.arguments__titles {
+				font-size: 24px;
+				position: absolute;
+				top: 130px;
+				left: 80px;
+			}
+			.arguments__text {
+				position: absolute;
+				top: 165px;
+				left: 80px;
+				width: 190px;
+			}
+		}
+	}
+
+	&__titles {
+		z-index: 10;
+		font-size: 18px;
+		font-weight: 700;
+	}
+	&__text {
+		z-index: 10;
+		font-size: 14px;
+		font-weight: 300;
+	}
+
+	&__border {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&__decor {
+		position: absolute;
+		top: 16px;
+		left: -40px;
+	}
 }
