@@ -847,7 +847,7 @@
 		<div class="container">
 			<h2 class="section__title">Всего три шага к покупке</h2>
 
-			<ul class="step__list">
+			<ol class="step__list">
 				<li class="step__item">
 					<div class="step__img">
 						<img class="b-lazy" data-src="./images/step1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Заявка">
@@ -872,10 +872,100 @@
 					<h3 class="step__title">Доставка</h3>
 					<p class="step__text">Вы вносите оплату, мы отправляем <br> Вам заказ удобным способом.</p>
 				</li>
-			</ul>
+			</ol>
 		</div>
 	</section>
+	
 
+	<div class="cooperate">
+		<div class="container">
+			<div class="cooperate__box">
+				<div class="cooperate__content">
+					<strong class="cooperate__accent">Если Вы занимаетесь:</strong>
+					<ul class="cooperate__list">
+						<li class="cooperate__item">ландшафтным дизайном;</li>
+						<li class="cooperate__item">озеленением территорий;</li>
+						<li class="cooperate__item">или хотите стать нашим <br> дилером, тогда <img src="./images/arr-sm.png" alt="читать далее"></li>
+					</ul>
+					<strong class="cooperate__accent">Оставляйте заявку</strong>
+					<p class="cooperate__text">и наш менеджер расскажет Вам <br> об условиях сотрудничества и <br> возможных скидках.</p>
+
+					<img class="b-lazy cooperate__decor1" data-src="./images/bonsay.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+					<img class="b-lazy cooperate__decor2" data-src="./images/wood.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+					
+
+					<button class="btn btn-black" data-remodal-target="cooperate">Узнать условия</button>
+				</div>
+			</div>
+		</div>
+		<img class="b-lazy cooperate__decor3" data-src="./images/form__decor.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+	</div>
+
+
+	<section class="review">
+		<div class="wrapper">
+			<h2 class="section__title">Отзывы наших клиентов</h2>
+
+			<div class="review__slider slider">
+				<div class="review__slide">
+					<div class="review__item">
+						<div class="review__img">
+							<img src="./images/review1.jpg" alt="Отзывы наших клиентов">
+						</div>
+						<div class="review__info">
+							<h3 class="review__name">Анна Шатова</h3>
+							<p class="review__desc">35 лет, Киев.</p>
+
+							<p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="review__slide">
+					<div class="review__item">
+						<div class="review__img">
+							<img src="./images/review2.jpg" alt="Отзывы наших клиентов">
+						</div>
+						<div class="review__info">
+							<h3 class="review__name">Анна Шатова</h3>
+							<p class="review__desc">35 лет, Киев.</p>
+
+							<p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="review__slide">
+					<div class="review__item">
+						<div class="review__img">
+							<img data-lazy="./images/review3.jpg" alt="Отзывы наших клиентов">
+						</div>
+						<div class="review__info">
+							<h3 class="review__name">Анна Шатова</h3>
+							<p class="review__desc">35 лет, Киев.</p>
+
+							<p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="review__slide">
+					<div class="review__item">
+						<div class="review__img">
+							<img data-lazy="./images/review4.jpg" alt="Отзывы наших клиентов">
+						</div>
+						<div class="review__info">
+							<h3 class="review__name">Анна Шатова</h3>
+							<p class="review__desc">35 лет, Киев.</p>
+
+							<p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
 
 
 	
@@ -950,16 +1040,26 @@
 			<input type="hidden" name="whatform" value="Stimlex > Заказ подробной консультации">
 
 			<!-- END Hidden Required Fields -->
-			<p class="formBox__title">Заполните форму</p>
-			<p class="formBox__text">И наш менеджер свяжется с Вами в ближайшее время</p>
+			<p class="form__title">Заполните форму</p>
+			<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+			<div class="form__img">
+				<img class="b-lazy" data-src="./images/form_line.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+			</div>
 
-			<div class="input__wrap">
-				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" required> 
+			<div class="inputWrap">
+				<label for="formName2"></label>
+				<div class="ico_user form__icon"></div>
+				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName2" required>
 			</div>
-			<div class="input__wrap">
-				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" required>
+			<div class="inputWrap">
+				<label for="formPhone2"></label>
+				<div class="ico_phone form__icon"></div>
+				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone2" required>
+			</div>		
+
+			<div class="btnWrap btn-black">
+				<input type="submit" value="Заказать звонок"> 
 			</div>
-			<input type="submit" class="btn" value="Заказать звонок"> 
 		</form>
 	</div> 
 
@@ -974,43 +1074,63 @@
 			<input type="hidden" name="whatform" value="Stimlex > Заказ на цветочные вазоны">
 			<input type="hidden" name="whatform2" value="Pokostovskiy">
 			<!-- END Hidden Required Fields -->
-			<p class="formBox__title">Заполните форму</p>
-			<p class="formBox__text">И наш менеджер свяжется с Вами в ближайшее время</p>
+			<p class="form__title">Заполните форму</p>
+			<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+			<div class="form__img">
+				<img class="b-lazy" data-src="./images/form_line.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+			</div>
 
-			<div class="input__wrap">
-				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" required> 
+			<div class="inputWrap">
+				<label for="formName3"></label>
+				<div class="ico_user form__icon"></div>
+				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName3" required>
 			</div>
-			<div class="input__wrap">
-				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" required>
+			<div class="inputWrap">
+				<label for="formPhone3"></label>
+				<div class="ico_phone form__icon"></div>
+				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone3" required>
+			</div>		
+
+			<div class="btnWrap btn-black">
+				<input type="submit" value="Заказать"> 
 			</div>
-			<input type="submit" class="btn" value="Заказать"> 
 		</form>
 	</div> 
 	<div class="remodal formBox" data-remodal-id="orderUrn"> 
 		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<form class="form form-validate" name="order pots">
+		<form class="form form-validate" name="order urns">
 			<!-- Hidden Required Fields -->
 			<input type="hidden" name="project_name" value="Stimlex">
 			<input type="hidden" name="admin_email" value="dm@push-k.ua">
-			<input type="hidden" name="form_subject" value="Заказ на цветочные вазоны">
-			<input type="hidden" name="whatform" value="Stimlex > Заказ на цветочные вазоны">
+			<input type="hidden" name="form_subject" value="Заказ на урны">
+			<input type="hidden" name="whatform" value="Stimlex > Заказ на урны">
 			<input type="hidden" name="whatform2" value="Pokostovskiy">
 			<!-- END Hidden Required Fields -->
-			<p class="formBox__title">Заполните форму</p>
-			<p class="formBox__text">И наш менеджер свяжется с Вами в ближайшее время</p>
+			<p class="form__title">Заполните форму</p>
+			<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+			<div class="form__img">
+				<img class="b-lazy" data-src="./images/form_line.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+			</div>
 
-			<div class="input__wrap">
-				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" required> 
+			<div class="inputWrap">
+				<label for="formName10"></label>
+				<div class="ico_user form__icon"></div>
+				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName10" required>
 			</div>
-			<div class="input__wrap">
-				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" required>
+			<div class="inputWrap">
+				<label for="formPhone10"></label>
+				<div class="ico_phone form__icon"></div>
+				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone10" required>
+			</div>		
+
+			<div class="btnWrap btn-black">
+				<input type="submit" value="Заказать"> 
 			</div>
-			<input type="submit" class="btn" value="Заказать"> 
 		</form>
 	</div> 
 	<div class="remodal formBox" data-remodal-id="orderFence"> 
 		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<form class="form form-validate" name="order pots">
+		<form class="form form-validate" name="order fences">
 			<!-- Hidden Required Fields -->
 			<input type="hidden" name="project_name" value="Stimlex">
 			<input type="hidden" name="admin_email" value="dm@push-k.ua">
@@ -1018,37 +1138,88 @@
 			<input type="hidden" name="whatform" value="Stimlex > Заказ на цветочные вазоны">
 			<input type="hidden" name="whatform2" value="Pokostovskiy">
 			<!-- END Hidden Required Fields -->
-			<p class="formBox__title">Заполните форму</p>
-			<p class="formBox__text">И наш менеджер свяжется с Вами в ближайшее время</p>
+			<p class="form__title">Заполните форму</p>
+			<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+			<div class="form__img">
+				<img class="b-lazy" data-src="./images/form_line.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+			</div>
 
-			<div class="input__wrap">
-				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" required> 
+			<div class="inputWrap">
+				<label for="formName4"></label>
+				<div class="ico_user form__icon"></div>
+				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName4" required>
 			</div>
-			<div class="input__wrap">
-				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" required>
+			<div class="inputWrap">
+				<label for="formPhone4"></label>
+				<div class="ico_phone form__icon"></div>
+				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone4" required>
+			</div>		
+
+			<div class="btnWrap btn-black">
+				<input type="submit" value="Заказать"> 
 			</div>
-			<input type="submit" class="btn" value="Заказать"> 
 		</form>
 	</div> 
 	<div class="remodal formBox" data-remodal-id="order"> 
 		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<form class="form form-validate" name="order pots">
+		<form class="form form-validate" name="order">
 			<!-- Hidden Required Fields -->
 			<input type="hidden" name="project_name" value="Stimlex">
 			<input type="hidden" name="admin_email" value="dm@push-k.ua">
 			<input type="hidden" name="form_subject" value="Заявка">
 			<input type="hidden" name="whatform" value="Stimlex > Заявка">
 			<!-- END Hidden Required Fields -->
-			<p class="formBox__title">Заполните форму</p>
-			<p class="formBox__text">И наш менеджер свяжется с Вами в ближайшее время</p>
+			<p class="form__title">Заполните форму</p>
+			<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+			<div class="form__img">
+				<img class="b-lazy" data-src="./images/form_line.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+			</div>
 
-			<div class="input__wrap">
-				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" required> 
+			<div class="inputWrap">
+				<label for="formName5"></label>
+				<div class="ico_user form__icon"></div>
+				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName5" required>
 			</div>
-			<div class="input__wrap">
-				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" required>
+			<div class="inputWrap">
+				<label for="formPhone5"></label>
+				<div class="ico_phone form__icon"></div>
+				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone5" required>
+			</div>		
+
+			<div class="btnWrap btn-black">
+				<input type="submit" value="Оставить заявку"> 
 			</div>
-			<input type="submit" class="btn" value="Оставить заявку"> 
+		</form>
+	</div> 
+	<div class="remodal formBox" data-remodal-id="cooperate"> 
+		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+		<form class="form form-validate" name="cooperate">
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="Stimlex">
+			<input type="hidden" name="admin_email" value="dm@push-k.ua">
+			<input type="hidden" name="form_subject" value="Условия сотрудничества и возможные скидки">
+			<input type="hidden" name="whatform" value="Stimlex > Условия сотрудничества и возможные скидки">
+			<!-- END Hidden Required Fields -->
+			<p class="form__title">Заполните форму</p>
+			<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+			<div class="form__img">
+				<img class="b-lazy" data-src="./images/form_line.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+			</div>
+
+			<div class="inputWrap">
+				<label for="formName6"></label>
+				<div class="ico_user form__icon"></div>
+				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName6" required>
+			</div>
+			<div class="inputWrap">
+				<label for="formPhone6"></label>
+				<div class="ico_phone form__icon"></div>
+				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone6" required>
+			</div>		
+
+			<div class="btnWrap btn-black">
+				<input type="submit" value="Узнать условия"> 
+			</div>
 		</form>
 	</div> 
 
@@ -1062,7 +1233,5 @@
 
 <!-- 	<script src="./libs/map.js"></script>  
 	<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyANY39pap8l5_ndmHjwHGhuWmw07CdBVRE"></script>  -->
-
-
 </body>
 </html>
