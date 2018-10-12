@@ -1,21 +1,21 @@
 var markersData = [{
-        lat: 48.5075627,
-        lng: 34.9882175,
-        name: "AUrum",
-        address: "г. Днепр,  ул.  Шолохова, 7."
+        lat: 48.4410735,
+        lng: 35.0170546,
+        name: "Stimlex",
+        address: "г. Днепр,  ул. Данила Галицкого,7"
     },
 ];
 
 var map, infoWindow;
 
 function initMap() {
-    var centerLatLng = new google.maps.LatLng(48.5075627, 34.9882175);
+    var centerLatLng = new google.maps.LatLng(48.4410735, 35.0170546);
 
     var mapOptions = {
         center: centerLatLng,
         zoom: 15,
 
-        mapTypeControl: true,
+        mapTypeControl: false,
 
         mapTypeControlOptions: {
             style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
