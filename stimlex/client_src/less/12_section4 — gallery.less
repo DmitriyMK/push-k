@@ -28,12 +28,13 @@
 		// flex-wrap: wrap;
 		// flex-direction: column;
 		// align-items: center;
-		// height: 880px;
+		// height: 875px;
 		// overflow: hidden;
 	}
+	
 
 	.row {
-		
+		display: flex;
 	}
 	&__item1 {
 		
@@ -53,12 +54,14 @@
 	&__link {
 		position: relative;
 		display: block;
+		overflow: hidden;
 		&:before {
 			content: '';
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background: rgba(0,0,0, .5);
+			background: #000;
+			opacity: .4;
 			transition: all .3s linear;
 		}
 		&:after {
@@ -95,7 +98,6 @@
 	.smallHeight {
 		max-height: 425px;
 		overflow: hidden;
-		
 	}
 
 	&__title {
@@ -109,4 +111,3 @@
 		transition: all .3s linear;
 	}
 }
-
