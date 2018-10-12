@@ -35,16 +35,12 @@
 	<script defer src="./libs/fancybox.js"></script>
 	<script defer src="./libs/slick.js"></script>
 	<script defer src="./libs/jquery.validate.min.js"></script>
+	<script defer src="./libs/masked-input.js"></script>
 	<script defer src="./libs/wow.min.js"></script>
-	<script defer src="./libs/jquery-modal-video.min.js"></script>
 	<script defer src="./libs/cssrelpreload.js"></script>
 	<!-- END DEFER SCRIPT -->
-
-
 </head>
 <body>
-
-
 	<header class="header" id="header">	
 		<div class="header__top">
 			<div class="container">
@@ -660,27 +656,27 @@
 					<li class="arguments__item">
 						<h3 class="arguments__titles">Устойчивость <br> к температурам</h3>
 						<p class="arguments__text">Мытый бетон сохраняет свои свойства в диапазоне +40…-40 С, не лопаясь и не деформируясь, не выгорает и не выцветает. на солнце</p>
-						 <img class="arguments__border b-lazy" data-src="./images/arguments1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+						<img class="arguments__border b-lazy" data-src="./images/arguments1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
 					</li>
 					<li class="arguments__item">
 						<h3 class="arguments__titles">Длительный срок <br> эксплуатации</h3>
 						<p class="arguments__text">При правильном уходе служат 10 и более лет.</p>
-						 <img class="arguments__border b-lazy" data-src="./images/arguments2.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+						<img class="arguments__border b-lazy" data-src="./images/arguments2.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
 					</li>
 					<li class="arguments__item">
 						<h3 class="arguments__titles">Износостойкость</h3>
 						<p class="arguments__text">Изделия из мытого бетона практически не подвергаются износу.</p>
-						 <img class="arguments__border b-lazy" data-src="./images/arguments3.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+						<img class="arguments__border b-lazy" data-src="./images/arguments3.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
 					</li>
 					<li class="arguments__item">
 						<h3 class="arguments__titles">Практичность</h3>
 						<p class="arguments__text">Не требуют особого ухода, легко моется с помощью щетки и воды.</p>
-						 <img class="arguments__border b-lazy" data-src="./images/arguments4.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+						<img class="arguments__border b-lazy" data-src="./images/arguments4.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
 					</li>
 					<li class="arguments__item">
 						<h3 class="arguments__titles">Эстетичность</h3>
 						<p class="arguments__text">Изделия из мытого бетона выглядят очень привлекательно и благородно, уместно смотрятся на любом ландшафтном участке.</p>
-						 <img class="arguments__border b-lazy" data-src="./images/arguments5.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+						<img class="arguments__border b-lazy" data-src="./images/arguments5.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
 					</li>
 				</ul>
 
@@ -688,6 +684,58 @@
 			</div>
 		</div>
 	</section>
+
+
+	<article class="consult">
+		<div class="container">
+			<div class="consult__box">
+
+				<div class="consult__content">
+					<h2 class="consult__title">Хотите заказать подробную <br> консультацию?</h2>
+					<p class="consult__text">Оставляйте заявку, <br> и наш менеджер ответит на <br> все Ваши вопросы.</p>
+				</div>
+
+				<div class="consult__form">
+					<form action="mail.php" method="post" class="form form-validate" name="Consultation">
+						<input type="hidden" name="project_name" value="Stimlex">
+						<input type="hidden" name="admin_email" value="dm@push-k.ua">
+						<input type="hidden" name="form_subject" value="Stimlex > Заказ на подробную консультацию">
+						<input type="hidden" name="whatform" value="Stimlex > Заказ на подробную консультацию">
+
+						<p class="form__title">Заполните форму</p>
+						<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+						<div class="form__img">
+							<img class="b-lazy" data-src="./images/form_line.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+						</div>
+						
+						<div class="inputWrap">
+							<label for="formName"><div class="ico_user form__icon"></div></label>
+							<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName" required>
+						</div>
+						<div class="inputWrap">
+							<label for="formPhone"><div class="ico_phone form__icon"></div></label>
+							<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone" required>
+						</div>		
+						
+						<div class="btnWrap btn-black">
+							<input type="submit" value="Отправить"> 
+						</div>
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</article>
+
+
+	<section class="gallery">
+		<div class="container">
+			<h2 class="section__title">Цветочницы, урны, парковочные ограничители из <br> мытого бетона можно устанавливать возле:</h2>
+		</div>
+	</section>
+
+
+
 	
 	
 	

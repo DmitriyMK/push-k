@@ -59,7 +59,7 @@ $(document).ready(function() {
 
 
 
-  // $('.phone-mask').mask('+39(999)999-99-99');
+  $('.phone-mask').mask('+39(999)999-99-99');
 
 
   /*  $(".js-video-button").modalVideo({
@@ -162,9 +162,9 @@ $(document).ready(function() {
 
 
 
-$(window).on('resize orientationchange', function() {
-  $('.slider').slick('resize');
-});
+// $(window).on('resize orientationchange', function() {
+//   $('.slider').slick('resize');
+// });
 
 
 

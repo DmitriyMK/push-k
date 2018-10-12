@@ -1013,6 +1013,117 @@ section {
     top: 16px;
     left: -40px;
 }
+.consult {
+    position: relative;
+    background: url(../images/form__back.jpg) no-repeat 50% 0;
+    background-size: cover;
+    height: 569px;
+    -webkit-box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.34);
+            box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.34);
+}
+.consult__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.consult__content {
+    padding-top: 40px;
+    padding-left: 40px;
+    border-top: 3px solid #6b6c70;
+    border-left: 3px solid #6b6c70;
+    height: 300px;
+}
+.consult__title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #900;
+}
+.consult__text {
+    padding-top: 30px;
+    font-size: 32px;
+}
+.form {
+    position: relative;
+    max-width: 350px;
+    padding: 35px 25px 8px 25px;
+    margin: auto;
+    text-align: center;
+    background: #f2f2f2;
+    border-radius: 15px;
+    border-bottom: 12px solid #000;
+    -webkit-box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.45);
+            box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.45);
+}
+.form:before {
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: -25px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 26px 26px 26px 0;
+    border-color: transparent #f2f2f2 transparent transparent;
+}
+.form__title {
+    padding-bottom: 15px;
+    font-size: 27px;
+    font-weight: 700;
+}
+.form__text {
+    padding-bottom: 15px;
+    font-weight: 500;
+}
+.form__img {
+    display: block;
+    height: 9px;
+    margin-bottom: 35px;
+}
+.form .inputWrap {
+    position: relative;
+    margin-bottom: 25px;
+}
+.form .inputWrap:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 53px;
+    width: 1px;
+    height: 40px;
+    background: #e2e2e2;
+}
+.form__icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.form__line {
+    max-width: 290px;
+    padding: 15px 10px 15px 65px;
+    border: none;
+    border-radius: 9px;
+    font-size: 18px;
+    font-weight: 500;
+    outline: none!important;
+    -webkit-box-shadow: -5px -5px 5px 2px #e2e2e2;
+            box-shadow: -5px -5px 5px 2px #e2e2e2;
+}
+.form input[type='submit'] {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+    color: #fff;
+}
 .remodal-first {
     padding-top: 95px;
     text-align: center;
@@ -1052,6 +1163,21 @@ section {
 }
 .remodal-first:before {
     display: none;
+}
+.remodal-first #name-error {
+    font-size: 0 !important;
+}
+.remodal-first .input {
+    position: relative;
+}
+.remodal-first label {
+    position: absolute;
+    top: 0;
+    border: 0;
+    font-size: 0 !important;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
 }
 .btn-remodal {
     margin: 30px 0 0 15px;
@@ -1119,21 +1245,6 @@ section {
     color: #df3a3a;
     margin: 0 auto;
     text-align: center;
-}
-#name-error {
-    font-size: 0 !important;
-}
-.input {
-    position: relative;
-}
-label {
-    position: absolute;
-    top: 0;
-    border: 0;
-    font-size: 0 !important;
-    vertical-align: baseline;
-    margin: 0;
-    padding: 0;
 }
 .formBox {
     position: relative;
