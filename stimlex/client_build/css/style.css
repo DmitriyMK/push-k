@@ -1095,6 +1095,13 @@ section {
     height: 40px;
     background: #e2e2e2;
 }
+.form label {
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    z-index: 10;
+}
 .form__icon {
     position: absolute;
     left: 20px;
@@ -1124,23 +1131,27 @@ section {
             transition: all 0.3s linear;
     color: #fff;
 }
+.gallery {
+    padding-bottom: 0;
+}
 .gallery__list {
     padding-top: 30px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: 875px;
+    overflow: hidden;
 }
 .gallery .row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
-.gallery__link {
-    position: relative;
-    display: block;
+.gallery__item {
     overflow: hidden;
+    position: relative;
 }
-.gallery__link:before {
+.gallery__item:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -1151,7 +1162,7 @@ section {
          -o-transition: all 0.3s linear;
             transition: all 0.3s linear;
 }
-.gallery__link:after {
+.gallery__item:after {
     content: '';
     position: absolute;
     width: 95%;
@@ -1166,16 +1177,19 @@ section {
          -o-transition: all 0.3s linear;
             transition: all 0.3s linear;
 }
-.gallery__link:hover:before {
+.gallery__item:hover:before {
     background: rgba(0, 0, 0, 0);
 }
-.gallery__link:hover:after {
+.gallery__item:hover:after {
     width: 100%;
     height: 100%;
     border: 1px solid transparent;
 }
-.gallery__link:hover .gallery__title {
+.gallery__item:hover .gallery__title {
     opacity: 0;
+}
+.gallery__link {
+    display: block;
 }
 .gallery .bigHeight {
     max-height: 850px;
@@ -1198,6 +1212,91 @@ section {
     -webkit-transition: all 0.3s linear;
          -o-transition: all 0.3s linear;
             transition: all 0.3s linear;
+}
+.advantages {
+    position: relative;
+    background: url(../images/advantages__back.jpg) no-repeat center / cover;
+    -webkit-box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.34);
+            box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.34);
+}
+.advantages__box {
+    position: relative;
+}
+.advantages__list {
+    padding-left: 60px;
+    margin-top: 60px;
+}
+.advantages__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.advantages__img {
+    width: 120px;
+}
+.advantages__title {
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.advantages__text {
+    font-weight: 500;
+}
+.advantages__decor-bg {
+    position: absolute;
+    top: -120px;
+    right: 15%;
+}
+.advantages__decor-sm {
+    position: absolute;
+    top: 70px;
+    right: -8%;
+}
+.step {
+    background: url(../images/step__back.jpg) repeat-x 0 100%;
+}
+.step__list {
+    padding-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    text-align: center;
+}
+.step__item {
+    position: relative;
+    width: 30%;
+}
+.step__item:before {
+    content: '';
+    position: absolute;
+    top: 37%;
+    right: -15px;
+    background-image: url(../images/icons/spritebox-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -58px -95px;
+    height: 45px;
+    width: 24px;
+}
+.step__item:last-of-type:before {
+    display: none;
+}
+.step__img {
+    height: 235px;
+}
+.step__title {
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.step .btn {
+    margin-top: 20px;
+    padding: 12px 35px;
 }
 .remodal-first {
     padding-top: 95px;

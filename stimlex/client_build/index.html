@@ -709,7 +709,7 @@
 						</div>
 						
 						<div class="inputWrap">
-							<label for="formName"></label>
+							<label for="formName" name="formName"></label>
 							<div class="ico_user form__icon"></div>
 							<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName" required>
 						</div>
@@ -796,6 +796,83 @@
 	<section class="advantages">
 		<div class="container">
 			<h2 class="section__title">Почему выгодно работать с нами:</h2>
+			
+			<div class="advantages__box">
+				<ul class="advantages__list">
+					<li class="advantages__item">
+						<div class="advantages__img">
+							<img class="b-lazy" data-src="./images/advantages1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Собственное производство" >
+						</div>
+						<div class="advantages__content">
+							<h3 class="advantages__title">Собственное производство</h3>
+							<p class="advantages__text">Мы являемся производителем, поэтому <br>предлагаем бетонные изделия высокого <br> качества без переплат.</p>
+						</div>
+					</li>
+					<li class="advantages__item">
+						<div class="advantages__img">
+							<img class="b-lazy" data-src="./images/advantages2.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Гарантия" >
+						</div>
+						<div class="advantages__content">
+							<h3 class="advantages__title">Гарантия</h3>
+							<p class="advantages__text">Предоставляем гарантию на все <br> изделия сроком на 10 лет</p>
+						</div>
+					</li>
+					<li class="advantages__item">
+						<div class="advantages__img">
+							<img class="b-lazy" data-src="./images/advantages3.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Надежность" >
+						</div>
+						<div class="advantages__content">
+							<h3 class="advantages__title">Надежность</h3>
+							<p class="advantages__text">Мы производим изделия из мытого бетона <br>уже более 10 лет, поэтому можем <br> гарантировать качество и отличный сервис.</p>
+						</div>
+					</li>
+					<li class="advantages__item">
+						<div class="advantages__img">
+							<img class="b-lazy" data-src="./images/advantages4.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" >
+						</div>
+						<div class="advantages__content">
+							<h3 class="advantages__title">Доставка</h3>
+							<p class="advantages__text">Осуществляем оперативную доставку по <br> всем регионам России и Украины.</p>
+						</div>
+					</li>
+				</ul>
+				<img class="b-lazy advantages__decor-bg" data-src="./images/advantages__vase-big.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+				<img class="b-lazy advantages__decor-sm" data-src="./images/advantages__vase-sm.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+			</div>
+		</div>
+	</section>
+
+
+	<section class="step">
+		<div class="container">
+			<h2 class="section__title">Всего три шага к покупке</h2>
+
+			<ul class="step__list">
+				<li class="step__item">
+					<div class="step__img">
+						<img class="b-lazy" data-src="./images/step1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Заявка">
+					</div>
+					<h3 class="step__title">Заявка</h3>
+					<p class="step__text">Вы оставляете заявку на сайте, наш <br>менеджер связывается с Вами.</p>
+					<button class="btn btn-black" data-remodal-target="order">Оставить заявку</button>
+				</li>
+
+				<li class="step__item">
+					<div class="step__img">
+						<img class="b-lazy" data-src="./images/step2.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Вопрос-ответ">
+					</div>
+					<h3 class="step__title">Вопрос-ответ</h3>
+					<p class="step__text">Мы отвечаем на все Ваши <br> вопросы и формируем заказ.</p>
+				</li>
+
+				<li class="step__item">
+					<div class="step__img">
+						<img class="b-lazy" data-src="./images/step3.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Доставка">
+					</div>
+					<h3 class="step__title">Доставка</h3>
+					<p class="step__text">Вы вносите оплату, мы отправляем <br> Вам заказ удобным способом.</p>
+				</li>
+			</ul>
 		</div>
 	</section>
 
@@ -951,6 +1028,27 @@
 				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" required>
 			</div>
 			<input type="submit" class="btn" value="Заказать"> 
+		</form>
+	</div> 
+	<div class="remodal formBox" data-remodal-id="order"> 
+		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+		<form class="form form-validate" name="order pots">
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="Stimlex">
+			<input type="hidden" name="admin_email" value="dm@push-k.ua">
+			<input type="hidden" name="form_subject" value="Заявка">
+			<input type="hidden" name="whatform" value="Stimlex > Заявка">
+			<!-- END Hidden Required Fields -->
+			<p class="formBox__title">Заполните форму</p>
+			<p class="formBox__text">И наш менеджер свяжется с Вами в ближайшее время</p>
+
+			<div class="input__wrap">
+				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" required> 
+			</div>
+			<div class="input__wrap">
+				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" required>
+			</div>
+			<input type="submit" class="btn" value="Оставить заявку"> 
 		</form>
 	</div> 
 

@@ -1,0 +1,61 @@
+@media @mobile-xl {
+
+}
+@media @mobile-land {
+
+}
+@media @tablet {
+
+}
+@media @desktop {
+
+}
+@media @desktop-xl {
+	
+}
+@media @desktop-xl-2 {
+
+}
+@media @desktop-xll {
+	
+}
+
+.step {
+	background: url(../images/step__back.jpg)repeat-x 0 100%;
+	&__list {
+		padding-top: 30px;
+		display: flex;
+		justify-content: space-around;
+		text-align: center;
+	}
+	&__item {
+		position: relative;
+		width: 30%;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 37%;
+			right: -15px;
+			.ico_arr-right
+		}
+		&:last-of-type {
+			&:before {
+				display: none;
+			}
+		}
+	}
+	&__img {
+		height: 235px;
+	}
+	&__title {
+		padding-bottom: 10px;
+		font-size: 24px;
+		font-weight: 500;
+	}
+	.btn {
+		margin-top: 20px;
+		padding: 12px 35px;
+	}
+}
+
+
