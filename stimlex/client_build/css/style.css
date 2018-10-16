@@ -650,6 +650,11 @@ section {
     width: 32px;
     background: #6b6c70;
 }
+@media only screen and (min-width: 768px) {
+    .section__title {
+        font-size: 30px;
+    }
+}
 @media only screen and (min-width: 1200px) {
     .section__title {
         font-size: 35px;
@@ -663,8 +668,23 @@ section {
 .section__subtitle {
     padding-top: 30px;
     text-align: center;
-    font-size: 26px;
+    font-size: 17px;
     font-weight: 300;
+}
+@media only screen and (min-width: 360px) {
+    .section__subtitle {
+        font-size: 19px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .section__subtitle {
+        font-size: 23px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .section__subtitle {
+        font-size: 26px;
+    }
 }
 ::-webkit-input-placeholder {
     font-size: 16px;
@@ -1077,7 +1097,25 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     position: relative;
+}
+@media only screen and (min-width: 1200px) {
+    .pots__item-img {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -webkit-box-align: inherit;
+        -ms-flex-align: inherit;
+        align-items: inherit;
+    }
 }
 .pots__title {
     padding: 30px 0;
@@ -1102,8 +1140,16 @@ section {
     max-width: 196px;
 }
 .pots__materials {
-    position: absolute;
-    right: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+@media only screen and (min-width: 1200px) {
+    .pots__materials {
+        display: inline;
+        position: absolute;
+        right: 2%;
+    }
 }
 .pots__btn {
     display: block;
@@ -1236,7 +1282,6 @@ section {
 .arguments__item:nth-of-type(2) {
     top: 215px;
     left: 90px;
-    z-index: 10;
 }
 .arguments__item:nth-of-type(2) .arguments__titles {
     position: absolute;
