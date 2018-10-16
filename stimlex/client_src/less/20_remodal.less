@@ -72,15 +72,16 @@
 }
 
 .remodal-close { 
-    top: 12px !important;
-    right: 15px !important;
-    color: #fff !important;
+    top: 5px !important;
+    right: 35px !important;
+    color: #000 !important;
     font-weight: 900;
+    z-index: 20;
     @media @mobile {
-     width: 10px !important;
-     height: 16px !important;
- }
- @media @tablet { 
+       width: 10px !important;
+       height: 16px !important;
+   }
+   @media @tablet { 
     width: 35px !important;
     height: 30px !important;
 }
@@ -146,10 +147,13 @@ textarea:focus:required:invalid {
 
 .formBox {
     position: relative;
-    padding: 30px 15px;
     max-width: 400px;
-    margin: 20px auto;
-    text-align: center;
+
+    .form:before {
+        display: none;
+    }
+
+
 }
 
 
