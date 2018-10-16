@@ -1312,12 +1312,12 @@ section {
 }
 .arguments {
     margin-top: -0.25%;
-    background: url(../images/argument__back.jpg) no-repeat left / cover;
+    background: url(../images/argument__back.jpg) no-repeat center / cover;
+    overflow: hidden;
 }
 .arguments__box {
     position: relative;
     margin-bottom: -160px;
-    overflow: hidden;
 }
 @media only screen and (min-width: 1200px) {
     .arguments__box {
@@ -1506,6 +1506,7 @@ section {
 }
 @media only screen and (min-width: 992px) {
     .arguments__border {
+        position: absolute;
         display: block;
     }
 }

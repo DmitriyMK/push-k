@@ -22,12 +22,13 @@
 
 .arguments {
 	margin-top: -0.25%;
-	background: url(../images/argument__back.jpg)no-repeat left/cover;
+	background: url(../images/argument__back.jpg)no-repeat center/cover;
+	overflow: hidden;
 	
 	&__box {
 		position: relative;
 		margin-bottom: -160px;
-		overflow: hidden;
+		
 		@media @mobile-xl {
 
 		}
@@ -453,6 +454,7 @@
 	&__border {
 		display: none;
 		@media @desktop {
+			position: absolute;
 			display: block;
 		}
 	}
