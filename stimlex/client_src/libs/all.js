@@ -64,7 +64,7 @@ $(document).ready(function() {
 
   $('.review__slider').slick({
     slidesToShow: 2,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     lazyLoad: 'ondemand',
     arrows: true,
     dots: true,
