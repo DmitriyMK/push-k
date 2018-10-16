@@ -1480,8 +1480,14 @@ section {
 .arguments__decor {
     position: absolute;
     top: 230px;
-    left: 60px;
+    left: 0;
     z-index: 10;
+}
+@media only screen and (min-width: 992px) {
+    .arguments__decor {
+        top: 230px;
+        left: 60px;
+    }
 }
 @media only screen and (min-width: 1200px) {
     .arguments__decor {
@@ -1493,6 +1499,14 @@ section {
     .arguments__decor {
         top: 16px;
         left: 175px;
+    }
+}
+.arguments__border {
+    display: none;
+}
+@media only screen and (min-width: 992px) {
+    .arguments__border {
+        display: block;
     }
 }
 .consult {

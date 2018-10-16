@@ -426,7 +426,7 @@
 	&__decor {
 		position: absolute;
 		top: 230px;
-		left: 60px;
+		left: 0;
 		z-index: 10;
 		@media @mobile-xl {
 
@@ -438,7 +438,8 @@
 
 		}
 		@media @desktop {
-
+			top: 230px;
+			left: 60px;
 		}
 		@media @desktop-xl {
 			top: 5px;
@@ -447,6 +448,12 @@
 		@media @desktop-xl-2 {
 			top: 16px;
 			left: 175px;
+		}
+	}
+	&__border {
+		display: none;
+		@media @desktop {
+			display: block;
 		}
 	}
 }
