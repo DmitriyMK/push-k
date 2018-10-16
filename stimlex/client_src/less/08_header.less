@@ -49,10 +49,10 @@
 	}
 	@media @tablet {
 		height: 700px;
-		overflow: visible;
 	}
 	@media @desktop {
 		height: 650px;
+		overflow: visible;
 	}
 	@media @desktop-xl-2 {
 		height: 100vh;
@@ -189,13 +189,18 @@
 			@media @tablet {
 				content: '';
 				position: absolute;
-				top: -70px;
-				left: -90px;
-				width: 958px;
+				top: -50px;
+				left: -60px;
+				width: 700px;
 				height: 388px;
 				background: url(../images/header__text.png)no-repeat;
 				background-size: contain; 
 				z-index: -1;
+			}
+			@media @desktop {
+				top: -70px;
+				left: -90px;
+				width: 958px;
 			}
 			@media @desktop {
 				top: -60px;
