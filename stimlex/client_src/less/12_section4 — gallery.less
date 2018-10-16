@@ -25,8 +25,6 @@
 	&__list {
 		padding-top: 30px;
 		display: flex;
-		height: 875px;
-		overflow: hidden;
 	}
 
 	.row {
@@ -34,7 +32,15 @@
 	}
 
 	&__item {
-		overflow: hidden;
+		position: relative;
+		&:hover {
+			.gallery__title {
+				opacity: 0;
+			}
+		}
+	}
+
+	&__img {
 		position: relative;
 		&:before {
 			content: '';
@@ -48,8 +54,7 @@
 		&:after {
 			content: '';
 			position: absolute;
-			width: 95%;
-			height: 95%;
+			
 			border: 1px solid #fff;
 			top: 50%;
 			left: 50%;
@@ -65,39 +70,49 @@
 				height: 100%;
 				border: 1px solid transparent;
 			}
-			.gallery__title {
-				opacity: 0;
+		}
+
+		&-row {
+			&:after {
+				width: 95%;
+				height: 97%;
+			}
+		}
+		&-row1 {
+			&:after {
+				width: 95%;
+				height: 95%;
+			}
+		}
+		&-row2 {
+			&:after {
+				width: 97%;
+				height: 95%;
+			}
+		}
+		&-row3 {
+			&:after {
+				width: 90%;
+				height: 95%;
 			}
 		}
 	}
 
-	&__item1 {
-		
+	.big {
+		display: block;
+		height: 850px;
+		object-fit: cover;
+		object-position: center;
 	}
-	&__item2 {
-		
+	.small {
+		display: block;
+		height: 425px;
+		object-fit: cover;
+		object-position: 55%;
 	}
-	&__item3 {
-		
-	}
-	&__item4 {
-		
-	}
-	&__item5 {
-		
-	}
+
 	&__link {
 		display: block;
-	}
-	
-	.bigHeight {
-		max-height: 850px;
-		overflow: hidden;
-		
-	}
-	.smallHeight {
-		max-height: 425px;
-		overflow: hidden;
 	}
 
 	&__title {
@@ -109,5 +124,6 @@
 		font-weight: 300;
 		color: #fff;
 		transition: all .3s linear;
+		z-index: 10;
 	}
 }
