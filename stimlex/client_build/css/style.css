@@ -1211,10 +1211,10 @@ section {
     height: 100%;
     border: 1px solid transparent;
 }
-.gallery__imgHeight:after {
+.gallery__img-height:after {
     height: 830px;
 }
-.gallery__imgWidth:after {
+.gallery__img-width:after {
     width: 97%;
 }
 .gallery .big {
