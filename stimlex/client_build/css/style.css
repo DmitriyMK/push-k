@@ -896,8 +896,32 @@ section {
     padding-bottom: 10px;
     font-size: 21px;
     font-weight: 700;
-    text-shadow: 0 0 25px #000;
     z-index: 10;
+}
+@media only screen and (min-width: 768px) {
+    .header__title:before {
+        content: '';
+        position: absolute;
+        top: -70px;
+        left: -90px;
+        width: 958px;
+        height: 388px;
+        background: url(../images/header__text.png) no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .header__title:before {
+        top: -60px;
+        left: -90px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .header__title:before {
+        top: -40px;
+        left: -70px;
+    }
 }
 .header__title br {
     display: none;
@@ -940,7 +964,6 @@ section {
     position: relative;
     font-size: 20px;
     font-weight: 500;
-    text-shadow: 0 0 25px #000;
     z-index: 10;
 }
 @media only screen and (min-width: 360px) {
@@ -969,6 +992,7 @@ section {
     top: 220px;
     left: -15px;
     width: 150px;
+    z-index: 10;
 }
 @media only screen and (min-width: 360px) {
     .header__decorLeft {
@@ -1028,6 +1052,7 @@ section {
     .header__decorRight {
         top: 80px;
         width: 280px;
+        z-index: 10;
     }
 }
 @media only screen and (min-width: 992px) {
