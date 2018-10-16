@@ -1197,6 +1197,8 @@ section {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+    width: 95%;
+    height: 400px;
     -webkit-transition: all 0.3s linear;
          -o-transition: all 0.3s linear;
             transition: all 0.3s linear;
@@ -1209,21 +1211,11 @@ section {
     height: 100%;
     border: 1px solid transparent;
 }
-.gallery__img-row:after {
-    width: 95%;
-    height: 97%;
+.gallery__imgHeight:after {
+    height: 830px;
 }
-.gallery__img-row1:after {
-    width: 95%;
-    height: 95%;
-}
-.gallery__img-row2:after {
+.gallery__imgWidth:after {
     width: 97%;
-    height: 95%;
-}
-.gallery__img-row3:after {
-    width: 90%;
-    height: 95%;
 }
 .gallery .big {
     display: block;
