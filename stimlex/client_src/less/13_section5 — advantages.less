@@ -22,25 +22,55 @@
 
 .advantages {
 	position: relative;
-	background: url(../images/advantages__back.jpg)no-repeat center/cover;
+	background: url(../images/form__back-full-mob.jpg);
 	box-shadow: 0px 17px 17px 0px rgba(0, 0, 0, 0.34);
+
+	@media @tablet {
+		background: url(../images/advantages__back.jpg)no-repeat center/cover;
+	}
 
 	&__box {
 		position: relative;
 	}
 	&__list {
-		padding-left: 60px;
-		margin-top: 60px;
+		margin-top: 30px;
+		@media @tablet {
+			margin-top: 60px;
+		}
+		@media @desktop-xl {
+			padding-left: 60px;
+		}
 	}
 
 	&__item {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		margin-bottom: 10px;
-		height: 122px;
+		text-align: center;
+		margin-bottom: 20px;
+
+		br {
+			display: none;
+		}
+
+		@media @tablet {
+			flex-direction: row;
+			align-items: inherit;
+			height: 122px;
+			text-align: inherit;
+			margin-bottom: 10px;
+			br {
+				display: inline;
+			}
+		}
 	}
 	&__img {
 		width: 120px;
+		margin: auto;
+		margin-bottom: 10px;
+		@media @tablet {
+			margin: 0;
+		}
 	}
 	&__title {
 		padding-bottom: 10px;
@@ -52,13 +82,45 @@
 	}
 
 	&__decor-bg {
-		position: absolute;
-		top: -120px;
-		right: 15%;
+		display: none;
+		@media @tablet {
+			display: block;
+			position: absolute;
+			top: -50px;
+			right: 0;
+			width: 250px;
+		}
+		@media @desktop {
+			right: 18%;
+			width: 270px;
+		}
+		@media @desktop-xl {
+			top: -120px;
+			width: 375px;
+		}
+		@media @desktop-xl-2 {
+			right: 15%;
+		}
 	}
 	&__decor-sm {
-		position: absolute;
-		top: 70px;
-		right: -8%;
+		display: none;
+		@media @tablet {
+			display: block;
+			position: absolute;
+			top: 310px;
+			right: 0;
+			width: 150px;
+		}
+		@media @desktop {
+			top: 70px;
+			width: 180px;
+		}
+		@media @desktop-xl {
+			width: 233px;
+			top: 70px;
+		}
+		@media @desktop-xl-2 {
+			right: -8%;
+		}
 	}
 }
