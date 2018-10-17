@@ -36,11 +36,21 @@
 	&__box {
 		position: absolute;
 		padding-top: 35px;
+		padding-left: 35px;
 		top: -400px;
-		right: -50px;
+		right: 50px;
 		width: 551px;
 		z-index: 20;
 		font-weight: 700;
+		@media @tablet {
+
+		}
+		@media @desktop {
+
+		}
+		@media @desktop-xl {
+			padding-left: 0;
+		}
 	}
 	&__title {
 		padding-bottom: 10px;
@@ -65,8 +75,18 @@
 	&__decor {
 		position: absolute;
 		top: -195px;
-		left: -80px;
+		right: 40px;
 		z-index: -1;
+
+		@media @tablet {
+
+		}
+		@media @desktop {
+
+		}
+		@media @desktop-xl {
+			right: 80px;
+		}
 	}
 	.ask {
 		padding-bottom: 10px;
@@ -75,9 +95,27 @@
 	.text {
 		padding-left: 25px;
 		font-size: 20px;
+		@media @tablet {
+
+		}
+		@media @desktop {
+
+		}
+		@media @desktop-xl {
+
+		}
 	}
 	.btn {
 		margin-top: 20px;
 		margin-left: 60px;
+		@media @tablet {
+
+		}
+		@media @desktop {
+
+		}
+		@media @desktop-xl {
+			margin-left: 60px;
+		}
 	}
 }

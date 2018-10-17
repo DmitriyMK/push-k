@@ -2542,6 +2542,7 @@ section {
 .review {
     position: relative;
     clear: both;
+    overflow: hidden;
 }
 .review__slider {
     margin: auto;
@@ -2651,11 +2652,17 @@ section {
 .contacts__box {
     position: absolute;
     padding-top: 35px;
+    padding-left: 35px;
     top: -400px;
-    right: -50px;
+    right: 50px;
     width: 551px;
     z-index: 20;
     font-weight: 700;
+}
+@media only screen and (min-width: 1200px) {
+    .contacts__box {
+        padding-left: 0;
+    }
 }
 .contacts__title {
     padding-bottom: 10px;
@@ -2683,8 +2690,13 @@ section {
 .contacts__decor {
     position: absolute;
     top: -195px;
-    left: -80px;
+    right: 40px;
     z-index: -1;
+}
+@media only screen and (min-width: 1200px) {
+    .contacts__decor {
+        right: 80px;
+    }
 }
 .contacts .ask {
     padding-bottom: 10px;
@@ -2697,6 +2709,11 @@ section {
 .contacts .btn {
     margin-top: 20px;
     margin-left: 60px;
+}
+@media only screen and (min-width: 1200px) {
+    .contacts .btn {
+        margin-left: 60px;
+    }
 }
 .footer {
     padding: 20px 0;
