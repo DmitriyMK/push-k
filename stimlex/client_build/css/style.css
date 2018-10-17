@@ -2356,7 +2356,6 @@ section {
     background: url(../images/form__back.png) no-repeat top / cover;
     -webkit-box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.34);
             box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.34);
-    clear: both;
 }
 .cooperate ul li {
     list-style-type: inherit;
@@ -2391,8 +2390,8 @@ section {
     .cooperate__content {
         padding-top: 30px;
         padding-right: 150px;
+        padding-bottom: 0;
         float: right;
-        clear: both;
         text-align: inherit;
     }
 }
@@ -2542,11 +2541,42 @@ section {
 }
 .review {
     position: relative;
+    clear: both;
 }
 .review__slider {
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-top: 60px;
+    margin: auto;
+}
+@media only screen and (min-width: 768px) {
+    .review__slider {
+        padding-top: 60px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .review__slider {
+        max-width: 800px;
+        margin: auto;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .review__slider {
+        max-width: inherit;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .review__slider {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}
+.review__img {
+    max-width: 222px;
+}
+@media only screen and (min-width: 768px) {
+    .review__img {
+        max-width: inherit;
+    }
 }
 .review__item {
     margin: 25px 15px;
@@ -2557,17 +2587,40 @@ section {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
 }
-.review__item:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-box-shadow: -2px 10px 20px 0 rgba(0, 0, 0, 0.5);
-            box-shadow: -2px 10px 20px 0 rgba(0, 0, 0, 0.5);
+@media only screen and (min-width: 768px) {
+    .review__item {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .review__item:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-box-shadow: -2px 10px 20px 0 rgba(0, 0, 0, 0.5);
+                box-shadow: -2px 10px 20px 0 rgba(0, 0, 0, 0.5);
+    }
 }
 .review__info {
-    padding-left: 30px;
+    position: relative;
+    padding-top: 20px;
+    text-align: center;
+    z-index: 10;
+}
+@media only screen and (min-width: 768px) {
+    .review__info {
+        padding-left: 30px;
+        text-align: inherit;
+    }
 }
 .review__name {
     font-size: 22px;
@@ -2580,6 +2633,8 @@ section {
 }
 .review__text {
     font-weight: 500;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 .contacts {
     padding-top: 80px;
@@ -2861,18 +2916,51 @@ section {
     z-index: 10;
 }
 .slick-prev {
-    top: 30px;
-    right: 13%;
+    top: 140px;
+    left: 10px;
     width: 24px;
     height: 45px;
     background: url('../images/icons/spritebox-sprite.png') -10px -125px;
 }
+@media only screen and (min-width: 480px) {
+    .slick-prev {
+        left: 40vh;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .slick-prev {
+        top: 30px;
+        left: inherit;
+        right: 75px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .slick-prev {
+        right: 13%;
+    }
+}
 .slick-next {
-    top: 30px;
-    right: 10%;
+    top: 140px;
+    right: 10px;
     width: 24px;
     height: 45px;
     background: url('../images/icons/spritebox-sprite.png') -341px -39px;
+}
+@media only screen and (min-width: 480px) {
+    .slick-next {
+        right: 40vh;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .slick-next {
+        top: 30px;
+        right: 25px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .slick-next {
+        right: 9%;
+    }
 }
 .slick-prev:before, .slick-next:before {
     width: 0;
@@ -2890,8 +2978,13 @@ section {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
-    bottom: -80px;
+    bottom: -20px;
     z-index: 20;
+}
+@media only screen and (min-width: 768px) {
+    .slick-dots {
+        bottom: -80px;
+    }
 }
 .slick-dots li {
     margin: 7px;

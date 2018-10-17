@@ -9,15 +9,36 @@
 
 
 .slick-prev {
-	top: 30px;
-	right: 13%;
+	top: 140px;
+	left: 10px;
 	.ico_arr-left;
+	@media @mobile-land {
+		left: 40vh;
+	}
+	@media @tablet {
+		top: 30px;
+		left: inherit;
+		right: 75px;
+	}
+	@media @desktop {
+		right: 13%;
+	}
 }
 
 .slick-next {
-	top: 30px;
-	right: 10%; 
+	top: 140px;
+	right: 10px; 
 	.ico_arr-right;
+	@media @mobile-land {
+		right: 40vh; 
+	}
+	@media @tablet {
+		top: 30px;
+		right: 25px; 
+	}
+	@media @desktop {
+		right: 9%;
+	}
 }
 
 
@@ -30,7 +51,7 @@
 .slick-prev:focus,
 .slick-next:focus
 {
-    opacity: 1;
+	opacity: 1;
 }
 
 .slick-disabled {
@@ -43,8 +64,12 @@
 	display: inline-block!important;
 	left: 50%;
 	transform: translateX(-50%);
-	bottom: -80px;
+	bottom: -20px;
 	z-index: 20;
+
+	@media @tablet {
+		bottom: -80px;
+	}
 
 	li {
 		margin: 7px;

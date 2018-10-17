@@ -73,11 +73,11 @@ $(document).ready(function() {
     responsive: [
 
     {
-      breakpoint: 767,
+      breakpoint: 1200,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-
+        fade: true,
         arrows: true,
       }
     },
