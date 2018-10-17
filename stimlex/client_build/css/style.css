@@ -1029,15 +1029,17 @@ section {
 }
 @media only screen and (min-width: 768px) {
     .header__decorRight {
-        top: 80px;
+        top: 45px;
         width: 280px;
         z-index: 10;
+        right: 0;
     }
 }
 @media only screen and (min-width: 992px) {
     .header__decorRight {
         top: 0;
         width: 300px;
+        right: 10px;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -2366,38 +2368,71 @@ section {
 .cooperate__box {
     position: relative;
 }
-.cooperate__box:before {
-    content: '';
-    position: absolute;
-    left: 52%;
-    top: 50%;
-    -webkit-transform: translate(-50%, 20%);
-        -ms-transform: translate(-50%, 20%);
-            transform: translate(-50%, 20%);
-    width: 1763px;
-    height: 374px;
-    background: url(../images/frame.png) no-repeat;
-    background-size: contain;
+@media only screen and (min-width: 1920px) {
+    .cooperate__box:before {
+        content: '';
+        position: absolute;
+        left: 52%;
+        top: 50%;
+        -webkit-transform: translate(-50%, 20%);
+            -ms-transform: translate(-50%, 20%);
+                transform: translate(-50%, 20%);
+        width: 1763px;
+        height: 374px;
+        background: url(../images/frame.png) no-repeat;
+        background-size: contain;
+    }
 }
 .cooperate__content {
-    padding-top: 30px;
-    padding-right: 150px;
-    float: right;
-    clear: both;
-    z-index: 10;
+    padding: 80px 0 90px 0;
+    text-align: center;
+}
+@media only screen and (min-width: 768px) {
+    .cooperate__content {
+        padding-top: 30px;
+        padding-right: 150px;
+        float: right;
+        clear: both;
+        text-align: inherit;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .cooperate__content {
+        padding-right: 240px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .cooperate__content {
+        padding-right: 150px;
+    }
 }
 .cooperate__accent {
     position: relative;
     display: block;
-    padding-top: 30px;
+    padding-top: 25px;
     padding-bottom: 10px;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+    .cooperate__accent {
+        padding-top: 30px;
+        font-size: 30px;
+    }
 }
 .cooperate__list {
     position: relative;
-    padding-top: 10px;
-    padding-bottom: 27px;
+}
+@media only screen and (min-width: 768px) {
+    .cooperate__list {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .cooperate__list {
+        padding-bottom: 27px;
+    }
 }
 .cooperate__item {
     padding-bottom: 5px;
@@ -2405,28 +2440,105 @@ section {
 }
 .cooperate__text {
     position: relative;
-    padding-left: 15px;
-    font-size: 20px;
+    font-size: 18px;
+    z-index: 20;
+}
+@media only screen and (min-width: 768px) {
+    .cooperate__text {
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .cooperate__text {
+        padding-left: 15px;
+    }
 }
 .cooperate .btn {
     position: relative;
-    margin-top: 30px;
-    margin-left: 25px;
+    margin-top: 15px;
+}
+@media only screen and (min-width: 768px) {
+    .cooperate .btn {
+        margin-top: 30px;
+        margin-left: 25px;
+    }
 }
 .cooperate__decor1 {
     position: absolute;
     top: -60px;
-    left: -20px;
+    left: 0;
+    width: 200px;
+}
+@media only screen and (min-width: 768px) {
+    .cooperate__decor1 {
+        top: 150px;
+        left: -20px;
+        width: 250px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .cooperate__decor1 {
+        top: 40px;
+        left: 0;
+        width: 425px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .cooperate__decor1 {
+        width: 550px;
+        top: -60px;
+        left: 0;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .cooperate__decor1 {
+        width: 606px;
+        left: -20px;
+    }
 }
 .cooperate__decor2 {
-    position: absolute;
-    top: 350px;
-    left: 40px;
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+    .cooperate__decor2 {
+        display: block;
+        position: absolute;
+        top: 370px;
+        left: 0;
+        width: 170px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .cooperate__decor2 {
+        top: 350px;
+        left: 40px;
+        width: 205px;
+    }
 }
 .cooperate__decor3 {
     position: absolute;
-    bottom: 60px;
+    bottom: -8px;
     right: 0;
+    width: 140px;
+}
+@media only screen and (min-width: 768px) {
+    .cooperate__decor3 {
+        bottom: 60px;
+        width: 220px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .cooperate__decor3 {
+        width: 299px;
+    }
+}
+.cooperate br {
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+    .cooperate br {
+        display: inline;
+    }
 }
 .review {
     position: relative;
