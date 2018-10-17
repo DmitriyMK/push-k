@@ -2007,7 +2007,7 @@ section {
     border: 1px solid transparent;
 }
 .gallery__img img {
-    width: 100%;
+    width: 100vw;
     height: 300px;
 }
 @media only screen and (min-width: 768px) {
