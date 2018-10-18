@@ -119,26 +119,12 @@
 			}
 		}
 		.btn {
-			position: absolute;
-			top: 320px;
-			left: 50%;
-			transform: translateX(-50%);
-			z-index: 10;
-
-			width: 200px;
-			padding-left: 0;
-			padding-right: 0;
-			@media @mobile-xl {
-				top: 365px;
-			}
-			@media @mobile-land {
-				top: 285px;
-			}
+			display: none;
 			@media @tablet {
-				position: inherit;
-				top: inherit;
-				left: inherit;
-				transform: inherit;
+				display: inline-block;
+				width: 200px;
+				padding-left: 0;
+				padding-right: 0;
 			}
 			@media @desktop {
 				width: inherit;
@@ -259,6 +245,27 @@
 		}
 		@media @desktop-xl-2 {
 			font-size: 36px;
+		}
+	}
+
+	.btn-white-mob {
+		position: relative;
+		display: block;
+		padding: 12px 0;
+		margin: 25px auto;
+		width: 230px;
+		color: #162f40;
+		background: #fff;
+		font-size: 18px;
+		font-weight: 500;
+		transition: all .3s linear;
+		z-index: 20;
+		&:hover{
+			background: darken(#fff, 15%);
+		}
+
+		@media @tablet {
+			display: none;
 		}
 	}
 
