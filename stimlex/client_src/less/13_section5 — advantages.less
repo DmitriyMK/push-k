@@ -79,6 +79,12 @@
 	}
 	&__text {
 		font-weight: 500;
+		@media @mobile-land {
+			max-width: 400px;
+		}
+		@media @tablet {
+			max-width: inherit;
+		}
 	}
 
 	&__decor-bg {

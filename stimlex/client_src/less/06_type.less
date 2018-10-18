@@ -123,11 +123,18 @@ section {
     font-size: 17px;
     font-weight: 300;
 
+    br {
+        display: none;
+    }
+
     @media @mobile-xl {
         font-size: 19px;
     }
     @media @tablet {
         font-size: 23px;
+        br {
+            display: inline;
+        }
     }
     @media @desktop {
         font-size: 26px;
