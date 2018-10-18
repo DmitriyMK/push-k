@@ -2,8 +2,6 @@ $(document).ready(function() {
 
   if (document.documentElement.clientWidth > 1200) {
 
-    // new WOW().init();
-
     $("body").niceScroll({
       scrollspeed: 60,
       mousescrollstep: 60,

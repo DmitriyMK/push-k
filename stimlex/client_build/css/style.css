@@ -678,7 +678,7 @@ section {
 }
 .header {
     position: relative;
-    background: url(../images/header__back.jpg) no-repeat center / cover;
+    background: url(../images/header__back-mob.jpg) no-repeat center / cover;
     height: 570px;
     overflow: hidden;
 }
@@ -710,6 +710,7 @@ section {
 @media only screen and (min-width: 768px) {
     .header {
         height: 700px;
+        background: url(../images/header__back.jpg) no-repeat center / cover;
     }
 }
 @media only screen and (min-width: 992px) {
@@ -2993,6 +2994,8 @@ section {
     .remodal-close {
         width: 10px !important;
         height: 16px !important;
+        top: 8px !important;
+        right: 20px !important;
     }
 }
 @media only screen and (min-width: 768px) {
