@@ -2374,9 +2374,14 @@ section {
     position: relative;
     margin-top: -10px;
     min-height: 495px;
-    background: url(../images/form__back.png) no-repeat top / cover;
+    background: url(../images/form__back-mob.png) no-repeat top / cover;
     -webkit-box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.34);
             box-shadow: 0 17px 17px 0 rgba(0, 0, 0, 0.34);
+}
+@media only screen and (min-width: 768px) {
+    .cooperate {
+        background: url(../images/form__back.png) no-repeat top / cover;
+    }
 }
 .cooperate ul li {
     list-style-type: inherit;
