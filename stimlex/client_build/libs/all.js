@@ -1,4 +1,4 @@
-var language='ru';
+var language = 'ru';
 $(document).ready(function() {
 
   if (document.documentElement.clientWidth > 1200) {
@@ -39,7 +39,7 @@ $(document).ready(function() {
 
 
   $('.pots__materials button').click(function() {
-
+    console.log('42');
     if (!$(this).parents('.pots__btn').hasClass('pots__btn-active')) {
       $(this).parents('.pots__materials').find('.pots__btn').removeClass('pots__btn-active');
       $(this).addClass('pots__btn-active');
@@ -48,7 +48,8 @@ $(document).ready(function() {
       $('#' + $(this).data('model')).addClass('pots__link-active');
 
       $(this).parents('.pots__item').find('.pricePots').html($(this).data('price-' + language));
-      //$(this).parents('.pots__item').find('.pricePots').html($(this).data('price'));
+      console.log(language);
+      // $(this).parents('.pots__item').find('.pricePots').html($(this).data('price'));
 
       $('.form input[name="whatform2"]').val($(this).data('material'));
     }
