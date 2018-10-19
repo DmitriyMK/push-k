@@ -36,9 +36,11 @@
 	<script defer src="./libs/masked-input.js"></script>
 	<script defer src="./libs/cssrelpreload.js"></script>
 	<!-- END DEFER SCRIPT -->
-	
+
 </head>
 <body>
+	<p id="user-city" class="maps" style="position: absolute; z-index: -10;"></p>
+
 	<header class="header" id="header">	
 		<div class="header__top">
 			<div class="container">
@@ -54,7 +56,8 @@
 					</div>
 
 					<div class="header__top-right">
-						<a class="header__top-tel" href="tel:+380970800493" title="+38(097) 080-04-93">+38(097) 080-04-93</a>
+						<a class="header__top-tel price ua" href="tel:+380970800493">+38(097) 080-04-93</a>
+						<a class="header__top-tel price ru" href="tel:+79067122727">+7 (906) 712-27-27</a>
 						<button class="btn btn-white" data-remodal-target="callback">Заказать звонок</button>
 					</div>
 				</div>
@@ -71,1154 +74,1177 @@
 
 				<picture class="header__decorRight">
 					<source media="(max-width: 767px)" srcset="./images/vase-big-mob.png">
-					<source media="(min-width: 768px)" srcset="./images/vase-big.png">
-					<img src="./images/vase-big.png" alt role="presentation">
-				</picture>
-			</div>
-		</div>
-
-		<div class="header__end">
-			<a class="scrolling__link arr_anim" href="#pots"><div class="ico_arr-down"></div></a>
-		</div>
-	</header>
-
-
-	<section class="pots" id="pots"> 
-		<div class="container">
-			<h2 class="section__title">Цветочные вазоны</h2>
-			<p class="pots__subtitle section__subtitle">
-				Идеальное решение для благоустройства городских улиц, <br> мест отдыха, парков, частных и загородных домов, отелей.
-			</p>
-		</div>
-
-		<div class="wrapper">
-			<ul class="pots__list">
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot1.jpg" data-fancybox="pots1Pokostovskiy" id="plato1Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/pot/pot1.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots1Marble" id="plato1Marble">
-								<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots1Granite" id="plato1Granite">
-								<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active pokostovskiy" title="Покостовский" data-model="plato1Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato1Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato1Granite" data-price="500"></button>
-						</div>
+						<source media="(min-width: 768px)" srcset="./images/vase-big.png">
+							<img src="./images/vase-big.png" alt role="presentation">
+						</picture>
 					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
-				</li>
-
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots2Pokostovskiy" id="plato2Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots2Marble" id="plato2Marble">
-								<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot4.jpg" data-fancybox="pots2Granite" id="plato2Granite">
-								<img class="img-responsive" src="./images/catalog/pot/pot4.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato2Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato2Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato2Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
-				</li>
-
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots3Pokostovskiy" id="plato3Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots3Marble" id="plato3Marble">
-								<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots3Granite" id="plato3Granite">
-								<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato3Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato3Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato3Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
-				</li>
-
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot4.jpg" data-fancybox="pots4Pokostovskiy" id="plato4Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/pot/pot4.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots4Marble" id="plato4Marble">
-								<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots4Granite" id="plato4Granite">
-								<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato4Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato4Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato4Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
-				</li>
-
-
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot5.jpg" data-fancybox="pots5Pokostovskiy" id="plato5Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/pot/pot5.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots5Marble" id="plato5Marble">
-								<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots5Granite" id="plato5Granite">
-								<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato5Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato5Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato5Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
-				</li>
-
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot6.jpg" data-fancybox="pots6Pokostovskiy" id="plato6Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/pot/pot6.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots6Marble" id="plato6Marble">
-								<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot8.jpg" data-fancybox="pots6Granite" id="plato6Granite">
-								<img class="img-responsive" src="./images/catalog/pot/pot8.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato6Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato6Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato6Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
-				</li>
-
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot7.jpg" data-fancybox="pots7Pokostovskiy" id="plato7Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/pot/pot7.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots7Marble" id="plato7Marble">
-								<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots7Granite" id="plato7Granite">
-								<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato7Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato7Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato7Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
-				</li>
-
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot8.jpg" data-fancybox="pots8Pokostovskiy" id="plato8Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/pot/pot8.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots8Marble" id="plato8Marble">
-								<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots8Granite" id="plato8Granite">
-								<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato8Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato8Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato8Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
-				</li>
-			</ul>
-		</div>
-	</section>
-
-
-	<section class="urns" id="urns"> 
-		<div class="container">
-			<h2 class="section__title">Урны</h2>
-			<p class="pots__subtitle section__subtitle">
-				Уличные бетонные урны отличаются высокой прочностью,<br> неприхотливостью в уходе и прекрасно смотрятся в любом ландшафте.
-			</p>
-		</div>
-
-		<div class="wrapper">
-			<ul class="pots__list">
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/urn/big/urn1.jpg" data-fancybox="urn1Pokostovskiy" id="urn1Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/urn/urn1.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/urn/urn2.jpg" data-fancybox="urn1Marble" id="urn1Marble">
-								<img class="img-responsive" src="./images/catalog/urn/urn2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/urn/big/urn3.jpg" data-fancybox="urn1Granite" id="urn1Granite">
-								<img class="img-responsive" src="./images/catalog/urn/urn3.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="urn1Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="urn1Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="urn1Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderUrn">Заказать</button>
-				</li>
-
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/urn/big/urn2.jpg" data-fancybox="urn2Pokostovskiy" id="urn2Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/urn/urn2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/urn/urn2.jpg" data-fancybox="urn2Marble" id="urn2Marble">
-								<img class="img-responsive" src="./images/catalog/urn/urn2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/urn/big/urn3.jpg" data-fancybox="urn2Granite" id="urn2Granite">
-								<img class="img-responsive" src="./images/catalog/urn/urn3.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="urn2Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="urn2Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="urn2Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderUrn">Заказать</button>
-				</li>
-
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/urn/big/urn3.jpg" data-fancybox="urn3Pokostovskiy" id="urn3Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/urn/urn3.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/urn/urn2.jpg" data-fancybox="urn3Marble" id="urn3Marble">
-								<img class="img-responsive" src="./images/catalog/urn/urn2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/urn/big/urn1.jpg" data-fancybox="urn3Granite" id="urn3Granite">
-								<img class="img-responsive" src="./images/catalog/urn/urn1.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="urn3Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="urn3Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="urn3Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderUrn">Заказать</button>
-				</li>
-
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/urn/big/urn4.jpg" data-fancybox="urn4Pokostovskiy" id="urn4Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/urn/urn4.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/urn/urn2.jpg" data-fancybox="urn4Marble" id="urn4Marble">
-								<img class="img-responsive" src="./images/catalog/urn/urn2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/urn/big/urn1.jpg" data-fancybox="urn4Granite" id="urn4Granite">
-								<img class="img-responsive" src="./images/catalog/urn/urn1.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="urn4Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="urn4Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="urn4Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderUrn">Заказать</button>
-				</li>
-			</ul>
-		</div>
-	</section>
-
-
-	<section class="fences" id="fences"> 
-		<div class="container">
-			<h2 class="section__title">Парковочные ограждения</h2>
-		</div>
-
-		<div class="wrapper">
-			<ul class="pots__list">
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/fences/big/fences1.jpg" data-fancybox="fences1Pokostovskiy" id="fences1Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/fences/fences1.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/fences/big/fences2.jpg" data-fancybox="fences1Marble" id="fences1Marble">
-								<img class="img-responsive" src="./images/catalog/fences/fences2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/fences/big/fences3.jpg" data-fancybox="fences1Granite" id="fences1Granite">
-								<img class="img-responsive" src="./images/catalog/fences/fences3.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="fences1Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="fences1Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="fences1Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderFence">Заказать</button>
-				</li>
-
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/fences/big/fences2.jpg" data-fancybox="fences2Pokostovskiy" id="fences2Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/fences/fences2.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/fences/big/fences1.jpg" data-fancybox="fences2Marble" id="fences2Marble">
-								<img class="img-responsive" src="./images/catalog/fences/fences1.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/fences/big/fences3.jpg" data-fancybox="fences2Granite" id="fences2Granite">
-								<img class="img-responsive" src="./images/catalog/fences/fences3.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="fences2Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="fences2Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="fences2Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderFence">Заказать</button>
-				</li>
-
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/fences/big/fences3.jpg" data-fancybox="fences3Pokostovskiy" id="fences3Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/fences/fences3.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/fences/big/fences1.jpg" data-fancybox="fences3Marble" id="fences3Marble">
-								<img class="img-responsive" src="./images/catalog/fences/fences1.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/fences/big/fences2.jpg" data-fancybox="fences3Granite" id="fences3Granite">
-								<img class="img-responsive" src="./images/catalog/fences/fences2.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="fences3Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="fences3Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="fences3Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderFence">Заказать</button>
-				</li>
-
-				<li class="pots__item">
-					<h3 class="pots__title" data-model="Плато">Плато</h3>
-
-					<div class="pots__item-img">
-						<div class="pots__img">
-							<a class="pots__link pots__link-active" href="./images/catalog/fences/big/fences4.jpg" data-fancybox="fences4Pokostovskiy" id="fences4Pokostovksiy">
-								<img class="img-responsive" src="./images/catalog/fences/fences4.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/fences/big/fences1.jpg" data-fancybox="fences4Marble" id="fences4Marble">
-								<img class="img-responsive" src="./images/catalog/fences/fences1.jpg" alt="Плато" title="Плато">
-							</a>
-							<a class="pots__link" href="./images/catalog/fences/big/fences3.jpg" data-fancybox="fences4Granite" id="fences4Granite">
-								<img class="img-responsive" src="./images/catalog/fences/fences3.jpg" alt="Плато" title="Плато">
-							</a>
-						</div>
-
-						<div class="pots__materials">
-							<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="fences4Pokostovksiy" data-material="pokostovskiy" data-price="700"></button>
-							<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="fences4Marble" data-price="999"></button>
-							<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="fences4Granite" data-price="500"></button>
-						</div>
-					</div>
-
-					<div class="pots__desc">
-						<div class="pots__desc-item pots-diameter">110 см</div>
-						<div class="pots__desc-item pots-height">40 см</div>
-						<div class="pots__desc-item pots-weight">180 кг</div>
-					</div>
-
-					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
-					<button class="btn btn-black btn-pots" data-remodal-target="orderFence">Заказать</button>
-				</li>
-			</ul>
-		</div>
-	</section>
-
-
-	<section class="arguments">
-		<div class="container">
-			<h2 class="section__title">Аргументы в пользу декоративного бетона</h2>
-
-			<div class="arguments__box">
-				<ul class="arguments__list">
-					<li class="arguments__item">
-						<h3 class="arguments__titles">Устойчивость <br> к температурам</h3>
-						<p class="arguments__text">Мытый бетон сохраняет свои свойства в диапазоне +40…-40 С, не лопаясь и не деформируясь, не выгорает и не выцветает на солнце.</p>
-						<img class="arguments__border" src="./images/arguments1.png" alt role="presentation">
-					</li>
-					<li class="arguments__item">
-						<h3 class="arguments__titles">Длительный срок <br> эксплуатации</h3>
-						<p class="arguments__text">При правильном уходе служат 10 и более лет.</p>
-						<img class="arguments__border" src="./images/arguments2.png" alt role="presentation">
-					</li>
-					<li class="arguments__item">
-						<h3 class="arguments__titles">Износостойкость</h3>
-						<p class="arguments__text">Изделия из мытого бетона практически не подвергаются износу.</p>
-						<img class="arguments__border" src="./images/arguments3.png" alt role="presentation">
-					</li>
-					<li class="arguments__item">
-						<h3 class="arguments__titles">Практичность</h3>
-						<p class="arguments__text">Не требуют особого ухода, легко моется с помощью щетки и воды.</p>
-						<img class="arguments__border" src="./images/arguments4.png" alt role="presentation">
-					</li>
-					<li class="arguments__item">
-						<h3 class="arguments__titles">Эстетичность</h3>
-						<p class="arguments__text">Изделия из мытого бетона выглядят очень привлекательно и благородно, уместно смотрятся на любом ландшафтном участке.</p>
-						<img class="arguments__border" src="./images/arguments5.png" alt role="presentation">
-					</li>
-				</ul>
-
-				<img class="arguments__decor" src="./images/arguments__vase1.png" alt role="presentation">
-			</div>
-		</div>
-	</section>
-
-
-	<article class="consult">
-		<div class="container">
-			<div class="consult__box">
-
-				<div class="consult__content">
-					<h2 class="consult__title">Хотите заказать подробную <br> консультацию?</h2>
-					<p class="consult__text">Оставляйте заявку, <br> и наш менеджер ответит на <br> все Ваши вопросы.</p>
 				</div>
 
-				<div class="consult__form">
-					<form action="mail.php" method="post" class="form form-validate" name="Consultation">
-						<input type="hidden" name="project_name" value="Stimlex">
-						<input type="hidden" name="admin_email" value="dm@push-k.ua">
-						<input type="hidden" name="form_subject" value="Stimlex > Заказ на подробную консультацию">
-						<input type="hidden" name="whatform" value="Stimlex > Заказ на подробную консультацию">
-
-						<p class="form__title">Заполните форму</p>
-						<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
-						<div class="form__img ico_form_line"></div>
-
-						<div class="inputWrap">
-							<label for="formName"></label>
-							<div class="ico_user form__icon"></div>
-							<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName" required>
-						</div>
-						<div class="inputWrap">
-							<label for="formPhone"></label>
-							<div class="ico_phone form__icon"></div>
-							<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone" required>
-						</div>		
-
-						<div class="btnWrap btn-black">
-							<input type="submit" value="Отправить"> 
-						</div>
-					</form>
+				<div class="header__end">
+					<a class="scrolling__link arr_anim" href="#pots"><div class="ico_arr-down"></div></a>
 				</div>
-			</div>
-
-		</div>
-	</article>
+			</header>
 
 
-	<section class="gallery">
-		<div class="wrapper">
-			<h2 class="section__title gallery__sectionTitle">Цветочницы, урны, парковочные ограничители из <br> мытого бетона можно устанавливать возле:</h2>
+			<section class="pots" id="pots"> 
+				<div class="container">
+					<h2 class="section__title">Цветочные вазоны</h2>
+					<p class="pots__subtitle section__subtitle">
+						Идеальное решение для благоустройства городских улиц, <br> мест отдыха, парков, частных и загородных домов, отелей.
+					</p>
+				</div>
 
-			<div class="gallery__list">
+				<div class="wrapper">
+					<ul class="pots__list">
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
 
-				<div class="column-left">
-					<figure class="gallery__item">
-						<a class="gallery__link">
-							<h3 class="gallery__title">Магазинов</h3>
-							<div class="gallery__img gallery__img-height">
-								<img class="b-lazy big" data-src="./images/gallery1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot1.jpg" data-fancybox="pots1Pokostovskiy" id="plato1Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/pot/pot1.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots1Marble" id="plato1Marble">
+										<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots1Granite" id="plato1Granite">
+										<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
+
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active pokostovskiy" title="Покостовский" data-model="plato1Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato1Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato1Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
 							</div>
-						</a>
-					</figure>
-				</div>
 
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
 
-				<div class="column-right">
-					<div class="row">
-						<figure class="gallery__item">
-							<a class="gallery__link">
-								<h3 class="gallery__title">Парков</h3>
-								<div class="gallery__img">
-									<img class="b-lazy small small1" data-src="./images/gallery2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
+						</li>
+
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
+
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots2Pokostovskiy" id="plato2Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots2Marble" id="plato2Marble">
+										<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot4.jpg" data-fancybox="pots2Granite" id="plato2Granite">
+										<img class="img-responsive" src="./images/catalog/pot/pot4.jpg" alt="Плато" title="Плато">
+									</a>
 								</div>
-							</a>
-						</figure>
 
-						<figure class="gallery__item">
-							<a class="gallery__link">
-								<h3 class="gallery__title">Жилых домов</h3>
-								<div class="gallery__img gallery__img-width">
-									<img class="b-lazy small small2" data-src="./images/gallery3.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato2Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato2Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato2Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
 								</div>
-							</a>
-						</figure>
-					</div>
+							</div>
 
-					<div class="row">
-						<figure class="gallery__item">
-							<a class="gallery__link">
-								<h3 class="gallery__title">Загородных участков</h3>
-								<div class="gallery__img gallery__img-width">
-									<img class="b-lazy small small3" data-src="./images/gallery4.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
+
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
+						</li>
+
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
+
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots3Pokostovskiy" id="plato3Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots3Marble" id="plato3Marble">
+										<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots3Granite" id="plato3Granite">
+										<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
+									</a>
 								</div>
-							</a>
-						</figure>
-						<figure class="gallery__item small">
-							<a class="gallery__link">
-								<h3 class="gallery__title">Парковок</h3>
-								<div class="gallery__img">
-									<img class="b-lazy small small4" data-src="./images/gallery5.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato3Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato3Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato3Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
 								</div>
-							</a>
-						</figure>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+							</div>
+
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
+
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
+						</li>
+
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
+
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot4.jpg" data-fancybox="pots4Pokostovskiy" id="plato4Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/pot/pot4.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots4Marble" id="plato4Marble">
+										<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots4Granite" id="plato4Granite">
+										<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
+
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato4Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato4Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato4Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
+							</div>
+
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
+
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
+						</li>
 
 
-	<section class="advantages">
-		<div class="container">
-			<h2 class="section__title">Почему выгодно работать с нами:</h2>
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
 
-			<div class="advantages__box">
-				<ul class="advantages__list">
-					<li class="advantages__item">
-						<div class="advantages__img">
-							<img  src="./images/advantages1.png" alt="Собственное производство" >
-						</div>
-						<div class="advantages__content">
-							<h3 class="advantages__title">Собственное производство</h3>
-							<p class="advantages__text">Мы являемся производителем, поэтому <br>предлагаем бетонные изделия высокого <br> качества без переплат.</p>
-						</div>
-					</li>
-					<li class="advantages__item">
-						<div class="advantages__img">
-							<img src="./images/advantages2.png" alt="Гарантия" >
-						</div>
-						<div class="advantages__content">
-							<h3 class="advantages__title">Гарантия</h3>
-							<p class="advantages__text">Предоставляем гарантию на все <br> изделия сроком на 10 лет</p>
-						</div>
-					</li>
-					<li class="advantages__item">
-						<div class="advantages__img">
-							<img src="./images/advantages3.png" alt="Надежность" >
-						</div>
-						<div class="advantages__content">
-							<h3 class="advantages__title">Надежность</h3>
-							<p class="advantages__text">Мы производим изделия из мытого бетона <br>уже более 10 лет, поэтому можем <br> гарантировать качество и отличный сервис.</p>
-						</div>
-					</li>
-					<li class="advantages__item">
-						<div class="advantages__img">
-							<img src="./images/advantages4.png" alt="Доставка">
-						</div>
-						<div class="advantages__content">
-							<h3 class="advantages__title">Доставка</h3>
-							<p class="advantages__text">Осуществляем оперативную доставку по <br> всем регионам России и Украины.</p>
-						</div>
-					</li>
-				</ul>
-				<img class="b-lazy advantages__decor-bg" data-src="./images/advantages__vase-big.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
-				<img class="b-lazy advantages__decor-sm" data-src="./images/advantages__vase-sm.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
-			</div>
-		</div>
-	</section>
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot5.jpg" data-fancybox="pots5Pokostovskiy" id="plato5Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/pot/pot5.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots5Marble" id="plato5Marble">
+										<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots5Granite" id="plato5Granite">
+										<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
 
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato5Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato5Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato5Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
+							</div>
 
-	<section class="step">
-		<div class="container">
-			<h2 class="section__title">Всего три шага к покупке</h2>
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
 
-			<ol class="step__list">
-				<li class="step__item">
-					<div class="step__img">
-						<img class="b-lazy" data-src="./images/step1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Заявка">
-					</div>
-					<h3 class="step__title">Заявка</h3>
-					<p class="step__text">Вы оставляете заявку на сайте, наш <br>менеджер связывается с Вами.</p>
-					<button class="btn btn-black" data-remodal-target="order">Оставить заявку</button>
-				</li>
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
+						</li>
 
-				<li class="step__item">
-					<div class="step__img">
-						<img class="b-lazy" data-src="./images/step2.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Вопрос-ответ">
-					</div>
-					<h3 class="step__title">Вопрос-ответ</h3>
-					<p class="step__text">Мы отвечаем на все Ваши <br> вопросы и формируем заказ.</p>
-				</li>
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
 
-				<li class="step__item">
-					<div class="step__img">
-						<img class="b-lazy" data-src="./images/step3.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Доставка">
-					</div>
-					<h3 class="step__title">Доставка</h3>
-					<p class="step__text">Вы вносите оплату, мы отправляем <br> Вам заказ удобным способом.</p>
-				</li>
-			</ol>
-		</div>
-	</section>
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot6.jpg" data-fancybox="pots6Pokostovskiy" id="plato6Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/pot/pot6.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots6Marble" id="plato6Marble">
+										<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot8.jpg" data-fancybox="pots6Granite" id="plato6Granite">
+										<img class="img-responsive" src="./images/catalog/pot/pot8.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
 
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato6Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato6Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato6Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
+							</div>
 
-	<div class="cooperate">
-		<div class="container">
-			<div class="cooperate__box">
-				<div class="cooperate__content">
-					<strong class="cooperate__accent cooperate__accent-first">Если Вы занимаетесь:</strong>
-					<ul class="cooperate__list">
-						<li class="cooperate__item">ландшафтным дизайном;</li>
-						<li class="cooperate__item">озеленением территорий;</li>
-						<li class="cooperate__item">или хотите стать нашим <br> дилером, тогда <img src="./images/arr-sm.png" alt="читать далее"></li>
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
+
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
+						</li>
+
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
+
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot7.jpg" data-fancybox="pots7Pokostovskiy" id="plato7Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/pot/pot7.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots7Marble" id="plato7Marble">
+										<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots7Granite" id="plato7Granite">
+										<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
+
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato7Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato7Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato7Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
+							</div>
+
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
+
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
+						</li>
+
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
+
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/pot/big/pot8.jpg" data-fancybox="pots8Pokostovskiy" id="plato8Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/pot/pot8.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot2.jpg" data-fancybox="pots8Marble" id="plato8Marble">
+										<img class="img-responsive" src="./images/catalog/pot/pot2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/pot/big/pot3.jpg" data-fancybox="pots8Granite" id="plato8Granite">
+										<img class="img-responsive" src="./images/catalog/pot/pot3.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
+
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="plato8Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="plato8Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="plato8Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
+							</div>
+
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
+
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderPots">Заказать</button>
+						</li>
 					</ul>
-					<strong class="cooperate__accent">Оставляйте заявку</strong>
-					<p class="cooperate__text">и наш менеджер расскажет Вам <br> об условиях сотрудничества и <br> возможных скидках.</p>
-
-					<img class="b-lazy cooperate__decor1" data-src="./images/bonsay.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
-					<img class="b-lazy cooperate__decor2" data-src="./images/wood.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
-
-
-					<button class="btn btn-black" data-remodal-target="cooperate">Узнать условия</button>
 				</div>
-			</div>
-		</div>
-		<img class="b-lazy cooperate__decor3" data-src="./images/form__decor.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
-	</div>
+			</section>
 
 
-	<section class="review">
-		<div class="wrapper">
-			<h2 class="section__title">Отзывы наших клиентов</h2>
-
-			<div class="review__slider slider">
-				<div class="review__slide">
-					<div class="review__item">
-						<div class="review__img">
-							<img src="./images/review1.jpg" alt="Отзывы наших клиентов">
-						</div>
-						<div class="review__info">
-							<h3 class="review__name">Анна Шатова</h3>
-							<p class="review__desc">35 лет, Киев.</p>
-
-							<p class="review__text">Всем привет! Получил подарок в виде барбекю на новоселье, эксплуатируем её по полной!  Как по мне, очень крутое преимущество - это чугунная вставка, она накапливает тепло и благодаря ей, мясо равномерно и нежно приготавливается! </p>
-						</div>
-					</div>
+			<section class="urns" id="urns"> 
+				<div class="container">
+					<h2 class="section__title">Урны</h2>
+					<p class="pots__subtitle section__subtitle">
+						Уличные бетонные урны отличаются высокой прочностью,<br> неприхотливостью в уходе и прекрасно смотрятся в любом ландшафте.
+					</p>
 				</div>
 
-				<div class="review__slide">
-					<div class="review__item">
-						<div class="review__img">
-							<img src="./images/review2.jpg" alt="Отзывы наших клиентов">
-						</div>
-						<div class="review__info">
-							<h3 class="review__name">Анна Шатова</h3>
-							<p class="review__desc">35 лет, Киев.</p>
+				<div class="wrapper">
+					<ul class="pots__list">
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
 
-							<p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-						</div>
-					</div>
-				</div>
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/urn/big/urn1.jpg" data-fancybox="urn1Pokostovskiy" id="urn1Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/urn/urn1.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/urn/urn2.jpg" data-fancybox="urn1Marble" id="urn1Marble">
+										<img class="img-responsive" src="./images/catalog/urn/urn2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/urn/big/urn3.jpg" data-fancybox="urn1Granite" id="urn1Granite">
+										<img class="img-responsive" src="./images/catalog/urn/urn3.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
 
-				<div class="review__slide">
-					<div class="review__item">
-						<div class="review__img">
-							<img src="./images/review3.jpg" alt="Отзывы наших клиентов">
-						</div>
-						<div class="review__info">
-							<h3 class="review__name">Анна Шатова</h3>
-							<p class="review__desc">35 лет, Киев.</p>
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="urn1Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="urn1Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="urn1Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
+							</div>
 
-							<p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-						</div>
-					</div>
-				</div>
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
 
-				<div class="review__slide">
-					<div class="review__item">
-						<div class="review__img">
-							<img src="./images/review4.jpg" alt="Отзывы наших клиентов">
-						</div>
-						<div class="review__info">
-							<h3 class="review__name">Анна Шатова</h3>
-							<p class="review__desc">35 лет, Киев.</p>
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderUrn">Заказать</button>
+						</li>
 
-							<p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-						</div>
-					</div>
-				</div>
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
 
-			</div>
-		</div>
-	</section>
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/urn/big/urn2.jpg" data-fancybox="urn2Pokostovskiy" id="urn2Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/urn/urn2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/urn/urn2.jpg" data-fancybox="urn2Marble" id="urn2Marble">
+										<img class="img-responsive" src="./images/catalog/urn/urn2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/urn/big/urn3.jpg" data-fancybox="urn2Granite" id="urn2Granite">
+										<img class="img-responsive" src="./images/catalog/urn/urn3.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
 
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="urn2Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="urn2Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="urn2Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
+							</div>
 
-	<article class="contacts">
-		<div class="contacts__wrap">
-			<div class="map" id="map">
-			</div>
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
 
-			<div class="container">
-				<div class="contacts__box">
-					<h2 class="contacts__title">Контакты:</h2>
-					<ul class="contacts__list">
-						<li class="contacts__item address"><address>Украина, г. Днепр, <br> улица Данила Галицкого, 7;</address></li>
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderUrn">Заказать</button>
+						</li>
 
-						<li class="contacts__item tel"><a class="contact__link" href="tel:+380970800493">+38(097)080-04-93</a></li>
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
 
-						<li class="contacts__item mail"><a class="contact__link" href="mailto:stimlexpro@gmail.com">stimlexpro@gmail.com</a></li>
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/urn/big/urn3.jpg" data-fancybox="urn3Pokostovskiy" id="urn3Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/urn/urn3.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/urn/urn2.jpg" data-fancybox="urn3Marble" id="urn3Marble">
+										<img class="img-responsive" src="./images/catalog/urn/urn2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/urn/big/urn1.jpg" data-fancybox="urn3Granite" id="urn3Granite">
+										<img class="img-responsive" src="./images/catalog/urn/urn1.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
+
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="urn3Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="urn3Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="urn3Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
+							</div>
+
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
+
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderUrn">Заказать</button>
+						</li>
+
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
+
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/urn/big/urn4.jpg" data-fancybox="urn4Pokostovskiy" id="urn4Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/urn/urn4.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/urn/urn2.jpg" data-fancybox="urn4Marble" id="urn4Marble">
+										<img class="img-responsive" src="./images/catalog/urn/urn2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/urn/big/urn1.jpg" data-fancybox="urn4Granite" id="urn4Granite">
+										<img class="img-responsive" src="./images/catalog/urn/urn1.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
+
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="urn4Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="urn4Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="urn4Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
+							</div>
+
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
+
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderUrn">Заказать</button>
+						</li>
 					</ul>
-
-					<p class="ask">Остались вопросы?</p>
-					<p class="text">Мы Вам перезвоним в течении <br> 10 минут, и проконсультируем.</p>
-					<button class="btn btn-black" data-remodal-target="callback">Заказать звонок</button>
-					<img class="b-lazy contacts__decor" data-src="./images/contact__vase.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
 				</div>
-			</div>
-		</div>
-	</article>
+			</section>
 
 
-	<footer class="footer">
-		<div class="container">
-			<div class="footer__box">
-				<div class="footer__logo">
-					<a href="index.html">
-						<img src="./images/logo.png" alt="Stimlex" title="Stimlex">
-					</a>
-					<p class="footer__desc">Продажа изделий <br> из мытого бетона</p>
+			<section class="fences" id="fences"> 
+				<div class="container">
+					<h2 class="section__title">Парковочные ограждения</h2>
 				</div>
 
-				<div class="footer__copy">
-					© Copyright 2018, ТОВ СТИМЛЕКС. <br> Все права защищены.
+				<div class="wrapper">
+					<ul class="pots__list">
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
+
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/fences/big/fences1.jpg" data-fancybox="fences1Pokostovskiy" id="fences1Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/fences/fences1.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/fences/big/fences2.jpg" data-fancybox="fences1Marble" id="fences1Marble">
+										<img class="img-responsive" src="./images/catalog/fences/fences2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/fences/big/fences3.jpg" data-fancybox="fences1Granite" id="fences1Granite">
+										<img class="img-responsive" src="./images/catalog/fences/fences3.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
+
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="fences1Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="fences1Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="fences1Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
+							</div>
+
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
+
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderFence">Заказать</button>
+						</li>
+
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
+
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/fences/big/fences2.jpg" data-fancybox="fences2Pokostovskiy" id="fences2Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/fences/fences2.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/fences/big/fences1.jpg" data-fancybox="fences2Marble" id="fences2Marble">
+										<img class="img-responsive" src="./images/catalog/fences/fences1.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/fences/big/fences3.jpg" data-fancybox="fences2Granite" id="fences2Granite">
+										<img class="img-responsive" src="./images/catalog/fences/fences3.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
+
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="fences2Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="fences2Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="fences2Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
+							</div>
+
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
+
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderFence">Заказать</button>
+						</li>
+
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
+
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/fences/big/fences3.jpg" data-fancybox="fences3Pokostovskiy" id="fences3Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/fences/fences3.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/fences/big/fences1.jpg" data-fancybox="fences3Marble" id="fences3Marble">
+										<img class="img-responsive" src="./images/catalog/fences/fences1.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/fences/big/fences2.jpg" data-fancybox="fences3Granite" id="fences3Granite">
+										<img class="img-responsive" src="./images/catalog/fences/fences2.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
+
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="fences3Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="fences3Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="fences3Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
+							</div>
+
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
+
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderFence">Заказать</button>
+						</li>
+
+						<li class="pots__item">
+							<h3 class="pots__title" data-model="Плато">Плато</h3>
+
+							<div class="pots__item-img">
+								<div class="pots__img">
+									<a class="pots__link pots__link-active" href="./images/catalog/fences/big/fences4.jpg" data-fancybox="fences4Pokostovskiy" id="fences4Pokostovksiy">
+										<img class="img-responsive" src="./images/catalog/fences/fences4.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/fences/big/fences1.jpg" data-fancybox="fences4Marble" id="fences4Marble">
+										<img class="img-responsive" src="./images/catalog/fences/fences1.jpg" alt="Плато" title="Плато">
+									</a>
+									<a class="pots__link" href="./images/catalog/fences/big/fences3.jpg" data-fancybox="fences4Granite" id="fences4Granite">
+										<img class="img-responsive" src="./images/catalog/fences/fences3.jpg" alt="Плато" title="Плато">
+									</a>
+								</div>
+
+								<div class="pots__materials">
+									<button class="pots__btn pots__btn-active ico_color_pokostovskiy" title="Покостовский" data-model="fences4Pokostovksiy" data-material="pokostovskiy" data-price="700 грн" data-price-RU="7000 руб"></button>
+									<button class="pots__btn ico_color_marble" title="Мрамор" data-material="marble" data-model="fences4Marble" data-price="999 грн" data-price-RU="99999 руб"></button>
+									<button class="pots__btn ico_color_granite" title="Гранит" data-material="granite" data-model="fences4Granite" data-price="500 грн" data-price-RU="50000 руб"></button>
+								</div>
+							</div>
+
+							<div class="pots__desc">
+								<div class="pots__desc-item pots-diameter">110 см</div>
+								<div class="pots__desc-item pots-height">40 см</div>
+								<div class="pots__desc-item pots-weight">180 кг</div>
+							</div>
+
+							<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700 грн</span></p>
+							<button class="btn btn-black btn-pots" data-remodal-target="orderFence">Заказать</button>
+						</li>
+					</ul>
 				</div>
+			</section>
 
-				<div class="footer__agency">
-					<a class="agency" href="http://landingpage.push-k.ua/" target="_blank" rel="noopener noreferrer">Создание сайтов <br>
-						<img src="./images/agency.png" alt="push-k solutions">
-					</a> 
+
+			<section class="arguments">
+				<div class="container">
+					<h2 class="section__title">Аргументы в пользу декоративного бетона</h2>
+
+					<div class="arguments__box">
+						<ul class="arguments__list">
+							<li class="arguments__item">
+								<h3 class="arguments__titles">Устойчивость <br> к температурам</h3>
+								<p class="arguments__text">Мытый бетон сохраняет свои свойства в диапазоне +40…-40 С, не лопаясь и не деформируясь, не выгорает и не выцветает на солнце.</p>
+								<img class="arguments__border" src="./images/arguments1.png" alt role="presentation">
+							</li>
+							<li class="arguments__item">
+								<h3 class="arguments__titles">Длительный срок <br> эксплуатации</h3>
+								<p class="arguments__text">При правильном уходе служат 10 и более лет.</p>
+								<img class="arguments__border" src="./images/arguments2.png" alt role="presentation">
+							</li>
+							<li class="arguments__item">
+								<h3 class="arguments__titles">Износостойкость</h3>
+								<p class="arguments__text">Изделия из мытого бетона практически не подвергаются износу.</p>
+								<img class="arguments__border" src="./images/arguments3.png" alt role="presentation">
+							</li>
+							<li class="arguments__item">
+								<h3 class="arguments__titles">Практичность</h3>
+								<p class="arguments__text">Не требуют особого ухода, легко моется с помощью щетки и воды.</p>
+								<img class="arguments__border" src="./images/arguments4.png" alt role="presentation">
+							</li>
+							<li class="arguments__item">
+								<h3 class="arguments__titles">Эстетичность</h3>
+								<p class="arguments__text">Изделия из мытого бетона выглядят очень привлекательно и благородно, уместно смотрятся на любом ландшафтном участке.</p>
+								<img class="arguments__border" src="./images/arguments5.png" alt role="presentation">
+							</li>
+						</ul>
+
+						<img class="arguments__decor" src="./images/arguments__vase1.png" alt role="presentation">
+					</div>
 				</div>
+			</section>
+
+
+			<article class="consult">
+				<div class="container">
+					<div class="consult__box">
+
+						<div class="consult__content">
+							<h2 class="consult__title">Хотите заказать подробную <br> консультацию?</h2>
+							<p class="consult__text">Оставляйте заявку, <br> и наш менеджер ответит на <br> все Ваши вопросы.</p>
+						</div>
+
+						<div class="consult__form">
+							<form action="mail.php" method="post" class="form form-validate" name="Consultation">
+								<input type="hidden" name="project_name" value="Stimlex">
+								<input type="hidden" name="admin_email" value="dm@push-k.ua">
+								<input type="hidden" name="form_subject" value="Stimlex > Заказ на подробную консультацию">
+								<input type="hidden" name="whatform" value="Stimlex > Заказ на подробную консультацию">
+
+								<p class="form__title">Заполните форму</p>
+								<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+								<div class="form__img ico_form_line"></div>
+
+								<div class="inputWrap">
+									<label for="formName"></label>
+									<div class="ico_user form__icon"></div>
+									<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName" required>
+								</div>
+								<div class="inputWrap">
+									<label for="formPhone"></label>
+									<div class="ico_phone form__icon"></div>
+									<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone" required>
+								</div>		
+
+								<div class="btnWrap btn-black">
+									<input type="submit" value="Отправить"> 
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</article>
+
+
+			<section class="gallery">
+				<div class="wrapper">
+					<h2 class="section__title gallery__sectionTitle">Цветочницы, урны, парковочные ограничители из <br> мытого бетона можно устанавливать возле:</h2>
+
+					<div class="gallery__list">
+
+						<div class="column-left">
+							<figure class="gallery__item">
+								<a class="gallery__link">
+									<h3 class="gallery__title">Магазинов</h3>
+									<div class="gallery__img gallery__img-height">
+										<img class="b-lazy big" data-src="./images/gallery1.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+									</div>
+								</a>
+							</figure>
+						</div>
+
+
+						<div class="column-right">
+							<div class="row">
+								<figure class="gallery__item">
+									<a class="gallery__link">
+										<h3 class="gallery__title">Парков</h3>
+										<div class="gallery__img">
+											<img class="b-lazy small small1" data-src="./images/gallery2.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+										</div>
+									</a>
+								</figure>
+
+								<figure class="gallery__item">
+									<a class="gallery__link">
+										<h3 class="gallery__title">Жилых домов</h3>
+										<div class="gallery__img gallery__img-width">
+											<img class="b-lazy small small2" data-src="./images/gallery3.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+										</div>
+									</a>
+								</figure>
+							</div>
+
+							<div class="row">
+								<figure class="gallery__item">
+									<a class="gallery__link">
+										<h3 class="gallery__title">Загородных участков</h3>
+										<div class="gallery__img gallery__img-width">
+											<img class="b-lazy small small3" data-src="./images/gallery4.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+										</div>
+									</a>
+								</figure>
+								<figure class="gallery__item small">
+									<a class="gallery__link">
+										<h3 class="gallery__title">Парковок</h3>
+										<div class="gallery__img">
+											<img class="b-lazy small small4" data-src="./images/gallery5.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+										</div>
+									</a>
+								</figure>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="advantages">
+				<div class="container">
+					<h2 class="section__title">Почему выгодно работать с нами:</h2>
+
+					<div class="advantages__box">
+						<ul class="advantages__list">
+							<li class="advantages__item">
+								<div class="advantages__img">
+									<img  src="./images/advantages1.png" alt="Собственное производство" >
+								</div>
+								<div class="advantages__content">
+									<h3 class="advantages__title">Собственное производство</h3>
+									<p class="advantages__text">Мы являемся производителем, поэтому <br>предлагаем бетонные изделия высокого <br> качества без переплат.</p>
+								</div>
+							</li>
+							<li class="advantages__item">
+								<div class="advantages__img">
+									<img src="./images/advantages2.png" alt="Гарантия" >
+								</div>
+								<div class="advantages__content">
+									<h3 class="advantages__title">Гарантия</h3>
+									<p class="advantages__text">Предоставляем гарантию на все <br> изделия сроком на 10 лет</p>
+								</div>
+							</li>
+							<li class="advantages__item">
+								<div class="advantages__img">
+									<img src="./images/advantages3.png" alt="Надежность" >
+								</div>
+								<div class="advantages__content">
+									<h3 class="advantages__title">Надежность</h3>
+									<p class="advantages__text">Мы производим изделия из мытого бетона <br>уже более 10 лет, поэтому можем <br> гарантировать качество и отличный сервис.</p>
+								</div>
+							</li>
+							<li class="advantages__item">
+								<div class="advantages__img">
+									<img src="./images/advantages4.png" alt="Доставка">
+								</div>
+								<div class="advantages__content">
+									<h3 class="advantages__title">Доставка</h3>
+									<p class="advantages__text">Осуществляем оперативную доставку по <br> всем регионам России и Украины.</p>
+								</div>
+							</li>
+						</ul>
+						<img class="b-lazy advantages__decor-bg" data-src="./images/advantages__vase-big.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+						<img class="b-lazy advantages__decor-sm" data-src="./images/advantages__vase-sm.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+					</div>
+				</div>
+			</section>
+
+
+			<section class="step">
+				<div class="container">
+					<h2 class="section__title">Всего три шага к покупке</h2>
+
+					<ol class="step__list">
+						<li class="step__item">
+							<div class="step__img">
+								<img class="b-lazy" data-src="./images/step1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Заявка">
+							</div>
+							<h3 class="step__title">Заявка</h3>
+							<p class="step__text">Вы оставляете заявку на сайте, наш <br>менеджер связывается с Вами.</p>
+							<button class="btn btn-black" data-remodal-target="order">Оставить заявку</button>
+						</li>
+
+						<li class="step__item">
+							<div class="step__img">
+								<img class="b-lazy" data-src="./images/step2.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Вопрос-ответ">
+							</div>
+							<h3 class="step__title">Вопрос-ответ</h3>
+							<p class="step__text">Мы отвечаем на все Ваши <br> вопросы и формируем заказ.</p>
+						</li>
+
+						<li class="step__item">
+							<div class="step__img">
+								<img class="b-lazy" data-src="./images/step3.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Доставка">
+							</div>
+							<h3 class="step__title">Доставка</h3>
+							<p class="step__text">Вы вносите оплату, мы отправляем <br> Вам заказ удобным способом.</p>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+
+			<div class="cooperate">
+				<div class="container">
+					<div class="cooperate__box">
+						<div class="cooperate__content">
+							<strong class="cooperate__accent cooperate__accent-first">Если Вы занимаетесь:</strong>
+							<ul class="cooperate__list">
+								<li class="cooperate__item">ландшафтным дизайном;</li>
+								<li class="cooperate__item">озеленением территорий;</li>
+								<li class="cooperate__item">или хотите стать нашим <br> дилером, тогда <img src="./images/arr-sm.png" alt="читать далее"></li>
+							</ul>
+							<strong class="cooperate__accent">Оставляйте заявку</strong>
+							<p class="cooperate__text">и наш менеджер расскажет Вам <br> об условиях сотрудничества и <br> возможных скидках.</p>
+
+							<img class="b-lazy cooperate__decor1" data-src="./images/bonsay.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+							<img class="b-lazy cooperate__decor2" data-src="./images/wood.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+
+
+							<button class="btn btn-black" data-remodal-target="cooperate">Узнать условия</button>
+						</div>
+					</div>
+				</div>
+				<img class="b-lazy cooperate__decor3" data-src="./images/form__decor.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
 			</div>
-		</div>
-	</footer>
+
+
+			<section class="review">
+				<div class="wrapper">
+					<h2 class="section__title">Отзывы наших клиентов</h2>
+
+					<div class="review__slider slider">
+						<div class="review__slide">
+							<div class="review__item">
+								<div class="review__img">
+									<img src="./images/review1.jpg" alt="Отзывы наших клиентов">
+								</div>
+								<div class="review__info">
+									<h3 class="review__name">Анна Шатова</h3>
+									<p class="review__desc">35 лет, Киев.</p>
+
+									<p class="review__text">Всем привет! Получил подарок в виде барбекю на новоселье, эксплуатируем её по полной!  Как по мне, очень крутое преимущество - это чугунная вставка, она накапливает тепло и благодаря ей, мясо равномерно и нежно приготавливается! </p>
+								</div>
+							</div>
+						</div>
+
+						<div class="review__slide">
+							<div class="review__item">
+								<div class="review__img">
+									<img src="./images/review2.jpg" alt="Отзывы наших клиентов">
+								</div>
+								<div class="review__info">
+									<h3 class="review__name">Анна Шатова</h3>
+									<p class="review__desc">35 лет, Киев.</p>
+
+									<p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="review__slide">
+							<div class="review__item">
+								<div class="review__img">
+									<img src="./images/review3.jpg" alt="Отзывы наших клиентов">
+								</div>
+								<div class="review__info">
+									<h3 class="review__name">Анна Шатова</h3>
+									<p class="review__desc">35 лет, Киев.</p>
+
+									<p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="review__slide">
+							<div class="review__item">
+								<div class="review__img">
+									<img src="./images/review4.jpg" alt="Отзывы наших клиентов">
+								</div>
+								<div class="review__info">
+									<h3 class="review__name">Анна Шатова</h3>
+									<p class="review__desc">35 лет, Киев.</p>
+
+									<p class="review__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+
+			<article class="contacts">
+				<div class="contacts__wrap">
+					<div class="map price ua" id="map">
+					</div>
+
+					<div class="map price ru" id="google-map-ru">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2646.8054558132194!2d35.01456591565963!3d48.44107347924872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe34048a6ab2f%3A0x34bf8eb46a3693b2!2z0L_RgNC-0YHQvy4g0JDQu9C10LrRgdCw0L3QtNGA0LAg0J_QvtC70Y8sIDExOSwg0JTQvdC40L_RgNC-LCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNDkwMDA!5e0!3m2!1sru!2sua!4v1526307720959" title="Контакты компании Stimlex"></iframe>
+					</div>
+
+					<div class="container">
+						<div class="contacts__box">
+							<h2 class="contacts__title">Контакты:</h2>
+							<ul class="contacts__list">
+								<li class="contacts__item address price ua"><address>Украина, г. Днепр, <br> улица Данила Галицкого, 7;</address></li>
+								<li class="contacts__item address price ru"><address>Россия, г. Москва, <br> улица Калинина, 1С4.
+								</address></li>
+
+								<li class="contacts__item tel price ua"><a class="contact__link" href="tel:+380970800493">тел. +38(097) 080-04-93</a></li>
+								<li class="contacts__item tel price ru"><a class="contact__link" href="tel:+79067122727">тел. +7 906-712-27-27</a></li> 
+
+								<li class="contacts__item mail price ua"><a class="contact__link" href="mailto:stimlexpro@gmail.com">stimlexpro@gmail.com</a></li>
+								<li class="contacts__item mail price ru"><a class="contact__link" href="mailto:stimlexrus@gmail.com">stimlexrus@gmail.com</a></li>
+							</ul>
+
+							<p class="ask">Остались вопросы?</p>
+							<p class="text">Мы Вам перезвоним в течении <br> 10 минут, и проконсультируем.</p>
+							<button class="btn btn-black" data-remodal-target="callback">Заказать звонок</button>
+							<img class="b-lazy contacts__decor" data-src="./images/contact__vase.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+						</div>
+					</div>
+				</div>
+			</article>
+
+
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__box">
+						<div class="footer__logo">
+							<a href="index.html">
+								<img src="./images/logo.png" alt="Stimlex" title="Stimlex">
+							</a>
+							<p class="footer__desc">Продажа изделий <br> из мытого бетона</p>
+						</div>
+
+						<div class="footer__copy">
+							© Copyright 2018, ТОВ СТИМЛЕКС. <br> Все права защищены.
+						</div>
+
+						<div class="footer__agency">
+							<a class="agency" href="http://landingpage.push-k.ua/" target="_blank" rel="noopener noreferrer">Создание сайтов <br>
+								<img src="./images/agency.png" alt="push-k solutions">
+							</a> 
+						</div>
+					</div>
+				</div>
+			</footer>
 
 
 
-	<!-- THANKS -->
-	<div class="remodal remodal-common"  data-remodal-id="modal-thanks" >
-		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<p class="thanks__title">Благодарим Вас!</p>
-		<p class="thanks__text">Мы свяжемся с Вами <br>в ближайшее время.</p>
-	</div>
-
-
-	<!-- MODALS -->
-	<div class="remodal formBox" data-remodal-id="callback"> 
-		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<form class="form form-validate" name="callback">
-			<!-- Hidden Required Fields -->
-			<input type="hidden" name="project_name" value="Stimlex">
-			<input type="hidden" name="admin_email" value="dm@push-k.ua">
-			<input type="hidden" name="form_subject" value="Заказ подробной консультации">
-			<input type="hidden" name="whatform" value="Stimlex > Заказ подробной консультации">
-
-			<!-- END Hidden Required Fields -->
-			<p class="form__title">Заполните форму</p>
-			<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
-			<div class="form__img ico_form_line"></div>
-
-			<div class="inputWrap">
-				<label for="formName2"></label>
-				<div class="ico_user form__icon"></div>
-				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName2" required>
+			<!-- THANKS -->
+			<div class="remodal remodal-common"  data-remodal-id="modal-thanks" >
+				<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+				<p class="thanks__title">Благодарим Вас!</p>
+				<p class="thanks__text">Мы свяжемся с Вами <br>в ближайшее время.</p>
 			</div>
-			<div class="inputWrap">
-				<label for="formPhone2"></label>
-				<div class="ico_phone form__icon"></div>
-				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone2" required>
-			</div>		
-
-			<div class="btnWrap btn-black">
-				<input type="submit" value="Заказать звонок"> 
-			</div>
-		</form>
-	</div> 
 
 
-	<div class="remodal formBox" data-remodal-id="orderPots"> 
-		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<form class="form form-validate" name="order pots">
-			<!-- Hidden Required Fields -->
-			<input type="hidden" name="project_name" value="Stimlex">
-			<input type="hidden" name="admin_email" value="dm@push-k.ua">
-			<input type="hidden" name="form_subject" value="Заказ на цветочные вазоны">
-			<input type="hidden" name="whatform" value="Stimlex > Заказ на цветочные вазоны">
-			<input type="hidden" name="whatform2" value="Pokostovskiy">
-			<!-- END Hidden Required Fields -->
-			<p class="form__title">Заполните форму</p>
-			<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
-			<div class="form__img ico_form_line"></div>
+			<!-- MODALS -->
+			<div class="remodal formBox" data-remodal-id="callback"> 
+				<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+				<form class="form form-validate" name="callback">
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="Stimlex">
+					<input type="hidden" name="admin_email" value="dm@push-k.ua">
+					<input type="hidden" name="form_subject" value="Заказ подробной консультации">
+					<input type="hidden" name="whatform" value="Stimlex > Заказ подробной консультации">
 
-			<div class="inputWrap">
-				<label for="formName3"></label>
-				<div class="ico_user form__icon"></div>
-				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName3" required>
-			</div>
-			<div class="inputWrap">
-				<label for="formPhone3"></label>
-				<div class="ico_phone form__icon"></div>
-				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone3" required>
-			</div>		
+					<!-- END Hidden Required Fields -->
+					<p class="form__title">Заполните форму</p>
+					<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+					<div class="form__img ico_form_line"></div>
 
-			<div class="btnWrap btn-black">
-				<input type="submit" value="Заказать"> 
-			</div>
-		</form>
-	</div> 
-	<div class="remodal formBox" data-remodal-id="orderUrn"> 
-		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<form class="form form-validate" name="order urns">
-			<!-- Hidden Required Fields -->
-			<input type="hidden" name="project_name" value="Stimlex">
-			<input type="hidden" name="admin_email" value="dm@push-k.ua">
-			<input type="hidden" name="form_subject" value="Заказ на урны">
-			<input type="hidden" name="whatform" value="Stimlex > Заказ на урны">
-			<input type="hidden" name="whatform2" value="Pokostovskiy">
-			<!-- END Hidden Required Fields -->
-			<p class="form__title">Заполните форму</p>
-			<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
-			<div class="form__img ico_form_line"></div>
+					<div class="inputWrap">
+						<label for="formName2"></label>
+						<div class="ico_user form__icon"></div>
+						<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName2" required>
+					</div>
+					<div class="inputWrap">
+						<label for="formPhone2"></label>
+						<div class="ico_phone form__icon"></div>
+						<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone2" required>
+					</div>		
 
-			<div class="inputWrap">
-				<label for="formName10"></label>
-				<div class="ico_user form__icon"></div>
-				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName10" required>
-			</div>
-			<div class="inputWrap">
-				<label for="formPhone10"></label>
-				<div class="ico_phone form__icon"></div>
-				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone10" required>
-			</div>		
-
-			<div class="btnWrap btn-black">
-				<input type="submit" value="Заказать"> 
-			</div>
-		</form>
-	</div> 
-	<div class="remodal formBox" data-remodal-id="orderFence"> 
-		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<form class="form form-validate" name="order fences">
-			<!-- Hidden Required Fields -->
-			<input type="hidden" name="project_name" value="Stimlex">
-			<input type="hidden" name="admin_email" value="dm@push-k.ua">
-			<input type="hidden" name="form_subject" value="Заказ на цветочные вазоны">
-			<input type="hidden" name="whatform" value="Stimlex > Заказ на цветочные вазоны">
-			<input type="hidden" name="whatform2" value="Pokostovskiy">
-			<!-- END Hidden Required Fields -->
-			<p class="form__title">Заполните форму</p>
-			<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
-			<div class="form__img ico_form_line"></div>
-
-			<div class="inputWrap">
-				<label for="formName4"></label>
-				<div class="ico_user form__icon"></div>
-				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName4" required>
-			</div>
-			<div class="inputWrap">
-				<label for="formPhone4"></label>
-				<div class="ico_phone form__icon"></div>
-				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone4" required>
-			</div>		
-
-			<div class="btnWrap btn-black">
-				<input type="submit" value="Заказать"> 
-			</div>
-		</form>
-	</div> 
-	<div class="remodal formBox" data-remodal-id="order"> 
-		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<form class="form form-validate" name="order">
-			<!-- Hidden Required Fields -->
-			<input type="hidden" name="project_name" value="Stimlex">
-			<input type="hidden" name="admin_email" value="dm@push-k.ua">
-			<input type="hidden" name="form_subject" value="Заявка">
-			<input type="hidden" name="whatform" value="Stimlex > Заявка">
-			<!-- END Hidden Required Fields -->
-			<p class="form__title">Заполните форму</p>
-			<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
-			<div class="form__img ico_form_line"></div>
-
-			<div class="inputWrap">
-				<label for="formName5"></label>
-				<div class="ico_user form__icon"></div>
-				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName5" required>
-			</div>
-			<div class="inputWrap">
-				<label for="formPhone5"></label>
-				<div class="ico_phone form__icon"></div>
-				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone5" required>
-			</div>		
-
-			<div class="btnWrap btn-black">
-				<input type="submit" value="Оставить заявку"> 
-			</div>
-		</form>
-	</div> 
-	<div class="remodal formBox" data-remodal-id="cooperate"> 
-		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<form class="form form-validate" name="cooperate">
-			<!-- Hidden Required Fields -->
-			<input type="hidden" name="project_name" value="Stimlex">
-			<input type="hidden" name="admin_email" value="dm@push-k.ua">
-			<input type="hidden" name="form_subject" value="Условия сотрудничества и возможные скидки">
-			<input type="hidden" name="whatform" value="Stimlex > Условия сотрудничества и возможные скидки">
-			<!-- END Hidden Required Fields -->
-			<p class="form__title">Заполните форму</p>
-			<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
-			<div class="form__img ico_form_line"></div>
-
-			<div class="inputWrap">
-				<label for="formName6"></label>
-				<div class="ico_user form__icon"></div>
-				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName6" required>
-			</div>
-			<div class="inputWrap">
-				<label for="formPhone6"></label>
-				<div class="ico_phone form__icon"></div>
-				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone6" required>
-			</div>		
-
-			<div class="btnWrap btn-black">
-				<input type="submit" value="Узнать условия"> 
-			</div>
-		</form>
-	</div> 
+					<div class="btnWrap btn-black">
+						<input type="submit" value="Заказать звонок"> 
+					</div>
+				</form>
+			</div> 
 
 
-	<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
-	<script src="./libs/jquery.nicescroll.min.js"></script>
-	<script src="./libs/blazy.js"></script>  
-	<script src="./libs/all.js"></script>
+			<div class="remodal formBox" data-remodal-id="orderPots"> 
+				<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+				<form class="form form-validate" name="order pots">
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="Stimlex">
+					<input type="hidden" name="admin_email" value="dm@push-k.ua">
+					<input type="hidden" name="form_subject" value="Заказ на цветочные вазоны">
+					<input type="hidden" name="whatform" value="Stimlex > Заказ на цветочные вазоны">
+					<input type="hidden" name="whatform2" value="Pokostovskiy">
+					<!-- END Hidden Required Fields -->
+					<p class="form__title">Заполните форму</p>
+					<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+					<div class="form__img ico_form_line"></div>
+
+					<div class="inputWrap">
+						<label for="formName3"></label>
+						<div class="ico_user form__icon"></div>
+						<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName3" required>
+					</div>
+					<div class="inputWrap">
+						<label for="formPhone3"></label>
+						<div class="ico_phone form__icon"></div>
+						<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone3" required>
+					</div>		
+
+					<div class="btnWrap btn-black">
+						<input type="submit" value="Заказать"> 
+					</div>
+				</form>
+			</div> 
+			<div class="remodal formBox" data-remodal-id="orderUrn"> 
+				<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+				<form class="form form-validate" name="order urns">
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="Stimlex">
+					<input type="hidden" name="admin_email" value="dm@push-k.ua">
+					<input type="hidden" name="form_subject" value="Заказ на урны">
+					<input type="hidden" name="whatform" value="Stimlex > Заказ на урны">
+					<input type="hidden" name="whatform2" value="Pokostovskiy">
+					<!-- END Hidden Required Fields -->
+					<p class="form__title">Заполните форму</p>
+					<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+					<div class="form__img ico_form_line"></div>
+
+					<div class="inputWrap">
+						<label for="formName10"></label>
+						<div class="ico_user form__icon"></div>
+						<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName10" required>
+					</div>
+					<div class="inputWrap">
+						<label for="formPhone10"></label>
+						<div class="ico_phone form__icon"></div>
+						<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone10" required>
+					</div>		
+
+					<div class="btnWrap btn-black">
+						<input type="submit" value="Заказать"> 
+					</div>
+				</form>
+			</div> 
+			<div class="remodal formBox" data-remodal-id="orderFence"> 
+				<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+				<form class="form form-validate" name="order fences">
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="Stimlex">
+					<input type="hidden" name="admin_email" value="dm@push-k.ua">
+					<input type="hidden" name="form_subject" value="Заказ на цветочные вазоны">
+					<input type="hidden" name="whatform" value="Stimlex > Заказ на цветочные вазоны">
+					<input type="hidden" name="whatform2" value="Pokostovskiy">
+					<!-- END Hidden Required Fields -->
+					<p class="form__title">Заполните форму</p>
+					<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+					<div class="form__img ico_form_line"></div>
+
+					<div class="inputWrap">
+						<label for="formName4"></label>
+						<div class="ico_user form__icon"></div>
+						<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName4" required>
+					</div>
+					<div class="inputWrap">
+						<label for="formPhone4"></label>
+						<div class="ico_phone form__icon"></div>
+						<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone4" required>
+					</div>		
+
+					<div class="btnWrap btn-black">
+						<input type="submit" value="Заказать"> 
+					</div>
+				</form>
+			</div> 
+			<div class="remodal formBox" data-remodal-id="order"> 
+				<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+				<form class="form form-validate" name="order">
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="Stimlex">
+					<input type="hidden" name="admin_email" value="dm@push-k.ua">
+					<input type="hidden" name="form_subject" value="Заявка">
+					<input type="hidden" name="whatform" value="Stimlex > Заявка">
+					<!-- END Hidden Required Fields -->
+					<p class="form__title">Заполните форму</p>
+					<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+					<div class="form__img ico_form_line"></div>
+
+					<div class="inputWrap">
+						<label for="formName5"></label>
+						<div class="ico_user form__icon"></div>
+						<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName5" required>
+					</div>
+					<div class="inputWrap">
+						<label for="formPhone5"></label>
+						<div class="ico_phone form__icon"></div>
+						<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone5" required>
+					</div>		
+
+					<div class="btnWrap btn-black">
+						<input type="submit" value="Оставить заявку"> 
+					</div>
+				</form>
+			</div> 
+			<div class="remodal formBox" data-remodal-id="cooperate"> 
+				<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+				<form class="form form-validate" name="cooperate">
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="Stimlex">
+					<input type="hidden" name="admin_email" value="dm@push-k.ua">
+					<input type="hidden" name="form_subject" value="Условия сотрудничества и возможные скидки">
+					<input type="hidden" name="whatform" value="Stimlex > Условия сотрудничества и возможные скидки">
+					<!-- END Hidden Required Fields -->
+					<p class="form__title">Заполните форму</p>
+					<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
+					<div class="form__img ico_form_line"></div>
+
+					<div class="inputWrap">
+						<label for="formName6"></label>
+						<div class="ico_user form__icon"></div>
+						<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" id="formName6" required>
+					</div>
+					<div class="inputWrap">
+						<label for="formPhone6"></label>
+						<div class="ico_phone form__icon"></div>
+						<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone6" required>
+					</div>		
+
+					<div class="btnWrap btn-black">
+						<input type="submit" value="Узнать условия"> 
+					</div>
+				</form>
+			</div> 
 
 
-	<script src="./libs/map.js"></script>  
-	<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyANY39pap8l5_ndmHjwHGhuWmw07CdBVRE"></script> 
-</body>
-</html>
+			<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+			<script src="./libs/jquery.nicescroll.min.js"></script>
+			<script src="./libs/blazy.js"></script>  
+			<script src="./libs/all.js"></script>
+
+
+			<script src="./libs/map.js"></script>  
+			<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyANY39pap8l5_ndmHjwHGhuWmw07CdBVRE"></script> 
+
+
+			<script type="text/javascript">
+				window.onload = function () {
+					jQuery("#user-city").text(ymaps.geolocation.country);
+					$('.price').hide();
+					switch(ymaps.geolocation.country){
+						case 'Украина': $('.price.ua').show();
+						break;
+						default: 
+						$('.price.ru').show();
+					}
+				}
+			</script>
+			<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script>
+		</body>
+		</html>
