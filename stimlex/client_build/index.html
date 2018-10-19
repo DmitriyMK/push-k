@@ -67,7 +67,18 @@
 				<button class="btn-white-mob" data-remodal-target="callback">Заказать звонок</button>
 
 				<img class="header__decorLeft" src="./images/vase-sm.png" alt role="presentation">
-				<img class="header__decorRight" src="./images/vase-big.png" alt role="presentation">
+
+
+				<!-- <img class="header__decorRight" src="./images/vase-big.png" alt role="presentation"> -->
+				<!-- <img class="header__decorRight" srcset="./images/vase-big-mob.png,
+				./images/vase-big.png"
+				src="./images/vase-big.png" alt role="presentation"> -->
+
+				<picture class="header__decorRight">
+					<source media="(max-width: 767px)" srcset="./images/vase-big-mob.png">
+					<source media="(min-width: 768px)" srcset="./images/vase-big.png">
+					<img src="elva-800w.jpg" alt role="presentation">
+				</picture>
 			</div>
 		</div>
 
@@ -354,7 +365,7 @@
 			</ul>
 		</div>
 	</section>
-	
+
 
 	<section class="urns" id="urns"> 
 		<div class="container">
@@ -541,7 +552,7 @@
 					<p class="pots__price">Цена: <span class="pots__price-accent pricePots">700</span><span class="pots__price-accent priceCurrency"> грн</span></p>
 					<button class="btn btn-black btn-pots" data-remodal-target="orderFence">Заказать</button>
 				</li>
-				
+
 				<li class="pots__item">
 					<h3 class="pots__title" data-model="Плато">Плато</h3>
 
@@ -643,12 +654,12 @@
 			</ul>
 		</div>
 	</section>
-	
+
 
 	<section class="arguments">
 		<div class="container">
 			<h2 class="section__title">Аргументы в пользу декоративного бетона</h2>
-			
+
 			<div class="arguments__box">
 				<ul class="arguments__list">
 					<li class="arguments__item">
@@ -703,7 +714,7 @@
 						<p class="form__title">Заполните форму</p>
 						<p class="form__text">И наш менеджер свяжется с Вами <br> в ближайшее время</p>
 						<div class="form__img ico_form_line"></div>
-						
+
 						<div class="inputWrap">
 							<label for="formName"></label>
 							<div class="ico_user form__icon"></div>
@@ -714,14 +725,14 @@
 							<div class="ico_phone form__icon"></div>
 							<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" id="formPhone" required>
 						</div>		
-						
+
 						<div class="btnWrap btn-black">
 							<input type="submit" value="Отправить"> 
 						</div>
 					</form>
 				</div>
 			</div>
-			
+
 		</div>
 	</article>
 
@@ -731,7 +742,7 @@
 			<h2 class="section__title gallery__sectionTitle">Цветочницы, урны, парковочные ограничители из <br> мытого бетона можно устанавливать возле:</h2>
 
 			<div class="gallery__list">
-				
+
 				<div class="column-left">
 					<figure class="gallery__item">
 						<a class="gallery__link">
@@ -742,7 +753,7 @@
 						</a>
 					</figure>
 				</div>
-				
+
 
 				<div class="column-right">
 					<div class="row">
@@ -792,7 +803,7 @@
 	<section class="advantages">
 		<div class="container">
 			<h2 class="section__title">Почему выгодно работать с нами:</h2>
-			
+
 			<div class="advantages__box">
 				<ul class="advantages__list">
 					<li class="advantages__item">
@@ -871,7 +882,7 @@
 			</ol>
 		</div>
 	</section>
-	
+
 
 	<div class="cooperate">
 		<div class="container">
@@ -888,7 +899,7 @@
 
 					<img class="b-lazy cooperate__decor1" data-src="./images/bonsay.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
 					<img class="b-lazy cooperate__decor2" data-src="./images/wood.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
-					
+
 
 					<button class="btn btn-black" data-remodal-target="cooperate">Узнать условия</button>
 				</div>
@@ -999,7 +1010,7 @@
 					</a>
 					<p class="footer__desc">Продажа изделий <br> из мытого бетона</p>
 				</div>
-				
+
 				<div class="footer__copy">
 					© Copyright 2018, ТОВ СТИМЛЕКС. <br> Все права защищены.
 				</div>
