@@ -982,10 +982,13 @@
 
 	<article class="contacts">
 		<div class="contacts__wrap">
-			<div class="map price ua" id="map">
+			
+			<div class="map price ua" id="google-map">
+				<iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2646.8054558132194!2d35.01456591565963!3d48.44107347924872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe34048a6ab2f%3A0x34bf8eb46a3693b2!2z0L_RgNC-0YHQvy4g0JDQu9C10LrRgdCw0L3QtNGA0LAg0J_QvtC70Y8sIDExOSwg0JTQvdC40L_RgNC-LCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNDkwMDA!5e0!3m2!1sru!2sua!4v1526307720959" title="Контакты компании Stimlex"></iframe>
 			</div>
 
 			<div class="map price ru" id="google-map-ru">
+				<iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2646.8054558132194!2d35.01456591565963!3d48.44107347924872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe34048a6ab2f%3A0x34bf8eb46a3693b2!2z0L_RgNC-0YHQvy4g0JDQu9C10LrRgdCw0L3QtNGA0LAg0J_QvtC70Y8sIDExOSwg0JTQvdC40L_RgNC-LCDQlNC90LXQv9GA0L7Qv9C10YLRgNC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNDkwMDA!5e0!3m2!1sru!2sua!4v1526307720959" title="Контакты компании Stimlex"></iframe>
 			</div>
 
 			<div class="container">
@@ -1077,6 +1080,7 @@
 			</div>
 		</form>
 	</div> 
+
 
 	<div class="remodal formBox" data-remodal-id="orderPots"> 
 		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
@@ -1234,8 +1238,8 @@
 	<script src="./libs/all.js"></script>
 
 
-	<script src="./libs/map.js"></script> 
-	<script src="./libs/map-RU.js"></script>   
+<!-- 	<script src="./libs/map.js"></script> 
+	<script src="./libs/map-RU.js"></script>    -->
 
 	<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyANY39pap8l5_ndmHjwHGhuWmw07CdBVRE"></script> 
 
@@ -1246,12 +1250,11 @@
 			$('.price').hide();
 			switch(ymaps.geolocation.country){
 				case 'Украина': $('.price.ua').show();
-					 language = "ua";
+				language = "ua";
 				break;
 				default: 
-					$('.price.ru').show();
-					language = "ru";
-				break;
+				language = "ru";
+				$('.price.ru').show();
 			}
 		}
 	</script>
