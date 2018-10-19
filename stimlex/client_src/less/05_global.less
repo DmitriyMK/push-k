@@ -40,7 +40,7 @@
 }
 .btn-black {
 	position: relative;
-    overflow: hidden;
+	overflow: hidden;
 	display: block;
 	padding: 12px 0;
 	margin: 0 auto 30px auto;
@@ -49,21 +49,25 @@
 	background: #000;
 
 	&:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: -4.5em;
-        height: 100%;
-        width: 3em;
-        transform: skewX(-45deg) translateX(0);
-        background-color: rgba(255,255,255,0.5);
-    }
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -4.5em;
+		height: 100%;
+		width: 3em;
+		transform: skewX(-45deg) translateX(0);
+		background-color: rgba(255,255,255,0.5);
+	}
 
-    &:hover {
-        &:after {
-            transform: skewX(-45deg) translateX(25em);
-            transition: all .5s linear;
-        }
-    }
+	&:hover {
+		&:after {
+			transform: skewX(-45deg) translateX(25em);
+			transition: all .5s linear;
+		}
+	}
+}
+
+.price.ru  {
+	display: none;
 }

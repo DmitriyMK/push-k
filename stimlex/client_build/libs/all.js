@@ -1,3 +1,4 @@
+var language='ru';
 $(document).ready(function() {
 
   if (document.documentElement.clientWidth > 1200) {
@@ -46,7 +47,8 @@ $(document).ready(function() {
       $(this).parents('.pots__item').find(".pots__link.pots__link-active").removeClass("pots__link-active");
       $('#' + $(this).data('model')).addClass('pots__link-active');
 
-      $(this).parents('.pots__item').find('.pricePots').html($(this).data('price'));
+      $(this).parents('.pots__item').find('.pricePots').html($(this).data('price-' + language));
+      //$(this).parents('.pots__item').find('.pricePots').html($(this).data('price'));
 
       $('.form input[name="whatform2"]').val($(this).data('material'));
     }
