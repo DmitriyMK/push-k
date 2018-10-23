@@ -1,0 +1,90 @@
+@media @mobile-xl {
+
+}
+@media @mobile-land {
+
+}
+@media @tablet {
+
+}
+@media @desktop {
+
+}
+@media @desktop-xl {
+	
+}
+@media @desktop-xl-2 {
+
+}
+@media @desktop-xll {
+	
+}
+
+.formSection {
+	position: relative;
+	background: url(../images/form-back.jpg)no-repeat center/cover;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 159px;
+		height: 50px;
+		background: url(../images/decor-section-light.png)no-repeat;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__text {
+		max-width: 520px;
+		font-size: 21px;
+		font-weight: 300;
+	}
+	&__title {
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		position: relative;
+		font-size: 40px;
+		font-weight: 700;
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 249px;
+			height: 11px;
+			background: url(../images/line-gray.png)no-repeat;
+		}
+	}
+	&__form {
+		max-width: 290px;
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.form__title {
+		padding-bottom: 10px;
+		text-align: center;
+		font-size: 31px;
+		font-weight: 700;
+	}
+	.form__line {
+		padding: 10px 10px 10px 25px;
+		margin-bottom: 10px;
+		width: 100%;
+		outline: none;
+	}
+	.btn {
+		border: none;
+		width: 100%;
+		color: #fff;
+	}
+}
