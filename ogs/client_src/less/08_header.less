@@ -20,6 +20,96 @@
 	
 }
 
+.header {
+	position: relative;
+	background: url(../images/hero-back.jpg)no-repeat center/cover;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 164px;
+		height: 50px;
+		background: url(../images/decor-section-header.png)no-repeat;
+	}
+
+	&__top {
+		padding: 10px 0;
+		background: @blue;
+	}
+	&__box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__item {
+		margin-right: 35px;
+		list-style: none;
+	}
+	&__link {
+		position: relative;
+		padding-bottom: 5px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0px;
+			left: 0;
+			width: 100%;
+			height: 2px;
+
+			background-color: @lime;
+			transition: transform .3s  linear;		
+			transform: scaleX(0);
+			transform-origin: bottom right; 
+			z-index: 10;
+		}
+		&:hover {
+			transition: all .5s;
+			&:after{
+				-webkit-transform-origin: bottom left; 
+				-ms-transform-origin: bottom left;
+				transform-origin: bottom left;
+				transform: scaleX(1);
+			}
+		}
+	} 
+	&__phone {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 180px;
+	}
+
+	&__center {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: 860px;
+	}
+
+	&__title {
+		padding-bottom: 25px;
+		font-size: 52px;
+		line-height: 1;
+		font-weight: 700;
+	}
+	&__subtitle {
+		font-size: 30px;
+	}
+	.btn {
+		margin: 25px auto;
+	}
+}
 
 
 

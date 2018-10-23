@@ -1,0 +1,82 @@
+@media @mobile-xl {
+
+}
+@media @mobile-land {
+
+}
+@media @tablet {
+
+}
+@media @desktop {
+
+}
+@media @desktop-xl {
+	
+}
+@media @desktop-xl-2 {
+
+}
+@media @desktop-xll {
+	
+}
+
+.reason {
+	position: relative;
+	background: #fff;
+	color: #000;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 165px;
+		height: 50px;
+		background: url(../images/decor-section-about.png)no-repeat;
+	}
+
+	&__list {
+		padding-top: 80px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__item {
+		counter-increment: li;
+		padding-left: 25px;
+		padding-right: 25px;
+		margin-bottom: 115px;
+		flex-basis: 30%;
+		border-left: 2px solid @blue;
+		list-style-type: none;
+
+		.reason__title:before{
+			content: "" counter(li);
+			position: absolute;
+			left: -90px;
+			top: 0;
+			width: 64px;
+			height: 54px;
+			background: @blue;
+			color: #fff;
+			font-size: 54px;
+			line-height: 54px;
+			font-family: @ff1;
+			font-weight: 400;
+			text-align: center;
+		}
+	}
+	&__title {
+		position: relative;
+		padding-bottom: 10px;
+		font-size: 23px;
+		font-weight: 700;
+		color: #415b72;
+		text-transform: uppercase;
+	}
+	&__text {
+		font-size: 17px;
+		font-weight: 300;
+	}
+}

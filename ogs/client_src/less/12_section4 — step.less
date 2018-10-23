@@ -1,0 +1,122 @@
+@media @mobile-xl {
+
+}
+@media @mobile-land {
+
+}
+@media @tablet {
+
+}
+@media @desktop {
+
+}
+@media @desktop-xl {
+	
+}
+@media @desktop-xl-2 {
+
+}
+@media @desktop-xll {
+	
+}
+
+.step {
+	position: relative;
+	z-index: 1;
+	background: url(../images/step-back.jpg)no-repeat center/cover;
+	color: #000;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 165px;
+		height: 50px;
+		background: url(../images/decor-section-about.png)no-repeat;
+	}
+
+	&__decor {
+		position: absolute;
+		top: 160px;
+		right: 0;
+	}
+
+	&__text {
+		padding: 30px 0;
+		font-size: 18px;
+		font-weight: 300;
+		text-align: center;
+	}
+
+	&__box {
+		position: relative;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__title {
+		position: absolute;
+		top: 330px;
+		left: 44%;
+		text-align: center;
+		font-size: 18px;
+	}
+	&__item {
+		position: absolute;
+		list-style: none;
+		text-align: center;
+		font-size: 16px;
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 155px;
+			height: 155px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: url(../images/infographic-item.png);
+			border-radius: 50%;
+			box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.40);
+			z-index: -1;
+		}
+
+		&:nth-of-type(1) {
+			top: 60px;
+			left: 46%;
+			z-index: 10;
+		}
+		&:nth-of-type(2) {
+			top: 152px;
+			left: 62%;
+			z-index: 10;
+		}
+		&:nth-of-type(3) {
+			top: 392px;
+			left: 66%;
+			z-index: 10;
+		}
+		&:nth-of-type(4) {
+			top: 555px;
+			left: 55.5%;
+			z-index: 10;
+		}
+		&:nth-of-type(5) {
+			top: 545px;
+			left: 36%;
+			z-index: 10;
+		}
+		&:nth-of-type(6) {
+			top: 370px;
+			left: 22%;
+			z-index: 10;
+		}
+		&:nth-of-type(7) {
+			top: 152px;
+			left: 26%;
+			z-index: 10;
+		}
+	}
+}
