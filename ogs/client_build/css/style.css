@@ -1098,6 +1098,53 @@ section {
     color: #000;
     overflow: hidden;
 }
+.plan__list {
+    padding-top: 30px;
+    padding-bottom: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.plan__item {
+    width: 260px;
+    text-align: center;
+    list-style: none;
+    font-size: 18px;
+}
+.plan__img {
+    margin: 20px auto;
+}
+.plan .btn {
+    margin: 20px auto;
+    width: 220px;
+    color: #fff;
+}
+.pay {
+    background: #f4f6f8;
+    min-height: 150px;
+}
+.pay__content {
+    padding-left: 520px;
+    position: relative;
+}
+.pay__title {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-size: 27px;
+    font-weight: 700;
+    color: #2fafe4;
+}
+.pay__text {
+    font-size: 19px;
+    color: #7f7f7f;
+}
+.pay__decor {
+    position: absolute;
+    top: -140px;
+    left: 80px;
+}
 .remodal-first {
     padding-top: 95px;
     text-align: center;
