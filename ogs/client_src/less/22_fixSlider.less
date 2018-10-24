@@ -1,5 +1,7 @@
 .slick-prev,
 .slick-next {
+	top: 50%;
+	transform: translateY(-50%);
 	width: 50px;
 	height: 100%;
 	opacity: 1;
@@ -9,15 +11,13 @@
 
 
 .slick-prev {
-	top: 152px;
-	left: -50px;
-	// .spritebox(-0px, -174px, 19px, 36px);
+	left: -35px;
+	.bg-arr_left;
 }
 
 .slick-next {
-	top: 213px;
-	left: -50px; 
-	// .spritebox(-36px, -174px, 19px, 36px);
+	right: -35px; 
+	.bg-arr_rightt;
 }
 
 
@@ -27,43 +27,46 @@
 	height: 0;
 }
 
+
 .slick-prev:focus,
 .slick-next:focus
 {
     opacity: 1;
 }
 
+
 .slick-disabled {
-	opacity: .35!important;
+	opacity: .45!important;
 }
 
 
 
 .slick-dots {
 	display: inline-block!important;
-	left: -48px;
-	top: 50%;
-	transform: translateY(17%);
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -20px;
+	z-index: 20;
 
-	border-image: transparent;
+	@media @tablet {
+		bottom: -40px;
+	}
 
 	li {
-		margin: 4px 8px;
-		margin-bottom: 10px;
-
+		margin: 7px;
 		width: 13px;
 		height: 13px;
 
 		button {
-			background: #fff;
+			background: #000;
 			display: block;
-			height: 13px;
-			width: 13px;
+			height: 5px;
+			width: 5px;
 			font-size: 0px;
-			color: #fff;
 			border-radius: 50%;
-			box-shadow: 0px 5px 7px 1px rgba(0, 45, 86, 0.15);
+			border: 1px solid transparent;
 			opacity: 0.75;
+			transition: all .3s linear;
 			&:before {
 				font-size: 0;
 				opacity: 0;
@@ -72,12 +75,10 @@
 
 		}
 		&.slick-active button {
-			background: #fb0035;
-			border-radius: 50%;
 			opacity: 1;
-			@media @tablet {
-				background: #fff;
-			}
+			transform: scale(2);
+			border: 1px solid #000;
+			background: transparent;
 		}
 	}
 }

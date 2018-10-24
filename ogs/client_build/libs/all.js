@@ -51,17 +51,24 @@ $(document).ready(function() {
   // $('.phone-mask').mask('+38(999)999-99-99');
 
 
-  /*  $('.slider-for-recipe').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      dots: false,
-      asNavFor: '.slider-nav-recipe',
-      fade: true,
-      draggable: false,
-      infinite: true,
+    $('.review__slider').slick({
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      arrows: true,
+      dots: true,
+      infinite: false,
+      lazyLoad: 'ondemand',
 
-    });*/
+    });
+
+    $('.partner__slider').slick({
+      slidesToShow: 8,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      lazyLoad: 'ondemand',
+
+    });
 
 
   /*  $('.slider-nav-recipe').slick({
