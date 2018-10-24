@@ -9,8 +9,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-	<meta name="theme-color" content="#232e34"> -->
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+	<meta name="theme-color" content="#232e34">
 
 <!-- 	<meta property="og:type" content="website"/> 
 	<meta property="og:image" content="photo-og.jpg">
@@ -35,7 +35,7 @@
 	<script defer src="./libs/remodal.min.js"></script>
 	<script defer src="./libs/slick.js"></script>
 	<script defer src="./libs/jquery.validate.min.js"></script>
-	<script defer src="./libs/masked-input.js"></script>
+	<!-- <script defer src="./libs/masked-input.js"></script> -->
 	<!-- <script defer src="./libs/wow.min.js"></script> -->
 	<script defer src="./libs/cssrelpreload.js"></script>
 	<!-- END DEFER SCRIPT -->
@@ -156,7 +156,7 @@
 			<h2 class="section__title">2-х минутный обзор нашей услуги</h2>
 			
 			<div class="video-responsive video__box">
-				<iframe src="https://www.youtube.com/embed/vMKR_OGOCAU?ecver=1" allowfullscreen lazyload="on"></iframe>
+				<iframe src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="https://www.youtube.com/embed/vMKR_OGOCAU?ecver=1" allowfullscreen></iframe>
 			</div>
 		</div>
 	</section>
@@ -274,13 +274,11 @@
 
 						<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" required>
 						<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" required>
-						<input class="form__line" type="email" name="Email&nbsp;покупателя" placeholder="Ваш Е-mail" required>
-
+						<input class="form__line" type="email" name="Email&nbsp;покупателя" placeholder="Ваш Е-mail">
 						<input class="btn" type="submit" value="Отправить"> 
 					</form>
 				</div>
 			</div>
-			
 		</div>
 	</section>
 
@@ -336,5 +334,18 @@
 	<!-- <script src="./libs/jquery.nicescroll.min.js"></script> -->
 	<script src="./libs/blazy.js"></script>  
 	<script src="./libs/all.js"></script>
+
+	<script>
+		function init() {
+			var vidDefer = document.getElementsByTagName('iframe');
+			for (var i=0; i<vidDefer.length; i++) 
+			{
+				if(vidDefer[i].getAttribute('data-src')) {
+					vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+				} 
+			} 
+		}
+		window.onload = init;
+	</script>
 </body>
 </html>
