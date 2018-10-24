@@ -161,7 +161,7 @@ $(document).ready(function() {
     previousTop = 0,
     currentTop = 0,
     scrollDelta = 10,
-    scrollOffset = 80;
+    scrollOffset = 86;
 
   mainHeader.on('click', '.nav-trigger', function(event) {
     event.preventDefault();
