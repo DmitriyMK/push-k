@@ -102,47 +102,45 @@ section {
 .section__title {
     position: relative;
     display: table;
-    font-size: 40px;
+    font-size: 24px;
     font-weight: 700;
     text-align: center;
     margin: auto;
     &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        left: -95px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 81px;
-        height: 2px;
-        background: #aeafaf;
+        @media @desktop {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -95px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 81px;
+            height: 2px;
+            background: #aeafaf;
+        }
     }
     &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        right: -108px;
-        top: 70%;
-        transform: translateY(-50%);
-        .bg-decor_title;
+        @media @desktop {
+            content: '';
+            display: block;
+            position: absolute;
+            right: -108px;
+            top: 70%;
+            transform: translateY(-50%);
+            .bg-decor_title;
+        }
     }
 
     @media @mobile {
 
     }
     @media @tablet {
-
+        font-size: 28px;
     }
     @media @desktop {
-
+        font-size: 32px;
     }
     @media @desktop-xl {
-
-    }
-    @media @desktop-xl-2 {
-
-    }
-    @media @desktop-xll {
-
+        font-size: 40px;
     }
 }
