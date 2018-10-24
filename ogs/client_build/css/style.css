@@ -1596,6 +1596,133 @@ section {
     font-size: 18px;
     color: #000;
 }
+/* RESPONSIVE MENU TO 992px*/
+.open {
+    -webkit-transform: translateX(-220px);
+        -ms-transform: translateX(-220px);
+            transform: translateX(-220px);
+    -webkit-transition-duration: 0.5s;
+         -o-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    position: relative;
+    z-index: 100;
+}
+@media only screen and (min-width: 992px) {
+    .open {
+        display: none;
+    }
+}
+.overlay {
+    position: fixed;
+    width: 220px;
+    background: #f4f6f6;
+    height: 100vh;
+    top: 60px;
+    right: -220px;
+    overflow-y: scroll;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+}
+@media only screen and (min-width: 992px) {
+    .overlay {
+        position: inherit;
+        width: inherit;
+        height: inherit;
+        background: inherit;
+        overflow-y: inherit;
+    }
+}
+.burger {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    -webkit-transition: all 0.6s ease-in-out;
+         -o-transition: all 0.6s ease-in-out;
+            transition: all 0.6s ease-in-out;
+    z-index: 1000;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: block;
+    z-index: 100;
+}
+.burger:hover {
+    cursor: pointer;
+}
+@media only screen and (min-width: 992px) {
+    .burger {
+        display: none;
+    }
+}
+.burger i {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+}
+.burger i:before, .burger i:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: yellow;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+}
+.burger i:before {
+    margin-top: -12px;
+}
+.burger i:after {
+    margin-top: 12px;
+}
+.burger:hover i:before {
+    margin-top: -14px;
+}
+.burger:hover i:after {
+    margin-top: 14px;
+}
+.burger.active i {
+    background: transparent;
+}
+.burger.active i:before, .burger.active i:after {
+    left: -5px;
+    width: 50px;
+}
+.burger.active i:before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 12px;
+}
+.burger.active i:after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: -12px;
+}
+.burger.active:hover i:before, .burger.active:hover i:after {
+    width: 60px;
+    margin: 0;
+    left: -10px;
+    top: 0;
+}
+/* END RESPONSIVE MENU TO 992px*/
 .slick-prev, .slick-next {
     top: 50%;
     -webkit-transform: translateY(-50%);

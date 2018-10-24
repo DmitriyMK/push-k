@@ -89,6 +89,25 @@ $(document).ready(function() {
 
   });
 
+  // var $menu = $('.nav');
+
+  // $('.burger').click(function() {
+  //   $(this).toggleClass('active');
+  //   $('.overlay').toggleClass('open').show;
+  // });
+
+
+  // $(document).mouseup(function(e) {
+  //   if (!$menu.is(e.target) 
+  //     &&
+  //     $menu.has(e.target).length === 0) 
+  //   {
+
+  //     $('.overlay').removeClass('open');
+  //     $(".burger").removeClass('active');
+  //   }
+  // });
+
 
   /*  $('.slider-nav-recipe').slick({
       slidesToShow: 4,
