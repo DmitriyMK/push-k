@@ -56,6 +56,21 @@
 		background: url(../images/decor-section-blue.png)no-repeat;
 	}
 
+	&__title {
+		position: relative;
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			right: -108px;
+			top: 70%;
+			transform: translateY(-50%);
+			width: 94px;
+			height: 24px;
+			background: url(../images/icons/decor-title-light.png);
+		}
+	}
+
 
 	&__subtitle {
 		padding-top: 25px;

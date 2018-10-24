@@ -591,7 +591,7 @@ section {
             transform: translateY(-50%);
     width: 94px;
     height: 24px;
-    background: url('../images/icons/decor-title.png') no-repeat;
+    background: url('../images/icons/css_sprites.png') -10px -41px;
 }
 ::-webkit-input-placeholder {
     font-size: 16px;
@@ -1263,6 +1263,22 @@ section {
     height: 50px;
     background: url(../images/decor-section-blue.png) no-repeat;
 }
+.partner__title {
+    position: relative;
+}
+.partner__title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -108px;
+    top: 70%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 94px;
+    height: 24px;
+    background: url(../images/icons/decor-title-light.png);
+}
 .partner__subtitle {
     padding-top: 25px;
     padding-bottom: 50px;
@@ -1299,8 +1315,81 @@ section {
     background: url('../images/icons/css_sprites.png') -157px -154px;
 }
 .question {
+    position: relative;
     background: #fefefe;
     color: #000;
+    overflow: hidden;
+}
+.question__decor {
+    position: absolute;
+    top: -150px;
+    right: 0;
+}
+.accordions {
+    margin: 50px 0;
+    padding: 0 120px;
+    min-height: 360px;
+}
+.accordions .accordion {
+    margin-bottom: 20px;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+}
+.accordions .accordion__header {
+    display: block;
+    background: #0b355b;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+}
+.accordions .accordion__link {
+    position: relative;
+    padding: 15px 15px 15px 50px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+}
+.accordions .accordion__link:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(90deg);
+        -ms-transform: translateY(-50%) rotate(90deg);
+            transform: translateY(-50%) rotate(90deg);
+    left: 20px;
+    width: 16px;
+    height: 25px;
+    background: url(../images/icons/arr-accordeon.png);
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+}
+.accordions .accordion-body {
+    display: none;
+}
+.accordions .accordion__text {
+    padding: 20px 0 10px 50px;
+}
+.accordions .active .accordion__header {
+    background: #abc12e;
+    -webkit-box-shadow: 4.695px 8.829px 10px 0 rgba(0, 0, 0, 0.32);
+            box-shadow: 4.695px 8.829px 10px 0 rgba(0, 0, 0, 0.32);
+}
+.accordions .active .accordion-body {
+    display: block;
+}
+.accordions .active .accordion__link:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 20px;
+    width: 16px;
+    height: 25px;
+    background: url(../images/icons/arr-accordeon.png);
 }
 .remodal-first {
     padding-top: 95px;

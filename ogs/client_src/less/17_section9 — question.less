@@ -21,6 +21,77 @@
 }
 
 .question {
+	position: relative;
 	background: #fefefe;
 	color: #000;
+	overflow: hidden;
+	&__decor {
+		position: absolute;
+		top: -150px;
+		right: 0;
+	}
+}
+
+
+
+.accordions {
+	margin: 50px 0;
+	padding: 0 120px;
+	min-height: 360px; 
+	.accordion {
+		margin-bottom: 20px;
+		transition: all .3s linear;
+	}
+	.accordion__header {
+		display: block;
+		background: @blue;
+		transition: all .3s linear;
+	}
+	.accordion__link {
+		position: relative;
+		padding: 15px 15px 15px 50px;
+		font-size: 18px;
+		font-weight: 300;
+		color: #fff;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%) rotate(90deg);
+			left: 20px;
+			width: 16px;
+			height: 25px;
+			background: url(../images/icons/arr-accordeon.png);
+			transition: all .3s linear;
+		}
+	}
+	.accordion-body {
+		display: none; 
+	}
+	.accordion__text {
+		padding: 20px 0 10px 50px;
+	}
+
+
+	.active {
+		.accordion__header {
+			background: @lime;
+			box-shadow: 4.695px 8.829px 10px 0px rgba(0, 0, 0, 0.32);
+		}
+		.accordion-body {
+			display: block; 
+		}
+		.accordion__link {
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 20px;
+				width: 16px;
+				height: 25px;
+				background: url(../images/icons/arr-accordeon.png);
+			}
+		}
+	}
 }
