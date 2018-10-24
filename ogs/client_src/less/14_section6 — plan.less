@@ -32,13 +32,27 @@
 		justify-content: space-around;
 	}
 	&__item {
+		position: relative;
 		width: 260px;
 		text-align: center;
 		list-style: none;
 		font-size: 18px;
+		counter-increment: li;
+		&:before{
+			content: "" counter(li);
+			position: absolute;
+			left: 20px;
+			top: 0;
+
+			color: #d2d2d4;
+			font-size: 92px;
+			font-weight: 400;
+		}
 	}
 	&__img {
+		position: relative;
 		margin: 20px auto;
+		z-index: 10;
 	}
 	.btn {
 		margin: 20px auto;

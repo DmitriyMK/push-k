@@ -69,6 +69,7 @@ $(document).ready(function() {
     arrows: true,
     dots: false,
     lazyLoad: 'ondemand',
+    autoplay: true,
 
   });
 
@@ -89,24 +90,25 @@ $(document).ready(function() {
 
   });
 
-  // var $menu = $('.nav');
+  // BURGER RESPONSIVE < 992px
+  var $menu = $('.nav');
 
-  // $('.burger').click(function() {
-  //   $(this).toggleClass('active');
-  //   $('.overlay').toggleClass('open').show;
-  // });
+  $('.burger').click(function() {
+    $(this).toggleClass('active');
+    $('.overlay').toggleClass('open').show;
+  });
 
 
-  // $(document).mouseup(function(e) {
-  //   if (!$menu.is(e.target) 
-  //     &&
-  //     $menu.has(e.target).length === 0) 
-  //   {
+  $(document).mouseup(function(e) {
+    if (!$menu.is(e.target) 
+      &&
+      $menu.has(e.target).length === 0) 
+    {
 
-  //     $('.overlay').removeClass('open');
-  //     $(".burger").removeClass('active');
-  //   }
-  // });
+      $('.overlay').removeClass('open');
+      $(".burger").removeClass('active');
+    }
+  });
 
 
   /*  $('.slider-nav-recipe').slick({
