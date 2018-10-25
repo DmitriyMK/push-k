@@ -52,19 +52,21 @@
     background: url('../images/icons/css_sprites.png') -124px -41px;
 }
 .bg-fb {
-    width: 49px;
-    height: 49px;
-    background: url('../images/icons/css_sprites.png') -10px -85px;
+    width: 50px;
+    height: 50px;
+    background: url('../images/icons/facebook.svg');
+    background-color: #fff;
 }
 .bg-gplus {
-    width: 49px;
-    height: 49px;
-    background: url('../images/icons/css_sprites.png') -79px -85px;
+    width: 50px;
+    height: 50px;
+    background: url('../images/icons/google-plus.svg');
+    background-color: #fff;
 }
 .bg-linkeldin {
-    width: 49px;
-    height: 49px;
-    background: url('../images/icons/css_sprites.png') -148px -85px;
+    width: 50px;
+    height: 50px;
+    background: url('../images/icons/linkedin.svg');
 }
 .bg-phone {
     width: 19px;
@@ -77,9 +79,9 @@
     background: url('../images/icons/css_sprites.png') -168px -41px;
 }
 .bg-skype {
-    width: 49px;
-    height: 49px;
-    background: url('../images/icons/css_sprites.png') -217px -85px;
+    width: 50px;
+    height: 50px;
+    background: url('../images/icons/skype.svg');
 }
 .bg-usa {
     width: 21px;
