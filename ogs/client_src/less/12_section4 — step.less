@@ -38,9 +38,13 @@
 	}
 
 	&__decor {
-		position: absolute;
-		top: 160px;
-		right: 0;
+		display: none;
+		@media @desktop-xl {
+			display: block;
+			position: absolute;
+			top: 160px;
+			right: 0;
+		}
 	}
 
 	&__text {
@@ -51,9 +55,15 @@
 	}
 
 	&__box {
-		position: relative;
-		display: flex;
-		justify-content: center;
+		display: none;
+
+
+		@media @desktop-xl {
+			position: relative;
+			display: flex;
+			justify-content: center;
+		}
+		
 	}
 
 	&__title {
@@ -117,6 +127,13 @@
 			top: 152px;
 			left: 26%;
 			z-index: 10;
+		}
+	}
+
+	br {
+		display: none;
+		@media @desktop-xl {
+			display: inline-block;
 		}
 	}
 }

@@ -24,6 +24,7 @@
 	position: relative;
 	background: #e8e8e8;
 	color: #000;
+	overflow: hidden;
 
 	.wrapper {
 		position: relative;
@@ -35,18 +36,23 @@
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		overflow: hidden;
 		position: relative;
 		z-index: 10;
 		@media @desktop {
 			flex-direction: row;
 			padding: 60px;
+			padding-right: 0;
+		}
+		@media @desktop-xl {
+			width: 1200px;
+			margin: auto;
 		}
 		@media @desktop-xl-2 {
-			padding: 100px 60px;
+			padding: 100px 0px 100px 240px;
+			width: 1500px;
 		}	
 		@media @desktop-xll {
-			padding: 120px;
+			width: 1600px;
 		}
 	}
 	
@@ -65,7 +71,7 @@
 		}
 	}
 	&__title {
-		padding-bottom: 10px;
+		padding-bottom: 15px;
 		margin-bottom: 15px;
 		position: relative;
 		font-size: 24px;
@@ -75,9 +81,12 @@
 		}
 		@media @desktop {
 			margin-bottom: 10px;
-			font-size: 32px;
+			font-size: 30px;
 		}
 		@media @desktop-xl {
+			font-size: 36px;
+		}
+		@media @desktop-xl-2 {
 			font-size: 40px;
 		}
 		&:before {
@@ -90,7 +99,7 @@
 			@media @desktop {
 				left: 0;
 				bottom: 0;
-				transform: 0;
+				transform: none;
 			}
 		}
 	}
@@ -110,6 +119,7 @@
 	&__list {
 		max-width: 320px;
 		margin: 15px auto;
+		padding-left: 10px;
 		font-size: 18px;
 		font-weight: 300;
 		text-align: left;
@@ -123,14 +133,25 @@
 			text-align: inherit;
 		}
 	}
+	&__item {
+		margin-bottom: 8px;
+		@media @desktop {
+			margin-bottom: 0;
+		}
+	}
 	&__photo {
-		margin-top: 30px;
+		margin-top: 40px;
 		position: relative;
 		@media @desktop {
 			margin-top: 0;
 			padding-left: 40px;
+			padding-right: 40px;
+		}
+		@media @desktop-xl {
+			padding-left: 0;
 		}
 		@media @desktop-xl-2 {
+			padding-right: 0;
 			padding-left: 80px;
 		}
 	}
@@ -160,19 +181,16 @@
 			display: block;
 			position: absolute;
 			top: 110px;
-			left: -80px;
+			left: -60px;
 		}
 		@media @desktop-xl-2 {
 			top: 160px;
 			left: 0px;
 		}
-		@media @desktop-xll {
-			left: 50px;
-		}
 	}
 	&__decor-right {
 		display: none;
-		
+
 		@media @desktop-xl {
 			position: absolute;
 			top: -120px;
@@ -180,7 +198,7 @@
 			z-index: 0;
 		}	
 	}
-	
+
 	abbr {
 		text-decoration: none;
 	}
