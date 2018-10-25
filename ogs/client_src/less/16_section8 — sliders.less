@@ -40,52 +40,61 @@
 
 	&__slider {
 		width: 100%;
-		padding: 0 40px;
-
-		@media @mobile-xl {
-
-		}
-		@media @mobile-land {
-
-		}
+		
 		@media @tablet {
-
+			padding: 0 30px;
 		}
 		@media @desktop {
-
+			padding: 0 40px;
 		}
-		@media @desktop-xl {
-
-		}
-		@media @desktop-xl-2 {
-
-		}
-		@media @desktop-xll {
-
-		}
-
 	}
 
 	&__block {
 		display: flex;
-		justify-content: space-between;
-		padding: 20px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 20px 0;
+		margin: auto;
 		max-width: 480px;
 		text-align: left;
+
+		@media @tablet {
+			flex-direction: row;
+			align-items: inherit;
+			justify-content: space-between;
+			padding: 20px;
+		}
+
 		&-photo {
 			min-width: 100px;
+			margin-bottom: 15px;
+			@media @tablet {
+				margin-bottom: 0;
+			}
 		}
 		&-content {
-			margin-left: 30px;
+			margin: auto;
+			@media @tablet {
+				margin-left: 30px;
+			}
 		}
 
 		&-name {
 			padding-top: 15px;
 			font-weight: 700;
+			text-align: center;
+			@media @tablet {
+				text-align: left;
+			}
 		}
 		&-rating {
 			display: flex;
+			justify-content: center;
 			margin-bottom: 15px;
+			@media @tablet {
+				justify-content: inherit;
+			}
 		}
 		&-star {
 			position: relative;
@@ -108,11 +117,17 @@
 			}
 		}
 		&-verified {
+			display: table;
 			position: relative;
 			padding-left: 25px;
+			margin: auto;
 			margin-bottom: 15px;
 			font-weight: 700;
 			color: #a9a9a9;
+			@media @tablet {
+				margin: 0;
+				margin-bottom: 15px;
+			}
 			&:before {
 				content: '';
 				display: block;
@@ -126,17 +141,37 @@
 		}
 		&-accent {
 			display: block;
+			padding-left: 15px;
+			padding-right: 15px;
 			font-size: 18px;
 			font-weight: 700;
+			text-align: center;
+			@media @tablet {
+				padding-left: inherit;
+				padding-right: inherit;
+				text-align: inherit;
+			}
 		}
 		&-text {
 			display: block;
 			margin: 15px 0;
+			padding-left: 15px;
+			padding-right: 15px;
 			font-style: italic;
+			text-align: center;
+			@media @tablet {
+				text-align: inherit;
+				padding-left: inherit;
+				padding-right: inherit;
+			}
 		}
 		&-links {
 			display: flex;
+			justify-content: center;
 			list-style: none;
+			@media @tablet {
+				justify-content: inherit;
+			}
 		}
 		&-item {
 			margin-right: 3px;
