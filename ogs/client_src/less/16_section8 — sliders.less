@@ -94,15 +94,17 @@
 	&__title {
 		position: relative;
 		&:after {
-			content: '';
-			display: block;
-			position: absolute;
-			right: -108px;
-			top: 70%;
-			transform: translateY(-50%);
-			width: 94px;
-			height: 24px;
-			background: url(../images/icons/decor-title-light.png);
+			@media @desktop {
+				content: '';
+				display: block;
+				position: absolute;
+				right: -108px;
+				top: 70%;
+				transform: translateY(-50%);
+				width: 94px;
+				height: 24px;
+				background: url(../images/icons/decor-title-light.png);
+			}
 		}
 	}
 
@@ -116,12 +118,17 @@
 	}
 
 	&__slider {
-		margin: 0 25px;
+		padding: 0 25px;
+		width: 100%;	
 	}
 	&__slide img{
 		min-height: 70px;
 		padding: 5px;
-		border: 1px solid #fff;
+		margin: auto;
+
+		@media @mobile-land {
+			border: 1px solid #fff;
+		}
 	}
 
 	.slick-prev,
@@ -134,12 +141,12 @@
 
 	.slick-prev {
 		left: inherit;
-		right: 80px;
+		right: 110px;
 		.bg-arr_lef_lightt;
 	}
 
 	.slick-next {
-		right: 30px; 
+		right: 60px; 
 		.bg-arr_rightt_light;
 	}
 

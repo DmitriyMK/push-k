@@ -22,46 +22,112 @@
 	color: #9fb9c7;
 	&__box {
 		display: flex;
+		align-items: center;
+		flex-direction: column;
 		justify-content: space-between;
+		text-align: center;
+
+		@media @desktop {
+			align-items: inherit;
+			flex-direction: row;
+			text-align: inherit;
+		}
 	}
 	&__col {
-		width: 30%;
+		@media @desktop {
+			width: 30%;
+		}
 	}
 	&__title {
-		font-size: 26px;
+		font-size: 24px;
 		font-weight: 700;
+
+		@media @tablet {
+			font-size: 26px;
+		}
 	}
 	&__contact {
 		padding-top: 20px;
+		margin-bottom: 30px;
 		list-style: none;
+		@media @desktop {
+			margin-bottom: 0;
+		}
 		&-link {
 			display: flex;
+			justify-content: center;
 			margin-bottom: 15px;
 			font-size: 18px;
+			@media @desktop {
+				justify-content: inherit;
+			}
 			div {
 				margin-right: 10px;
 			}
 		}
 	}
 	&__logo {
-		margin-top: 90px;
+		order: -1;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		@media @desktop {
+			order: inherit;
+			margin-top: 90px;
+			margin-bottom: 0;
+		}
 	}
 
 	&__social {
 		padding-top: 20px;
 		display: flex;
+		justify-content: space-around;
 		list-style: none;
+		@media @desktop {
+			justify-content: inherit;
+		}
 		&-item {
-			margin-right: 15px;
+			
+			@media @desktop {
+				margin-right: 15px;
+			}
 		}
 	}
 	&__copy {
-		padding-top: 120px;
+		padding-top: 30px;
+
+		@media @desktop {
+			padding-top: 120px;
+		}
+	}
+
+	.col__contact {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media @desktop {
+			display: block;
+			flex-direction: inherit;
+			align-items: inherit;
+		}
+	}
+
+	.col__form {
+		order: -1;
+		@media @desktop {
+			order: inherit;
+		}
 	}
 	
 	form {
 		margin-top: 30px;
+		margin-left: auto;
+		margin-right: auto;
 		max-width: 290px;
+
+		@media @desktop {
+			margin-left: 0;
+		}
 	}
 	.form__line {
 		padding: 10px 10px 10px 25px;

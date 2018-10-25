@@ -57,17 +57,7 @@ $(document).ready(function() {
           slidesToScroll: 1,
           fade: true,
         }
-      },
-
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-
-          arrows: true,
-        }
-      },
+      }
 
       ]
 
@@ -81,6 +71,47 @@ $(document).ready(function() {
     lazyLoad: 'ondemand',
     autoplay: true,
 
+    responsive: [
+
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 6,
+        }
+      },
+
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5,
+        }
+      },
+
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+        }
+      },
+
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2,
+          arrows: false
+        }
+      },
+
+      {
+        breakpoint: 380,
+        settings: {
+          slidesToShow: 1,
+          arrows: false
+        }
+      }
+
+      ]
   });
 
 
@@ -96,16 +127,6 @@ $(document).ready(function() {
         .children('.accordion-body').slideUp();
     });
   });
-
-
-  
-
-
-  /*  $('.slider-nav-recipe').slick({
-      
-
-    });
-    */
 
 });
 
