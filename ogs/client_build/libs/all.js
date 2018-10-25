@@ -36,22 +36,8 @@ $(document).ready(function() {
     }, 1000);
   });
 
-  // $('.scrolling__link').click(function(event) {
-  //   var id = $(this).attr("href");
-  //   var offset = 80;
-  //   var target = $(id).offset().top - offset;
-
-  //   $('html, body').animate({
-  //     scrollTop: target
-  //   }, 1000);
-
-  //   event.preventDefault();
-  // });
-
 
   var bLazy = new Blazy();
-
-  // $('.phone-mask').mask('+38(999)999-99-99');
 
 
   $('.review__slider').slick({
@@ -61,6 +47,29 @@ $(document).ready(function() {
     dots: true,
     infinite: false,
     lazyLoad: 'ondemand',
+
+    responsive: [
+
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          fade: true,
+        }
+      },
+
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+
+          arrows: true,
+        }
+      },
+
+      ]
 
   });
 
@@ -93,29 +102,7 @@ $(document).ready(function() {
 
 
   /*  $('.slider-nav-recipe').slick({
-      responsive: [
-
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: true,
-
-        }
-      },
-
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-
-          arrows: true,
-        }
-      },
-
-      ]
+      
 
     });
     */

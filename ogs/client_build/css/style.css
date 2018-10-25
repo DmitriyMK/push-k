@@ -1996,6 +1996,10 @@ section {
     -webkit-text-decoration-color: #0b355b;
             text-decoration-color: #0b355b;
 }
+.review__slider {
+    width: 100%;
+    padding: 0 40px;
+}
 .review__slide {
     margin: 25px;
     -webkit-box-shadow: -2px 10px 20px 0 rgba(0, 0, 0, 0.5);
@@ -2003,6 +2007,7 @@ section {
 }
 .review__slide img {
     min-height: 219px;
+    margin: auto;
 }
 .partner {
     position: relative;
@@ -2656,13 +2661,13 @@ section {
     z-index: 10;
 }
 .slick-prev {
-    left: -35px;
+    left: 0;
     width: 29px;
     height: 45px;
     background: url('../images/icons/css_sprites.png') -59px -154px;
 }
 .slick-next {
-    right: -35px;
+    right: 0;
     width: 29px;
     height: 45px;
     background: url('../images/icons/css_sprites.png') -108px -154px;
