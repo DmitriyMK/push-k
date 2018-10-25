@@ -37,6 +37,12 @@
 		width: 164px;
 		height: 50px;
 		background: url(../images/decor-section-header.png)no-repeat;
+		@media @mobile-land {
+			display: none;
+		}
+		@media @tablet {
+			display: block;
+		}
 	}
 
 	&__top {
@@ -157,7 +163,11 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		min-height: 93vh;
+		min-height: 90vh;
+
+		@media @mobile-land {
+			min-height: 320px;
+		}
 
 		@media @tablet {
 			min-height: 590px;

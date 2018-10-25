@@ -494,6 +494,16 @@ section {
     height: 50px;
     background: url(../images/decor-section-header.png) no-repeat;
 }
+@media only screen and (min-width: 480px) {
+    .header:after {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .header:after {
+        display: block;
+    }
+}
 .header__top {
     padding: 5px 0;
     background: #0b355b;
@@ -679,7 +689,12 @@ section {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    min-height: 93vh;
+    min-height: 90vh;
+}
+@media only screen and (min-width: 480px) {
+    .header__center {
+        min-height: 320px;
+    }
 }
 @media only screen and (min-width: 768px) {
     .header__center {
