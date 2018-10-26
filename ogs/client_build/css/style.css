@@ -1211,6 +1211,7 @@ section {
 .proposal__img {
     position: relative;
     z-index: 15;
+    min-height: 180px;
 }
 @media only screen and (min-width: 768px) {
     .proposal__img {
@@ -1300,6 +1301,7 @@ section {
 }
 .video__box {
     max-width: 900px;
+    min-height: 180px;
     margin: 30px auto;
 }
 .video .video-responsive {
@@ -1615,6 +1617,7 @@ section {
 .advantage__img {
     position: relative;
     z-index: 10;
+    min-height: 180px;
 }
 @media only screen and (min-width: 768px) {
     .advantage__img {
@@ -2724,6 +2727,7 @@ section {
 .about__img {
     position: relative;
     z-index: 10;
+    min-height: 180px;
 }
 @media only screen and (min-width: 768px) {
     .about__img {
