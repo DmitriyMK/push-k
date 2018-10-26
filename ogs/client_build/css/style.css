@@ -1197,7 +1197,7 @@ section {
 }
 .proposal__img {
     position: relative;
-    z-index: 10;
+    z-index: 15;
 }
 @media only screen and (min-width: 768px) {
     .proposal__img {
@@ -1245,8 +1245,9 @@ section {
 }
 @media only screen and (min-width: 1200px) {
     .proposal__decor-right {
+        display: block;
         position: absolute;
-        top: -120px;
+        top: -105px;
         left: 120px;
         z-index: 0;
     }
@@ -2837,6 +2838,7 @@ section {
 }
 @media only screen and (min-width: 1200px) {
     .press__title {
+        padding-left: 70px;
         font-size: 42px;
     }
 }
