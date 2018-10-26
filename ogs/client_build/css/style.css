@@ -625,7 +625,7 @@ section {
 }
 @media only screen and (min-width: 992px) {
     .header__link {
-        font-size: 16px;
+        font-size: 17px;
     }
 }
 .header__link:after {
@@ -1349,30 +1349,30 @@ section {
 }
 .step__text {
     padding: 30px 0;
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 300;
     text-align: center;
 }
 .step__box {
-    display: none;
-}
-@media only screen and (min-width: 1200px) {
-    .step__box {
-        position: relative;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 150px 0;
+    min-height: 750px;
 }
 .step__title {
     position: absolute;
-    top: 330px;
-    left: 44%;
+    top: 340px;
+    left: 49%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
 }
 .step__item {
     position: absolute;
@@ -1391,46 +1391,113 @@ section {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    background: url(../images/infographic-item.png);
+    background: #fff;
     border-radius: 50%;
     -webkit-box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.4);
             box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.4);
     z-index: -1;
+    border: double 10px transparent;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), radial-gradient(circle at top left, #378abc, #004377);
+    background-image: -webkit-linear-gradient(white, white), -webkit-radial-gradient(top left, circle, #378abc, #004377);
+    background-image:      -o-linear-gradient(white, white), -o-radial-gradient(top left, circle, #378abc, #004377);
+    background-image:         linear-gradient(white, white), radial-gradient(circle at top left, #378abc, #004377);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 .step__item:nth-of-type(1) {
-    top: 60px;
+    top: 45px;
     left: 46%;
     z-index: 10;
 }
 .step__item:nth-of-type(2) {
-    top: 152px;
-    left: 62%;
+    top: 160px;
+    left: 67%;
     z-index: 10;
 }
 .step__item:nth-of-type(3) {
-    top: 392px;
-    left: 66%;
+    top: 450px;
+    left: 71%;
     z-index: 10;
 }
 .step__item:nth-of-type(4) {
-    top: 555px;
-    left: 55.5%;
+    top: 650px;
+    left: 58%;
     z-index: 10;
 }
 .step__item:nth-of-type(5) {
-    top: 545px;
-    left: 36%;
+    top: 640px;
+    left: 33%;
     z-index: 10;
 }
 .step__item:nth-of-type(6) {
-    top: 370px;
-    left: 22%;
+    top: 430px;
+    left: 18%;
     z-index: 10;
 }
 .step__item:nth-of-type(7) {
-    top: 152px;
-    left: 26%;
+    top: 160px;
+    left: 21.5%;
     z-index: 10;
+}
+.step__arr1:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 70px;
+    height: 36px;
+    top: 60px;
+    right: -130px;
+    background: url(../images/arr1.png) no-repeat;
+}
+.step__arr2:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 19px;
+    height: 78px;
+    top: 130px;
+    right: 0;
+    background: url(../images/arr2.png) no-repeat;
+}
+.step__arr3:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 76px;
+    top: 100px;
+    right: 85px;
+    background: url(../images/arr3.png) no-repeat;
+}
+.step__arr4:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 77px;
+    height: 10px;
+    top: 30px;
+    right: 155px;
+    background: url(../images/arr4.png) no-repeat;
+}
+.step__arr5:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 63px;
+    top: -80px;
+    right: 135px;
+    background: url(../images/arr5.png) no-repeat;
+}
+.step__arr6:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 13px;
+    height: 78px;
+    top: -150px;
+    right: 85px;
+    background: url(../images/arr6.png) no-repeat;
 }
 .step br {
     display: none;
