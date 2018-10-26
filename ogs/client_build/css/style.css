@@ -768,6 +768,7 @@ section {
 }
 @media only screen and (min-width: 1200px) {
     .header__title {
+        padding-top: 45px;
         padding-bottom: 15px;
         font-size: 46px;
     }
@@ -2783,11 +2784,6 @@ section {
 @media only screen and (min-width: 992px) {
     .press {
         padding: 50px 0;
-    }
-}
-@media only screen and (min-width: 1200px) {
-    .press {
-        padding: 50px 70px;
     }
 }
 .press__box {
