@@ -40,7 +40,7 @@ gulp.task('css', function () {
         }).on("error", notify.onError()))
         .pipe(gulpif(argv.mob,gcmq()))
 
-        .pipe(autoprefixer(['last 5 versions', '> 1%', 'ie 8'], {
+        .pipe(autoprefixer(['last 5 versions', '> 1%', 'ie 9'], {
         cascade: true
         }))
 
