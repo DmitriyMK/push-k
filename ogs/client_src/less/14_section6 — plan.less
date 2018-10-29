@@ -38,13 +38,11 @@
 		}
 	}
 	&__item {
-		position: relative;
 		width: 270px;
 		margin-bottom: 25px;
 		text-align: center;
 		list-style: none;
 		font-size: 18px;
-		counter-increment: li;
 
 		@media @desktop {
 			width: 220px;
@@ -54,24 +52,6 @@
 		@media @desktop-xl {
 			width: 260px;
 			font-size: 18px;
-		}
-		&:before{
-			content: "" counter(li);
-			position: absolute;
-			left: 20px;
-			top: 10px;
-			color: #d2d2d4;
-			font-size: 82px;
-			font-weight: 400;
-
-			@media @desktop {
-				left: 0;
-			}
-			@media @desktop-xl {
-				left: 20px;
-				top: 0;
-				font-size: 92px;
-			}
 		}
 	}
 	&__img {
