@@ -110,7 +110,7 @@
 		text-align: center;
 		font-size: 18px;
 
-		&:not(:last-child):before {
+		&:before {
 			content: '';
 			position: absolute;
 			bottom: -50px;
@@ -122,6 +122,13 @@
 			background-size: contain;
 			@media @tablet {
 				display: none;
+			}
+		}
+
+		&:last-of-type:before {
+			display: none;
+			@media @tablet {
+				display: inherit;
 			}
 		}
 		
@@ -250,7 +257,7 @@
 			left: 9%;
 		}
 		@media @desktop-xl {
-			left: 18%;
+			left: 17%;
 		}
 	}
 	&:nth-of-type(7) {
@@ -263,7 +270,7 @@
 			left: 12%;
 		}
 		@media @desktop-xl {
-			left: 20%;
+			left: 21%;
 		}
 	}
 }
@@ -370,7 +377,7 @@
 		width: 13px;
 		height: 78px;
 		top: -150px;
-		right: 85px;
+		right: 65px;
 		background: url(../images/arr6.png)no-repeat;
 	}
 }
