@@ -98,6 +98,7 @@ $(document).ready(function() {
   /*ACCORDION*/
 
     $(function() {
+
       $('.accordion__header').click(function(e) {
 
         e.preventDefault();
@@ -105,7 +106,7 @@ $(document).ready(function() {
         $(this).siblings('.accordion-body').slideToggle()
           .parent().toggleClass('active')
           .siblings().removeClass('active')
-          .children('.accordion-body').slideUp(300);
+          .children('.accordion-body').slideUp();
       });
     });
 });
