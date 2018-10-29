@@ -76,6 +76,10 @@
 		list-style: none;
 		text-align: center;
 		font-size: 16px;
+
+		opacity: 0;
+		transform: scale3d(0.3, 0.3, 0.3);
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -94,6 +98,10 @@
 			background-image: linear-gradient(white, white), radial-gradient(circle at top left, #378abc,#004377);
 			background-origin: border-box;
 			background-clip: content-box, border-box;
+
+			opacity: 0;
+			transition-property: all;
+			transition-timing-function: linear;
 
 
 			// border-left: 14px solid #3EC8AC;
@@ -160,8 +168,39 @@
 			left: 12%;
 			z-index: 10;
 			@media @desktop-xl {
-				left: 21.5%;
+				left: 20%;
 			}
+		}
+	}
+
+	#stepList.animation .step__item {
+		transform: scale3d(1, 1, 1);
+		opacity: 1;
+
+		&:before {
+			opacity: 1;
+		}
+
+		&:nth-of-type(1) {
+			transition: all .3s linear;
+		}
+		&:nth-of-type(2) {
+			transition: all .4s linear;
+		}
+		&:nth-of-type(3) {
+			transition: all .5s linear;
+		}
+		&:nth-of-type(4) {
+			transition: all .6s linear;
+		}
+		&:nth-of-type(5) {
+			transition: all .7s linear;
+		}
+		&:nth-of-type(6){
+			transition: all .8s linear;
+		}
+		&:nth-of-type(7) {
+			transition: all .9s linear;
 		}
 	}
 
@@ -233,5 +272,18 @@
 		@media @tablet {
 			display: inline-block;
 		}
+	}
+}
+
+
+
+@keyframes animation {
+	from {
+		opacity: 0;
+		transform: scale3d(0.3, 0.3, 0.3);
+	}
+
+	to {
+		opacity: 1;
 	}
 }

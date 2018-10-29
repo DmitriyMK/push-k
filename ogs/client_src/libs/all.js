@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-    if (document.documentElement.clientWidth > 1200) {
-      new WOW().init();
-    };
+  if (document.documentElement.clientWidth > 1200) {
+    new WOW().init();
+  };
 
 
   $(".scrolling__link").on("click", function(event) {
@@ -39,7 +39,7 @@ $(document).ready(function() {
         }
       }
 
-      ]
+    ]
 
   });
 
@@ -91,7 +91,7 @@ $(document).ready(function() {
         }
       }
 
-      ]
+    ]
   });
 
 
@@ -115,7 +115,7 @@ $(document).ready(function() {
 $(window).on('resize orientationchange', function() {
   $('.slider').slick('resize');
 });
-  
+
 
 
 // MENU EVENTS
@@ -206,6 +206,20 @@ $(document).ready(function() {
       }
     }
   }
+});
+
+
+$(window).scroll(function() {
+
+  $("#step").each(function() {
+
+    stepAnim = $("#step").offset().top - 400;
+    scrollstep = $(window).scrollTop();
+    if (scrollstep > stepAnim) {
+      $("#stepList").addClass('animation');
+    }
+  });
+
 });
 
 

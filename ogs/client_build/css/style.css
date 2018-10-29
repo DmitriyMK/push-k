@@ -1379,6 +1379,9 @@ section {
     list-style: none;
     text-align: center;
     font-size: 16px;
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
 }
 .step__item:before {
     content: '';
@@ -1403,6 +1406,13 @@ section {
     background-image:         linear-gradient(white, white), radial-gradient(circle at top left, #378abc, #004377);
     background-origin: border-box;
     background-clip: content-box, border-box;
+    opacity: 0;
+    -webkit-transition-property: all;
+         -o-transition-property: all;
+            transition-property: all;
+    -webkit-transition-timing-function: linear;
+         -o-transition-timing-function: linear;
+            transition-timing-function: linear;
 }
 .step__item:nth-of-type(1) {
     top: 45px;
@@ -1473,8 +1483,51 @@ section {
 }
 @media only screen and (min-width: 1200px) {
     .step__item:nth-of-type(7) {
-        left: 21.5%;
+        left: 20%;
     }
+}
+.step #stepList.animation .step__item {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+    opacity: 1;
+}
+.step #stepList.animation .step__item:before {
+    opacity: 1;
+}
+.step #stepList.animation .step__item:nth-of-type(1) {
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+}
+.step #stepList.animation .step__item:nth-of-type(2) {
+    -webkit-transition: all 0.4s linear;
+         -o-transition: all 0.4s linear;
+            transition: all 0.4s linear;
+}
+.step #stepList.animation .step__item:nth-of-type(3) {
+    -webkit-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+}
+.step #stepList.animation .step__item:nth-of-type(4) {
+    -webkit-transition: all 0.6s linear;
+         -o-transition: all 0.6s linear;
+            transition: all 0.6s linear;
+}
+.step #stepList.animation .step__item:nth-of-type(5) {
+    -webkit-transition: all 0.7s linear;
+         -o-transition: all 0.7s linear;
+            transition: all 0.7s linear;
+}
+.step #stepList.animation .step__item:nth-of-type(6) {
+    -webkit-transition: all 0.8s linear;
+         -o-transition: all 0.8s linear;
+            transition: all 0.8s linear;
+}
+.step #stepList.animation .step__item:nth-of-type(7) {
+    -webkit-transition: all 0.9s linear;
+         -o-transition: all 0.9s linear;
+            transition: all 0.9s linear;
 }
 .step__arr1:after {
     content: '';
@@ -1542,6 +1595,26 @@ section {
 @media only screen and (min-width: 768px) {
     .step br {
         display: inline-block;
+    }
+}
+@-webkit-keyframes animation {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+                transform: scale3d(0.3, 0.3, 0.3);
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes animation {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+                transform: scale3d(0.3, 0.3, 0.3);
+    }
+    to {
+        opacity: 1;
     }
 }
 .advantage {
