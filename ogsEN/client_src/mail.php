@@ -41,7 +41,7 @@ if ( $method === 'POST' ) {
 }
 }
 
-$admin_email = "dm@push-k.ua";
+$admin_email = "alex@ogscapital.com";
 $message = "<table style='width: 100%;'>$message</table>";
 
 function adopt($text) {
