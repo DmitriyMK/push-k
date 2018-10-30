@@ -1,0 +1,144 @@
+@media @mobile-xl {
+
+}
+@media @mobile-land {
+
+}
+@media @tablet {
+
+}
+@media @desktop {
+
+}
+@media @desktop-xl {
+	
+}
+@media @desktop-xl-2 {
+
+}
+@media @desktop-xll {
+	
+}
+
+.formSection {
+	position: relative;
+	background: url(../images/form-back.jpg)no-repeat center/cover;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 159px;
+		height: 50px;
+		background: url(../images/decor-section-light.png)no-repeat;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+
+		@media @desktop {
+			flex-direction: row;
+			align-items: inherit;
+			justify-content: space-around;
+		}
+	}
+
+	&__text {
+		padding: 10px 5px;
+		max-width: 400px;
+		font-size: 18px;
+		text-align: center;
+
+		@media @tablet {
+			font-size: 19px;
+		}
+		@media @desktop {
+			padding: 0;
+			max-width: 420px;
+			font-size: 21px;
+			text-align: inherit;
+		}
+		@media @desktop-xl {
+			max-width: 520px;
+		}
+	}
+	&__title {
+		padding-bottom: 15px;
+		margin-bottom: 10px;
+		position: relative;
+		font-size: 24px;
+		font-weight: 700;
+		text-align: center;
+
+		@media @tablet {
+			font-size: 28px;
+		}
+		@media @desktop {
+			margin-bottom: 10px;
+			font-size: 32px;
+			text-align: inherit;
+		}
+		@media @desktop-xl {
+			font-size: 36px;
+		}
+		@media @desktop-xl-2 {
+			font-size: 40px;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 249px;
+			height: 11px;
+			background: url(../images/line-gray.png)no-repeat;
+			@media @desktop {
+				left: 0;
+				transform: none;
+			}
+		}
+	}
+	&__form {
+		max-width: 290px;
+	}
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 15px 0 30px 0;
+		
+		@media @tablet {
+			margin: 30px 0;
+		}
+
+		@media @desktop {
+			margin: 0;
+		}
+	}
+
+	.form__title {
+		padding-bottom: 10px;
+		text-align: center;
+		font-size: 31px;
+		font-weight: 700;
+	}
+	.form__line {
+		padding: 10px 10px 10px 25px;
+		margin-bottom: 10px;
+		width: 100%;
+		outline: none;
+	}
+	.btn {
+		border: none;
+		width: 100%;
+		color: #fff;
+	}
+}

@@ -1,0 +1,282 @@
+@media @mobile-xl {
+
+}
+@media @mobile-land {
+
+}
+@media @tablet {
+
+}
+@media @desktop {
+
+}
+@media @desktop-xl {
+	
+}
+@media @desktop-xl-2 {
+
+}
+@media @desktop-xll {
+	
+}
+
+.about {
+	position: relative;
+	background: #e8e8e8;
+	color: #000;
+	overflow: hidden;
+
+	.wrapper {
+		position: relative;
+	}
+
+	&__box {
+		padding: 60px 0;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		z-index: 10;
+		@media @desktop {
+			flex-direction: row;
+			padding: 60px;
+			padding-right: 0;
+		}
+		@media @desktop-xl {
+			width: 1200px;
+			margin: auto;
+		}
+		@media @desktop-xl-2 {
+			padding: 100px 0px 100px 240px;
+			width: 1500px;
+		}	
+		@media @desktop-xll {
+			width: 1600px;
+		}
+	}
+
+	&__content {
+		padding: 0 15px;
+		margin: auto;
+		text-align: center;
+
+		@media @mobile-land {
+			padding: 0;
+			max-width: 550px;
+		}
+		@media @desktop {
+			max-width: 450px;
+			text-align: inherit;
+		}
+		@media @desktop-xl {
+			max-width: inherit;
+		}
+	}
+
+	&__title {
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+		position: relative;
+		font-size: 24px;
+		font-weight: 700;
+		@media @tablet {
+			font-size: 28px;
+		}
+		@media @desktop {
+			margin-bottom: 10px;
+			font-size: 30px;
+		}
+		@media @desktop-xl {
+			font-size: 36px;
+		}
+		@media @desktop-xl-2 {
+			font-size: 40px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 50%;
+			transform: translateX(-50%);
+			.bg-decor_line;
+			@media @desktop {
+				left: 0;
+				bottom: 0;
+				transform: none;
+			}
+		}
+	}
+
+	&__text {
+		padding-bottom: 20px;
+		font-size: 18px;
+		font-weight: 300;
+		text-align: center;
+		@media @desktop {
+			text-align: inherit;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		list-style: none;
+		@media @tablet {
+			justify-content: inherit;
+			flex-wrap: nowrap;
+		}
+	}
+	&__item {
+		width: 40%;
+		margin-bottom: 30px;
+		text-align: center;
+
+		@media @tablet {
+			width: 150px;
+			margin-bottom: 0;
+		}
+	}
+
+	&__accent {
+		display: block;
+		width: 75px;
+		height: 75px;
+		margin: auto;
+		margin-bottom: 10px;
+		background: #305375;
+		border-radius: 50%;
+		
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 75px;
+		color: #fff;
+	}
+	&__titles {
+		
+	}
+
+	&__photo {
+		margin-top: 40px;
+		position: relative;
+		@media @desktop {
+			margin-top: 0;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+		@media @desktop-xl {
+			padding-left: 0;
+		}
+		@media @desktop-xl-2 {
+			padding-right: 0;
+			padding-left: 80px;
+		}
+	}
+	&__img {
+		position: relative;
+		z-index: 10;
+		min-height: 180px;
+		
+		@media @tablet {
+			width: 450px;
+		}
+		@media @desktop {
+
+		}
+		@media @desktop-xl {
+			width: 500px;
+		}
+		@media @desktop-xl-2 {
+			width: 700px;
+		}	
+		@media @desktop-xll {
+			width: 766px;
+		}
+		img {
+			box-shadow: 6.103px 11.478px 13px 0px rgba(0, 0, 0, 0.32);
+		}
+	}
+
+	&__decor-left {
+		display: none;
+		@media @desktop-xl {
+			display: block;
+			position: absolute;
+			top: 110px;
+			left: -85px;
+		}
+		@media @desktop-xl-2 {
+			top: 160px;
+			left: 20px;
+		}
+		@media @desktop-xll {
+			top: 180px;
+		}
+	}
+	&__decor-right {
+		display: none;
+		@media @desktop {
+			display: block;
+			position: absolute;
+			top: -120px;
+			left: 120px;
+			z-index: 0;
+		}
+	}
+
+	br {
+		display: none;
+		@media @desktop-xl {
+			display: inline-block;
+		}
+	}
+}
+
+
+.press {
+	padding: 30px 0;
+	background: #315577;
+
+	@media @desktop {
+		padding: 50px 0;
+	}
+	&__box {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		@media @tablet {
+			flex-direction: row;
+		}
+		@media @desktop {
+			flex-wrap: nowrap;
+		}
+	}
+	&__title {
+		width: 100%;
+		padding-bottom: 25px;
+		text-align: center;
+		font-size: 26px;
+		font-weight: 700;
+		@media @tablet {
+			font-size: 32px;
+		}
+		@media @desktop {
+			width: inherit;
+			text-align: inherit;
+			padding-bottom: 0;
+		}
+		@media @desktop-xl {
+			padding-left: 70px;
+			font-size: 42px;
+		}
+	}
+	img {
+		margin-bottom: 30px;
+		@media @tablet {
+			margin-bottom: 0;
+		}
+	}
+}

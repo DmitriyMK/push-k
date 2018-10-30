@@ -1,0 +1,152 @@
+@media @mobile-xl {
+
+}
+@media @mobile-land {
+
+}
+@media @tablet {
+
+}
+@media @desktop {
+
+}
+@media @desktop-xl {
+	
+}
+@media @desktop-xl-2 {
+
+}
+@media @desktop-xll {
+	
+}
+
+.plan {
+	background: #f2f2f2;
+	color: #000;
+	overflow: hidden;
+
+	&__list {
+		padding-top: 30px;
+		padding-bottom: 60px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		@media @desktop {
+			padding-bottom: 80px;
+			flex-wrap: nowrap;
+		}
+	}
+	&__item {
+		width: 270px;
+		margin-bottom: 25px;
+		text-align: center;
+		list-style: none;
+		font-size: 18px;
+
+		@media @desktop {
+			width: 220px;
+			margin-bottom: 0;
+			font-size: 17px;
+		}
+		@media @desktop-xl {
+			width: 260px;
+			font-size: 18px;
+		}
+	}
+	&__img {
+		position: relative;
+		margin: 20px auto;
+		z-index: 10;
+	}
+	.btn {
+		margin: 20px auto;
+		width: 220px;
+		color: #fff;
+	}
+
+	br {
+		display: none;
+		@media @desktop-xl {
+			display: inline-block;
+		}
+	}
+}
+
+
+.pay {
+	background: #f4f6f8;
+	min-height: 150px;
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+
+		@media @tablet {
+			display: inherit;
+			flex-direction: inherit;
+			align-items: inherit;
+			padding-left: 350px;
+		}
+		@media @desktop {
+			padding-left: 420px;
+		}
+		@media @desktop-xl {
+			padding-left: 520px;
+		}
+	}
+	&__title {
+		position: relative;
+		padding-top: 27px;
+		padding-bottom: 10px;
+		font-size: 27px;
+		font-weight: 700;
+		color: #2fafe4;
+		z-index: 10;
+
+		@media @desktop {
+			padding-top: 40px;
+		}
+	}
+	&__text {
+		width: 290px;
+		padding-bottom: 30px;
+		position: relative;
+		font-size: 19px;
+		text-align: center;
+		color: #7f7f7f;
+		z-index: 10;
+
+		@media @tablet {
+			padding-bottom: 0;
+			text-align: inherit;
+		}
+		@media @desktop {
+			width: inherit;
+		}
+	}
+	&__decor {
+		order: -1;
+		margin-top: -100px;
+		width: 290px;
+		z-index: 0;
+
+		@media @tablet {
+			position: absolute;
+			top: -130px;
+			left: 45px;
+			margin-top: 0;
+			width: 350px;
+			order: inherit;
+		}
+		@media @desktop {
+			width: 401px;
+			top: -140px;
+			left: 0px;
+		}
+		@media @desktop-xl {
+			left: 150px;
+		}
+	}
+}
