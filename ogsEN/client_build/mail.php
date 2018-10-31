@@ -32,17 +32,16 @@ if ( $method === 'POST' ) {
 			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
 			<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
 			<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-			<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-			<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-			<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
 		</tr>
 		";
 	}
 }
 }
 
+$ip = $_SERVER['REMOTE_ADDR'];
+
 $admin_email = "alex@ogscapital.com";
-$message = "<table style='width: 100%;'>$message</table>";
+$message = "<table style='width: 100%;'>$message <tr><td>IP-address:</td><td>$ip</td></tr></table>";
 
 function adopt($text) {
 	return '=?UTF-8?B?'.Base64_encode($text).'?=';
