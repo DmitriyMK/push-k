@@ -3566,6 +3566,7 @@ section {
     font-weight: 700;
 }
 .formBox .form__text {
+    display: none;
     padding-bottom: 30px;
     text-align: center;
     font-size: 20px;
