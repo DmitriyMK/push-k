@@ -130,7 +130,6 @@ $(document).ready(function() {
   });
 
 
-
   $('.header__link').click(function() {
     $('.overlay').removeClass('open');
     $('.burger').removeClass('active');
