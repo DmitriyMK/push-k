@@ -71,7 +71,6 @@ $(document).ready(function() {
         breakpoint: 992,
         settings: {
           slidesToShow: 3,
-          arrows: false,
         }
       },
 
@@ -79,7 +78,6 @@ $(document).ready(function() {
         breakpoint: 700,
         settings: {
           slidesToShow: 2,
-          arrows: false
         }
       },
 
@@ -87,7 +85,6 @@ $(document).ready(function() {
         breakpoint: 380,
         settings: {
           slidesToShow: 1,
-          arrows: false
         }
       }
 

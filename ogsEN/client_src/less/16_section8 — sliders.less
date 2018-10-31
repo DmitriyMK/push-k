@@ -304,21 +304,30 @@
 
 	.slick-prev,
 	.slick-next {
-		top: -80px;
-		transform: none;
+		top: 50%;
+		transform: translateY(-50%);
 		opacity: .5;
+		@media @desktop {
+			top: -80px;
+			transform: none;
+		}
 	}
 
 
 	.slick-prev {
-		left: inherit;
-		right: 110px;
 		.bg-arr_lef_lightt;
+		left: 5px;
+		@media @desktop {
+			left: inherit;
+			right: 110px;
+		}
 	}
 
 	.slick-next {
-		right: 60px; 
+		right: 5px;
 		.bg-arr_rightt_light;
+		@media @desktop {
+			right: 60px; 
+		}
 	}
-
 }
