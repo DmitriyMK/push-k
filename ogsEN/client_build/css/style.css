@@ -2224,7 +2224,27 @@ section {
 }
 .formSection {
     position: relative;
-    background: url(../images/form-back.jpg) no-repeat center / cover;
+    background: url(../images/form-back-mob.jpg) no-repeat center / cover;
+}
+.formSection:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+}
+.formSection .container {
+    position: relative;
+}
+@media only screen and (min-width: 992px) {
+    .formSection {
+        background: url(../images/form-back.jpg) no-repeat center / cover;
+    }
+    .formSection:before {
+        display: none;
+    }
 }
 .formSection:after {
     content: '';

@@ -22,7 +22,28 @@
 
 .formSection {
 	position: relative;
-	background: url(../images/form-back.jpg)no-repeat center/cover;
+	background: url(../images/form-back-mob.jpg)no-repeat center/cover;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0, .65);
+	}
+
+	.container {
+		position: relative;
+	}
+
+	@media @desktop {
+		background: url(../images/form-back.jpg)no-repeat center/cover;
+		&:before {
+			display: none;
+		}
+	}
 
 	&:after {
 		content: '';
