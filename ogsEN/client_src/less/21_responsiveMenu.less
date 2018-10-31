@@ -1,33 +1,10 @@
 /* RESPONSIVE MENU TO 992px*/
-
-.overlay {
-	position: fixed;
-	width: 100vw;
-	background: @blue;
-	height: 105vh;
-	top: 60px;
-	right: 0;
-	// transition: all .3s linear;
-	opacity: 0;
-
- @media @desktop {
- 	position: inherit;
- 	width: inherit;
- 	height: inherit;
- 	background: inherit;
- 	overflow-y: inherit;
- 	opacity: 1;
- }
-}
-
 .open {
-	// transform: translateX(-100vw);
-	transition-duration: 0.5s;
+	transform: translateX(-100vw);
 	transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
 	opacity: 1;
-	// position: relative;
+	position: relative;
 	z-index: 200;
-	
 
 	@media @mobile-land {
 		overflow-y: scroll;
@@ -54,7 +31,24 @@
 	}
 }
 
+.overlay {
+	position: fixed;
+	width: 100vw;
+	background: @blue;
+	height: 105vh;
+	top: 60px;
+	right: -100vw;
+	transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
 
+	@media @desktop {
+		position: inherit;
+		width: inherit;
+		height: inherit;
+		background: inherit;
+		overflow-y: inherit;
+		opacity: 1;
+	}
+}
 
 .burger {
 	position: relative;

@@ -3599,33 +3599,15 @@ section {
     color: #000;
 }
 /* RESPONSIVE MENU TO 992px*/
-.overlay {
-    position: fixed;
-    width: 100vw;
-    background: #0b355b;
-    height: 105vh;
-    top: 60px;
-    right: 0;
-    opacity: 0;
-}
-@media only screen and (min-width: 992px) {
-    .overlay {
-        position: inherit;
-        width: inherit;
-        height: inherit;
-        background: inherit;
-        overflow-y: inherit;
-        opacity: 1;
-    }
-}
 .open {
-    -webkit-transition-duration: 0.5s;
-         -o-transition-duration: 0.5s;
-            transition-duration: 0.5s;
+    -webkit-transform: translateX(-100vw);
+        -ms-transform: translateX(-100vw);
+            transform: translateX(-100vw);
     -webkit-transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
          -o-transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
             transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
     opacity: 1;
+    position: relative;
     z-index: 200;
 }
 @media only screen and (min-width: 480px) {
@@ -3653,6 +3635,27 @@ section {
 @media only screen and (min-width: 992px) {
     .open {
         display: none;
+    }
+}
+.overlay {
+    position: fixed;
+    width: 100vw;
+    background: #0b355b;
+    height: 105vh;
+    top: 60px;
+    right: -100vw;
+    -webkit-transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+         -o-transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+            transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+}
+@media only screen and (min-width: 992px) {
+    .overlay {
+        position: inherit;
+        width: inherit;
+        height: inherit;
+        background: inherit;
+        overflow-y: inherit;
+        opacity: 1;
     }
 }
 .burger {
