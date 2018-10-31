@@ -3615,6 +3615,7 @@ section {
         height: inherit;
         background: inherit;
         overflow-y: inherit;
+        opacity: 1;
     }
 }
 .open {
