@@ -42,7 +42,6 @@
 	<!-- DEFER SCRIPT -->
 	<script defer src="./libs/remodal.min.js"></script>
 	<script defer src="./libs/slick.js"></script>
-	<script defer src="./libs/jquery.validate.min.js"></script>
 	<script defer src="./libs/wow.min.js"></script>
 	<script defer src="./libs/cssrelpreload.js"></script>
 	<!-- END DEFER SCRIPT -->
@@ -79,6 +78,13 @@
 								</li>
 							</ul>
 
+							<div class="header__item-mob">
+								<a class="header__phone-mob" href="tel:+16197275304">
+									<div class="bg-phone"></div>
+									+1-619-727-5304
+									<div class="bg-usa"></div>
+								</a>
+							</div>
 							<ul class="header__social-mob">
 								<li class="header__social-item">
 									<a class="header__social-link" href="https://www.linkedin.com/company/ogs-capital/" target="_blank" rel="noopener noreferrer"><div class="bg-linkeldin"></div></a>
@@ -297,17 +303,23 @@
 					</div>
 
 					<div class="consult__form fadeInUp wow" data-wow-offset="80" data-wow-delay="0.35s" data-wow-duration="1.2s">
-						<form action="mail.php" method="post" class="form form-validate" name="Consultation">
+						<form id="form3" action="mail.php" method="post" class="form form-validate" name="Consultation" novalidate="novalidate">
 							<input type="hidden" name="project_name" value="OGS Capital">
-							<input type="hidden" name="admin_email" value="alex@ogscapital.com">
+							<input type="hidden" name="admin_email" value="dm@push-k.ua">
 							<input type="hidden" name="form_subject" value="OGS Capital > Get Your Free Consultation">
 							<input type="hidden" name="whatform" value="OGS Capital > Get Your Free Consultation">
 
 							<p class="form__title">Get Your Free Consultation</p>
 
-							<input class="form__line name" type="text" name="Name" placeholder="Name" required>
-							<input class="form__line phone-mask" type="tel" name="Telephone" placeholder="Telephone" required>
-							<input class="form__line" type="email" name="Email" placeholder="Email">
+							<div class="inputWrap">
+								<input class="form__line name" type="text" name="name" placeholder="Name" minlength="1" required aria-required="true" >
+							</div>
+							<div class="inputWrap">
+								<input class="form__line phone-mask" type="text" name="phone" placeholder="Phone" minlength="10" required aria-required="true">
+							</div>
+							<div class="inputWrap">
+								<input class="form__line" type="email" name="email" placeholder="Email" required aria-required="true">
+							</div>	
 							<input class="btn" type="submit" value="Send"> 
 						</form>
 					</div>
@@ -821,16 +833,21 @@
 				<div class="footer__col col__form">
 					<h2 class="footer__title">Any questions? Get in touch</h2>
 
-					<form action="mail.php" method="post" class="form form-validate" name="Any questions? Get in touch">
+					<form id="#form2" action="mail.php" method="post" class="form form-validate" name="callback" novalidate="novalidate">
 						<input type="hidden" name="project_name" value="OGS Capital">
-						<input type="hidden" name="admin_email" value="alex@ogscapital.com">
-						<input type="hidden" name="form_subject" value="OGS Capital > Any questions? Get in touch">
-						<input type="hidden" name="whatform" value="OGS Capital > Any questions? Get in touch">
+						<input type="hidden" name="admin_email" value="dm@push-k.ua">
+						<input type="hidden" name="form_subject" value="OGS Capital > Get Your Free Consultation">
+						<input type="hidden" name="whatform" value="OGS Capital > Get Your Free Consultation">
 
-						<input class="form__line name" type="text" name="Name" placeholder="Name" required>
-						<input class="form__line phone-mask" type="tel" name="Telephone" placeholder="Telephone" required>
-						<input class="form__line" type="email" name="Email" placeholder="Email">
-						<input class="btn" type="submit" value="Send"> 
+						<div class="inputWrap">
+							<input class="form__line name" type="text" name="name" placeholder="Name" minlength="1" required aria-required="true" >
+						</div>
+						<div class="inputWrap">
+							<input class="form__line phone-mask" type="text" name="phone" placeholder="Phone" minlength="10" required aria-required="true">
+						</div>
+						<div class="inputWrap">
+							<input class="form__line" type="email" name="email" placeholder="Email" required aria-required="true">
+						</div>	
 					</form>
 				</div>
 			</div>
@@ -848,21 +865,25 @@
 	<!-- MODALS -->
 	<div class="remodal formBox" data-remodal-id="callback"> 
 		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<form class="form form-validate" name="callback">
+		<form id="form1" class="form form-validate" name="callback" novalidate="novalidate">
 			<!-- Hidden Required Fields -->
 			<input type="hidden" name="project_name" value="OGS Capital">
-			<input type="hidden" name="admin_email" value="alex@ogscapital.com">
+			<input type="hidden" name="admin_email" value="dm@push-k.ua">
 			<input type="hidden" name="form_subject" value="callback">
 			<input type="hidden" name="form_subject" value="OGS Capital > Get Free Consultation">
 			<input type="hidden" name="whatform" value="OGS Capital > Get Free Consultation">
 			<!-- END Hidden Required Fields -->
 			<p class="form__title">Get Your Free Consultation</p>
 			<p class="form__text">We will contact you <br> as soon as possible</p>
-
-			<input class="form__line name" type="text" name="Name" placeholder="Name" required>
-			<input class="form__line phone-mask" type="tel" name="Telephone" placeholder="Telephone" required>
-			<input class="form__line" type="email" name="Email" placeholder="Email">
-			
+			<div class="inputWrap">
+				<input class="form__line name" type="text" name="name" placeholder="Name" minlength="1" required aria-required="true" >
+			</div>
+			<div class="inputWrap">
+				<input class="form__line phone-mask" type="text" name="phone" placeholder="Phone" minlength="10" required aria-required="true">
+			</div>
+			<div class="inputWrap">
+				<input class="form__line" type="email" name="email" placeholder="Email" required aria-required="true">
+			</div>	
 			<input class="btn" type="submit" value="Send"> 
 		</form>
 	</div>  
@@ -871,6 +892,7 @@
 
 	<!-- Load Scripts -->
 	<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="./libs/jquery.validate.min.js"></script>
 	<script src="./libs/blazy.js"></script>  
 	<script src="./libs/all.js"></script>
 

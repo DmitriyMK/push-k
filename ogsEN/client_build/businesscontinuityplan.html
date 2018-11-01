@@ -9,12 +9,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="canonical" href="https://www.ogscapital.com/bcp/businesscontinuityplan.html" />
-	
+	<link rel="canonical" href="https://www.ogscapital.com/bcp/businesscontinuityplan" />
+
 	<link rel="alternate" href="https://www.ogscapital.com/bcp/en-ca/businesscontinuityplan.html" hreflang="en-au" />
 	<link rel="alternate" href="https://www.ogscapital.com/bcp/en-gb/businesscontinuityplan.html" hreflang="en-gb" />
 	<link rel="alternate" href="https://www.ogscapital.com/bcp/en-ca/businesscontinuityplan.html" hreflang="en-ca" />
-	<link rel="alternate" href="https://www.ogscapital.com/bcp/businesscontinuityplan.html" hreflang="x-default" />
+	<link rel="alternate" href="https://www.ogscapital.com/bcp/businesscontinuityplan" hreflang="x-default" />
+
 
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 	<meta name="theme-color" content="#232e34">
@@ -41,7 +42,6 @@
 	<!-- DEFER SCRIPT -->
 	<script defer src="./libs/remodal.min.js"></script>
 	<script defer src="./libs/slick.js"></script>
-	<script defer src="./libs/jquery.validate.min.js"></script>
 	<script defer src="./libs/wow.min.js"></script>
 	<script defer src="./libs/cssrelpreload.js"></script>
 	<!-- END DEFER SCRIPT -->
@@ -52,7 +52,7 @@
 		<div class="header__top header__fixed">
 			<div class="container">
 				<div class="header__box">
-					<a class="header__logo" href="./businesscontinuityplan.html">
+					<a class="header__logo" href="./index.html">
 						<img class="img-responsive" src="./images/logo.png" alt="OGScapital" title="OGScapital">
 					</a>
 					
@@ -296,17 +296,23 @@
 					</div>
 
 					<div class="consult__form fadeInUp wow" data-wow-offset="80" data-wow-delay="0.35s" data-wow-duration="1.2s">
-						<form action="mail.php" method="post" class="form form-validate" name="Business_continuity_plan-USA">
+						<form id="form3" action="mail.php" method="post" class="form form-validate" name="Consultation" novalidate="novalidate">
 							<input type="hidden" name="project_name" value="OGS Capital">
-							<input type="hidden" name="admin_email" value="alex@ogscapital.com">
-							<input type="hidden" name="form_subject" value="OGS Capital > Business continuity plan > USA">
-							<input type="hidden" name="whatform" value="OGS Capital > Business continuity plan > USA">
+							<input type="hidden" name="admin_email" value="dm@push-k.ua">
+							<input type="hidden" name="form_subject" value="OGS Capital > Get Your Free Consultation">
+							<input type="hidden" name="whatform" value="OGS Capital > Get Your Free Consultation">
 
 							<p class="form__title">Get Your Free Consultation</p>
 
-							<input class="form__line name" type="text" name="Name" placeholder="Name" required>
-							<input class="form__line phone-mask" type="tel" name="Telephone" placeholder="Telephone" required>
-							<input class="form__line" type="email" name="Email" placeholder="Email" required>
+							<div class="inputWrap">
+								<input class="form__line name" type="text" name="name" placeholder="Name" minlength="1" required aria-required="true" >
+							</div>
+							<div class="inputWrap">
+								<input class="form__line phone-mask" type="text" name="phone" placeholder="Phone" required aria-required="true">
+							</div>
+							<div class="inputWrap">
+								<input class="form__line" type="email" name="email" placeholder="Email" required aria-required="true">
+							</div>	
 							<input class="btn" type="submit" value="Send"> 
 						</form>
 					</div>
@@ -820,16 +826,21 @@
 				<div class="footer__col col__form">
 					<h2 class="footer__title">Any questions? Get in touch</h2>
 
-					<form action="mail.php" method="post" class="form form-validate" name="Business_continuity_plan-USA">
+					<form id="#form2" action="mail.php" method="post" class="form form-validate" name="callback" novalidate="novalidate">
 						<input type="hidden" name="project_name" value="OGS Capital">
-						<input type="hidden" name="admin_email" value="alex@ogscapital.com">
-						<input type="hidden" name="form_subject" value="OGS Capital > Business continuity plan > USA">
-						<input type="hidden" name="whatform" value="OGS Capital > Business continuity plan > USA">
+						<input type="hidden" name="admin_email" value="dm@push-k.ua">
+						<input type="hidden" name="form_subject" value="OGS Capital > Get Your Free Consultation">
+						<input type="hidden" name="whatform" value="OGS Capital > Get Your Free Consultation">
 
-						<input class="form__line name" type="text" name="Name" placeholder="Name" required>
-						<input class="form__line phone-mask" type="tel" name="Telephone" placeholder="Telephone" required>
-						<input class="form__line" type="email" name="Email" placeholder="Email" required>
-						<input class="btn" type="submit" value="Send"> 
+						<div class="inputWrap">
+							<input class="form__line name" type="text" name="name" placeholder="Name" minlength="1" required aria-required="true" >
+						</div>
+						<div class="inputWrap">
+							<input class="form__line phone-mask" type="text" name="phone" placeholder="Phone" required aria-required="true">
+						</div>
+						<div class="inputWrap">
+							<input class="form__line" type="email" name="email" placeholder="Email" required aria-required="true">
+						</div>	
 					</form>
 				</div>
 			</div>
@@ -847,20 +858,25 @@
 	<!-- MODALS -->
 	<div class="remodal formBox" data-remodal-id="callback"> 
 		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<form class="form form-validate" name="Business_continuity_plan-USA">
+		<form id="form1" class="form form-validate" name="callback" novalidate="novalidate">
 			<!-- Hidden Required Fields -->
 			<input type="hidden" name="project_name" value="OGS Capital">
-			<input type="hidden" name="admin_email" value="alex@ogscapital.com">
-			<input type="hidden" name="form_subject" value="OGS Capital > Business continuity plan > USA">
-			<input type="hidden" name="whatform" value="OGS Capital > Business continuity plan > USA">
+			<input type="hidden" name="admin_email" value="dm@push-k.ua">
+			<input type="hidden" name="form_subject" value="callback">
+			<input type="hidden" name="form_subject" value="OGS Capital > Get Free Consultation">
+			<input type="hidden" name="whatform" value="OGS Capital > Get Free Consultation">
 			<!-- END Hidden Required Fields -->
 			<p class="form__title">Get Your Free Consultation</p>
 			<p class="form__text">We will contact you <br> as soon as possible</p>
-
-			<input class="form__line name" type="text" name="Name" placeholder="Name" required>
-			<input class="form__line phone-mask" type="tel" name="Telephone" placeholder="Telephone" required>
-			<input class="form__line" type="email" name="Email" placeholder="Email" required>
-			
+			<div class="inputWrap">
+				<input class="form__line name" type="text" name="name" placeholder="Name" minlength="1" required aria-required="true" >
+			</div>
+			<div class="inputWrap">
+				<input class="form__line phone-mask" type="text" name="phone" placeholder="Phone" required aria-required="true">
+			</div>
+			<div class="inputWrap">
+				<input class="form__line" type="email" name="email" placeholder="Email" required aria-required="true">
+			</div>	
 			<input class="btn" type="submit" value="Send"> 
 		</form>
 	</div>  
@@ -869,6 +885,7 @@
 
 	<!-- Load Scripts -->
 	<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="./libs/jquery.validate.min.js"></script>
 	<script src="./libs/blazy.js"></script>  
 	<script src="./libs/all.js"></script>
 

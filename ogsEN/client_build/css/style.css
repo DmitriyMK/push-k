@@ -528,15 +528,47 @@ section {
 }
 ::-webkit-input-placeholder {
     font-size: 16px;
+    font-family: 'Proxima Nova', Fallback, sans-serif;
+    font-weight: 400;
 }
 ::-moz-placeholder {
     font-size: 16px;
+    font-family: 'Proxima Nova', Fallback, sans-serif;
+    font-weight: 400;
 }
 :-ms-input-placeholder {
     font-size: 16px;
+    font-family: 'Proxima Nova', Fallback, sans-serif;
+    font-weight: 400;
 }
 :-moz-placeholder {
     font-size: 16px;
+    font-family: 'Proxima Nova', Fallback, sans-serif;
+    font-weight: 400;
+}
+.inputWrap {
+    padding-bottom: 6px;
+    min-height: 47px;
+    position: relative;
+}
+.error {
+    font-size: 14px;
+    color: red;
+}
+#name-error, #phone-error, #email-error {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+}
+.form__line:valid {
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+    border-bottom: 1px solid #abc12e !important;
 }
 .header {
     position: relative;
@@ -613,7 +645,6 @@ section {
     }
 }
 .header__list {
-    margin-top: 5vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -627,44 +658,49 @@ section {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
         flex-direction: column;
-}
-@media only screen and (min-width: 480px) {
-    .header__list {
-        margin-top: 4vh;
-    }
+    border-top: 1px solid #fff;
 }
 @media only screen and (min-width: 992px) {
     .header__list {
-        margin-top: 0;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+        border-top: none;
     }
 }
 .header__item {
-    margin-bottom: 5vh;
+    width: 100%;
+    border-bottom: 1px solid #fff;
     list-style: none;
-}
-@media only screen and (min-width: 480px) {
-    .header__item {
-        margin-bottom: 4.5vh;
-    }
+    text-align: center;
 }
 @media only screen and (min-width: 992px) {
     .header__item {
-        margin-bottom: 0;
+        width: inherit;
+        padding-bottom: 0;
         margin-right: 35px;
+        border: none;
+        text-align: inherit;
     }
 }
 .header__link {
+    display: block;
+    width: 100%;
     position: relative;
-    padding-bottom: 5px;
     font-size: 19px;
+    line-height: 60px;
+}
+@media only screen and (min-width: 480px) {
+    .header__link {
+        line-height: 52px;
+    }
 }
 @media only screen and (min-width: 992px) {
     .header__link {
+        padding-bottom: 5px;
         font-size: 16px;
+        line-height: 1.2;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -678,7 +714,7 @@ section {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 60px;
     background-color: #abc12e;
     -webkit-transition: -webkit-transform 0.3s  linear;
             transition: -webkit-transform 0.3s  linear;
@@ -691,7 +727,13 @@ section {
     -webkit-transform-origin: bottom right;
         -ms-transform-origin: bottom right;
             transform-origin: bottom right;
-    z-index: 10;
+    z-index: -1;
+}
+@media only screen and (min-width: 992px) {
+    .header__link:after {
+        height: 2px;
+        z-index: 10;
+    }
 }
 .header__link:hover {
     -webkit-transition: all 0.5s;
@@ -2399,6 +2441,7 @@ section {
 }
 .formSection .form__line {
     padding: 10px 10px 10px 25px;
+    min-height: 47px;
     margin-bottom: 10px;
     width: 100%;
     outline: none;
@@ -3458,7 +3501,6 @@ section {
         height: 487px;
         text-align: left;
         border-radius: 0;
-        background: url('../images/form.png') no-repeat top center;
         padding: 120px 0 0 109px;
     }
 }
@@ -3467,18 +3509,6 @@ section {
 }
 .remodal-first:before {
     display: none;
-}
-.remodal-first .input {
-    position: relative;
-}
-.remodal-first label {
-    position: absolute;
-    top: 0;
-    border: 0;
-    font-size: 0 !important;
-    vertical-align: baseline;
-    margin: 0;
-    padding: 0;
 }
 .btn-remodal {
     margin: 30px 0 0 15px;
@@ -3538,18 +3568,6 @@ section {
 .remodal-common .remodal-close {
     color: #000 !important;
 }
-.error-input {
-    clear: both;
-    float: left;
-    font-size: 13px;
-    padding-left: 93px;
-    color: #df3a3a;
-    margin: 0 auto;
-    text-align: center;
-}
-#name-error {
-    font-size: 0 !important;
-}
 .formBox {
     position: relative;
     background: #fff;
@@ -3579,6 +3597,7 @@ section {
     padding: 10px 10px 10px 25px;
     margin-bottom: 10px;
     width: 100%;
+    min-height: 47px;
     outline: none;
     border: none;
     border-bottom: 1px solid #e8e8e8;

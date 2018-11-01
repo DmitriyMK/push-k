@@ -226,20 +226,68 @@ $(window).scroll(function() {
 });
 
 
-$(".form").submit(function() {
-  var th = $(this);
-  $.ajax({
-    type: "POST",
-    url: "mail.php",
-    data: th.serialize()
-  }).done(function() {
+$("#form1").validate({
 
-    var inst = $('[data-remodal-id=modal-thanks]').remodal();
-    inst.open();
+  submitHandler: function() {
+    var th = $("#form1");
 
-    setTimeout(function() {
-      th.trigger("reset");
-    }, 1000);
-  });
-  return false;
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: th.serialize()
+    }).done(function() {
+      var inst = $('[data-remodal-id=modal-thanks]').remodal();
+      inst.open();
+
+      setTimeout(function() {
+        th.trigger("reset");
+      }, 1000);
+    });
+
+    return false;
+  }
+});
+
+$("#form2").validate({
+
+  submitHandler: function() {
+    var th = $("#form2");
+
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: th.serialize()
+    }).done(function() {
+      var inst = $('[data-remodal-id=modal-thanks]').remodal();
+      inst.open();
+
+      setTimeout(function() {
+        th.trigger("reset");
+      }, 1000);
+    });
+
+    return false;
+  }
+});
+
+$("#form3").validate({
+
+  submitHandler: function() {
+    var th = $("#form3");
+
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: th.serialize()
+    }).done(function() {
+      var inst = $('[data-remodal-id=modal-thanks]').remodal();
+      inst.open();
+
+      setTimeout(function() {
+        th.trigger("reset");
+      }, 1000);
+    });
+
+    return false;
+  }
 });

@@ -1,12 +1,44 @@
 ::-webkit-input-placeholder { 
 	font-size: 16px;
+	font-family: @ff1;
+	font-weight: 400;
 }
 ::-moz-placeholder { 
 	font-size: 16px;
+	font-family: @ff1;
+	font-weight: 400;
 }
 :-ms-input-placeholder { 
 	font-size: 16px;
+	font-family: @ff1;
+	font-weight: 400;
 }
 :-moz-placeholder {
 	font-size: 16px;
+	font-family: @ff1;
+	font-weight: 400;
+}
+
+.inputWrap {
+	padding-bottom: 6px;
+	min-height: 47px;
+	position: relative;
+}
+
+.error{
+	font-size: 14px;
+	color: red;
+}
+
+#name-error, #phone-error, #email-error {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	opacity: 1;
+	transition: all .3s linear;
+}
+
+.form__line:valid {
+	transition: all .3s linear;
+	border-bottom: 1px solid @lime !important;
 }
