@@ -3626,11 +3626,17 @@ section {
 @media only screen and (min-width: 992px) {
     .overlay {
         position: inherit;
+        top: inherit;
         width: inherit;
         height: inherit;
         background: inherit;
         overflow-y: inherit;
         opacity: 1;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
+        visibility: visible;
+        pointer-events: auto;
     }
 }
 .open {
