@@ -3604,15 +3604,47 @@ section {
     color: #000;
 }
 /* RESPONSIVE MENU TO 992px*/
-.open {
-    -webkit-transform: translateX(-100vw);
-        -ms-transform: translateX(-100vw);
-            transform: translateX(-100vw);
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 105vh;
+    top: 60px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    -webkit-transform: translateY(15px);
+        -ms-transform: translateY(15px);
+            transform: translateY(15px);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     -webkit-transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
          -o-transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
             transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+    background: #0b355b;
+}
+@media only screen and (min-width: 992px) {
+    .overlay {
+        position: inherit;
+        width: inherit;
+        height: inherit;
+        background: inherit;
+        overflow-y: inherit;
+        opacity: 1;
+    }
+}
+.open {
+    position: fixed;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    pointer-events: auto;
     opacity: 1;
-    position: relative;
+    visibility: visible;
+    -webkit-transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+         -o-transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+            transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+    overflow: hidden;
     z-index: 200;
 }
 @media only screen and (min-width: 480px) {
@@ -3640,27 +3672,6 @@ section {
 @media only screen and (min-width: 992px) {
     .open {
         display: none;
-    }
-}
-.overlay {
-    position: fixed;
-    width: 100vw;
-    background: #0b355b;
-    height: 105vh;
-    top: 60px;
-    right: -100vw;
-    -webkit-transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
-         -o-transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
-            transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
-}
-@media only screen and (min-width: 992px) {
-    .overlay {
-        position: inherit;
-        width: inherit;
-        height: inherit;
-        background: inherit;
-        overflow-y: inherit;
-        opacity: 1;
     }
 }
 .burger {

@@ -1,11 +1,42 @@
 /* RESPONSIVE MENU TO 992px*/
-.open {
-	transform: translateX(-100vw);
-	transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
-	opacity: 1;
-	position: relative;
-	z-index: 200;
 
+.overlay {
+	position: fixed;
+	width: 100vw;
+	height: 105vh;
+	top: 60px;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+    transform: translateY(15px);
+    backface-visibility: hidden;
+
+	transition: all .3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+	background: @blue;
+	
+
+	@media @desktop {
+		position: inherit;
+		width: inherit;
+		height: inherit;
+		background: inherit;
+		overflow-y: inherit;
+		opacity: 1;
+	}
+}
+
+.open {
+	position: fixed;
+	
+	transform: translateY(0);
+	pointer-events: auto;
+	opacity: 1;
+	visibility: visible;
+	transition: all .3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+	
+	overflow: hidden;
+	z-index: 200;
 	@media @mobile-land {
 		overflow-y: scroll;
 		&::-webkit-scrollbar-track {
@@ -28,25 +59,6 @@
 
 	@media @desktop {
 		display: none;
-	}
-}
-
-.overlay {
-	position: fixed;
-	width: 100vw;
-	background: @blue;
-	height: 105vh;
-	top: 60px;
-	right: -100vw;
-	transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
-
-	@media @desktop {
-		position: inherit;
-		width: inherit;
-		height: inherit;
-		background: inherit;
-		overflow-y: inherit;
-		opacity: 1;
 	}
 }
 
