@@ -720,6 +720,7 @@ section {
 }
 @media only screen and (min-width: 992px) {
     .header__link {
+        padding-top: 13px;
         font-size: 16px;
         line-height: 1.2;
     }
@@ -727,6 +728,11 @@ section {
 @media only screen and (min-width: 1200px) {
     .header__link {
         font-size: 17px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .header__link {
+        padding-top: 17px;
     }
 }
 @media only screen and (min-width: 992px) {
@@ -3706,28 +3712,26 @@ section {
     -webkit-box-flex: 1;
     -ms-flex: 1;
         flex: 1;
-    -ms-flex-preferred-size: 75vh;
-    flex-basis: 75vh;
+    -ms-flex-preferred-size: 70vh;
+    flex-basis: 70vh;
 }
 @media only screen and (min-width: 480px) {
     .overlay__top {
         -ms-flex-preferred-size: 67vh;
         flex-basis: 67vh;
+        margin-bottom: 15px;
     }
 }
 @media only screen and (min-width: 768px) {
     .overlay__top {
-        -ms-flex-preferred-size: 80vh;
-        flex-basis: 80vh;
+        -ms-flex-preferred-size: 75vh;
+        flex-basis: 75vh;
     }
 }
 @media only screen and (min-width: 992px) {
     .overlay__top {
-        -webkit-box-flex: inherit;
-        -ms-flex: inherit;
-            flex: inherit;
-        -ms-flex-preferred-size: inherit;
-        flex-basis: inherit;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
     }
 }
 .open {
