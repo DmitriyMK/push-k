@@ -550,6 +550,7 @@ section {
     padding-bottom: 6px;
     min-height: 47px;
     position: relative;
+    width: 100%;
 }
 .error {
     font-size: 14px;
@@ -658,6 +659,9 @@ section {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
         flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 0;
+        flex: 1 1 0;
     border-top: 1px solid #fff;
 }
 @media only screen and (min-width: 992px) {
@@ -684,6 +688,24 @@ section {
         text-align: inherit;
     }
 }
+.header__item-phone {
+    display: none;
+}
+@media only screen and (min-width: 992px) {
+    .header__item-phone {
+        display: block;
+    }
+}
+.header__item-mob {
+    display: table;
+    margin: auto;
+    margin-bottom: 5px;
+}
+@media only screen and (min-width: 992px) {
+    .header__item-mob {
+        display: none;
+    }
+}
 .header__link {
     display: block;
     width: 100%;
@@ -698,7 +720,6 @@ section {
 }
 @media only screen and (min-width: 992px) {
     .header__link {
-        padding-bottom: 5px;
         font-size: 16px;
         line-height: 1.2;
     }
@@ -708,30 +729,26 @@ section {
         font-size: 17px;
     }
 }
-.header__link:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #abc12e;
-    -webkit-transition: -webkit-transform 0.3s  linear;
-            transition: -webkit-transform 0.3s  linear;
-         -o-transition:         transform 0.3s  linear;
-            transition:         transform 0.3s  linear;
-            transition:         transform 0.3s  linear, -webkit-transform 0.3s  linear;
-    -webkit-transform: scaleX(0);
-        -ms-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: bottom right;
-        -ms-transform-origin: bottom right;
-            transform-origin: bottom right;
-    z-index: -1;
-}
 @media only screen and (min-width: 992px) {
     .header__link:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
         height: 2px;
+        background-color: #abc12e;
+        -webkit-transition: -webkit-transform 0.3s  linear;
+                transition: -webkit-transform 0.3s  linear;
+             -o-transition:         transform 0.3s  linear;
+                transition:         transform 0.3s  linear;
+                transition:         transform 0.3s  linear, -webkit-transform 0.3s  linear;
+        -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+                transform: scaleX(0);
+        -webkit-transform-origin: bottom right;
+            -ms-transform-origin: bottom right;
+                transform-origin: bottom right;
         z-index: 10;
     }
 }
@@ -3388,6 +3405,8 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-width: 250px;
+    margin: auto;
     -ms-flex-pack: distribute;
     justify-content: space-around;
     list-style: none;
@@ -3397,6 +3416,8 @@ section {
         -webkit-box-pack: inherit;
         -ms-flex-pack: inherit;
         justify-content: inherit;
+        max-width: inherit;
+        margin: 0;
     }
 }
 @media only screen and (min-width: 992px) {
@@ -3622,7 +3643,6 @@ section {
     font-size: 18px;
     color: #000;
 }
-/* RESPONSIVE MENU TO 992px*/
 .overlay {
     position: fixed;
     width: 100vw;
@@ -3656,6 +3676,58 @@ section {
                 transform: none;
         visibility: visible;
         pointer-events: auto;
+    }
+}
+.overlay__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+@media only screen and (min-width: 992px) {
+    .overlay__wrap {
+        display: inherit;
+        -webkit-box-orient: inherit;
+        -webkit-box-direction: inherit;
+        -ms-flex-direction: inherit;
+            flex-direction: inherit;
+        -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+        justify-content: inherit;
+    }
+}
+.overlay__top {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+        flex: 1;
+    -ms-flex-preferred-size: 75vh;
+    flex-basis: 75vh;
+}
+@media only screen and (min-width: 480px) {
+    .overlay__top {
+        -ms-flex-preferred-size: 67vh;
+        flex-basis: 67vh;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .overlay__top {
+        -ms-flex-preferred-size: 80vh;
+        flex-basis: 80vh;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .overlay__top {
+        -webkit-box-flex: inherit;
+        -ms-flex: inherit;
+            flex: inherit;
+        -ms-flex-preferred-size: inherit;
+        flex-basis: inherit;
     }
 }
 .open {
@@ -3788,7 +3860,6 @@ section {
     left: -10px;
     top: 0;
 }
-/* END RESPONSIVE MENU TO 992px*/
 .slick-prev, .slick-next {
     top: 65px;
     -webkit-transform: none;

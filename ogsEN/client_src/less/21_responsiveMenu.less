@@ -1,4 +1,4 @@
-/* RESPONSIVE MENU TO 992px*/
+ // RESPONSIVE MENU TO 992px
 
 .overlay {
 	position: fixed;
@@ -9,12 +9,10 @@
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
-    transform: translateY(15px);
-    backface-visibility: hidden;
-
+	transform: translateY(15px);
+	backface-visibility: hidden;
 	transition: all .3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
 	background: @blue;
-	
 
 	@media @desktop {
 		position: inherit;
@@ -27,6 +25,32 @@
 		transform: none;
 		visibility: visible;
 		pointer-events: auto;
+	}
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media @desktop {
+			display: inherit;
+			flex-direction: inherit;
+			justify-content: inherit;
+		}
+	}
+	&__top {
+		flex: 1;
+		flex-basis: 75vh;
+		@media @mobile-land {
+			flex-basis: 67vh;
+		}
+		@media @tablet {
+			flex-basis: 80vh;
+		}
+		@media @desktop {
+			flex: inherit;
+			flex-basis: inherit;
+		}
 	}
 }
 
@@ -144,4 +168,4 @@
 	top: 0;
 }	
 
-/* END RESPONSIVE MENU TO 992px*/
+// END RESPONSIVE MENU TO 992px
