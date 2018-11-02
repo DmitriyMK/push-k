@@ -3561,14 +3561,13 @@ section {
 @media only screen and (min-width: 320px) {
     .remodal-close:before {
         font-size: 30px !important;
-        font-weight: 700;
         top: -7px !important;
         left: -12px !important;
     }
 }
 @media only screen and (min-width: 768px) {
     .remodal-close:before {
-        font-size: 35px !important;
+        font-size: 50px !important;
         top: 0 !important;
         left: 0 !important;
     }
@@ -3800,8 +3799,8 @@ section {
 }
 .burger i {
     display: block;
-    width: 40px;
-    height: 2px;
+    width: 30px;
+    height: 3px;
     background: #abc12e;
     position: absolute;
     top: 50%;
@@ -3816,14 +3815,14 @@ section {
 .burger i:before, .burger i:after {
     content: '';
     position: absolute;
-    height: 2px;
+    height: 3px;
     background: #abc12e;
-    width: 40px;
-    top: 50%;
+    width: 30px;
+    top: 0;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     -webkit-transition: all 0.2s ease-in-out;
          -o-transition: all 0.2s ease-in-out;
             transition: all 0.2s ease-in-out;
@@ -3834,18 +3833,12 @@ section {
 .burger i:after {
     margin-top: 12px;
 }
-.burger:hover i:before {
-    margin-top: -14px;
-}
-.burger:hover i:after {
-    margin-top: 14px;
-}
 .burger.active i {
     background: transparent;
 }
 .burger.active i:before, .burger.active i:after {
-    left: -5px;
-    width: 50px;
+    left: 0;
+    width: 25px;
 }
 .burger.active i:before {
     -webkit-transform: rotate(45deg);
@@ -3858,12 +3851,6 @@ section {
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
     top: -12px;
-}
-.burger.active:hover i:before, .burger.active:hover i:after {
-    width: 60px;
-    margin: 0;
-    left: -10px;
-    top: 0;
 }
 .slick-prev, .slick-next {
     top: 65px;

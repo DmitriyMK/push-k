@@ -13,6 +13,7 @@
 
 	<link rel="alternate" href="https://www.ogscapital.com/bcp/businesscontinuityplan.html" hreflang="en-us" />
 	<link rel="alternate" href="https://www.ogscapital.com/bcp/en-gb/businesscontinuityplan.html" hreflang="en-gb" />
+	<link rel="alternate" href="https://www.ogscapital.com/bcp/en-CA/businesscontinuityplan.html" hreflang="en-CA" />
 	<link rel="alternate" href="https://www.ogscapital.com/bcp/businesscontinuityplan.html" hreflang="x-default" />
 	
 
@@ -41,7 +42,6 @@
 	<!-- DEFER SCRIPT -->
 	<script defer src="../libs/remodal.min.js"></script>
 	<script defer src="../libs/slick.js"></script>
-	<script defer src="../libs/jquery.validate.min.js"></script>
 	<script defer src="../libs/wow.min.js"></script>
 	<script defer src="../libs/cssrelpreload.js"></script>
 	<!-- END DEFER SCRIPT -->
@@ -52,7 +52,7 @@
 		<div class="header__top header__fixed">
 			<div class="container">
 				<div class="header__box">
-					<a class="header__logo" href="./businesscontinuityplan.html">
+					<a class="header__logo" href="../index.html">
 						<img class="img-responsive" src="../images/logo.png" alt="OGScapital" title="OGScapital">
 					</a>
 					
@@ -62,33 +62,45 @@
 							<i></i>
 						</button>
 						<div class="overlay">
-							<ul class="header__list">
-								<li class="header__item"><a class="header__link scrolling__link" href="#reason">Advantages</a></li>
-								<li class="header__item"><a class="header__link scrolling__link" href="#proposal">Our solution</a></li>
-								<li class="header__item"><a class="header__link scrolling__link" href="#plans">How it works</a></li>
-								<li class="header__item"><a class="header__link scrolling__link" href="#review">Testimonials</a></li>
-								<li class="header__item"><a class="header__link scrolling__link" href="#footer">Contact</a></li>
+							<div class="overlay__wrap">
+								<div class="overlay__top">
+									<ul class="header__list">
+										<li class="header__item"><a class="header__link scrolling__link" href="#reason">Advantages</a></li>
+										<li class="header__item"><a class="header__link scrolling__link" href="#proposal">Our solution</a></li>
+										<li class="header__item"><a class="header__link scrolling__link" href="#plans">How it works</a></li>
+										<li class="header__item"><a class="header__link scrolling__link" href="#review">Testimonials</a></li>
+										<li class="header__item"><a class="header__link scrolling__link" href="#footer">Contact</a></li>
+										<li class="header__item header__item-phone">
+											<a class="header__phone-mob" href="tel:+16136997822">
+												<div class="bg-phone"></div>
+												+1-613-699-7822
+												<div class="bg-ca"></div>
+											</a>
+										</li>
+									</ul>
+								</div>								
 
-								<li class="header__item">
-									<a class="header__phone-mob" href="tel:+16136997822">
-										<div class="bg-phone"></div>
-										+1-613-699-7822
-										<div class="bg-ca"></div>
-									</a>
-								</li>
-							</ul>
-
-							<ul class="header__social-mob">
-								<li class="header__social-item">
-									<a class="header__social-link" href="https://www.linkedin.com/company/ogs-capital/" target="_blank" rel="noopener noreferrer"><div class="bg-linkeldin"></div></a>
-								</li>
-								<li class="header__social-item">
-									<a class="header__social-link" href="https://www.facebook.com/pages/OGS-Capital/441972589196199" target="_blank" rel="noopener noreferrer"><div class="bg-fb"></div></a>
-								</li>
-								<li class="header__social-item">
-									<a class="header__social-link" href="skype:alex.tsexperts?chat" target="_blank" rel="noopener noreferrer"><div class="bg-skype"></div></a>
-								</li>
-							</ul>
+								<div class="overlay__bottom">
+									<div class="header__item-mob">
+										<a class="header__phone-mob" href="tel:+16136997822">
+											<div class="bg-phone"></div>
+											+1-613-699-7822
+											<div class="bg-ca"></div>
+										</a>
+									</div>
+									<ul class="header__social-mob">
+										<li class="header__social-item">
+											<a class="header__social-link" href="https://www.linkedin.com/company/ogs-capital/" target="_blank" rel="noopener noreferrer"><div class="bg-linkeldin"></div></a>
+										</li>
+										<li class="header__social-item">
+											<a class="header__social-link" href="https://www.facebook.com/pages/OGS-Capital/441972589196199" target="_blank" rel="noopener noreferrer"><div class="bg-fb"></div></a>
+										</li>
+										<li class="header__social-item">
+											<a class="header__social-link" href="skype:alex.tsexperts?chat" target="_blank" rel="noopener noreferrer"><div class="bg-skype"></div></a>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</nav>
 
@@ -105,7 +117,7 @@
 			<div class="container">
 				<h1 class="header__title">Development of effecient business continuity plans for company sustainiblaity </h1>
 				<h2 class="header__subtitle">Compliance with best practices</h2>
-				<button class="btn" data-remodal-target="callback">Get Your Free Consultation</button>
+				<button class="btn" data-remodal-target="callback">Free Consultation</button>
 			</div>
 		</div>
 	</header>
@@ -296,17 +308,23 @@
 					</div>
 
 					<div class="consult__form fadeInUp wow" data-wow-offset="80" data-wow-delay="0.35s" data-wow-duration="1.2s">
-						<form action="../mail.php" method="post" class="form form-validate" name="Business_continuity_plan-CA">
+						<form id="form3" action="mail.php" method="post" class="form form-validate" name="Business_continuity_plan-CA" novalidate="novalidate">
 							<input type="hidden" name="project_name" value="OGS Capital">
 							<input type="hidden" name="admin_email" value="alex@ogscapital.com">
-							<input type="hidden" name="form_subject" value="OGS Capital > Business continuity plan > CA">
-							<input type="hidden" name="whatform" value="OGS Capital > Get Business continuity plan > CA">
+							<input type="hidden" name="form_subject" value="OGS Capital > Get Your Free Business continuity plan > CA">
+							<input type="hidden" name="whatform" value="OGS Capital > Get Your Free Business continuity plan > CA">
 
 							<p class="form__title">Get Your Free Consultation</p>
 
-							<input class="form__line name" type="text" name="Name" placeholder="Name" required>
-							<input class="form__line phone-mask" type="tel" name="Telephone" placeholder="Telephone" required>
-							<input class="form__line" type="email" name="Email" placeholder="Email" required>
+							<div class="inputWrap">
+								<input class="form__line name" type="text" name="name" placeholder="Name" minlength="1" required aria-required="true" >
+							</div>
+							<div class="inputWrap">
+								<input class="form__line" type="email" name="email" placeholder="Email" required aria-required="true">
+							</div>	
+							<div class="inputWrap">
+								<input class="form__line phone-mask" type="tel" name="phone" placeholder="Phone" minlength="10" required aria-required="true">
+							</div>
 							<input class="btn" type="submit" value="Send"> 
 						</form>
 					</div>
@@ -611,55 +629,55 @@
 
 				<div class="partner__slider slider fadeInUp wow" data-wow-offset="40" data-wow-delay="0.3s" data-wow-duration="1.4s">
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners1.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners1.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners2.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners2.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners3.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners3.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners4.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners4.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners5.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners5.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners6.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners6.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners7.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners7.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners8.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners8.jpg" alt="clients OGScapital">
 					</div>
 
 					<!-- SLIDE 2 -->
 
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners1.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners1.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners2.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners2.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners3.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners3.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners4.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners4.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners5.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners5.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners6.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners6.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners7.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners7.jpg" alt="clients OGScapital">
 					</div>
 					<div class="partner__slide">
-						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="../images/partners/partners8.jpg" alt="clients OGScapital">
+						<img class="img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazy="./images/partners/partners8.jpg" alt="clients OGScapital">
 					</div>
 				</div>
 			</div>
@@ -820,15 +838,21 @@
 				<div class="footer__col col__form">
 					<h2 class="footer__title">Any questions? Get in touch</h2>
 
-					<form action="mail.php" method="post" class="form form-validate" name="Business_continuity_plan-CA">
+					<form id="form2" action="mail.php" method="post" class="form form-validate" name="Business_continuity_plan-CA" novalidate="novalidate">
 						<input type="hidden" name="project_name" value="OGS Capital">
 						<input type="hidden" name="admin_email" value="alex@ogscapital.com">
-						<input type="hidden" name="form_subject" value="OGS Capital > Business continuity plan > CA">
-						<input type="hidden" name="whatform" value="OGS Capital > Business continuity plan > CA">
+						<input type="hidden" name="form_subject" value="OGS Capital > Get Your Free Business continuity plan > CA">
+						<input type="hidden" name="whatform" value="OGS Capital > Get Your Free Business continuity plan > CA">
 
-						<input class="form__line name" type="text" name="Name" placeholder="Name" required>
-						<input class="form__line phone-mask" type="tel" name="Telephone" placeholder="Telephone" required>
-						<input class="form__line" type="email" name="Email" placeholder="Email" required>
+						<div class="inputWrap">
+							<input class="form__line name" type="text" name="name" placeholder="Name" minlength="1" required aria-required="true" >
+						</div>
+						<div class="inputWrap">
+							<input class="form__line" type="email" name="email" placeholder="Email" required aria-required="true">
+						</div>	
+						<div class="inputWrap">
+							<input class="form__line phone-mask" type="tel" name="phone" placeholder="Phone" minlength="10" required aria-required="true">
+						</div>	
 						<input class="btn" type="submit" value="Send"> 
 					</form>
 				</div>
@@ -847,21 +871,25 @@
 	<!-- MODALS -->
 	<div class="remodal formBox" data-remodal-id="callback"> 
 		<button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-		<form class="form form-validate" name="Business_continuity_plan-CA">
+		<form id="form1" class="form form-validate" name="Business_continuity_plan-CA" novalidate="novalidate">
 			<!-- Hidden Required Fields -->
 			<input type="hidden" name="project_name" value="OGS Capital">
 			<input type="hidden" name="admin_email" value="alex@ogscapital.com">
 			<input type="hidden" name="form_subject" value="callback">
-			<input type="hidden" name="form_subject" value="OGS Capital > Business continuity plan > CA">
-			<input type="hidden" name="whatform" value="OGS Capital > Business continuity plan > CA">
+			<input type="hidden" name="form_subject" value="OGS Capital > Get Your Free Business continuity plan > CA">
+			<input type="hidden" name="whatform" value="OGS Capital > Get Your Free Business continuity plan > CA">
 			<!-- END Hidden Required Fields -->
 			<p class="form__title">Get Your Free Consultation</p>
 			<p class="form__text">We will contact you <br> as soon as possible</p>
-
-			<input class="form__line name" type="text" name="Name" placeholder="Name" required>
-			<input class="form__line phone-mask" type="tel" name="Telephone" placeholder="Telephone" required>
-			<input class="form__line" type="email" name="Email" placeholder="Email" required>
-			
+			<div class="inputWrap">
+				<input class="form__line name" type="text" name="name" placeholder="Name" minlength="1" required aria-required="true" >
+			</div>
+			<div class="inputWrap">
+				<input class="form__line" type="email" name="email" placeholder="Email" required aria-required="true">
+			</div>	
+			<div class="inputWrap">
+				<input class="form__line phone-mask" type="tel" name="phone" placeholder="Phone" minlength="10" required aria-required="true">
+			</div>	
 			<input class="btn" type="submit" value="Send"> 
 		</form>
 	</div>  
@@ -870,6 +898,7 @@
 
 	<!-- Load Scripts -->
 	<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="../libs/jquery.validate.min.js"></script>
 	<script src="../libs/blazy.js"></script>  
 	<script src="../libs/all.js"></script>
 

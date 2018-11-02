@@ -114,8 +114,8 @@
 }
 .burger i {
 	display: block;
-	width: 40px;
-	height: 2px;
+	width: 30px;
+	height: 3px;
 	background: @lime;
 	position: absolute;
 	top: 50%;
@@ -126,12 +126,12 @@
 .burger i:before, .burger i:after {
 	content: '';
 	position: absolute;
-	height: 2px;
+	height: 3px;
 	background: @lime;
-	width: 40px;
-	top: 50%;
+	width: 30px;
+	top: 0;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translateX(-50%);
 	transition: all 0.2s ease-in-out;
 }
 .burger i:before {
@@ -140,18 +140,13 @@
 .burger i:after {
 	margin-top: 12px;
 }
-.burger:hover i:before {
-	margin-top: -14px;
-}
-.burger:hover i:after {
-	margin-top: 14px;
-}
+
 .burger.active i {
 	background: transparent;
 }
 .burger.active i:before, .burger.active i:after {
-	left: -5px;
-	width: 50px;
+	left: 0;
+	width: 25px;
 }
 .burger.active i:before {
 	transform: rotate(45deg);
@@ -161,11 +156,5 @@
 	transform: rotate(-45deg);
 	top: -12px;
 }
-.burger.active:hover i:before, .burger.active:hover i:after {
-	width: 60px;
-	margin: 0;
-	left: -10px;
-	top: 0;
-}	
 
 // END RESPONSIVE MENU TO 992px
