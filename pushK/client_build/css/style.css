@@ -341,8 +341,7 @@ section {
     justify-content: space-between;
 }
 .section__content {
-    -ms-flex-preferred-size: 460px;
-    flex-basis: 460px;
+    width: 460px;
 }
 .section__gallery li {
     list-style: none;
@@ -374,15 +373,19 @@ section {
 .portfolio__box {
     padding: 0 11vh;
 }
+.portfolio__title {
+    padding-left: 90px;
+    padding-right: 140px;
+}
+.portfolio__gallery {
+    margin-left: 80px;
+}
 .portfolio__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-}
-.portfolio__title {
-    padding-left: 90px;
 }
 .portfolio__item {
     margin-right: 15px;
