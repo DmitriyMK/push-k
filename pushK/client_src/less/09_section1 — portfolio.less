@@ -22,26 +22,55 @@
 
 .portfolio {
 	&__box {
-		padding: 0 11vh;
+		padding: 0 20px;
+		@media @desktop-xl-2 {
+			padding: 0 50px;
+		}
+		@media @desktop-xll {
+			padding: 0 100px;
+		}
 	}
 	&__title {
-		padding-left: 90px;
-		padding-right: 140px;
+		padding-left: 45px;
+		padding-right: 70px;
+		@media @desktop-xl-2 {
+			padding-left: 90px;
+			padding-right: 140px;
+		}
 	}
 
 	&__gallery {
-		margin-left: 80px;
+		
+		@media @desktop-xl-2 {
+			margin-left: 35px;
+		}
 	}
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
 	}
 	&__item {
-		margin-right: 15px;
+		
+	}
+	&__img {
+		width: 370px;
+		margin: auto;
+		object-fit: cover;
+		@media @desktop-xl15 {
+			width: 410px;
+		}
+		@media @desktop-xl-2 {
+			width: 520px;
+		}
+		@media @desktop-xll {
+			width: 560px;
+		}
 	}
 	&__figure {
 		position: relative;
-		max-height: 360px;
+		max-height: 350px;
+		margin-left: 15px;
+		margin-bottom: 15px;
 		overflow: hidden;
 		color: #fff;
 		&:before {
@@ -61,25 +90,33 @@
 			.portfolio__caption {
 				opacity: 1;
 				visibility: visible;
-				left: 20px;
+				transform: translateY(40px);
 			}
 		}
 	}
 	&__caption {
 		position: absolute;
 		max-width: 480px;
-		top: 40px;
-		left: 0px;
+		top: -20px;
+		transform: translateY(0);
+		left: 20px;
 		opacity: 0;
 		visibility: hidden;
-		transition: all .3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+		/*transition: all .3s cubic-bezier(0.72, -0.04, 0.14, 1.03); */
+		transition: all .3s cubic-bezier(0,1.56,.5,1.62);
 	}
 	&__titles {
-		font-size: 27px;
+		font-size: 23px;
+		@media @desktop-xl-2 {
+			font-size: 27px;
+		}
 	}
 	&__text {
-		padding: 15px 0;
-		font-size: 19px;
+		padding: 15px 15px 15px 0;
+		font-size: 18px;
+		@media @desktop-xl-2 {
+			font-size: 19px;
+		}
 	}
 	&__link {
 		display: table;
@@ -97,11 +134,11 @@
 			width: 40px;
 			height: 25px;
 			background: url(../images/icons/svg/arr-left.svg)no-repeat;
-			transition: all .3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+			transition: all .3s linear;
 		}
 		&:hover {
 			&:after {
-				right: -55px;
+				right: -50px;
 			}
 		}
 	}
