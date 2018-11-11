@@ -709,6 +709,7 @@ section {
 .partners__img {
     display: block;
     margin: auto;
+    min-height: 25px;
     -webkit-filter: brightness(0%);
             filter: brightness(0%);
     -webkit-transition: all 0.3s linear;
@@ -718,6 +719,109 @@ section {
 .partners__img:hover {
     -webkit-filter: brightness(100%);
             filter: brightness(100%);
+}
+.consult {
+    min-height: 380px;
+    background: url(../images/fornSection__back.jpg) no-repeat center / cover;
+}
+.consult .container {
+    position: relative;
+}
+.consult .form {
+    position: absolute;
+    top: -50px;
+    right: 180px;
+    width: 390px;
+    padding: 60px 20px 90px 20px;
+    text-align: center;
+    color: #fff;
+    background: #3b3b3d;
+    -webkit-box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.35);
+            box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.35);
+}
+.consult .form__title {
+    padding-bottom: 15px;
+    font-size: 38px;
+    font-weight: 700;
+}
+.consult .form__text {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.consult .form__line {
+    display: block;
+    width: 270px;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    text-align: center;
+}
+.consult .form .btn {
+    width: 270px;
+    padding: 12px 0;
+    margin: 20px auto;
+    border: none;
+    background: #ef720e;
+}
+.team {
+    padding-left: 45px;
+    padding-right: 45px;
+}
+.team__title {
+    padding-left: 45px;
+    padding-right: 70px;
+}
+@media only screen and (min-width: 1600px) {
+    .team__gallery {
+        margin-right: 55px;
+    }
+}
+.team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.team__item {
+    position: relative;
+    width: 310px;
+    margin-right: 35px;
+    min-height: 198px;
+    padding-top: 25px;
+    padding-left: 25px;
+    margin-bottom: 70px;
+    -webkit-box-shadow: 2.817px 5.298px 12px 0 rgba(0, 0, 0, 0.13);
+            box-shadow: 2.817px 5.298px 12px 0 rgba(0, 0, 0, 0.13);
+    list-style: none;
+}
+.team__person-name {
+    padding-bottom: 10px;
+    font-size: 23px;
+}
+.team__person-position {
+    font-size: 14px;
+}
+.team__person-photo {
+    position: absolute;
+    bottom: -2px;
+    right: -40px;
+}
+.team__person-img {
+    max-height: 240px;
+}
+.team__person-social {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+.team__person-link img {
+    display: block;
+    width: 24px;
+    height: 24px;
 }
 .remodal-first {
     padding-top: 95px;

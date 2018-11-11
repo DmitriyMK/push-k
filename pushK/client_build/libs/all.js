@@ -9,7 +9,7 @@ $(document).ready(function() {
     event.preventDefault();
     var id = $(this).attr('href'),
 
-      top = $(id).offset().top;
+    top = $(id).offset().top;
 
     $('body,html').animate({
       scrollTop: top
@@ -18,6 +18,8 @@ $(document).ready(function() {
 
 
   var bLazy = new Blazy();
+
+  $('.phone-mask').mask('+380(99)999-99-99');
 
 
   var animateButton = function(e) {

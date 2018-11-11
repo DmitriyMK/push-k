@@ -22,11 +22,11 @@
 
 
 	<link rel="preload" href="./css/plugin.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<link rel="preload" href="./css/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!-- <link rel="preload" href="./css/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
 
 	<noscript>
 		<link rel="stylesheet" href="./css/plugin.css">
-		<link rel="stylesheet" href="./css/animate.min.css">
+		<!-- <link rel="stylesheet" href="./css/animate.min.css"> -->
 	</noscript>
 
 	<link rel="stylesheet" href="./css/style.css">
@@ -34,10 +34,11 @@
 
 	<!-- DEFER SCRIPT -->
 	<script defer src="./libs/remodal.min.js"></script>
-	<script defer src="./libs/fancybox.js"></script>
+	<!-- <script defer src="./libs/fancybox.js"></script> -->
 	<script defer src="./libs/slick.js"></script>
-	<script defer src="./libs/jquery.validate.min.js"></script>
-	<script defer src="./libs/wow.min.js"></script>
+	<!-- <script defer src="./libs/jquery.validate.min.js"></script> -->
+	<!-- <script defer src="./libs/wow.min.js"></script> -->
+	<script defer src="./libs/masked-input.js"></script>
 	<script defer src="./libs/cssrelpreload.js"></script>
 
 	<!-- END DEFER SCRIPT -->
@@ -197,7 +198,7 @@
 
 				<div class="partners__content section__content">
 					<h2 class="partners__title section__title">
-						Постоянные <br> клиенты и <br> партнёры.<span>.</span>
+						Постоянные <br> клиенты и <br> партнёры<span>.</span>
 					</h2>
 					<p class="partners__text section__text">
 						Мы всегда радуемся успехам наших клиентов, как смелых стартапов, так и известных брендов. Наш опыт и увлеченность целями клиента позволяют эффективно решать бизнес-задачи и достигать впечатляющих результатов с помощью цифровых технологий.
@@ -209,7 +210,202 @@
 		</div>
 	</section>
 
-<!-- 	<section class="contacts">
+	
+	<article class="consult">
+		<div class="container">
+			<div class="consult__box">
+				<form method="post" class="consult__form form" name="Consultation">
+					<input type="hidden" name="project_name" value="">
+					<input type="hidden" name="admin_email" value="">
+					<input type="hidden" name="form_subject" value="">
+					<input type="hidden" name="whatform" value="">
+
+					<h2 class="form__title">Обсудить проект</h2>
+					<em class="form__text">Крутые проекты начинаются <br> с заполнения этой формы</em>
+					<input class="form__line name" type="text" name="name" placeholder="Ваше имя" required aria-required="true" >
+					<input class="form__line phone-mask" type="text" name="phone" placeholder="Ваш телефон" minlength="10" required aria-required="true">
+
+					<input class="btn" type="submit" value="Отправить"> 
+				</form>
+			</div>
+		</div>
+	</article>
+	
+
+	<section class="team">
+		<div class="wrapper">
+			<div class="team__box section__box">
+				<div class="team__gallery section__gallery">
+					<ul class="team__list">
+						<li class="team__item">
+							<div class="team__person">
+								<h3 class="team__person-name">AVA <br><strong>ARAUJO</strong></h3>
+								<em class="team__person-position">Head of digital</em>
+
+								<div class="team__person-social">
+									<a class="team__person-link" href="#" target="_blank" rel="noopener noreferrer">
+										<img class="fb" src="./images/icons/svg/facebook.svg" alt="Link to Facebook Profile">
+									</a>
+								</div>
+
+							</div>
+							<div class="team__person-photo">
+								<img class="b-lazy img-responsive team__person-img" data-src="./images/team/team1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="AVA ARAUJO - Head of digital">								
+							</div>
+						</li>
+
+						<li class="team__item">
+							<div class="team__person">
+								<h3 class="team__person-name">AVA <br><strong>ARAUJO</strong></h3>
+								<em class="team__person-position">Head of digital</em>
+
+								<div class="team__person-social">
+									<a class="team__person-link" href="#" target="_blank" rel="noopener noreferrer">
+										<img class="fb" src="./images/icons/svg/facebook.svg" alt="Link to Facebook Profile">
+									</a>
+								</div>
+
+							</div>
+							<div class="team__person-photo">
+								<img class="b-lazy img-responsive team__person-img" data-src="./images/team/team1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="AVA ARAUJO - Head of digital">								
+							</div>
+						</li>
+
+						<li class="team__item">
+							<div class="team__person">
+								<h3 class="team__person-name">AVA <br><strong>ARAUJO</strong></h3>
+								<em class="team__person-position">Head of digital</em>
+
+								<div class="team__person-social">
+									<a class="team__person-link" href="#" target="_blank" rel="noopener noreferrer">
+										<img class="fb" src="./images/icons/svg/facebook.svg" alt="Link to Facebook Profile">
+									</a>
+								</div>
+
+							</div>
+							<div class="team__person-photo">
+								<img class="b-lazy img-responsive team__person-img" data-src="./images/team/team1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="AVA ARAUJO - Head of digital">								
+							</div>
+						</li>
+						
+						<li class="team__item">
+							<div class="team__person">
+								<h3 class="team__person-name">AVA <br><strong>ARAUJO</strong></h3>
+								<em class="team__person-position">Head of digital</em>
+
+								<div class="team__person-social">
+									<a class="team__person-link" href="#" target="_blank" rel="noopener noreferrer">
+										<img class="fb" src="./images/icons/svg/facebook.svg" alt="Link to Facebook Profile">
+									</a>
+								</div>
+
+							</div>
+							<div class="team__person-photo">
+								<img class="b-lazy img-responsive team__person-img" data-src="./images/team/team1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="AVA ARAUJO - Head of digital">								
+							</div>
+						</li>
+
+						<li class="team__item">
+							<div class="team__person">
+								<h3 class="team__person-name">AVA <br><strong>ARAUJO</strong></h3>
+								<em class="team__person-position">Head of digital</em>
+
+								<div class="team__person-social">
+									<a class="team__person-link" href="#" target="_blank" rel="noopener noreferrer">
+										<img class="fb" src="./images/icons/svg/facebook.svg" alt="Link to Facebook Profile">
+									</a>
+								</div>
+
+							</div>
+							<div class="team__person-photo">
+								<img class="b-lazy img-responsive team__person-img" data-src="./images/team/team1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="AVA ARAUJO - Head of digital">								
+							</div>
+						</li>
+
+						<li class="team__item">
+							<div class="team__person">
+								<h3 class="team__person-name">AVA <br><strong>ARAUJO</strong></h3>
+								<em class="team__person-position">Head of digital</em>
+
+								<div class="team__person-social">
+									<a class="team__person-link" href="#" target="_blank" rel="noopener noreferrer">
+										<img class="fb" src="./images/icons/svg/facebook.svg" alt="Link to Facebook Profile">
+									</a>
+								</div>
+
+							</div>
+							<div class="team__person-photo">
+								<img class="b-lazy img-responsive team__person-img" data-src="./images/team/team1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="AVA ARAUJO - Head of digital">								
+							</div>
+						</li>
+
+						<li class="team__item">
+							<div class="team__person">
+								<h3 class="team__person-name">AVA <br><strong>ARAUJO</strong></h3>
+								<em class="team__person-position">Head of digital</em>
+
+								<div class="team__person-social">
+									<a class="team__person-link" href="#" target="_blank" rel="noopener noreferrer">
+										<img class="fb" src="./images/icons/svg/facebook.svg" alt="Link to Facebook Profile">
+									</a>
+								</div>
+
+							</div>
+							<div class="team__person-photo">
+								<img class="b-lazy img-responsive team__person-img" data-src="./images/team/team1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="AVA ARAUJO - Head of digital">								
+							</div>
+						</li>
+
+						<li class="team__item">
+							<div class="team__person">
+								<h3 class="team__person-name">AVA <br><strong>ARAUJO</strong></h3>
+								<em class="team__person-position">Head of digital</em>
+
+								<div class="team__person-social">
+									<a class="team__person-link" href="#" target="_blank" rel="noopener noreferrer">
+										<img class="fb" src="./images/icons/svg/facebook.svg" alt="Link to Facebook Profile">
+									</a>
+								</div>
+
+							</div>
+							<div class="team__person-photo">
+								<img class="b-lazy img-responsive team__person-img" data-src="./images/team/team1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="AVA ARAUJO - Head of digital">								
+							</div>
+						</li>
+
+						<li class="team__item">
+							<div class="team__person">
+								<h3 class="team__person-name">AVA <br><strong>ARAUJO</strong></h3>
+								<em class="team__person-position">Head of digital</em>
+
+								<div class="team__person-social">
+									<a class="team__person-link" href="#" target="_blank" rel="noopener noreferrer">
+										<img class="fb" src="./images/icons/svg/facebook.svg" alt="Link to Facebook Profile">
+									</a>
+								</div>
+
+							</div>
+							<div class="team__person-photo">
+								<img class="b-lazy img-responsive team__person-img" data-src="./images/team/team1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="AVA ARAUJO - Head of digital">								
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="team__content section__content">
+					<h2 class="team__title section__title">
+						Наша <br> команда<span>.</span>
+					</h2>
+					<p class="team__text section__text">
+						Наша веб-студия - это, прежде всего, люди. Талантливые люди, влюбленные в свою работу, заряженные драйвом, умноженным на профессионализм.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- 	<section class="contacts">
 		<div class="map" id="map">
 		</div>
 
@@ -258,10 +454,10 @@
 			<p class="form__text">и мы свяжемся с Вами для уточнения даты и времени приема.</p>
 
 			<div class="inputWrap inputWrap-name">
-				<input class="form__line name" type="text" name="Имя&nbsp;покупателя" placeholder="Ваше имя" required>
+				<input class="form__line name" type="text" name="name" placeholder="Ваше имя" required>
 			</div>
 			<div class="inputWrap inputWrap-phone">
-				<input class="form__line phone-mask" type="tel" name="Телефон&nbsp;покупателя" placeholder="Ваш телефон" required>
+				<input class="form__line phone-mask" type="tel" name="phone" placeholder="Ваш телефон" required>
 			</div>	
 
 			<input type="submit" class="btn" value="Записаться на прием"> 
