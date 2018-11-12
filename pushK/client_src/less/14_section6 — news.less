@@ -20,54 +20,38 @@
 	
 }
 
-.portfolio {
+
+.news {
+	padding: 0 45px;
 	&__box {
-		padding: 0 20px;
-		@media @desktop-xl-2 {
-			padding: 0 50px;
-		}
-		@media @desktop-xll {
-			padding: 0 100px;
-		}
+		padding: 100px 80px;
+		background: #f4f4f4;
+		box-shadow: 6.103px 11.478px 48px 0px rgba(0, 0, 0, 0.32);
+
 	}
 	&__title {
 		padding-left: 45px;
-		padding-right: 70px;
+		@media @desktop-xl-2 {
+			padding-right: 70px;
+		}
 	}
 
 	&__gallery {
 		@media @desktop-xl-2 {
-			margin-left: 35px;
+			margin-right: 35px;
 		}
 	}
+
 	&__list {
 		display: flex;
-		flex-wrap: wrap;
 	}
 	&__item {
-		
-	}
-	&__img {
-		width: 370px;
-		margin: auto;
-		object-fit: cover;
-		@media @desktop-xl15 {
-			width: 410px;
-		}
-		@media @desktop-xl-2 {
-			width: 520px;
-		}
-		@media @desktop-xll {
-			width: 560px;
-		}
-	}
-	&__figure {
+		width: 380px;
 		position: relative;
-		max-height: 350px;
-		margin-left: 15px;
-		margin-bottom: 15px;
-		overflow: hidden;
-		color: #fff;
+		margin-right: 15px;
+		list-style: none;
+		cursor: pointer;
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -80,46 +64,49 @@
 		}
 		&:hover {
 			&:before {
-				background: rgba(0,0,0, .55);
+				background: rgba(0,0,0, .65);
 			}
-			.portfolio__caption {
+			.news__caption {
 				opacity: 1;
 				visibility: visible;
 				transform: translateY(40px);
 			}
 		}
 	}
+	&__img {
+		width: 380px;
+		height: 380px;
+		object-fit: cover;
+		object-position: center;
+	}
+
 	&__caption {
 		position: absolute;
 		max-width: 480px;
-		top: -20px;
+		bottom: 90px;
 		transform: translateY(0);
 		left: 20px;
 		opacity: 0;
 		visibility: hidden;
-		/*transition: all .3s cubic-bezier(0.72, -0.04, 0.14, 1.03); */
-		transition: all .3s cubic-bezier(0,1.56,.5,1.62);
+		transition: all .3s cubic-bezier(.5,1.62, 0,1.56);
+		color: #fff;
 	}
+
 	&__titles {
-		font-size: 23px;
-		@media @desktop-xl-2 {
-			font-size: 27px;
-		}
-	}
-	&__text {
-		padding: 15px 0px;
-		font-size: 18px;
-		@media @desktop-xl-2 {
-			font-size: 19px;
-		}
-	}
-	&__link {
 		display: table;
 		position: relative;
 		font-size: 18px;
-		svg {
-			fill: #fff;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -10px;
+			left: 0;
+			height: 4px;
+			width: 70px;
+			background: @orange;
 		}
+
 		&:after {
 			content: '';
 			position: absolute;
@@ -131,13 +118,5 @@
 			background: url(../images/icons/svg/arr-left.svg)no-repeat;
 			transition: all .3s linear;
 		}
-		&:hover {
-			&:after {
-				right: -50px;
-			}
-		}
-	}
-	.btn {
-		margin-left: 15px;
 	}
 }

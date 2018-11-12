@@ -43,14 +43,22 @@
 	}
 	&__item {
 		position: relative;
-		width: 310px;
+		width: 210px;
 		margin-right: 35px;
 		min-height: 198px;
 		padding-top: 25px;
 		padding-left: 25px;
-		margin-bottom: 70px;
+		margin-bottom: 35px;
 		box-shadow: 2.817px 5.298px 12px 0px rgba(0, 0, 0, 0.13);
 		list-style: none;
+
+		@media @desktop-xl15 {
+			width: 250px;
+			margin-bottom: 70px;
+		}
+		@media @desktop-xl-2 {
+			width: 320px;
+		}
 	}
 
 	&__person {
@@ -67,8 +75,10 @@
 			right: -40px;
 		}
 		&-img {
-			max-height: 240px;
-
+			max-height: 166px;
+			@media @desktop-xl15 {
+				max-height: 240px;
+			}
 		}
 		&-social {
 			position: absolute;

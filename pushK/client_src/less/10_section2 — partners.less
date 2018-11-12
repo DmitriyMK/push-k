@@ -23,14 +23,18 @@
 .partners {
 	padding: 0 45px;
 	&__box {
-		align-items: center;
 		padding: 100px 40px;
 		background: #f4f4f4;
 		box-shadow: 6.103px 11.478px 48px 0px rgba(0, 0, 0, 0.32);
+		@media @desktop-xl-2 {
+			align-items: center;
+		}
 	}
 	&__title {
 		padding-left: 45px;
-		padding-right: 70px;
+		@media @desktop-xl-2 {
+			padding-right: 70px;
+		}
 	}
 
 	&__gallery {
@@ -45,27 +49,61 @@
 		flex-wrap: wrap;
 	}
 	&__item {
-		width: 20%;
-		vertical-align: middle;
+		position: relative;
+		width: 18%;
+		min-height: 120px;
 		margin-bottom: 25px;
 		list-style: none;
-		/* box-shadow: inset 0 0 0 0 @gray;
-		transition: all .3s linear;
-		height: 100px;
+
+		@media @desktop-xl-2 {
+			min-height: 150px;
+		}
+		
+		&:before {
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 0;
+			width: 0;
+			height: 0;
+			background: #40e0d0;
+			transition: all .3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+		}
+
 		&:hover {
-			box-shadow: inset 400px 50px 0 0 @gray; 
-		} */
+			&:before {
+				width: 100%;
+				height: 100%;
+			}
+			img {
+				filter: grayscale(0) brightness(100%) contrast(1);
+			}
+		} 
 	}
 	&__img {
 		display: block;
+		max-width: 120px;
+		max-height: 100px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: block;
 		margin: auto;
-		min-height: 25px;
-		filter: brightness(0%); 
+		// filter: brightness(0%); 
+		filter: grayscale(100%) brightness(75%) contrast(2);
 		transition: all .3s linear;
-		
-		&:hover {
-			filter: brightness(100%); 
-			
+
+		@media @desktop-xl-2 {
+			max-width: 150px;
 		}
+		
+		// &:hover {
+		// 	filter: brightness(100%); 
+			
+		// }
+	}
+	.tvbet {
+		filter: grayscale(100%) brightness(0) contrast(2);
 	}
 }

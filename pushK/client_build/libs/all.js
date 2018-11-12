@@ -39,53 +39,30 @@ $(document).ready(function() {
   }
 
 
-  // $('.partner__slider').slick({
-  //   slidesToShow: 8,
-  //   slidesToScroll: 1,
-  //   arrows: true,
-  //   dots: false,
-  //   lazyLoad: 'ondemand',
-  //   autoplay: true,
+  $('.review__slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    arrows: true,
+    dots: true,
+    focusOnSelect: true,
+    centerMode: true,
+    infinite: false,
+    initialSlide: 1,
 
-  //   responsive: [
 
-  //     {
-  //       breakpoint: 1400,
-  //       settings: {
-  //         slidesToShow: 6,
-  //       }
-  //     },
 
-  //     {
-  //       breakpoint: 1200,
-  //       settings: {
-  //         slidesToShow: 5,
-  //       }
-  //     },
+    responsive: [
 
-  //     {
-  //       breakpoint: 992,
-  //       settings: {
-  //         slidesToShow: 3,
-  //       }
-  //     },
+      {
+        breakpoint: 1900,
+        settings: {
+          centerMode: false,
+        }
+      },
 
-  //     {
-  //       breakpoint: 700,
-  //       settings: {
-  //         slidesToShow: 2,
-  //       }
-  //     },
 
-  //     {
-  //       breakpoint: 380,
-  //       settings: {
-  //         slidesToShow: 1,
-  //       }
-  //     }
-
-  //   ]
-  // });
+    ]
+  });
 
 
   $(window).on('resize orientationchange', function() {

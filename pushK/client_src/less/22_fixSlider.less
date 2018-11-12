@@ -1,23 +1,24 @@
 .slick-prev,
 .slick-next {
-	width: 50px;
-	height: 100%;
+	width: 40px;
+	height: 60px;
+	top: 50%;
+	transform: translateY(-50%);
 	opacity: 1;
 	transition: opacity .3s linear;
-	z-index: 10;
+	z-index: 20;
+	outline: none;
 }
 
 
 .slick-prev {
-	top: 152px;
-	left: -50px;
-	// .spritebox(-0px, -174px, 19px, 36px);
+	left: -10px;
+	background: url(../images/icons/svg/arr-back.svg)no-repeat center/cover;
 }
 
 .slick-next {
-	top: 213px;
-	left: -50px; 
-	// .spritebox(-36px, -174px, 19px, 36px);
+	right: 50px; 
+	background: url(../images/icons/svg/arr-next.svg)no-repeat center/cover;
 }
 
 
@@ -34,36 +35,32 @@
 }
 
 .slick-disabled {
-	opacity: .35!important;
+	opacity: .05!important;
 }
 
 
 
 .slick-dots {
-	display: inline-block!important;
-	left: -48px;
-	top: 50%;
-	transform: translateY(17%);
-
-	border-image: transparent;
+	text-align: left;
+	padding-left: 50px;
+	bottom: -20px;
+	z-index: 20;
 
 	li {
-		margin: 4px 8px;
-		margin-bottom: 10px;
-
+		margin: 7px;
 		width: 13px;
 		height: 13px;
 
 		button {
-			background: #fff;
+			background: #000;
 			display: block;
-			height: 13px;
-			width: 13px;
+			height: 5px;
+			width: 5px;
 			font-size: 0px;
-			color: #fff;
 			border-radius: 50%;
-			box-shadow: 0px 5px 7px 1px rgba(0, 45, 86, 0.15);
+			border: 1px solid transparent;
 			opacity: 0.75;
+			transition: all .3s linear;
 			&:before {
 				font-size: 0;
 				opacity: 0;
@@ -72,12 +69,10 @@
 
 		}
 		&.slick-active button {
-			background: #fb0035;
-			border-radius: 50%;
 			opacity: 1;
-			@media @tablet {
-				background: #fff;
-			}
+			transform: scale(2);
+			border: 1px solid #000;
+			background: transparent;
 		}
 	}
 }
