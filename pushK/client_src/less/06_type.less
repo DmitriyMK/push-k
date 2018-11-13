@@ -93,6 +93,26 @@ section {
     }
 }
 
+.wrapLine {
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -160px;
+        background: repeating-linear-gradient( 
+            90deg,
+            #fff,
+            #fff 260px,
+            #eaeaea 260px,
+            #eaeaea 261px);
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }   
+}
+
 .section {
 
     &__box {
@@ -121,6 +141,7 @@ section {
         font-size: 35px;
         font-weight: 700;
         border: 2px solid #000;
+        background: @white;
         @media @desktop-xl-2 {
             min-width: 370px;
             padding-top: 65px;
@@ -135,6 +156,7 @@ section {
     &__text {
         font-size: 18px;
         color: @gray;
+        background: @white;
         @media @desktop-xl-2 {
             font-size: 19px;
         }

@@ -112,6 +112,7 @@
 
 
 .hero {
+	overflow: hidden;
 	min-height: 95vh;
 	display: flex;
 	flex-direction: column;
@@ -120,9 +121,10 @@
 	background: url(../images/hero__back.jpg)no-repeat center/cover;
 	&__title {
 		padding-bottom: 35px;
-		font-size: 122px;
-		line-height: 1;
+		font-size: 92px;
+		letter-spacing: 0;
 		font-weight: 700;
+		text-transform: uppercase;
 	}
 	&__subtitle {
 		padding-bottom: 20px;
@@ -135,6 +137,8 @@
 		width: 290px;
 		font-size: 18px;
 		z-index: 1;
+		transition: all .3s linear;
+
 		&:before {
 			content: '';
 			display: block;
@@ -146,5 +150,137 @@
 			height: 14px;
 			background: url(../images/icons/cup.png)no-repeat;
 		}
+	}
+}
+
+.container {
+	position: relative;
+}
+
+.decoration {
+
+	&__img {
+		position: absolute;
+	}
+
+	&__img1 {
+		top: 100px;
+		left: -160px;
+	}
+	&__img2 {
+		top: 470px;
+		left: -160px;
+	}
+	&__img3 {
+		top: 545px;
+		left: 60px;
+	}
+	&__img4 {
+		top: 440px;
+		left: 350px;
+	}
+
+
+	&__img5 {
+		top: 200px;
+		right: 445px;
+	}
+	&__img6 {
+		top: 125px;
+		right: 420px;
+	}
+	&__img7 {
+		top: 35px;
+		right: 345px;
+	}
+	&__img8 {
+		top: 90px;
+		right: 360px;
+	}
+	&__img9 {
+		top: 110px;
+		right: 260px;
+	}
+	&__img10 {
+		top: 200px;
+		right: 380px;
+	}
+	&__img11 {
+		top: 255px;
+		right: 320px;
+	}
+	&__img12 {
+		top: 155px;
+		right: 100px;
+	}
+	&__img13 {
+		top: 245px;
+		right: 135px;
+	}
+	&__img14 {
+		top: 335px;
+		right: 210px;
+	}
+	&__img15 {
+		top: 245px;
+		right: 10px;
+		z-index: 10;
+	}
+	&__img16 {
+		top: 75px;
+		right: -180px;
+	}
+	&__img17 {
+		top: 305px;
+		right: -40px;
+	}
+	&__img18 {
+		top: 135px;
+		right: -100px;
+	}
+	&__img19 {
+		top: 315px;
+		right: -150px;
+	}
+	&__img20 {
+		top: 55px;
+		right: -280px;
+	}
+	&__img21 {
+		top: 165px;
+		right: -280px;
+	}
+	&__img22 {
+		top: 75px;
+		right: -310px;
+	}
+	&__img23 {
+		top: 145px;
+		right: -360px;
+	}
+	&__img24 {
+		top: -60px;
+		right: -360px;
+		z-index: 1000;
+	}
+	&__img25 {
+		top: -50px;
+		right: -370px;
+		z-index: 1003;
+	}
+	&__img26 {
+		top: -250px;
+		right: -370px;
+		z-index: 1002;
+	}
+	&__img27{
+		top: -240px;
+		right: -340px;
+		z-index: 1003;
+	}
+	&__img28{
+		top: -250px;
+		right: -380px;
+		z-index: 1000;
 	}
 }
