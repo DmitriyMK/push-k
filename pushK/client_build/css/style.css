@@ -823,6 +823,14 @@ section {
     right: -380px;
     z-index: 1000;
 }
+.arrow__link {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: -150px;
+}
 .portfolio__box {
     padding: 0 20px;
 }

@@ -9,7 +9,7 @@ $(document).ready(function() {
     event.preventDefault();
     var id = $(this).attr('href'),
 
-    top = $(id).offset().top;
+      top = $(id).offset().top;
 
     $('body,html').animate({
       scrollTop: top
@@ -20,23 +20,26 @@ $(document).ready(function() {
   var bLazy = new Blazy();
 
 
-//   var options = {
-//     paths: '#round',     // Shape we want to draw
-//     pointsNumber: 10,            // Number of points
-//     maxDistance: 100,             // Max distance among points
-//     // color: 'red',
-//     // debug: true               // Uncomment this to see the points
-// };
+  //   var options = {
+  //     paths: '#round',     // Shape we want to draw
+  //     pointsNumber: 10,            // Number of points
+  //     maxDistance: 100,             // Max distance among points
+  //     // color: 'red',
+  //     // debug: true               // Uncomment this to see the points
+  // };
 
 
-//   var jelly = new Jelly('.jelly', options);
-  
+  //   var jelly = new Jelly('.jelly', options);
 
-  
+
 
   $('.phone-mask').mask('+380(99)999-99-99');
 
-
+  //GLITCH
+  //
+  //
+  
+  // BUBBLE ANIMATION for BUTTON
   var animateButton = function(e) {
     e.preventDefault;
     e.target.classList.remove('animate');
