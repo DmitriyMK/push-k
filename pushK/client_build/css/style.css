@@ -832,7 +832,10 @@ section {
     bottom: -150px;
 }
 .redShadow {
-    text-shadow: -3px 0 #ef720e;
+    text-shadow: -6px 0 #df3e51;
+}
+.orangeShadow {
+    text-shadow: -6px 0 #ef720e;
 }
 .portfolio__box {
     padding: 0 20px;

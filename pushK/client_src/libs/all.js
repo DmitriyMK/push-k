@@ -72,10 +72,10 @@ $(document).ready(function() {
       className: '-=redShadow'
     }, "+=0.09")
     .to('.glitch', 0.03, {
-      className: '+=greenShadow'
+      className: '+=orangeShadow'
     }, 'split')
     .to('.glitch', 0.03, {
-      className: '-=greenShadow'
+      className: '-=orangeShadow'
     }, "+=0.01")
 
   .to('.top', 0.2, {
