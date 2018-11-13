@@ -61,7 +61,6 @@ $(document).ready(function() {
     initialSlide: 1,
 
 
-
     responsive: [
 
       {
@@ -178,6 +177,17 @@ $(document).ready(function() {
 });
 
 
+
+// GSAP
+$(document).ready(function() {
+	var tl = new TimelineMax();
+	tl
+	.fromTo(".header__box", 1, {y: -100, opacity: 0}, {y: 0, opacity: 1})
+	.fromTo(".nav", 1, {y: -50}, {y: 0} , 0.03)
+	// .staggerFromTo(".header__link", 0.5, {opacity: 0, y: -30}, {opacity: 1, y: 0 }, 0.03);
+});
+
+
 // GSAP
 $(document).ready(function() {
   //GLITCH
@@ -255,28 +265,6 @@ $(document).ready(function() {
     })
 });
 
-$( function() {
-    $( ".glitchWrap" ).mgGlitch({
-          // set 'true' to stop the plugin
-          destroy : false, 
-          // set 'false' to stop glitching
-          glitch: true, 
-          // set 'false' to stop scaling
-          scale: true, 
-          // set 'false' to stop glitch blending
-          blend : true, 
-          // select blend mode type
-          blendModeType : 'hue',
-          // set min time for glitch 1 elem
-          glitch1TimeMin : 200, 
-          // set max time for glitch 1 elem
-          glitch1TimeMax : 400,
-          // set min time for glitch 2 elem
-          glitch2TimeMin : 10, 
-          // set max time for glitch 2 elem
-          glitch2TimeMax : 100, 
-    });
-});
 
 
 $(".form").submit(function() {
