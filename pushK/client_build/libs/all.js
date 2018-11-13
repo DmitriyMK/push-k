@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 
   //GLITCH
-  
+
   var tl = new TimelineMax({
     repeat: -1,
     repeatDelay: 2
@@ -97,6 +97,13 @@ $(document).ready(function() {
     })
 
 
+  $('#glitchWrap img').hover(
+    function() {
+      $(this).addClass('glitch');
+    }
+  );
+
+
 
   //   var options = {
   //     paths: '#round',     // Shape we want to draw
@@ -113,7 +120,7 @@ $(document).ready(function() {
 
   $('.phone-mask').mask('+380(99)999-99-99');
 
-  
+
 
   // BUBBLE ANIMATION for BUTTON
   var animateButton = function(e) {
