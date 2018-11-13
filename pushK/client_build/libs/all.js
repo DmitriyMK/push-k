@@ -46,7 +46,7 @@ $(document).ready(function() {
     dots: true,
     focusOnSelect: true,
     centerMode: true,
-    infinite: false,
+    // infinite: false,
     initialSlide: 1,
 
 

@@ -50,7 +50,7 @@ body {
     position: relative;
     margin: 0;
     min-height: 100vh;
-    padding-right: 0 !important;
+    padding-right: 0!important;
     color: #000;
     font-size: @fs;
     line-height: @lh;
@@ -90,9 +90,6 @@ section {
     }
     @media @desktop-xl-2 {
         padding: 100px 0;
-    }
-    @media @desktop-xll {
-
     }
 }
 
@@ -155,7 +152,6 @@ section {
 }
 
 .bubbly-button{
-    -webkit-appearance: none;
     appearance: none;
     border: none;
     cursor: pointer;
@@ -170,7 +166,7 @@ section {
         position: absolute;
         content: '';
         display: block;
-        width: 140%;
+        width: 120%;
         height: 100%;
         left: -20%;
         z-index: -1000;
@@ -212,7 +208,7 @@ section {
 
     &:active {
         transform: scale(0.9);
-        background-color: darken(#000, 5%);
+        background: darken(#000, 5%);
     }
 
     &.animate {
@@ -225,6 +221,21 @@ section {
           animation: bottomBubbles ease-in-out 0.75s forwards;
       }
   }
+}
+
+.bubbly-button-no {
+    transition: transform ease-in 0.1s;
+    z-index: 1;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:active, &:hover {
+        transform: scale(0.9);
+        background-color: darken(#000, 5%);
+        z-index: 1;
+    }
 }
 
 
