@@ -21,15 +21,17 @@
 }
 
 .team {
-	padding-left: 45px;
-	padding-right: 45px;
-	background: @white;
+	padding: 100px 45px;
 	&__box {
-		
+		padding: 268px 0 0 0;
+		padding-right: 73px;
 	}
 	&__title {
-		padding-left: 45px;
-		padding-right: 70px;
+		padding-left: 80px;
+		padding-right: 30px;
+	}
+	&__text {
+		padding-left: 5px;
 	}
 
 	&__gallery {
@@ -45,10 +47,10 @@
 	&__item {
 		position: relative;
 		width: 210px;
-		margin-right: 35px;
-		min-height: 198px;
-		padding-top: 25px;
-		padding-left: 25px;
+		margin-left: 35px;
+		min-height: 210px;
+		padding-top: 10px;
+		padding-left: 18px;
 		margin-bottom: 35px;
 		background: @white;
 		box-shadow: 2.817px 5.298px 12px 0px rgba(0, 0, 0, 0.13);
@@ -56,41 +58,40 @@
 
 		@media @desktop-xl15 {
 			width: 250px;
-			margin-bottom: 70px;
+			margin-bottom: 160px;
 		}
 		@media @desktop-xl-2 {
-			width: 320px;
+			width: 300px;
 		}
 	}
 
 	&__person {
 		&-name {
-			padding-bottom: 10px;
 			font-size: 23px;
 		}
 		&-position {
-			font-size: 14px;
+			font-size: 10px;
 		}
 		&-photo {
 			position: absolute;
 			bottom: -2px;
-			right: -40px;
+			right: -45px;
 		}
 		&-img {
 			max-height: 166px;
 			@media @desktop-xl15 {
-				max-height: 240px;
+				max-height: 260px;
 			}
 		}
 		&-social {
 			position: absolute;
 			bottom: 25px;
-			left: 25px;
+			left: 30px;
 		}
 		&-link img{
 			display: block;
-			width: 24px;
-			height: 24px;
+			width: 16px;
+			height: 16px;
 		}
 	}
 }
