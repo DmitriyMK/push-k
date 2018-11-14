@@ -55,23 +55,7 @@ body {
     font-size: @fs;
     line-height: @lh;
     font-weight: 400;
-    font-family: @ff1;
-
-    @media @desktop {
-        overflow-y: scroll;
-        &::-webkit-scrollbar-track {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-            background-color: @gray;
-        }
-        &::-webkit-scrollbar {
-            width: 6px;
-            background-color:@gray;
-        }
-        &::-webkit-scrollbar-thumb {
-            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-            background-color: @orange;
-        }
-    }   
+    font-family: @ff1;  
 }
 
 *::selection {
@@ -79,9 +63,7 @@ body {
     color: #fff;
 }
 
-.fancybox-margin {
-    margin-right: 0 !important;
-}
+
 
 section {
     padding: 60px 0;
@@ -89,7 +71,7 @@ section {
         padding: 100px 0;
     }
     @media @desktop-xl-2 {
-        
+
     }
 }
 
@@ -114,32 +96,63 @@ section {
 }
 
 .section {
-
     &__box {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @media @desktop {
+            flex-direction: row;
+            align-items: inherit;
+            justify-content: space-between;
+        }
     }
     &__content {
-        width: 25%;
-        @media @desktop-xl-2 {
+        @media @desktop {
+            width: 30%;
+        }
+        @media @desktop-xl {
             width: 25%;
         }
     }
 
     &__gallery {
-        width: 70%;
+        @media @desktop {
+            width: 65%;
+        }
+        @media @desktop-xl {
+            width: 70%;
+        }
     }
 
     &__title {
+        padding-top: 15px;
         position: relative;
-        padding-top: 50px;
-        padding-bottom: 55px;
-        margin-bottom: 30px;
-        margin-left: 5px;
-        font-size: 35px;
+        text-align: center;
+        font-size: 2px;
         font-weight: 700;
-        border: 3px solid #000;
         background: @white;
+
+        @media @tablet {
+            font-size: 30px;
+        }
+        
+        @media @desktop {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-bottom: 15px;
+            text-align: inherit;
+            border: 3px solid #000;
+        }
+        @media @desktop-xl {
+            font-size: 35px;
+        }
+        @media @desktop-xl {
+            padding-top: 50px;
+            padding-bottom: 55px;
+            margin-bottom: 30px;
+            margin-left: 5px;
+        }
         @media @desktop-xl-2 {
             min-width: 445px;
             padding-top: 65px;
@@ -152,9 +165,13 @@ section {
     }
 
     &__text {
+        max-width: 500px;
         font-size: 18px;
         color: @gray;
         background: @white;
+        @media @desktop {
+            max-width: inherit;
+        }
         @media @desktop-xl-2 {
             font-size: 19px;
         }
@@ -282,5 +299,12 @@ section {
     100% {
         background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
         background-size: 0% 0%, 0% 0%,  0% 0%,  0% 0%,  0% 0%,  0% 0%;
+    }
+}
+
+br {
+    display: none;
+    @media @desktop {
+        display: block;
     }
 }
