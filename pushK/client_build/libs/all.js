@@ -69,12 +69,24 @@ $(document).ready(function() {
 
 // MENU EVENTS
 
-// if ($(this).scrollTop() > 120) {
-// 	$('#fixedTopMenu').removeClass('menuDefault');
+$(window).scroll(function(){ 
 
-// } else if ($(this).scrollTop() < 120) {
-// 	$('#fixedTopMenu').addClass('menuDefault');
-// };
+var a = 150;
+var pos = $(window).scrollTop();
+
+if(pos > a) {
+    $(".header__fixed").css({
+    	background: '#eee'
+    });
+}
+else {
+    $(".header__fixed").css({
+    	background: 'transparent'
+    });
+}
+});
+
+
 
 $(document).ready(function() {
 
