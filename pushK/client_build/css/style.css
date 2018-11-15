@@ -769,9 +769,11 @@ br {
 }
 .decoration__img {
     position: absolute;
-    -webkit-transition: all 0.4s linear;
-         -o-transition: all 0.4s linear;
-            transition: all 0.4s linear;
+    -webkit-transition: -webkit-transform 0.4s linear;
+            transition: -webkit-transform 0.4s linear;
+         -o-transition:         transform 0.4s linear;
+            transition:         transform 0.4s linear;
+            transition:         transform 0.4s linear, -webkit-transform 0.4s linear;
 }
 .decoration__img:hover {
     -webkit-transform: scale(1.09) !important;
@@ -1588,6 +1590,7 @@ br {
     border: 16px solid #3b3b3d;
     color: #fff;
     text-align: center;
+    z-index: 10;
 }
 @media only screen and (min-width: 768px) {
     .contacts__box {
