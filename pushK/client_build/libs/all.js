@@ -267,19 +267,70 @@ $(document).ready(function() {
 		// .staggerFromTo(".header__link", 0.5, {opacity: 0, y: -30}, {opacity: 1, y: 0 }, 0.03);
 });
 
-
+// GSAP MOUSE ROTATE ANIMATION 
 $(document).ready(function() {
 
     var cardWrap = document.getElementsByClassName('decoration__img12');
+    var cardWrap2 = document.getElementsByClassName('decoration__img7');
+    var cardWrap3 = document.getElementsByClassName('decoration__img9');
+    var cardWrap4 = document.getElementsByClassName('decoration__img15');
+    var cardWrap5 = document.getElementsByClassName('decoration__img16');
+    var cardWrap6 = document.getElementsByClassName('decoration__img20');
+    var cardWrap7 = document.getElementsByClassName('decoration__img24');
+
+
     document.body.addEventListener('mousemove', cursorPositionHandler);
 
     function cursorPositionHandler(e) {
       var decimalX = e.clientX / window.innerWidth - 0.5;
       var decimalY = e.clientY / window.innerHeight - 0.5;
 
-      TweenMax.to(cardWrap, 0.5, {
-        rotationY: 80 * decimalX,
-        rotationX: -80 * decimalY,
+      TweenMax.to(cardWrap, 0.75, {
+        rotationY: 20 * decimalX,
+        rotationX: -40 * decimalY,
+        ease: Quad.easeOut,
+        transformPerspective: 500,
+        transformOrigin: "center"
+      });
+
+      TweenMax.to(cardWrap2, 0.25, {
+        rotationY: 20 * decimalX,
+        rotationX: 40 * decimalY,
+        ease: Quad.easeOut,
+        transformPerspective: 500,
+        transformOrigin: "center"
+      });
+      TweenMax.to(cardWrap3, 0.25, {
+        rotationY: -40 * decimalX,
+        rotationX: -40 * decimalY,
+        ease: Quad.easeOut,
+        transformPerspective: 500,
+        transformOrigin: "center"
+      });
+      TweenMax.to(cardWrap4, 0.005, {
+        rotationY: 20 * decimalX,
+        rotationX: -40 * decimalY,
+        ease: Quad.easeOut,
+        transformPerspective: 500,
+        transformOrigin: "center"
+      });
+      TweenMax.to(cardWrap5, 2.75, {
+        rotationY: 30 * decimalX,
+        rotationX: 20 * decimalY,
+        ease: Quad.easeOut,
+        transformPerspective: 500,
+        transformOrigin: "center"
+      });
+      TweenMax.to(cardWrap6, 1.5, {
+        rotationY: 40 * decimalX,
+        rotationX: -40 * decimalY,
+        ease: Quad.easeOut,
+        transformPerspective: 500,
+        transformOrigin: "center"
+      });
+      TweenMax.to(cardWrap7, 0.75, {
+        rotationY: 20 * decimalX,
+        rotationX: -40 * decimalY,
         ease: Quad.easeOut,
         transformPerspective: 500,
         transformOrigin: "center"
