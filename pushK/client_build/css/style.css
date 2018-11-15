@@ -1179,8 +1179,8 @@ br {
             filter: grayscale(0) brightness(100%) contrast(1);
 }
 .partners__item:hover .tvbet {
-    -webkit-filter: brightness(0);
-            filter: brightness(0);
+    -webkit-filter: grayscale(0%) brightness(100%) invert(0.1);
+            filter: grayscale(0%) brightness(100%) invert(0.1);
 }
 .partners__img {
     max-width: 175px;
@@ -1201,8 +1201,8 @@ br {
     z-index: 10;
 }
 .partners .tvbet {
-    -webkit-filter: grayscale(100%) brightness(0) contrast(2);
-            filter: grayscale(100%) brightness(0) contrast(2);
+    -webkit-filter: grayscale(100%) brightness(0) contrast(2) invert(0);
+            filter: grayscale(100%) brightness(0) contrast(2) invert(0);
 }
 .consult {
     margin-top: -25px;
