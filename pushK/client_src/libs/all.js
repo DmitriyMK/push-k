@@ -66,40 +66,50 @@ $(document).ready(function() {
 
 });
 
+
 // MENU EVENTS
+
+// if ($(this).scrollTop() > 120) {
+// 	$('#fixedTopMenu').removeClass('menuDefault');
+
+// } else if ($(this).scrollTop() < 120) {
+// 	$('#fixedTopMenu').addClass('menuDefault');
+// };
+
 $(document).ready(function() {
-	// BURGER RESPONSIVE < 992px
-	var $menu = $('.nav');
 
-	$('.burger').click(function() {
-		$(this).toggleClass('active');
-		$('.overlay').toggleClass('open').show;
-	});
+		// BURGER RESPONSIVE < 992px
+		var $menu = $('.nav');
 
-
-	$('.header__link').click(function() {
-		$('.overlay').removeClass('open');
-		$('.burger').removeClass('active');
-	});
+		$('.burger').click(function() {
+			$(this).toggleClass('active');
+			$('.overlay').toggleClass('open').show;
+		});
 
 
-	$(window).scroll(function() {
-		if ($(this).scrollTop() > 590) {
-			$('.scrollup').fadeIn();
-		} else {
-			$('.scrollup').fadeOut();
+		$('.header__link').click(function() {
+			$('.overlay').removeClass('open');
+			$('.burger').removeClass('active');
+		});
+
+
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 590) {
+				$('.scrollup').fadeIn();
+			} else {
+				$('.scrollup').fadeOut();
+			}
+		});
+
+
+		$(document).mouseup(function(e) {
+			if (!$menu.is(e.target) &&
+				$menu.has(e.target).length === 0) {
+
+				$('.overlay').removeClass('open');
+			$('.burger').removeClass('active');
 		}
 	});
-
-
-	$(document).mouseup(function(e) {
-		if (!$menu.is(e.target) &&
-			$menu.has(e.target).length === 0) {
-
-			$('.overlay').removeClass('open');
-		$('.burger').removeClass('active');
-	}
-});
 
 	// HIDE MENU
 	var mainHeader = $('.header__fixed'),
@@ -176,8 +186,18 @@ $(document).ready(function() {
 $(document).ready(function() {
 	var tl = new TimelineMax();
 	tl
-	.fromTo(".header__box", 1, {y: -100, opacity: 0}, {y: 0,opacity: 1})
-	.fromTo(".nav", 1, {y: -50}, {y: 0}, 0.03)
+	.fromTo(".header__box", 1, {
+		y: -100,
+		opacity: 0
+	}, {
+		y: 0,
+		opacity: 1
+	})
+	.fromTo(".nav", 1, {
+		y: -50
+	}, {
+		y: 0
+	}, 0.03)
 		// .staggerFromTo(".header__link", 0.5, {opacity: 0, y: -30}, {opacity: 1, y: 0 }, 0.03);
 	});
 
@@ -262,17 +282,43 @@ $(document).ready(function() {
 	});
 
 	tl
-	.to('.glitch', 0.1, {skewX: 4, ease: Power4.easeInOut})
-	.to('.glitch', 0.04, {skewX: 0, ease: Power4.easeInOut})
-	.to('.glitch', 0.04, {opacity: 0})
-	.to('.glitch', 0.04, {opacity: 1})
-	.to('.glitch', 0.04, {x: 2})
-	.to('.glitch', 0.04, {x: 0})
-	.to('.top', 0.2, {y: 0, ease: Power4.linear})
-	.to('.bottom', 0., {y: 10, ease: Power4.linear})
+	.to('.glitch', 0.1, {
+		skewX: 4,
+		ease: Power4.easeInOut
+	})
+	.to('.glitch', 0.04, {
+		skewX: 0,
+		ease: Power4.easeInOut
+	})
+	.to('.glitch', 0.04, {
+		opacity: 0
+	})
+	.to('.glitch', 0.04, {
+		opacity: 1
+	})
+	.to('.glitch', 0.04, {
+		x: 2
+	})
+	.to('.glitch', 0.04, {
+		x: 0
+	})
+	.to('.top', 0.2, {
+		y: 0,
+		ease: Power4.linear
+	})
+	.to('.bottom', 0., {
+		y: 10,
+		ease: Power4.linear
+	})
 
-	.to('.glitch', 0.02, {scaleY: 1.20, ease: Power4.linear})
-	.to('.glitch', 0.08, {scaleY: 1, ease: Power4.linear})
+	.to('.glitch', 0.02, {
+		scaleY: 1.20,
+		ease: Power4.linear
+	})
+	.to('.glitch', 0.08, {
+		scaleY: 1,
+		ease: Power4.linear
+	})
 });
 
 
@@ -297,13 +343,68 @@ $(function() {
 		});
 		tl.add("start") // add timeline label
 
-		.fromTo(title, 1.2, { y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(text, 1.6,  { y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(btn, 3.6,   {y: '80px', opacity: 0, scale: 1.2}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img1, 2.0,  {y: '80px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img2, 2.6, {y: '70px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img3, 2.8, {y: '60px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img4, 3.2, {y: '50px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(title, 1.2, {
+			y: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			y: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(text, 1.6, {
+			y: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			y: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(btn, 3.6, {
+			y: '80px',
+			opacity: 0,
+			scale: 1.2
+		}, {
+			y: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img1, 2.0, {
+			y: '80px',
+			opacity: 0
+		}, {
+			y: 0,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img2, 2.6, {
+			y: '70px',
+			opacity: 0
+		}, {
+			y: 0,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img3, 2.8, {
+			y: '60px',
+			opacity: 0
+		}, {
+			y: 0,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img4, 3.2, {
+			y: '50px',
+			opacity: 0
+		}, {
+			y: 0,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
 
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
@@ -331,9 +432,36 @@ $(function() {
 		});
 		tl.add("start") // add timeline label
 
-		.fromTo(title, 1.4, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(text, 1.8, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img, 1.0, { y: '20px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(title, 1.4, {
+			y: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			y: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(text, 1.8, {
+			y: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			y: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img, 1.0, {
+			y: '20px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			y: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
 
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
@@ -369,29 +497,128 @@ $(function() {
 		});
 		tl.add("start") // add timeline label
 
-		.fromTo(title, 2.4, {x: '60px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(text, 2.8,  {x: '60px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img1, 1.0,  {x: '-40px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut }, "start")
-		.fromTo(img2, 1.5,  {x: '-40px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img3, 2.0,  {x: '-40px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img4, 2.5,  {x: '-40px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img5, 3.0,  {x: '-40px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img6, 3.5,  {x: '-40px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img7, 4.0,  {x: '40px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img8, 4.5,  {x: '40px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img9, 5.0,  {x: '40px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(title, 2.4, {
+			x: '60px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(text, 2.8, {
+			x: '60px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img1, 1.0, {
+			x: '-40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img2, 1.5, {
+			x: '-40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img3, 2.0, {
+			x: '-40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img4, 2.5, {
+			x: '-40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img5, 3.0, {
+			x: '-40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img6, 3.5, {
+			x: '-40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img7, 4.0, {
+			x: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img8, 4.5, {
+			x: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img9, 5.0, {
+			x: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
 
-			// Create the Scene and trigger when visible
-			var scene = new ScrollScene({
-				triggerElement: elem,
-				reverse: false,
-				offset: 0 /* offset the trigger Npx below scene's top */
-			})
+		// Create the Scene and trigger when visible
+		var scene = new ScrollScene({
+			triggerElement: elem,
+			reverse: false,
+			offset: 0 /* offset the trigger Npx below scene's top */
+		})
 
-			.setTween(tl)
-			.addTo(scrollMagicController);
-			scene.addIndicators();
-		});
+		.setTween(tl)
+		.addTo(scrollMagicController);
+		scene.addIndicators();
+	});
 
 	$('[data-scrollmagic4]').each(function(index, elem) {
 		// Init ScrollMagic Controller
@@ -407,9 +634,34 @@ $(function() {
 		});
 		tl.add("start") // add timeline label
 
-		.fromTo(title, 1.3, {x: '-50px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(text, 1.8,  {x: '-50px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(list, 2.3,  {x: '-60px', opacity: 0}, {x: 0, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(title, 1.3, {
+			x: '-50px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(text, 1.8, {
+			x: '-50px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(list, 2.3, {
+			x: '-60px',
+			opacity: 0
+		}, {
+			x: 0,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
 
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
@@ -435,8 +687,24 @@ $(function() {
 		});
 		tl.add("start") // add timeline label
 
-		.fromTo(title, 1.4, {x: '50px', opacity: 0, scale: 1.05}, {x: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(list, 1.8,  {x: '50px', opacity: 0}, {x: 0, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(title, 1.4, {
+			x: '50px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(list, 1.8, {
+			x: '50px',
+			opacity: 0
+		}, {
+			x: 0,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
 
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
@@ -462,7 +730,14 @@ $(function() {
 		});
 		tl.add("start") // add timeline label
 
-		.fromTo(list, 1.4, {x: '50px', opacity: 0}, {x: 0, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(list, 1.4, {
+			x: '50px',
+			opacity: 0
+		}, {
+			x: 0,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
 
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
