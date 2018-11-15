@@ -39,39 +39,7 @@ $(document).ready(function() {
 	var bLazy = new Blazy();
 
 
-	var options = {
-		paths: '#round', // Shape we want to draw
-		pointsNumber: 100, // Number of points
-		maxDistance: 100, // Max distance among points
-		color: 'blue',
-		// debug: true               // Uncomment this to see the points
-	};
-
-
-	var jelly = new Jelly('.jelly', options);
-
-
-
 	$('.phone-mask').mask('+380(99)999-99-99');
-
-
-
-	// BUBBLE ANIMATION for BUTTON
-	// var animateButton = function(e) {
-	// 	e.preventDefault;
-	// 	e.target.classList.remove('animate');
-
-	// 	e.target.classList.add('animate');
-	// 	setTimeout(function() {
-	// 		e.target.classList.remove('animate');
-	// 	}, 700);
-	// };
-
-	// var bubblyButtons = document.getElementsByClassName("bubbly-button");
-
-	// for (var i = 0; i < bubblyButtons.length; i++) {
-	// 	bubblyButtons[i].addEventListener('click', animateButton, false);
-	// }
 
 
 	$('.review__slider').slick({
@@ -84,15 +52,12 @@ $(document).ready(function() {
 
 
 		responsive: [
-
 			{
 				breakpoint: 1900,
 				settings: {
 					// centerMode: false,
 				}
 			},
-
-
 		]
 	});
 
@@ -206,8 +171,6 @@ $(function() {
 		// Init ScrollMagic Controller
 		var scrollMagicController = new ScrollMagic();
 
-
-
 		// Create Animations
 		var title = $(elem).find('.portfolio__title'),
 			text = $(elem).find('.portfolio__text'),
@@ -287,7 +250,7 @@ $(function() {
 
 
 
-// GSAP
+// GSAP START ANIMATION
 $(document).ready(function() {
 	var tl = new TimelineMax();
 	tl
@@ -308,38 +271,8 @@ $(document).ready(function() {
 
 
 
-// $(document).ready(function(){
-
-// 	// Init ScrollMagic
-// 	var controller = new ScrollMagic.Controller();
-
-// 	// build a scene
-// 	var ourScene = new ScrollMagic.Scene({
-// 		triggerElement: '.portfolio',
-// 		duration: '90%',
-// 		triggerHook: 0.8
-// 	})
-
-// 	.setClassToggle('.portfolio__title', 'title-animate')
-// 	.setClassToggle('#project01', 'fade-in')
-
-
-// 	.addIndicators({
-// 		name: 'fade scene',
-// 		colorTrigger: 'black',
-// 		colorStart: '#75C695',
-// 		colorEnd: 'pink'
-// 	})
-
-// 	.addTo(controller);
-
-// });
-
-
-
-// GSAP
+// GSAP - GLITCH
 $(document).ready(function() {
-// GLITCH
 var tl = new TimelineMax({
   repeat: -1,
   repeatDelay: 2
