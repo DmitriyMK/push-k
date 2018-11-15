@@ -51,14 +51,12 @@ $(document).ready(function() {
 		centerMode: true,
 
 
-		responsive: [
-			{
-				breakpoint: 1900,
-				settings: {
-					// centerMode: false,
-				}
-			},
-		]
+		responsive: [{
+			breakpoint: 1900,
+			settings: {
+				// centerMode: false,
+			}
+		}, ]
 	});
 
 
@@ -184,7 +182,7 @@ $(function() {
 		});
 		tl.add("start") // add timeline label
 
-			.fromTo(title, 1.2, {
+		.fromTo(title, 1.2, {
 				y: '40px',
 				opacity: 0
 			}, {
@@ -240,7 +238,7 @@ $(function() {
 		})
 
 		.setTween(tl)
-		.addTo(scrollMagicController);
+			.addTo(scrollMagicController);
 		scene.addIndicators();
 	});
 });
@@ -266,86 +264,107 @@ $(document).ready(function() {
 		}, {
 			y: 0
 		}, 0.03)
-	// .staggerFromTo(".header__link", 0.5, {opacity: 0, y: -30}, {opacity: 1, y: 0 }, 0.03);
+		// .staggerFromTo(".header__link", 0.5, {opacity: 0, y: -30}, {opacity: 1, y: 0 }, 0.03);
 });
+
+
+$(document).ready(function() {
+
+    var cardWrap = document.getElementsByClassName('decoration__img12');
+    document.body.addEventListener('mousemove', cursorPositionHandler);
+
+    function cursorPositionHandler(e) {
+      var decimalX = e.clientX / window.innerWidth - 0.5;
+      var decimalY = e.clientY / window.innerHeight - 0.5;
+
+      TweenMax.to(cardWrap, 0.5, {
+        rotationY: 80 * decimalX,
+        rotationX: -80 * decimalY,
+        ease: Quad.easeOut,
+        transformPerspective: 500,
+        transformOrigin: "center"
+      });
+    }
+});
+
 
 
 
 // GSAP - GLITCH
 $(document).ready(function() {
-var tl = new TimelineMax({
-  repeat: -1,
-  repeatDelay: 2
-});
+	var tl = new TimelineMax({
+		repeat: -1,
+		repeatDelay: 2
+	});
 
-tl
-  .to('.glitch', 0.1, {
-    skewX: 4,
-    ease: Power4.easeInOut
-  })
-  .to('.glitch', 0.04, {
-    skewX: 0,
-    ease: Power4.easeInOut
-  })
-  .to('.glitch', 0.04, {
-    opacity: 0
-  })
-  .to('.glitch', 0.04, {
-    opacity: 1
-  })
-  .to('.glitch', 0.04, {
-    x: 2
-  })
-  .to('.glitch', 0.04, {
-    x: 0
-  })
-  // .add("split", 0)
-  // .to('.top', 0.5, {
-  //   y: 5,
-  //   ease: Power4.easeInOut
-  // }, 'split')
-  // .to('.bottom', 0.25, {
-  //   y: 20,
-  //   ease: Power4.easeInOut
-  // }, 'split')
-  // .to('.glitch', 0.08, {
-  //   // className: '+=redShadow'
-  // }, 'split')
+	tl
+		.to('.glitch', 0.1, {
+			skewX: 4,
+			ease: Power4.easeInOut
+		})
+		.to('.glitch', 0.04, {
+			skewX: 0,
+			ease: Power4.easeInOut
+		})
+		.to('.glitch', 0.04, {
+			opacity: 0
+		})
+		.to('.glitch', 0.04, {
+			opacity: 1
+		})
+		.to('.glitch', 0.04, {
+			x: 2
+		})
+		.to('.glitch', 0.04, {
+			x: 0
+		})
+		// .add("split", 0)
+		// .to('.top', 0.5, {
+		//   y: 5,
+		//   ease: Power4.easeInOut
+		// }, 'split')
+		// .to('.bottom', 0.25, {
+		//   y: 20,
+		//   ease: Power4.easeInOut
+		// }, 'split')
+		// .to('.glitch', 0.08, {
+		// className: '+=redShadow'
+		// }, 'split')
 
-// .to('#txt', 0, {
-//     scale: 1.05
-//   }, 'split')
-//   .to('#txt', 0, {
-//     scale: 1
-//   }, "+=0.02")
+	// .to('#txt', 0, {
+	//     scale: 1.05
+	//   }, 'split')
+	//   .to('#txt', 0, {
+	//     scale: 1
+	//   }, "+=0.02")
 
-// .to('.glitch', 0.08, {
-//     // className: '-=redShadow'
-//   }, "+=0.09")
-//   .to('.glitch', 0.03, {
-//     // className: '+=orangeShadow'
-//   }, 'split')
-//   .to('.glitch', 0.03, {
-//     // className: '-=orangeShadow'
-//   }, "+=0.01")
+	// .to('.glitch', 0.08, {
+	//     // className: '-=redShadow'
+	//   }, "+=0.09")
+	//   .to('.glitch', 0.03, {
+	//     // className: '+=orangeShadow'
+	//   }, 'split')
+	//   .to('.glitch', 0.03, {
+	//     // className: '-=orangeShadow'
+	//   }, "+=0.01")
 
-.to('.top', 0.2, {
-    y: 0,
-    ease: Power4.linear
-  })
-  .to('.bottom', 0., {
-    y: 10,
-    ease: Power4.linear
-  })
+	.to('.top', 0.2, {
+			y: 0,
+			ease: Power4.linear
+		})
+		.to('.bottom', 0., {
+			y: 10,
+			ease: Power4.linear
+		})
 
-.to('.glitch', 0.02, {
-    scaleY: 1.15,
-    ease: Power4.linear
-  })
-  .to('.glitch', 0.04, {
-    scaleY: 1,
-    ease: Power4.linear
-  })
+	.to('.glitch', 0.02, {
+			scaleY: 1.15,
+			ease: Power4.linear
+		})
+		.to('.glitch', 0.04, {
+			scaleY: 1,
+			ease: Power4.linear
+		})
 });
 
 
