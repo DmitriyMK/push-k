@@ -769,6 +769,14 @@ br {
 }
 .decoration__img {
     position: absolute;
+    -webkit-transition: all 0.4s linear;
+         -o-transition: all 0.4s linear;
+            transition: all 0.4s linear;
+}
+.decoration__img:hover {
+    -webkit-transform: scale(1.09) !important;
+        -ms-transform: scale(1.09) !important;
+            transform: scale(1.09) !important;
 }
 .decoration__img1 {
     top: 60px;
