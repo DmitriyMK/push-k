@@ -15,16 +15,16 @@ $(document).ready(function() {
   var bLazy = new Blazy();
 
 
-  //   var options = {
-  //     paths: '#round',     // Shape we want to draw
-  //     pointsNumber: 10,            // Number of points
-  //     maxDistance: 100,             // Max distance among points
-  //     // color: 'red',
-  //     // debug: true               // Uncomment this to see the points
-  // };
+    var options = {
+      paths: '#round',     // Shape we want to draw
+      pointsNumber: 10,            // Number of points
+      maxDistance: 100,             // Max distance among points
+      color: 'red',
+      debug: true               // Uncomment this to see the points
+  };
 
 
-  //   var jelly = new Jelly('.jelly', options);
+    var jelly = new Jelly('.jelly', options);
 
 
 

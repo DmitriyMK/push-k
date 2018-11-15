@@ -86,12 +86,20 @@ section {
         background: repeating-linear-gradient( 
             90deg,
             #fff,
-            #fff 260px,
-            #eaeaea 260px,
-            #eaeaea 261px);
+            #fff 80px,
+            #eaeaea 80px,
+            #eaeaea 81px);
         height: 100%;
         width: 100%;
         z-index: -1;
+        @media @desktop {
+            background: repeating-linear-gradient( 
+            90deg,
+            #fff,
+            #fff 260px,
+            #eaeaea 260px,
+            #eaeaea 261px);
+        }
     }   
 }
 
@@ -117,7 +125,9 @@ section {
     }
 
     &__gallery {
+        margin-top: 30px;
         @media @desktop {
+            margin-top: inherit;
             width: 65%;
         }
         @media @desktop-xl {
@@ -129,7 +139,7 @@ section {
         padding-top: 15px;
         position: relative;
         text-align: center;
-        font-size: 2px;
+        font-size: 22px;
         font-weight: 700;
         background: @white;
 

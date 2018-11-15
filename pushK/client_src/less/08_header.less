@@ -60,7 +60,7 @@
 
 		}
 		@media @desktop {
-
+			flex: inherit;
 		}
 		@media @desktop-xl {
 			flex-basis: 170px;
@@ -69,7 +69,7 @@
 	.nav {
 		order: 5;
 		@media @desktop {
-			margin-top: 13px;
+			//margin-top: 13px;
 			flex: 1;
 			order: inherit;
 		}
@@ -93,9 +93,9 @@
 			@media @desktop {
 				content: '';
 				position: absolute;
-				top: 50%;
+				top: 55%;
 				left: 0;
-				transform: translateY(-45%);
+				transform: translateY(-50%);
 				width: 100%;
 				height: 1px;
 				background-color: #000;
@@ -311,21 +311,21 @@
 	}
 	&__img25 {
 		top: -50px;
-		right: -370px;
+		right: -380px;
 		z-index: 1003;
 	}
 	&__img26 {
-		top: -250px;
+		top: -280px;
 		right: -370px;
 		z-index: 1002;
 	}
 	&__img27{
-		top: -240px;
+		top: -290px;
 		right: -340px;
 		z-index: 1003;
 	}
 	&__img28{
-		top: -250px;
+		top: -280px;
 		right: -380px;
 		z-index: 1000;
 	}
@@ -359,7 +359,7 @@
 	overflow: hidden;
 	text-shadow: 3px 0 #000;
 	clip: rect(0, 750px, 0, 0);
-	animation: noise-anim 3s infinite ease alternate-reverse;
+	animation: noise-anim 16s infinite ease alternate-reverse;
 }
 .glitch:before {
 	content: attr(data-text);
@@ -369,7 +369,7 @@
 	overflow: hidden;
 	clip: rect(0, 750px, 0, 0);
 	text-shadow: 3px 0 #000;
-	animation: noise-anim-2 4s infinite ease alternate-reverse;
+	animation: noise-anim-2 10s infinite ease alternate-reverse;
 }
 
 
@@ -443,3 +443,4 @@
 		clip: rect(16px, 700px, 54px, 30px);
 	}
 }
+
