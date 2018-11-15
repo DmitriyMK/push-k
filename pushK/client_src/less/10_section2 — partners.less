@@ -69,9 +69,10 @@
 			width: 300%;
     		height: 300%;
 			transform: translate(-100%,-100%) rotate(45deg);
-			background-color: #007d9b;
-			transition: transform .25s cubic-bezier(.47,.78,.48,.53);
+			background-color: #fff;
+			transition: transform .45s cubic-bezier(.47,.78,.48,.53);
 			backface-visibility: hidden;
+			box-shadow: 6.103px 11.478px 48px 0px rgba(0, 0, 0, 0.32);
 		}
 
 		&:hover {
@@ -80,6 +81,9 @@
 			}
 			img {
 				filter: grayscale(0) brightness(100%) contrast(1);
+			}
+			.tvbet {
+				filter: brightness(0);
 			}
 		} 
 	}
@@ -94,16 +98,9 @@
 		transform: translate(-50%, -50%);
 		display: block;
 		margin: auto;
-		// filter: brightness(0%); 
 		filter: grayscale(100%) brightness(75%) contrast(2);
 		transition: all .3s linear;
 		z-index: 10;
-
-		
-		// &:hover {
-		// 	filter: brightness(100%); 
-
-		// }
 	}
 	.tvbet {
 		filter: grayscale(100%) brightness(0) contrast(2);
