@@ -261,9 +261,9 @@ $(document).ready(function() {
 			transformPerspective: 500,
 			transformOrigin: "center"
 		});
-		TweenMax.to(cardWrap5, 2.75, {
+		TweenMax.to(cardWrap5, 1.05, {
 			rotationY: 30 * decimalX,
-			rotationX: 20 * decimalY,
+			rotationX: 30 * decimalY,
 			ease: Quad.easeOut,
 			transformPerspective: 500,
 			transformOrigin: "center"
