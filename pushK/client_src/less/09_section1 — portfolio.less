@@ -22,6 +22,10 @@
 
 .portfolio {
 	&__box {
+		padding: 0 15px;
+		@media @desktop {
+			padding: 0;
+		}
 		@media @desktop-xl {
 			padding: 0 20px;
 		}
@@ -33,30 +37,28 @@
 		}
 	}
 	&__title {
-		position: relative;
-		//margin-top: 25px;
-		padding-left: 30px;
-		padding-right: 30px;
-		@media @mobile-xl {
-
-		}
-		@media @mobile-land {
-
-		}
-		@media @tablet {
-
-		}
 		@media @desktop {
-
-		}
-		@media @desktop-xl {
-
+			position: relative;
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 		@media @desktop-xl-2 {
 			padding-left: 80px;
 		}
-		@media @desktop-xll {
+	}
+	&__texts {
+		padding: 15px 0px;
+		font-size: 17px;
+		text-align: center;
 
+		@media @tablet {
+			font-size: 18px;
+		}
+		@media @desktop {
+			text-align: inherit;
+		}
+		@media @desktop-xl-2 {
+			font-size: 19px;
 		}
 	}
 
@@ -66,31 +68,15 @@
 		}
 	}
 	&__list {
-		margin-top: -15px;
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
 
-		@media @mobile-xl {
-
-		}
-		@media @mobile-land {
-
-		}
-		@media @tablet {
-
-		}
 		@media @desktop {
 			justify-content: inherit;
 		}
 		@media @desktop-xl {
-
-		}
-		@media @desktop-xl-2 {
-
-		}
-		@media @desktop-xll {
-
+			margin-top: -15px;
 		}
 	}
 
@@ -98,18 +84,7 @@
 		width: 290px;
 		margin: auto;
 		object-fit: cover;
-		@media @mobile-xl {
 
-		}
-		@media @mobile-land {
-
-		}
-		@media @tablet {
-
-		}
-		@media @desktop {
-
-		}
 		@media @desktop-xl {
 			width: 370px;
 		}
@@ -131,27 +106,9 @@
 		overflow: hidden;
 		color: #fff;
 
-		@media @mobile-xl {
-
-		}
-		@media @mobile-land {
-
-		}
-		@media @tablet {
-
-		}
-		@media @desktop {
-
-		}
 		@media @desktop-xl {
 			margin-left: 20px;
 			margin-bottom: 30px;
-		}
-		@media @desktop-xl-2 {
-
-		}
-		@media @desktop-xll {
-
 		}
 
 		&:before {
@@ -184,29 +141,11 @@
 		visibility: hidden;
 		transition: all .3s cubic-bezier(0,1.56,.5,1.62);
 
-		@media @mobile-xl {
-
-		}
-		@media @mobile-land {
-
-		}
-		@media @tablet {
-
-		}
-		@media @desktop {
-
-		}
 		@media @desktop-xl {
 			top: -20px;
 			transform: translateY(0);
 			left: 20px;
 			max-width: 480px;
-		}
-		@media @desktop-xl-2 {
-
-		}
-		@media @desktop-xll {
-
 		}
 	}
 	.portfolioLogo__img {
@@ -216,21 +155,9 @@
 		}
 	}
 	&__titles {
-		font-size: 23px;
-		@media @mobile-xl {
-
-		}
-		@media @mobile-land {
-
-		}
+		font-size: 19px;
 		@media @tablet {
-
-		}
-		@media @desktop {
-
-		}
-		@media @desktop-xl {
-
+			font-size: 23px;
 		}
 		@media @desktop-xl-2 {
 			font-size: 27px;
@@ -238,21 +165,10 @@
 	}
 	&__text {
 		padding: 15px 0px;
-		font-size: 18px;
-		@media @mobile-xl {
+		font-size: 16px;
 
-		}
-		@media @mobile-land {
-
-		}
 		@media @tablet {
-
-		}
-		@media @desktop {
-
-		}
-		@media @desktop-xl {
-
+			font-size: 18px;
 		}
 		@media @desktop-xl-2 {
 			font-size: 19px;
@@ -261,7 +177,12 @@
 	&__link {
 		display: table;
 		position: relative;
-		font-size: 18px;
+		font-size: 16px;
+
+		@media @tablet {
+			font-size: 18px;
+		}
+
 		svg {
 			fill: #fff;
 		}
@@ -270,11 +191,14 @@
 			position: absolute;
 			top: 50%;
 			right: -45px;
-			transform: translateY(-50%);
+			transform: translateY(-45%);
 			width: 40px;
 			height: 25px;
 			background: url(../images/icons/svg/arr-left.svg)no-repeat;
 			transition: all .3s linear;
+			@media @tablet {
+				transform: translateY(-50%);
+			}
 		}
 		&:hover {
 			&:after {

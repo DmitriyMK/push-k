@@ -20,46 +20,92 @@
 	
 }
 
+
 .partners {
-	padding: 100px 60px;
+	padding: 35px 0;
+	background: #f4f4f4;
+	box-shadow: 6.103px 11.478px 48px 0px rgba(0, 0, 0, 0.32);
+
+	@media @desktop-xl {
+		padding: 100px 25px;
+		background: none;
+		box-shadow: none;
+	}
+	@media @desktop-xl-2 {
+		padding: 100px 60px;
+	}
 	&__box {
-		padding: 30px 155px 60px 85px;
-		background: #f4f4f4;
-		box-shadow: 6.103px 11.478px 48px 0px rgba(0, 0, 0, 0.32);
+		padding: 30px 0;
+		@media @desktop-xl {
+			padding: 30px 15px;
+			background: #f4f4f4;
+			box-shadow: 6.103px 11.478px 48px 0px rgba(0, 0, 0, 0.32);
+		}
 		@media @desktop-xl-2 {
-			
+			padding: 30px 155px 60px 85px;
+		}
+	}
+	&__content {
+		order: -1;
+		padding: 0 8px;
+		@media @desktop {
+			order: inherit;
 		}
 	}
 	&__title {
-		margin-top: 25px;
-		margin-right: 75px;
+		padding-bottom: 25px;
 		background: #f4f4f4;
-		padding-top: 42px;
-        padding-bottom: 42px;
-        padding-left: 75px;
+
+		@media @desktop {
+			margin-top: 25px;
+			padding-top: 42px;
+			padding-bottom: 42px;
+			padding-left: 30px;
+		}
+		@media @desktop-xl-2 {
+			margin-right: 75px;
+			padding-left: 75px;
+		}
 	}
 	&__text {
-		padding-left: 5px;
+		text-align: center;
 		background: #f4f4f4;
+
+		@media @desktop {
+			text-align: inherit;
+		}
+		@media @desktop-xl {
+			padding-left: 5px;
+		}
 	}
 
-	&__gallery {
-	}
+
 	&__list {
-		padding-top: 25px;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
 		flex-wrap: wrap;
+
+		@media @desktop {
+			padding-top: 25px;
+		}
 	}
 	&__item {
 		position: relative;
-		width: 18%;
-		padding: 65px;
-		min-height: 100px;
-		margin-bottom: 20px;
+		width: 30%;
+		min-height: 85px;
+		margin-bottom: 10px;
 		list-style: none;
 		overflow: hidden;
+
+		@media @mobile-land {
+			width: 18%;
+			min-height: 100px;
+		}
+		@media @desktop-xl {
+			padding: 65px;
+			margin-bottom: 20px;
+		}
 		
 		&:after {
 			position: absolute;
@@ -67,7 +113,7 @@
 			left: 0;
 			top: 0;
 			width: 300%;
-    		height: 300%;
+			height: 300%;
 			transform: translate(-100%,-100%) rotate(45deg);
 			background-color: #fff;
 			transition: transform .45s cubic-bezier(.47,.78,.48,.53);
@@ -90,7 +136,7 @@
 
 	&__img {
 		display: block;
-		max-width: 175px;
+		max-width: 80px;
 		max-height: 100px;
 		position: absolute;
 		top: 50%;
@@ -101,6 +147,17 @@
 		filter: grayscale(100%) brightness(75%) contrast(2);
 		transition: all .3s linear;
 		z-index: 10;
+		object-fit: cover;
+
+		@media @tablet {
+			max-width: 100px;
+		}
+		@media @desktop-xl {
+			max-width: 140px;
+		}
+		@media @desktop-xl-2 {
+			max-width: 175px;
+		}
 	}
 	.tvbet {
 		filter: grayscale(100%) brightness(0) contrast(2) invert(0);

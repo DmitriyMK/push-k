@@ -79,19 +79,21 @@ section {
     position: relative;
     overflow: hidden;
     &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -160px;
-        background: repeating-linear-gradient( 
-            90deg,
-            #fff,
-            #fff 80px,
-            #eaeaea 80px,
-            #eaeaea 81px);
-        height: 100%;
-        width: 100%;
-        z-index: -1;
+        @media @tablet {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -160px;
+            background: repeating-linear-gradient( 
+                90deg,
+                #fff,
+                #fff 80px,
+                #eaeaea 80px,
+                #eaeaea 81px);
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
         @media @desktop {
             background: repeating-linear-gradient( 
                 90deg,
@@ -126,6 +128,7 @@ section {
 
     &__gallery {
         margin-top: 30px;
+        width: 100%;
         @media @desktop {
             margin-top: inherit;
             width: 65%;
@@ -176,9 +179,12 @@ section {
 
     &__text {
         max-width: 500px;
-        font-size: 18px;
+        font-size: 17px;
         color: @gray;
         background: @white;
+        @media @tablet {
+            font-size: 18px;
+        }
         @media @desktop {
             max-width: inherit;
         }

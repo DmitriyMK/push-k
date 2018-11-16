@@ -678,7 +678,8 @@ $(function() {
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
 			triggerElement: elem,
-			offset: 0 /* offset the trigger Npx below scene's top */
+			reverse: false,
+			offset: -180
 		})
 
 		.setTween(tl)

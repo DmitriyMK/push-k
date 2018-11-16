@@ -2,32 +2,33 @@
 
 
 
-.open {
-	transform: translateX(-200px);
-	position: relative;
-	z-index: 100;
-	transition: all .3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
-	@media @desktop {
-		display: none;
-	}
-}
-
 .overlay {
 	position: fixed;
-	width: 200px;
-	background: #eee;
-	height: 100vh; 
-	top: 55px;
-	right: -220px;
-	overflow-y: scroll;
+	width: 100vw;
+	height: 109vh;
+	top: 50px;
+	right: -10px;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transform: translateY(15px);
+	backface-visibility: hidden;
+
 	transition: all .3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+	background: #eee;
+	
 
 	@media @desktop {
 		position: inherit;
+		top: inherit;
 		width: inherit;
 		height: inherit;
 		background: inherit;
 		overflow-y: inherit;
+		opacity: 1;
+		transform: none;
+		visibility: visible;
+		pointer-events: auto;
 	}
 
 	&__wrap {
@@ -45,7 +46,7 @@
 		flex: 1;
 		flex-basis: 70vh;
 		@media @mobile-land {
-			flex-basis: 67vh;
+			flex-basis: 55vh;
 			margin-bottom: 15px;
 		}
 		@media @tablet {
@@ -72,12 +73,45 @@
 		background-color: #11569d;
 		background-color: @orange;
 	}
-
 }
 
 
+.open {
+	position: fixed;
+	
+	transform: translateY(0);
+	pointer-events: auto;
+	opacity: 1;
+	visibility: visible;
+	transition: all .3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
+	
+	overflow: hidden;
+	z-index: 200;
 
+	@media @mobile-land {
+		overflow-y: scroll;
+		&::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			background-color: #F5F5F5;
+		}
+		&::-webkit-scrollbar {
+			width: 6px;
+			background-color: #F5F5F5;
+		}
+		&::-webkit-scrollbar-thumb {
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+			background-color: @orange;
+		}
+	}
+	
+	@media @tablet {
+		overflow: inherit; 
+	}
 
+	@media @desktop {
+		display: none;
+	}
+}
 
 
 

@@ -21,17 +21,42 @@
 }
 
 .team {
-	padding: 100px 45px;
-	&__box {
-		padding: 268px 0 0 0;
-		padding-right: 73px;
+	@media @desktop-xl {
+		padding: 100px 45px;	
 	}
+
+	&__box {
+		padding: 80px 0 0 0;
+		@media @desktop-xl-2 {
+			padding: 200px 73px 0 0;
+		}
+	}
+	&__content {
+		order: -1;
+		padding: 0 8px;
+		@media @desktop {
+			order: inherit;
+		}
+	}
+
 	&__title {
-		padding-left: 80px;
-		padding-right: 30px;
+		@media @desktop {
+			padding-left: 30px;
+		}
+		@media @desktop-xl-2 {
+			padding-left: 80px;
+			padding-right: 30px;
+		}
 	}
 	&__text {
-		padding-left: 5px;
+		padding-top: 15px;
+		text-align: center;
+
+		@media @desktop {
+			padding-top: 0;
+			padding-left: 5px;
+			text-align: inherit;
+		}
 	}
 
 	&__gallery {
@@ -46,16 +71,31 @@
 	}
 	&__item {
 		position: relative;
-		width: 210px;
-		margin-left: 35px;
-		min-height: 210px;
+		width: 320px;
+		margin-left: 10px;
+		min-height: 170px;
 		padding-top: 10px;
-		padding-left: 18px;
 		margin-bottom: 35px;
 		background: @white;
 		box-shadow: 2.817px 5.298px 12px 0px rgba(0, 0, 0, 0.13);
 		list-style: none;
 
+		@media @mobile-xl {
+
+		}
+		@media @mobile-land {
+
+		}
+		@media @tablet {
+			width: 190px;
+			padding-left: 18px;
+			min-height: 210px;
+		}
+		@media @desktop-xl {
+			width: 210px;
+			margin-left: 35px;
+			min-height: 210px;
+		}
 		@media @desktop-xl15 {
 			width: 250px;
 			margin-bottom: 160px;
@@ -67,18 +107,53 @@
 
 	&__person {
 		&-name {
-			font-size: 23px;
+			padding-top: 15px;
+			padding-left: 15px;
+			font-size: 18px;
+			@media @mobile-xl {
+
+			}
+			@media @mobile-land {
+
+			}
+			@media @tablet {
+				padding-left: 0;
+				padding-top: 0;
+				font-size: 21px;
+			}
+			@media @desktop {
+
+			}
+			@media @desktop-xl {
+				font-size: 23px;
+			}
 		}
 		&-position {
+			padding-left: 15px;
 			font-size: 10px;
+			@media @tablet {
+				padding-left: 0;
+			}
 		}
 		&-photo {
 			position: absolute;
 			bottom: -2px;
-			right: -45px;
+			right: 5px;
+			@media @tablet {
+				right: -15px;
+			}
+			@media @desktop-xl {
+				right: -45px;
+			}
 		}
 		&-img {
-			max-height: 166px;
+			max-height: 180px;
+			@media @tablet {
+				max-height: 150px;
+			}
+			@media @desktop-xl {
+				max-height: 166px;
+			}
 			@media @desktop-xl15 {
 				max-height: 260px;
 			}
@@ -86,7 +161,10 @@
 		&-social {
 			position: absolute;
 			bottom: 25px;
-			// left: 30px;
+			left: 15px;
+			@media @tablet {
+				left: 0;
+			}
 		}
 		&-link svg{
 			display: block;
