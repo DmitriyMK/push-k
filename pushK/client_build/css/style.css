@@ -2067,7 +2067,7 @@ br {
 }
 @media only screen and (min-width: 768px) {
     .team__person-social {
-        left: 0;
+        left: 20px;
     }
 }
 .team__person-link svg {
