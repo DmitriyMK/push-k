@@ -612,7 +612,7 @@ br {
 }
 @media only screen and (min-width: 992px) {
     .header__list {
-        margin-top: inherit;
+        margin-top: 16px;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1238,6 +1238,7 @@ br {
 .decoration__img22 {
     top: 75px;
     right: -210px;
+    z-index: 10000;
 }
 @media only screen and (min-width: 1600px) {
     .decoration__img22 {
@@ -1253,6 +1254,7 @@ br {
         display: block;
         top: 45px;
         right: -360px;
+        z-index: 10000;
     }
 }
 .decoration__img24 {
@@ -1264,8 +1266,8 @@ br {
 @media only screen and (min-width: 1600px) {
     .decoration__img24 {
         display: block;
-        right: -360px;
-        top: -60px;
+        right: -380px;
+        top: -90px;
         z-index: 1000;
     }
 }
@@ -1275,7 +1277,7 @@ br {
 @media only screen and (min-width: 1600px) {
     .decoration__img25 {
         display: block;
-        top: -50px;
+        top: -70px;
         right: -380px;
         z-index: 1003;
     }
@@ -1286,7 +1288,7 @@ br {
 @media only screen and (min-width: 1600px) {
     .decoration__img26 {
         display: block;
-        top: -280px;
+        top: -310px;
         right: -380px;
         z-index: 1002;
     }
@@ -1297,7 +1299,7 @@ br {
 @media only screen and (min-width: 1600px) {
     .decoration__img27 {
         display: block;
-        top: -290px;
+        top: -310px;
         right: -340px;
         z-index: 1003;
     }
@@ -1308,7 +1310,7 @@ br {
 @media only screen and (min-width: 1600px) {
     .decoration__img28 {
         display: block;
-        top: -280px;
+        top: -310px;
         right: -380px;
         z-index: 1000;
     }
