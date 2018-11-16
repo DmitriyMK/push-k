@@ -422,7 +422,7 @@ $(function() {
 		var scene = new ScrollScene({
 			triggerElement: elem,
 			reverse: false,
-			offset: 0 /* offset the trigger Npx below scene's top */
+			offset: -180
 		})
 
 		.setTween(tl)
@@ -479,7 +479,7 @@ $(function() {
 		var scene = new ScrollScene({
 			triggerElement: elem,
 			reverse: false,
-			offset: 0 /* offset the trigger Npx below scene's top */
+			offset: -180
 		})
 
 		.setTween(tl)
@@ -624,7 +624,7 @@ $(function() {
 		var scene = new ScrollScene({
 			triggerElement: elem,
 			reverse: false,
-			offset: 0 /* offset the trigger Npx below scene's top */
+			offset: -180
 		})
 
 		.setTween(tl)
@@ -722,7 +722,7 @@ $(function() {
 		var scene = new ScrollScene({
 			triggerElement: elem,
 			reverse: false,
-			offset: 0 /* offset the trigger Npx below scene's top */
+			offset: -180
 		})
 
 		.setTween(tl)
@@ -754,7 +754,7 @@ $(function() {
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
 			triggerElement: elem,
-			offset: 0 /* offset the trigger Npx below scene's top */
+			offset: -180
 		})
 
 		.setTween(tl)
