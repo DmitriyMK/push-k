@@ -1088,6 +1088,18 @@ br {
         display: none;
     }
 }
+.decoration__imgBig-small {
+    display: block;
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    max-width: 250px;
+}
+@media only screen and (min-width: 768px) {
+    .decoration__imgBig-small {
+        display: none;
+    }
+}
 .decoration__img1 {
     top: 280px;
     left: 450px;
