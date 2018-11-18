@@ -8,11 +8,11 @@ var markersData = [{
 var map, infoWindow;
 
 function initMap() {
-    var centerLatLng = new google.maps.LatLng(50.4301475, 30.4737761);
+    var centerLatLng = new google.maps.LatLng(50.4301475, 30.4707761);
 
     var mapOptions = {
         center: centerLatLng,
-        zoom: 15.5,
+        zoom: 14,
 
         mapTypeControl: false,
 

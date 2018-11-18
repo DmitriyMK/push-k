@@ -49,14 +49,26 @@ $(document).ready(function() {
 		dots: true,
 		focusOnSelect: true,
 		centerMode: true,
+		cssEase: 'linear',
 
 
-		responsive: [{
-			breakpoint: 1900,
+		responsive: [
+		{
+			breakpoint: 1600,
 			settings: {
-				// centerMode: false,
+				centerMode: false,
 			}
-		}, ]
+		}, 
+		{
+			breakpoint: 1200,
+			settings: {
+				centerMode: false,
+				slidesToShow: 1,
+				fade: true,
+			}
+		},
+
+		]
 	});
 
 
@@ -71,19 +83,19 @@ $(document).ready(function() {
 
 $(window).scroll(function(){ 
 
-var a = 150;
-var pos = $(window).scrollTop();
+	var a = 150;
+	var pos = $(window).scrollTop();
 
-if(pos > a) {
-    $(".header__fixed").css({
-    	background: '#eee'
-    });
-}
-else {
-    $(".header__fixed").css({
-    	background: 'transparent'
-    });
-}
+	if(pos > a) {
+		$(".header__fixed").css({
+			background: '#eee'
+		});
+	}
+	else {
+		$(".header__fixed").css({
+			background: 'transparent'
+		});
+	}
 });
 
 
@@ -294,43 +306,16 @@ $(document).ready(function() {
 	});
 
 	tl
-	.to('.glitch', 0.1, {
-		skewX: 4,
-		ease: Power4.easeInOut
-	})
-	.to('.glitch', 0.04, {
-		skewX: 0,
-		ease: Power4.easeInOut
-	})
-	.to('.glitch', 0.04, {
-		opacity: 0
-	})
-	.to('.glitch', 0.04, {
-		opacity: 1
-	})
-	.to('.glitch', 0.04, {
-		x: 2
-	})
-	.to('.glitch', 0.04, {
-		x: 0
-	})
-	.to('.top', 0.2, {
-		y: 0,
-		ease: Power4.linear
-	})
-	.to('.bottom', 0., {
-		y: 10,
-		ease: Power4.linear
-	})
-
-	.to('.glitch', 0.02, {
-		scaleY: 1.20,
-		ease: Power4.linear
-	})
-	.to('.glitch', 0.08, {
-		scaleY: 1,
-		ease: Power4.linear
-	})
+	.to('.glitch', 0.1,  {skewX: 4, ease: Power4.easeInOut})
+	.to('.glitch', 0.04, {skewX: 0, ease: Power4.easeInOut})
+	.to('.glitch', 0.04, {opacity: 0})
+	.to('.glitch', 0.04, {opacity: 1})
+	.to('.glitch', 0.04, {x: 2})
+	.to('.glitch', 0.04, {x: 0})
+	.to('.top', 0.2, {y: 0,ease: Power4.linear})
+	.to('.bottom', 0., {y: 10, ease: Power4.linear})
+	.to('.glitch', 0.02, {scaleY: 1.20, ease: Power4.linear})
+	.to('.glitch', 0.08, {scaleY: 1, ease: Power4.linear})
 });
 
 
@@ -343,7 +328,7 @@ $(function() {
 
 		// Create Animations
 		var title = $(elem).find('.portfolio__title'),
-		text = $(elem).find('.portfolio__text'),
+		text = $(elem).find('.portfolio__texts'),
 		btn = $(elem).find('.portfolio__btn'),
 		img1 = $(elem).find('.portfolio__figure1'),
 		img2 = $(elem).find('.portfolio__figure2'),
@@ -355,68 +340,13 @@ $(function() {
 		});
 		tl.add("start") // add timeline label
 
-		.fromTo(title, 1.2, {
-			y: '40px',
-			opacity: 0,
-			scale: 1.05
-		}, {
-			y: 0,
-			scale: 1,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
-		.fromTo(text, 1.6, {
-			y: '40px',
-			opacity: 0,
-			scale: 1.05
-		}, {
-			y: 0,
-			scale: 1,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
-		.fromTo(btn, 3.6, {
-			y: '80px',
-			opacity: 0,
-			scale: 1.2
-		}, {
-			y: 0,
-			scale: 1,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
-		.fromTo(img1, 2.0, {
-			y: '80px',
-			opacity: 0
-		}, {
-			y: 0,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
-		.fromTo(img2, 2.6, {
-			y: '70px',
-			opacity: 0
-		}, {
-			y: 0,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
-		.fromTo(img3, 2.8, {
-			y: '60px',
-			opacity: 0
-		}, {
-			y: 0,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
-		.fromTo(img4, 3.2, {
-			y: '50px',
-			opacity: 0
-		}, {
-			y: 0,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
+		.fromTo(title, 1.2, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(text, 1.6, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(btn, 3.6, {y: '80px', opacity: 0, scale: 1.2}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(img1, 2.0, {y: '80px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(img2, 2.6, {y: '70px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(img3, 2.8, {y: '60px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(img4, 3.2, {y: '50px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
 
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({

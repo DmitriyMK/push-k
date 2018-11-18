@@ -25,6 +25,17 @@
 
 .header {
 	position: relative;
+	.container {
+		width: 100%;
+		padding: 0 15px;
+		@media @desktop {
+			width: 945px;
+		}
+		@media @desktop-xl {
+			width: 1170px;
+		}
+	}
+
 	&__box {
 		height: 60px;
 		display: flex;
@@ -59,7 +70,7 @@
 		@media @tablet {
 			margin-left: 0;
 		}
-		
+
 		@media @desktop {
 			flex: 1;
 			order: inherit;
@@ -100,7 +111,7 @@
 		transition: all .3s linear;
 
 		@media @mobile-land {
-			line-height: 2.2;
+			line-height: 50px;
 		}
 		@media @tablet {
 			line-height: 100px;

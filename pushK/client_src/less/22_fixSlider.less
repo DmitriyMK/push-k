@@ -2,25 +2,49 @@
 .slick-next {
 	width: 40px;
 	height: 60px;
-	top: 50%;
-	transform: translateY(-50%);
-	opacity: 1;
+	bottom: -64px;
+
 	transition: opacity .3s linear;
-	z-index: 20;
+	z-index: 200;
 	outline: none;
+
+	@media @tablet {
+		bottom: inherit;
+		top: 50%;
+		transform: translateY(-50%);	
+	}
 }
 
 
 .slick-prev {
-	display: none !important;
-	left: -10px;
+	left: 5px;
 	background: url(../images/icons/svg/arr-back.svg)no-repeat center/cover;
+	@media @desktop {
+		display: none !important;
+		opacity: 0;
+	}
 }
 
 .slick-next {
-	opacity: 0;
-	right: 0px; 
+	right: 5px; 
 	background: url(../images/icons/svg/arr-next.svg)no-repeat center/cover;
+
+	@media @tablet {
+
+	}
+	@media @desktop {
+		right: -44px;
+		opacity: 0;
+	}
+	@media @desktop-xl {
+		right: -25px; 
+	}
+	@media @desktop-xl-2 {
+		right: 0; 
+	}
+	@media @desktop-xll {
+
+	}
 }
 
 
@@ -33,7 +57,7 @@
 .slick-prev:focus,
 .slick-next:focus
 {
-    opacity: 1;
+	opacity: 1;
 }
 
 .slick-disabled {
@@ -43,10 +67,28 @@
 
 
 .slick-dots {
-	text-align: left;
-	padding-left: 50px;
+	left: 50%;
+	transform: translateX(-50%);
 	bottom: -20px;
 	z-index: 20;
+
+	@media @tablet {
+
+	}
+	@media @desktop {
+		left: 0;
+		transform: none;
+	}
+	@media @desktop-xl {
+		padding-left: 50px;
+		text-align: left;
+	}
+	@media @desktop-xl-2 {
+
+	}
+	@media @desktop-xll {
+
+	}
 
 	li {
 		margin: 7px;

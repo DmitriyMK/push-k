@@ -24,7 +24,15 @@
 
 	&__box {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
+		@media @tablet {
+			flex-direction: row;
+		}
+	}
+
+	&__logo {
+		margin-bottom: 50px;
 	}
 }

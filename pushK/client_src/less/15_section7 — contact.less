@@ -21,8 +21,18 @@
 }
 
 .contacts {
-	padding-left: 160px;
-	padding-right: 160px;
+	padding-bottom: 0;
+	@media @tablet {
+		padding-bottom: 80px;
+	}
+	@media @desktop-xl-2 {
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+	@media @desktop-xll {
+		padding-left: 160px;
+		padding-right: 160px;
+	}
 	.map {
 		width: 100%;
 		height: 500px; 
@@ -31,13 +41,23 @@
 	.container {
 		position: relative;
 		z-index: 10;
+		padding: 0;
 	}
 
 	&__title {
-		margin-bottom: 80px;
+		margin-bottom: 40px;
 		position: relative;
 		font-size: 35px;
 		font-weight: 700;
+		text-align: center;
+		@media @desktop {
+			text-align: inherit;
+		}
+
+		@media @desktop-xl {
+			margin-bottom: 80px;
+		}
+
 		@media @desktop-xl-2 {
 			min-width: 370px;
 			font-size: 42px;
@@ -48,24 +68,43 @@
 	}
 
 	&__box {
-		padding-top: 40px;
+		max-width: 414px;
+		margin: auto;
+		padding: 40px 15px;
 		background: #474747;
-		border: 16px solid #3b3b3d;
+		
 		color: #fff;
-		text-align: center;
 		z-index: 10;
 
-
 		@media @tablet {
-			position: absolute;
-			padding-top: 80px;
-			padding-left: 30px;
-			padding-right: 30px;
-			top: -535px;
-			left: -135px;
 			width: 400px;
+			padding: 40px 20px;
+			border: 16px solid #3b3b3d;
+		}
+		@media @desktop {
+			position: absolute;
+			top: -535px;
+			left: 80px;
+			padding: 80px 30px;
 			height: 565px;
-			text-align: inherit;
+		}
+		@media @desktop-xl {
+			
+		}
+		@media @desktop-xl-2 {
+			left: -55px;
+		}
+		@media @desktop-xll {
+			left: -135px;
+		}
+	}
+
+	&__list {
+		width: 280px;
+		margin: auto;
+		@media @tablet {
+			width: inherit;
+			margin: inherit;
 		}
 	}
 
@@ -88,13 +127,17 @@
 		fill: #9c9b9b;
 	}
 	&__link {
-		display: block;
+		display: table;
 		margin-bottom: 3px;
 	}
 	&__ask {
 		padding-top: 20px;
 		padding-bottom: 10px;
 		font-size: 20px;
+		text-align: center;
+	}
+	&__text {
+		text-align: center;
 	}
 
 	.btn {
@@ -118,17 +161,35 @@
 
 	.social {
 		&__list {
-			position: absolute;
-			width: 80px;
-			height: 500px;
-			top: -500px;
-			left: -215px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			background: #e6e6e6;
-			box-shadow: 0px 2px 8.71px 4.29px rgba(0, 0, 0, 0.14);
+			display: none;
+			@media @tablet {
+				display: block;
+				position: absolute;
+				width: 80px;
+				height: 484px;
+				top: 0;
+				left: 105px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				background: #e6e6e6;
+				box-shadow: 0px 2px 8.71px 4.29px rgba(0, 0, 0, 0.14);
+			}
+			@media @desktop {
+				top: -500px;
+				height: 500px;
+				left: 0;
+			}
+			@media @desktop-xl {
+				
+			}
+			@media @desktop-xl-2 {
+				left: -135px;
+			}
+			@media @desktop-xll {
+				left: -215px;
+			}
 
 		}
 		&__link {
@@ -156,8 +217,66 @@
 			transition: all .3s linear;
 			fill: #474747;
 		}
+	}
 
-		
+	.social {
+		&__list-mob {
+			margin-top: 30px;
+			margin-bottom: 10px;
+			display: flex;
+			justify-content: center;
+			@media @tablet {
+				display: none;
+			}
+			@media @desktop {
+				top: -500px;
+				height: 500px;
+				left: 0;
+			}
+			@media @desktop-xl {
+				
+			}
+			@media @desktop-xl-2 {
+				left: -135px;
+			}
+			@media @desktop-xll {
+				left: -215px;
+			}
+
+		}
+		&__link-mob {
+			display: block;
+			margin-left: 8px;
+			margin-right: 8px;
+			transition: all .3s linear;
+			fill: #9c9b9b;
+			&:hover {
+				.fb__circle {
+					fill: #3b5998;
+				}
+				.bh {
+					fill: #1769ff;
+				}
+				.skype {
+					fill: #00aaf2;
+				}
+				.pin {
+					fill: #cb1f24;
+				}
+			}
+			.fb-letter {
+				fill: #474747;
+			}
+		}
+		&__img-mob {
+			width: 50px;
+			max-height: 50px;
+			transition: all .3s linear;
+		}
+	}
+
+	br {
+		display: inline;
 	}
 }
 
