@@ -26,8 +26,18 @@ $(document).ready(function() {
 		$(document).ready(function() {
 			var tl = new TimelineMax();
 			tl
-			.fromTo(".header__box", 1, {y: -100, opacity: 0}, {y: 0, opacity: 1})
-			.fromTo(".nav", 1, {y: -50}, {y: 0}, 0.03)
+			.fromTo(".header__box", 1, {
+				y: -100,
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1
+			})
+			.fromTo(".nav", 1, {
+				y: -50
+			}, {
+				y: 0
+			}, 0.03)
 		});
 
 
@@ -133,14 +143,12 @@ $(document).ready(function() {
 		cssEase: 'linear',
 
 
-		responsive: [
-		{
+		responsive: [{
 			breakpoint: 1600,
 			settings: {
 				centerMode: false,
 			}
-		}, 
-		{
+		}, {
 			breakpoint: 1200,
 			settings: {
 				centerMode: false,
@@ -276,100 +284,188 @@ $(document).ready(function() {
 });
 
 
- // GSAP - GLITCH
- $(document).ready(function() {
- 	var tl = new TimelineMax({
- 		repeat: -1,
- 		repeatDelay: 2
- 	});
+// GSAP - GLITCH
+$(document).ready(function() {
+	var tl = new TimelineMax({
+		repeat: -1,
+		repeatDelay: 2
+	});
 
- 	tl
- 	.to('.glitch', 0.1, {
- 		skewX: 4,
- 		ease: Power4.easeInOut
- 	})
- 	.to('.glitch', 0.04, {
- 		skewX: 0,
- 		ease: Power4.easeInOut
- 	})
- 	.to('.glitch', 0.04, {
- 		opacity: 0
- 	})
- 	.to('.glitch', 0.04, {
- 		opacity: 1
- 	})
- 	.to('.glitch', 0.04, {
- 		x: 2
- 	})
- 	.to('.glitch', 0.04, {
- 		x: 0
- 	})
- 	.to('.top', 0.2, {
- 		y: 0,
- 		ease: Power4.linear
- 	})
- 	.to('.bottom', 0., {
- 		y: 10,
- 		ease: Power4.linear
- 	})
- 	.to('.glitch', 0.02, {
- 		scaleY: 1.20,
- 		ease: Power4.linear
- 	})
- 	.to('.glitch', 0.08, {
- 		scaleY: 1,
- 		ease: Power4.linear
- 	})
- });
+	tl
+	.to('.glitch', 0.1, {
+		skewX: 4,
+		ease: Power4.easeInOut
+	})
+	.to('.glitch', 0.04, {
+		skewX: 0,
+		ease: Power4.easeInOut
+	})
+	.to('.glitch', 0.04, {
+		opacity: 0
+	})
+	.to('.glitch', 0.04, {
+		opacity: 1
+	})
+	.to('.glitch', 0.04, {
+		x: 2
+	})
+	.to('.glitch', 0.04, {
+		x: 0
+	})
+	.to('.top', 0.2, {
+		y: 0,
+		ease: Power4.linear
+	})
+	.to('.bottom', 0., {
+		y: 10,
+		ease: Power4.linear
+	})
+	.to('.glitch', 0.02, {
+		scaleY: 1.20,
+		ease: Power4.linear
+	})
+	.to('.glitch', 0.08, {
+		scaleY: 1,
+		ease: Power4.linear
+	})
+});
 
 
- // SCROLL ANIMATION
- $(function() {
- 	if (document.documentElement.clientWidth > 1200) {
+// SCROLL ANIMATION
+$(function() {
+	if (document.documentElement.clientWidth > 1200) {
 
- 		$('[data-scrollmagic]').each(function(index, elem) {
-		// Init ScrollMagic Controller
-		var scrollMagicController = new ScrollMagic();
+		$('[data-scrollmagic]').each(function(index, elem) {
+			// Init ScrollMagic Controller
+			var scrollMagicController = new ScrollMagic();
 
-		// Create Animations
-		var title = $(elem).find('.portfolio__title'),
-		text = $(elem).find('.portfolio__texts'),
-		btn = $(elem).find('.portfolio__btn'),
-		img1 = $(elem).find('.portfolio__figure1'),
-		img2 = $(elem).find('.portfolio__figure2'),
-		img3 = $(elem).find('.portfolio__figure3'),
-		img4 = $(elem).find('.portfolio__figure4');
+			// Create Animations
+			var title = $(elem).find('.portfolio__title'),
+			text = $(elem).find('.portfolio__texts'),
+			btn = $(elem).find('.portfolio__btn'),
+			img1 = $(elem).find('.portfolio__figure1'),
+			img2 = $(elem).find('.portfolio__figure2'),
+			img3 = $(elem).find('.portfolio__figure3'),
+			img4 = $(elem).find('.portfolio__figure4');
 
-		var tl = new TimelineMax({
-			pause: true
+			var tl = new TimelineMax({
+				pause: true
+			});
+
+			tl.add("start") // add timeline label
+
+			.fromTo(title, 1.2, {
+				y: '40px',
+				opacity: 0,
+				scale: 1.05
+			}, {
+				y: 0,
+				scale: 1,
+				opacity: 1,
+				ease: Power2.easeOut
+			}, "start")
+			.fromTo(text, 1.6, {
+				y: '40px',
+				opacity: 0,
+				scale: 1.05
+			}, {
+				y: 0,
+				scale: 1,
+				opacity: 1,
+				ease: Power2.easeOut
+			}, "start")
+			.fromTo(btn, 3.6, {
+				y: '80px',
+				opacity: 0,
+				scale: 1.2
+			}, {
+				y: 0,
+				scale: 1,
+				opacity: 1,
+				ease: Power2.easeOut
+			}, "start")
+			.fromTo(img1, 2.0, {
+				y: '80px',
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				ease: Power2.easeOut
+			}, "start")
+			.fromTo(img2, 2.6, {
+				y: '70px',
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				ease: Power2.easeOut
+			}, "start")
+			.fromTo(img3, 2.8, {
+				y: '60px',
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				ease: Power2.easeOut
+			}, "start")
+			.fromTo(img4, 3.2, {
+				y: '50px',
+				opacity: 0
+			}, {
+				y: 0,
+				opacity: 1,
+				ease: Power2.easeOut
+			}, "start")
+
+			// Create the Scene and trigger when visible
+			var scene = new ScrollScene({
+				triggerElement: elem,
+				reverse: false,
+				offset: -180
+			})
+
+			.setTween(tl)
+			.addTo(scrollMagicController);
+			scene.addIndicators();
 		});
 
-		tl.add("start") // add timeline label
 
-		.fromTo(title, 1.2, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(text, 1.6,  {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(btn, 3.6,   {y: '80px', opacity: 0, scale: 1.2}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img1, 2.0,  {y: '80px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img2, 2.6,  {y: '70px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img3, 2.8,  {y: '60px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
-		.fromTo(img4, 3.2,  {y: '50px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+		$('[data-scrollmagic1]').each(function(index, elem) {
+		var scrollMagicController = new ScrollMagic();
 
-		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
-			triggerElement: elem,
-			reverse: false,
-			offset: -180
+			triggerElement: '#portfolio',
+			reverse: true,
+			duration: 400,
+			pushFollowers: false,
+			offset: 360
 		})
 
-		// setPin("#portfolio__content");
-
-		.setTween(tl)
+		.setPin("#portfolio__content")
 		.addTo(scrollMagicController);
 		scene.addIndicators();
 		});
 
 
- 		$('[data-scrollmagic2]').each(function(index, elem) {
+		$('[data-scrollmagic31]').each(function(index, elem) {
+
+		var scrollMagicController = new ScrollMagic();
+
+		var scene = new ScrollScene({
+			triggerElement: '#team',
+			reverse: true,
+			duration: 700,
+			pushFollowers: false,
+			offset: 360
+		})
+
+		.setPin("#teamContent")
+		.addTo(scrollMagicController);
+		scene.addIndicators();
+		});
+		
+
+		$('[data-scrollmagic2]').each(function(index, elem) {
 		// Init ScrollMagic Controller
 		var scrollMagicController = new ScrollMagic();
 
@@ -427,7 +523,7 @@ $(document).ready(function() {
 	});
 
 
- 		$('[data-scrollmagic3]').each(function(index, elem) {
+		$('[data-scrollmagic3]').each(function(index, elem) {
 		// Init ScrollMagic Controller
 		var scrollMagicController = new ScrollMagic();
 
@@ -573,7 +669,7 @@ $(document).ready(function() {
 	});
 
 
- 		$('[data-scrollmagic4]').each(function(index, elem) {
+		$('[data-scrollmagic4]').each(function(index, elem) {
 		// Init ScrollMagic Controller
 		var scrollMagicController = new ScrollMagic();
 
@@ -629,7 +725,7 @@ $(document).ready(function() {
 	});
 
 
- 		$('[data-scrollmagic5]').each(function(index, elem) {
+		$('[data-scrollmagic5]').each(function(index, elem) {
 		// Init ScrollMagic Controller
 		var scrollMagicController = new ScrollMagic();
 
@@ -674,7 +770,7 @@ $(document).ready(function() {
 	});
 
 
- 		$('[data-scrollmagic6]').each(function(index, elem) {
+		$('[data-scrollmagic6]').each(function(index, elem) {
 		// Init ScrollMagic Controller
 		var scrollMagicController = new ScrollMagic();
 
@@ -705,9 +801,8 @@ $(document).ready(function() {
 		.addTo(scrollMagicController);
 		scene.addIndicators();
 	});
-
- 	};
- });
+	};
+});
 
 
 
@@ -749,7 +844,7 @@ $(".form").submit(function() {
 
 		// var inst = $('[data-remodal-id=modal-thanks]').remodal();
 		// inst.open();
-		
+
 		window.location = 'thanks.html';
 
 		setTimeout(function() {
