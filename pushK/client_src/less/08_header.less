@@ -388,10 +388,12 @@
 }
 
 .decoration {
+	display: none;
+	@media @desktop-xl {
+		display: block;
+	}
 	&__img {
-		display: none;
 		@media @desktop-xl {
-			display: block;
 			position: absolute;
 			transition: transform .4s linear;
 			&:hover {

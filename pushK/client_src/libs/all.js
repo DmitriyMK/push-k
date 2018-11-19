@@ -333,7 +333,6 @@ $(document).ready(function() {
 
  // SCROLL ANIMATION
  $(function() {
-
  	if (document.documentElement.clientWidth > 1200) {
 
  		$('[data-scrollmagic]').each(function(index, elem) {
@@ -803,8 +802,10 @@ $(".form").submit(function() {
 		data: th.serialize()
 	}).done(function() {
 
-		var inst = $('[data-remodal-id=modal-thanks]').remodal();
-		inst.open();
+		// var inst = $('[data-remodal-id=modal-thanks]').remodal();
+		// inst.open();
+		
+		window.location = 'thanks.html';
 
 		setTimeout(function() {
 			th.trigger("reset");
