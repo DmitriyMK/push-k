@@ -441,7 +441,7 @@ $(function() {
 			offset: 360
 		})
 
-		.setPin("#portfolio__content")
+		.setPin("#portfolioContent")
 		.addTo(scrollMagicController);
 		scene.addIndicators();
 		});
@@ -456,7 +456,7 @@ $(function() {
 			reverse: true,
 			duration: 700,
 			pushFollowers: false,
-			offset: 360
+			offset: 460
 		})
 
 		.setPin("#teamContent")
