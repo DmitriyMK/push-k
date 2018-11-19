@@ -1060,16 +1060,29 @@ br {
     }
 }
 .decoration__imgBig-medium {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 77%;
+    -webkit-transform: translateY(-50%) rotate(55deg);
+        -ms-transform: translateY(-50%) rotate(55deg);
+            transform: translateY(-50%) rotate(55deg);
+    left: -50px;
+    max-width: 320px;
+}
+@media only screen and (min-width: 480px) {
+    .decoration__imgBig-medium {
+        top: 68%;
+        max-width: 300px;
+    }
 }
 @media only screen and (min-width: 768px) {
     .decoration__imgBig-medium {
         display: block;
-        position: absolute;
         top: 50%;
         -webkit-transform: translateY(-50%) rotate(-34deg);
             -ms-transform: translateY(-50%) rotate(-34deg);
                 transform: translateY(-50%) rotate(-34deg);
+        left: inherit;
         right: 0;
         max-width: 380px;
     }
@@ -1085,18 +1098,6 @@ br {
 }
 @media only screen and (min-width: 1200px) {
     .decoration__imgBig-medium {
-        display: none;
-    }
-}
-.decoration__imgBig-small {
-    display: block;
-    position: absolute;
-    bottom: 45px;
-    left: 0;
-    max-width: 250px;
-}
-@media only screen and (min-width: 768px) {
-    .decoration__imgBig-small {
         display: none;
     }
 }
@@ -1929,9 +1930,45 @@ br {
 .consult .form .btn {
     width: 290px;
     padding: 15px 0;
-    margin: 20px auto;
+    margin: auto;
     border: none;
     background: #ef720e;
+}
+.consult .form .btnWrap {
+    width: 290px;
+    display: block;
+    margin: 15px auto;
+    position: relative;
+    overflow: hidden;
+}
+.consult .form .btnWrap:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -6em;
+    height: 100%;
+    width: 3em;
+    -webkit-transform: skewX(-45deg) translateX(0);
+        -ms-transform: skewX(-45deg) translateX(0);
+            transform: skewX(-45deg) translateX(0);
+    -webkit-transition: none;
+         -o-transition: none;
+            transition: none;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.consult .form .btnWrap:hover {
+    color: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.consult .form .btnWrap:hover:after {
+    -webkit-transform: skewX(-45deg) translateX(35em);
+        -ms-transform: skewX(-45deg) translateX(35em);
+            transform: skewX(-45deg) translateX(35em);
+    -webkit-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
 }
 @media only screen and (min-width: 1200px) {
     .team {
@@ -3054,48 +3091,89 @@ br {
 #name-error {
     font-size: 0 !important;
 }
-.input {
-    position: relative;
-}
-label {
-    position: absolute;
-    top: 0;
-    border: 0;
-    font-size: 0 !important;
-    vertical-align: baseline;
-    margin: 0;
-    padding: 0;
-}
 .formBox {
     position: relative;
-    background: #fff;
+    background: #3b3b3d;
     padding: 30px 15px;
     max-width: 400px;
     margin: 20px auto;
     text-align: center;
-}
-.formBox .form__line {
-    width: 100%;
-    padding-left: 15px;
-    padding-bottom: 7px;
-    border: none!important;
-    outline: none;
-    font-size: 18px;
-}
-.formBox .btn {
-    margin: 15px 0 5px 0;
     color: #fff;
 }
-.formBox .btn:hover {
-    color: #000;
+.formBox .form__title {
+    padding: 10px 0;
+    font-size: 22px;
+    font-weight: 700;
 }
-.video {
-    max-width: 780px;
+@media only screen and (min-width: 768px) {
+    .formBox .form__title {
+        font-size: 30px;
+    }
 }
-.video iframe {
+@media only screen and (min-width: 1200px) {
+    .formBox .form__title {
+        font-size: 35px;
+    }
+}
+.formBox .form__text {
+    display: block;
+    padding-bottom: 15px;
+    font-size: 18px;
+}
+.formBox .form__line {
+    display: block;
+    width: 275px;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 15px 0;
+    text-align: center;
+}
+.formBox .form__line-top {
+    margin-top: 10px;
+}
+.formBox .btn {
+    width: 275px;
+    padding: 15px 0;
+    margin: auto;
     border: none;
-    width: 100%;
+    background: #ef720e;
+    overflow: hidden;
+}
+.formBox .btnWrap {
+    width: 275px;
+    display: block;
+    margin: 15px auto;
+    position: relative;
+    overflow: hidden;
+}
+.formBox .btnWrap:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -6em;
     height: 100%;
+    width: 3em;
+    -webkit-transform: skewX(-45deg) translateX(0);
+        -ms-transform: skewX(-45deg) translateX(0);
+            transform: skewX(-45deg) translateX(0);
+    -webkit-transition: none;
+         -o-transition: none;
+            transition: none;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.formBox .btnWrap:hover {
+    color: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.formBox .btnWrap:hover:after {
+    -webkit-transform: skewX(-45deg) translateX(35em);
+        -ms-transform: skewX(-45deg) translateX(35em);
+            transform: skewX(-45deg) translateX(35em);
+    -webkit-transition: all 0.5s linear;
+         -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
 }
 .thanks__title {
     padding-bottom: 15px;

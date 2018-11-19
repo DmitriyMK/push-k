@@ -85,9 +85,37 @@
 		.btn {
 			width: 290px;
 			padding: 15px 0;
-			margin: 20px auto;
+			margin: auto;
 			border: none;
 			background: @orange;
+		}
+		.btnWrap {
+			width: 290px;
+			display: block;
+			margin: 15px auto;
+			position: relative;
+			overflow: hidden; 
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: -6em;
+				height: 100%;
+				width: 3em;
+				transform: skewX(-45deg) translateX(0);
+				transition: none;
+				background-color: rgba(255,255,255,0.5);
+			}
+
+			&:hover {
+				color: #fff;
+				box-shadow: none;
+				&:after {
+					transform: skewX(-45deg) translateX(35em);
+					transition: all .5s linear;
+				}
+			}
 		}
 	}
 }
