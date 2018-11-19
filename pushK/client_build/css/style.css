@@ -3350,13 +3350,13 @@ br {
     -webkit-box-flex: 1;
     -ms-flex: 1;
         flex: 1;
-    -ms-flex-preferred-size: 70vh;
-    flex-basis: 70vh;
+    -ms-flex-preferred-size: 65vh;
+    flex-basis: 65vh;
 }
 @media only screen and (min-width: 480px) {
     .overlay__top {
-        -ms-flex-preferred-size: 55vh;
-        flex-basis: 55vh;
+        -ms-flex-preferred-size: 50vh;
+        flex-basis: 50vh;
         margin-bottom: 15px;
     }
 }
