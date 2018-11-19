@@ -201,7 +201,7 @@ $(document).ready(function() {
 		if (!$menu.is(e.target) &&
 			$menu.has(e.target).length === 0) {
 
-		$('.overlay').removeClass('open');
+			$('.overlay').removeClass('open');
 		$('.burger').removeClass('active');
 	}
 });
@@ -343,6 +343,7 @@ $(document).ready(function() {
 		var tl = new TimelineMax({
 			pause: true
 		});
+
 		tl.add("start") // add timeline label
 
 		.fromTo(title, 1.2, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
@@ -359,6 +360,8 @@ $(document).ready(function() {
 			reverse: false,
 			offset: -180
 		})
+
+		// setPin("#portfolio__content");
 
 		.setTween(tl)
 		.addTo(scrollMagicController);
@@ -421,7 +424,7 @@ $(document).ready(function() {
 		.setTween(tl)
 		.addTo(scrollMagicController);
 		scene.addIndicators();
-		});
+	});
 
 
  		$('[data-scrollmagic3]').each(function(index, elem) {
@@ -567,7 +570,7 @@ $(document).ready(function() {
 		.setTween(tl)
 		.addTo(scrollMagicController);
 		scene.addIndicators();
-		});
+	});
 
 
  		$('[data-scrollmagic4]').each(function(index, elem) {
@@ -623,7 +626,8 @@ $(document).ready(function() {
 		.setTween(tl)
 		.addTo(scrollMagicController);
 		scene.addIndicators();
-		});
+	});
+
 
  		$('[data-scrollmagic5]').each(function(index, elem) {
 		// Init ScrollMagic Controller
@@ -667,7 +671,8 @@ $(document).ready(function() {
 		.setTween(tl)
 		.addTo(scrollMagicController);
 		scene.addIndicators();
-		});
+	});
+
 
  		$('[data-scrollmagic6]').each(function(index, elem) {
 		// Init ScrollMagic Controller
@@ -699,7 +704,7 @@ $(document).ready(function() {
 		.setTween(tl)
 		.addTo(scrollMagicController);
 		scene.addIndicators();
-		});
+	});
 
  	};
  });
