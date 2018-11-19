@@ -815,7 +815,7 @@ br {
          -o-transition:         transform 0.5s cubic-bezier(0.72, -0.04, 0.14, 1.03);
             transition:         transform 0.5s cubic-bezier(0.72, -0.04, 0.14, 1.03);
             transition:         transform 0.5s cubic-bezier(0.72, -0.04, 0.14, 1.03), -webkit-transform 0.5s cubic-bezier(0.72, -0.04, 0.14, 1.03);
-    z-index: 9999999;
+    z-index: 10;
 }
 .header__fixed.is-hidden {
     -webkit-transform: translateY(-120%);

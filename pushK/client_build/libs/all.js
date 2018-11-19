@@ -196,20 +196,12 @@ $(document).ready(function() {
 	});
 
 
-	$(window).scroll(function() {
-		if ($(this).scrollTop() > 590) {
-			$('.scrollup').fadeIn();
-		} else {
-			$('.scrollup').fadeOut();
-		}
-	});
-
 
 	$(document).mouseup(function(e) {
 		if (!$menu.is(e.target) &&
 			$menu.has(e.target).length === 0) {
 
-			$('.overlay').removeClass('open');
+		$('.overlay').removeClass('open');
 		$('.burger').removeClass('active');
 	}
 });
@@ -353,68 +345,13 @@ $(document).ready(function() {
 		});
 		tl.add("start") // add timeline label
 
-		.fromTo(title, 1.2, {
-			y: '40px',
-			opacity: 0,
-			scale: 1.05
-		}, {
-			y: 0,
-			scale: 1,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
-		.fromTo(text, 1.6, {
-			y: '40px',
-			opacity: 0,
-			scale: 1.05
-		}, {
-			y: 0,
-			scale: 1,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
-		.fromTo(btn, 3.6, {
-			y: '80px',
-			opacity: 0,
-			scale: 1.2
-		}, {
-			y: 0,
-			scale: 1,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
-		.fromTo(img1, 2.0, {
-			y: '80px',
-			opacity: 0
-		}, {
-			y: 0,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
-		.fromTo(img2, 2.6, {
-			y: '70px',
-			opacity: 0
-		}, {
-			y: 0,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
-		.fromTo(img3, 2.8, {
-			y: '60px',
-			opacity: 0
-		}, {
-			y: 0,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
-		.fromTo(img4, 3.2, {
-			y: '50px',
-			opacity: 0
-		}, {
-			y: 0,
-			opacity: 1,
-			ease: Power2.easeOut
-		}, "start")
+		.fromTo(title, 1.2, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(text, 1.6,  {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(btn, 3.6,   {y: '80px', opacity: 0, scale: 1.2}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(img1, 2.0,  {y: '80px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(img2, 2.6,  {y: '70px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(img3, 2.8,  {y: '60px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+		.fromTo(img4, 3.2,  {y: '50px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
 
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
@@ -427,6 +364,7 @@ $(document).ready(function() {
 		.addTo(scrollMagicController);
 		scene.addIndicators();
 		});
+
 
  		$('[data-scrollmagic2]').each(function(index, elem) {
 		// Init ScrollMagic Controller
@@ -484,6 +422,7 @@ $(document).ready(function() {
 		.addTo(scrollMagicController);
 		scene.addIndicators();
 		});
+
 
  		$('[data-scrollmagic3]').each(function(index, elem) {
 		// Init ScrollMagic Controller
@@ -629,6 +568,7 @@ $(document).ready(function() {
 		.addTo(scrollMagicController);
 		scene.addIndicators();
 		});
+
 
  		$('[data-scrollmagic4]').each(function(index, elem) {
 		// Init ScrollMagic Controller
