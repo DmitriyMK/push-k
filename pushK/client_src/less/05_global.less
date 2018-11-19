@@ -25,25 +25,21 @@
 	overflow: hidden; 
 }
 
-//  .scrollup {
-// 	width: 37px;
-// 	height: 84px;
-// 	position: fixed;
-// 	bottom: 50px;
-// 	right: 15px;
-// 	display: none;
-// 	text-indent: -9999px;
-// 	background: url('../images/arrow-top.png') no-repeat;
-// 	z-index: 100;
-// 	@media @tablet {
-// 		right: 100px;
-// 	}
-// } 
 
 
 /* ONLY FOR IE11 */
 @media all and (-ms-high-contrast:none) {
-	
+	.hero .content {
+		padding-top: 250px;
+	}
+	.hero__btn {
+		&:after {
+			display: none!important;
+		}
+	}
+	.decoration {
+		display: none;
+	}
 }
 
 /* ONLY FOR EDGE */
