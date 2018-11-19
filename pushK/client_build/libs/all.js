@@ -21,6 +21,87 @@ $(document).ready(function() {
 
 
 		$(window).enllax();
+
+		// GSAP START ANIMATION
+		$(document).ready(function() {
+			var tl = new TimelineMax();
+			tl
+			.fromTo(".header__box", 1, {y: -100, opacity: 0}, {y: 0, opacity: 1})
+			.fromTo(".nav", 1, {y: -50}, {y: 0}, 0.03)
+		});
+
+
+		// GSAP MOUSE ROTATE ANIMATION 
+		$(document).ready(function() {
+
+			var cardWrap = document.getElementsByClassName('decoration__img12');
+			var cardWrap2 = document.getElementsByClassName('decoration__img7');
+			var cardWrap3 = document.getElementsByClassName('decoration__img9');
+			var cardWrap4 = document.getElementsByClassName('decoration__img15');
+			var cardWrap5 = document.getElementsByClassName('decoration__img16');
+			var cardWrap6 = document.getElementsByClassName('decoration__img20');
+			var cardWrap7 = document.getElementsByClassName('decoration__img24');
+
+
+			document.body.addEventListener('mousemove', cursorPositionHandler);
+
+			function cursorPositionHandler(e) {
+				var decimalX = e.clientX / window.innerWidth - 0.5;
+				var decimalY = e.clientY / window.innerHeight - 0.5;
+
+				TweenMax.to(cardWrap, 0.75, {
+					rotationY: 20 * decimalX,
+					rotationX: -40 * decimalY,
+					ease: Quad.easeOut,
+					transformPerspective: 500,
+					transformOrigin: "center"
+				});
+
+				TweenMax.to(cardWrap2, 0.45, {
+					rotationY: 20 * decimalX,
+					rotationX: 50 * decimalY,
+					ease: Quad.easeOut,
+					transformPerspective: 500,
+					transformOrigin: "center"
+				});
+				TweenMax.to(cardWrap3, 0.25, {
+					rotationY: -40 * decimalX,
+					rotationX: -40 * decimalY,
+					ease: Quad.easeOut,
+					transformPerspective: 500,
+					transformOrigin: "center"
+				});
+				TweenMax.to(cardWrap4, 0.005, {
+					rotationY: 20 * decimalX,
+					rotationX: -40 * decimalY,
+					ease: Quad.easeOut,
+					transformPerspective: 500,
+					transformOrigin: "center"
+				});
+				TweenMax.to(cardWrap5, 1.05, {
+					rotationY: 30 * decimalX,
+					rotationX: 30 * decimalY,
+					ease: Quad.easeOut,
+					transformPerspective: 500,
+					transformOrigin: "center"
+				});
+				TweenMax.to(cardWrap6, 1.5, {
+					rotationY: 40 * decimalX,
+					rotationX: -40 * decimalY,
+					ease: Quad.easeOut,
+					transformPerspective: 500,
+					transformOrigin: "center"
+				});
+				TweenMax.to(cardWrap7, 0.75, {
+					rotationY: 20 * decimalX,
+					rotationX: -40 * decimalY,
+					ease: Quad.easeOut,
+					transformPerspective: 500,
+					transformOrigin: "center"
+				});
+			}
+		});
+
 	};
 
 
@@ -75,7 +156,6 @@ $(document).ready(function() {
 	$(window).on('resize orientationchange', function() {
 		$('.slider').slick('resize');
 	});
-
 });
 
 
@@ -204,150 +284,59 @@ $(document).ready(function() {
 });
 
 
+ // GSAP - GLITCH
+ $(document).ready(function() {
+ 	var tl = new TimelineMax({
+ 		repeat: -1,
+ 		repeatDelay: 2
+ 	});
 
-// GSAP START ANIMATION
-$(document).ready(function() {
-	var tl = new TimelineMax();
-	tl
-	.fromTo(".header__box", 1, {
-		y: -100,
-		opacity: 0
-	}, {
-		y: 0,
-		opacity: 1
-	})
-	.fromTo(".nav", 1, {
-		y: -50
-	}, {
-		y: 0
-	}, 0.03)
-		// .staggerFromTo(".header__link", 0.5, {opacity: 0, y: -30}, {opacity: 1, y: 0 }, 0.03);
-	});
-
-
-// GSAP MOUSE ROTATE ANIMATION 
-$(document).ready(function() {
-
-	var cardWrap = document.getElementsByClassName('decoration__img12');
-	var cardWrap2 = document.getElementsByClassName('decoration__img7');
-	var cardWrap3 = document.getElementsByClassName('decoration__img9');
-	var cardWrap4 = document.getElementsByClassName('decoration__img15');
-	var cardWrap5 = document.getElementsByClassName('decoration__img16');
-	var cardWrap6 = document.getElementsByClassName('decoration__img20');
-	var cardWrap7 = document.getElementsByClassName('decoration__img24');
-
-
-	document.body.addEventListener('mousemove', cursorPositionHandler);
-
-	function cursorPositionHandler(e) {
-		var decimalX = e.clientX / window.innerWidth - 0.5;
-		var decimalY = e.clientY / window.innerHeight - 0.5;
-
-		TweenMax.to(cardWrap, 0.75, {
-			rotationY: 20 * decimalX,
-			rotationX: -40 * decimalY,
-			ease: Quad.easeOut,
-			transformPerspective: 500,
-			transformOrigin: "center"
-		});
-
-		TweenMax.to(cardWrap2, 0.45, {
-			rotationY: 20 * decimalX,
-			rotationX: 50 * decimalY,
-			ease: Quad.easeOut,
-			transformPerspective: 500,
-			transformOrigin: "center"
-		});
-		TweenMax.to(cardWrap3, 0.25, {
-			rotationY: -40 * decimalX,
-			rotationX: -40 * decimalY,
-			ease: Quad.easeOut,
-			transformPerspective: 500,
-			transformOrigin: "center"
-		});
-		TweenMax.to(cardWrap4, 0.005, {
-			rotationY: 20 * decimalX,
-			rotationX: -40 * decimalY,
-			ease: Quad.easeOut,
-			transformPerspective: 500,
-			transformOrigin: "center"
-		});
-		TweenMax.to(cardWrap5, 1.05, {
-			rotationY: 30 * decimalX,
-			rotationX: 30 * decimalY,
-			ease: Quad.easeOut,
-			transformPerspective: 500,
-			transformOrigin: "center"
-		});
-		TweenMax.to(cardWrap6, 1.5, {
-			rotationY: 40 * decimalX,
-			rotationX: -40 * decimalY,
-			ease: Quad.easeOut,
-			transformPerspective: 500,
-			transformOrigin: "center"
-		});
-		TweenMax.to(cardWrap7, 0.75, {
-			rotationY: 20 * decimalX,
-			rotationX: -40 * decimalY,
-			ease: Quad.easeOut,
-			transformPerspective: 500,
-			transformOrigin: "center"
-		});
-	}
-});
+ 	tl
+ 	.to('.glitch', 0.1, {
+ 		skewX: 4,
+ 		ease: Power4.easeInOut
+ 	})
+ 	.to('.glitch', 0.04, {
+ 		skewX: 0,
+ 		ease: Power4.easeInOut
+ 	})
+ 	.to('.glitch', 0.04, {
+ 		opacity: 0
+ 	})
+ 	.to('.glitch', 0.04, {
+ 		opacity: 1
+ 	})
+ 	.to('.glitch', 0.04, {
+ 		x: 2
+ 	})
+ 	.to('.glitch', 0.04, {
+ 		x: 0
+ 	})
+ 	.to('.top', 0.2, {
+ 		y: 0,
+ 		ease: Power4.linear
+ 	})
+ 	.to('.bottom', 0., {
+ 		y: 10,
+ 		ease: Power4.linear
+ 	})
+ 	.to('.glitch', 0.02, {
+ 		scaleY: 1.20,
+ 		ease: Power4.linear
+ 	})
+ 	.to('.glitch', 0.08, {
+ 		scaleY: 1,
+ 		ease: Power4.linear
+ 	})
+ });
 
 
-// GSAP - GLITCH
-$(document).ready(function() {
-	var tl = new TimelineMax({
-		repeat: -1,
-		repeatDelay: 2
-	});
+ // SCROLL ANIMATION
+ $(function() {
 
-	tl
-	.to('.glitch', 0.1, {
-		skewX: 4,
-		ease: Power4.easeInOut
-	})
-	.to('.glitch', 0.04, {
-		skewX: 0,
-		ease: Power4.easeInOut
-	})
-	.to('.glitch', 0.04, {
-		opacity: 0
-	})
-	.to('.glitch', 0.04, {
-		opacity: 1
-	})
-	.to('.glitch', 0.04, {
-		x: 2
-	})
-	.to('.glitch', 0.04, {
-		x: 0
-	})
-	.to('.top', 0.2, {
-		y: 0,
-		ease: Power4.linear
-	})
-	.to('.bottom', 0., {
-		y: 10,
-		ease: Power4.linear
-	})
-	.to('.glitch', 0.02, {
-		scaleY: 1.20,
-		ease: Power4.linear
-	})
-	.to('.glitch', 0.08, {
-		scaleY: 1,
-		ease: Power4.linear
-	})
-});
+ 	if (document.documentElement.clientWidth > 1200) {
 
-
-// SCROLL ANIMATION
-$(function() {
-
-	$('[data-scrollmagic]').each(function(index, elem) {
+ 		$('[data-scrollmagic]').each(function(index, elem) {
 		// Init ScrollMagic Controller
 		var scrollMagicController = new ScrollMagic();
 
@@ -438,9 +427,9 @@ $(function() {
 		.setTween(tl)
 		.addTo(scrollMagicController);
 		scene.addIndicators();
-	});
+		});
 
-	$('[data-scrollmagic2]').each(function(index, elem) {
+ 		$('[data-scrollmagic2]').each(function(index, elem) {
 		// Init ScrollMagic Controller
 		var scrollMagicController = new ScrollMagic();
 
@@ -495,9 +484,9 @@ $(function() {
 		.setTween(tl)
 		.addTo(scrollMagicController);
 		scene.addIndicators();
-	});
+		});
 
-	$('[data-scrollmagic3]').each(function(index, elem) {
+ 		$('[data-scrollmagic3]').each(function(index, elem) {
 		// Init ScrollMagic Controller
 		var scrollMagicController = new ScrollMagic();
 
@@ -640,9 +629,9 @@ $(function() {
 		.setTween(tl)
 		.addTo(scrollMagicController);
 		scene.addIndicators();
-	});
+		});
 
-	$('[data-scrollmagic4]').each(function(index, elem) {
+ 		$('[data-scrollmagic4]').each(function(index, elem) {
 		// Init ScrollMagic Controller
 		var scrollMagicController = new ScrollMagic();
 
@@ -695,9 +684,9 @@ $(function() {
 		.setTween(tl)
 		.addTo(scrollMagicController);
 		scene.addIndicators();
-	});
+		});
 
-	$('[data-scrollmagic5]').each(function(index, elem) {
+ 		$('[data-scrollmagic5]').each(function(index, elem) {
 		// Init ScrollMagic Controller
 		var scrollMagicController = new ScrollMagic();
 
@@ -739,9 +728,9 @@ $(function() {
 		.setTween(tl)
 		.addTo(scrollMagicController);
 		scene.addIndicators();
-	});
+		});
 
-	$('[data-scrollmagic6]').each(function(index, elem) {
+ 		$('[data-scrollmagic6]').each(function(index, elem) {
 		// Init ScrollMagic Controller
 		var scrollMagicController = new ScrollMagic();
 
@@ -771,8 +760,11 @@ $(function() {
 		.setTween(tl)
 		.addTo(scrollMagicController);
 		scene.addIndicators();
-	});
-});
+		});
+
+ 	};
+ });
+
 
 
 $(function() {
