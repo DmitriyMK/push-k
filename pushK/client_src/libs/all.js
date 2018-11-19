@@ -28,7 +28,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		var id = $(this).attr('href'),
 
-			top = $(id).offset().top;
+		top = $(id).offset().top;
 
 		$('body,html').animate({
 			scrollTop: top
@@ -52,19 +52,21 @@ $(document).ready(function() {
 		cssEase: 'linear',
 
 
-		responsive: [{
-				breakpoint: 1600,
-				settings: {
-					centerMode: false,
-				}
-			}, {
-				breakpoint: 1200,
-				settings: {
-					centerMode: false,
-					slidesToShow: 1,
-					fade: true,
-				}
-			},
+		responsive: [
+		{
+			breakpoint: 1600,
+			settings: {
+				centerMode: false,
+			}
+		}, 
+		{
+			breakpoint: 1200,
+			settings: {
+				centerMode: false,
+				slidesToShow: 1,
+				fade: true,
+			}
+		},
 
 		]
 	});
@@ -128,21 +130,21 @@ $(document).ready(function() {
 			$menu.has(e.target).length === 0) {
 
 			$('.overlay').removeClass('open');
-			$('.burger').removeClass('active');
-		}
-	});
+		$('.burger').removeClass('active');
+	}
+});
 
 	// HIDE MENU
 	var mainHeader = $('.header__fixed'),
-		secondaryNavigation = $('.header__fixed2'),
-		belowNavHeroContent = $('.sub-nav-hero'),
-		headerHeight = mainHeader.height();
+	secondaryNavigation = $('.header__fixed2'),
+	belowNavHeroContent = $('.sub-nav-hero'),
+	headerHeight = mainHeader.height();
 
 	var scrolling = false,
-		previousTop = 0,
-		currentTop = 0,
-		scrollDelta = 10,
-		scrollOffset = 86;
+	previousTop = 0,
+	currentTop = 0,
+	scrollDelta = 10,
+	scrollOffset = 86;
 
 	mainHeader.on('click', '.nav-trigger', function(event) {
 		event.preventDefault();
@@ -207,20 +209,20 @@ $(document).ready(function() {
 $(document).ready(function() {
 	var tl = new TimelineMax();
 	tl
-		.fromTo(".header__box", 1, {
-			y: -100,
-			opacity: 0
-		}, {
-			y: 0,
-			opacity: 1
-		})
-		.fromTo(".nav", 1, {
-			y: -50
-		}, {
-			y: 0
-		}, 0.03)
+	.fromTo(".header__box", 1, {
+		y: -100,
+		opacity: 0
+	}, {
+		y: 0,
+		opacity: 1
+	})
+	.fromTo(".nav", 1, {
+		y: -50
+	}, {
+		y: 0
+	}, 0.03)
 		// .staggerFromTo(".header__link", 0.5, {opacity: 0, y: -30}, {opacity: 1, y: 0 }, 0.03);
-});
+	});
 
 
 // GSAP MOUSE ROTATE ANIMATION 
@@ -303,42 +305,42 @@ $(document).ready(function() {
 	});
 
 	tl
-		.to('.glitch', 0.1, {
-			skewX: 4,
-			ease: Power4.easeInOut
-		})
-		.to('.glitch', 0.04, {
-			skewX: 0,
-			ease: Power4.easeInOut
-		})
-		.to('.glitch', 0.04, {
-			opacity: 0
-		})
-		.to('.glitch', 0.04, {
-			opacity: 1
-		})
-		.to('.glitch', 0.04, {
-			x: 2
-		})
-		.to('.glitch', 0.04, {
-			x: 0
-		})
-		.to('.top', 0.2, {
-			y: 0,
-			ease: Power4.linear
-		})
-		.to('.bottom', 0., {
-			y: 10,
-			ease: Power4.linear
-		})
-		.to('.glitch', 0.02, {
-			scaleY: 1.20,
-			ease: Power4.linear
-		})
-		.to('.glitch', 0.08, {
-			scaleY: 1,
-			ease: Power4.linear
-		})
+	.to('.glitch', 0.1, {
+		skewX: 4,
+		ease: Power4.easeInOut
+	})
+	.to('.glitch', 0.04, {
+		skewX: 0,
+		ease: Power4.easeInOut
+	})
+	.to('.glitch', 0.04, {
+		opacity: 0
+	})
+	.to('.glitch', 0.04, {
+		opacity: 1
+	})
+	.to('.glitch', 0.04, {
+		x: 2
+	})
+	.to('.glitch', 0.04, {
+		x: 0
+	})
+	.to('.top', 0.2, {
+		y: 0,
+		ease: Power4.linear
+	})
+	.to('.bottom', 0., {
+		y: 10,
+		ease: Power4.linear
+	})
+	.to('.glitch', 0.02, {
+		scaleY: 1.20,
+		ease: Power4.linear
+	})
+	.to('.glitch', 0.08, {
+		scaleY: 1,
+		ease: Power4.linear
+	})
 });
 
 
@@ -351,12 +353,12 @@ $(function() {
 
 		// Create Animations
 		var title = $(elem).find('.portfolio__title'),
-			text = $(elem).find('.portfolio__texts'),
-			btn = $(elem).find('.portfolio__btn'),
-			img1 = $(elem).find('.portfolio__figure1'),
-			img2 = $(elem).find('.portfolio__figure2'),
-			img3 = $(elem).find('.portfolio__figure3'),
-			img4 = $(elem).find('.portfolio__figure4');
+		text = $(elem).find('.portfolio__texts'),
+		btn = $(elem).find('.portfolio__btn'),
+		img1 = $(elem).find('.portfolio__figure1'),
+		img2 = $(elem).find('.portfolio__figure2'),
+		img3 = $(elem).find('.portfolio__figure3'),
+		img4 = $(elem).find('.portfolio__figure4');
 
 		var tl = new TimelineMax({
 			pause: true
@@ -364,67 +366,67 @@ $(function() {
 		tl.add("start") // add timeline label
 
 		.fromTo(title, 1.2, {
-				y: '40px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				y: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(text, 1.6, {
-				y: '40px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				y: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(btn, 3.6, {
-				y: '80px',
-				opacity: 0,
-				scale: 1.2
-			}, {
-				y: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img1, 2.0, {
-				y: '80px',
-				opacity: 0
-			}, {
-				y: 0,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img2, 2.6, {
-				y: '70px',
-				opacity: 0
-			}, {
-				y: 0,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img3, 2.8, {
-				y: '60px',
-				opacity: 0
-			}, {
-				y: 0,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img4, 3.2, {
-				y: '50px',
-				opacity: 0
-			}, {
-				y: 0,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
+			y: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			y: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(text, 1.6, {
+			y: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			y: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(btn, 3.6, {
+			y: '80px',
+			opacity: 0,
+			scale: 1.2
+		}, {
+			y: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img1, 2.0, {
+			y: '80px',
+			opacity: 0
+		}, {
+			y: 0,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img2, 2.6, {
+			y: '70px',
+			opacity: 0
+		}, {
+			y: 0,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img3, 2.8, {
+			y: '60px',
+			opacity: 0
+		}, {
+			y: 0,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img4, 3.2, {
+			y: '50px',
+			opacity: 0
+		}, {
+			y: 0,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
 
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
@@ -434,7 +436,7 @@ $(function() {
 		})
 
 		.setTween(tl)
-			.addTo(scrollMagicController);
+		.addTo(scrollMagicController);
 		scene.addIndicators();
 	});
 
@@ -444,8 +446,8 @@ $(function() {
 
 		// Create Animations
 		var title = $(elem).find('.partners__title'),
-			text = $(elem).find('.partners__text'),
-			img = $(elem).find('.partners__list');
+		text = $(elem).find('.partners__text'),
+		img = $(elem).find('.partners__list');
 
 		var tl = new TimelineMax({
 			pause: true
@@ -453,35 +455,35 @@ $(function() {
 		tl.add("start") // add timeline label
 
 		.fromTo(title, 1.4, {
-				y: '40px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				y: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(text, 1.8, {
-				y: '40px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				y: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img, 1.0, {
-				y: '20px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				y: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
+			y: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			y: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(text, 1.8, {
+			y: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			y: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img, 1.0, {
+			y: '20px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			y: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
 
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
@@ -491,7 +493,7 @@ $(function() {
 		})
 
 		.setTween(tl)
-			.addTo(scrollMagicController);
+		.addTo(scrollMagicController);
 		scene.addIndicators();
 	});
 
@@ -501,16 +503,16 @@ $(function() {
 
 		// Create Animations
 		var title = $(elem).find('.team__title'),
-			text = $(elem).find('.team__text'),
-			img1 = $(elem).find('.team__item1'),
-			img2 = $(elem).find('.team__item2'),
-			img3 = $(elem).find('.team__item3'),
-			img4 = $(elem).find('.team__item4'),
-			img5 = $(elem).find('.team__item5'),
-			img6 = $(elem).find('.team__item6'),
-			img7 = $(elem).find('.team__item7'),
-			img8 = $(elem).find('.team__item8'),
-			img9 = $(elem).find('.team__item9');
+		text = $(elem).find('.team__text'),
+		img1 = $(elem).find('.team__item1'),
+		img2 = $(elem).find('.team__item2'),
+		img3 = $(elem).find('.team__item3'),
+		img4 = $(elem).find('.team__item4'),
+		img5 = $(elem).find('.team__item5'),
+		img6 = $(elem).find('.team__item6'),
+		img7 = $(elem).find('.team__item7'),
+		img8 = $(elem).find('.team__item8'),
+		img9 = $(elem).find('.team__item9');
 
 		var tl = new TimelineMax({
 			pause: true
@@ -518,115 +520,115 @@ $(function() {
 		tl.add("start") // add timeline label
 
 		.fromTo(title, 2.4, {
-				x: '60px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(text, 2.8, {
-				x: '60px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img1, 1.0, {
-				x: '-40px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img2, 1.5, {
-				x: '-40px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img3, 2.0, {
-				x: '-40px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img4, 2.5, {
-				x: '-40px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img5, 3.0, {
-				x: '-40px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img6, 3.5, {
-				x: '-40px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img7, 4.0, {
-				x: '40px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img8, 4.5, {
-				x: '40px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(img9, 5.0, {
-				x: '40px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
+			x: '60px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(text, 2.8, {
+			x: '60px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img1, 1.0, {
+			x: '-40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img2, 1.5, {
+			x: '-40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img3, 2.0, {
+			x: '-40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img4, 2.5, {
+			x: '-40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img5, 3.0, {
+			x: '-40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img6, 3.5, {
+			x: '-40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img7, 4.0, {
+			x: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img8, 4.5, {
+			x: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(img9, 5.0, {
+			x: '40px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
 
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
@@ -636,7 +638,7 @@ $(function() {
 		})
 
 		.setTween(tl)
-			.addTo(scrollMagicController);
+		.addTo(scrollMagicController);
 		scene.addIndicators();
 	});
 
@@ -646,8 +648,8 @@ $(function() {
 
 		// Create Animations
 		var title = $(elem).find('.review__title'),
-			text = $(elem).find('.review__text'),
-			list = $(elem).find('.review__slider');
+		text = $(elem).find('.review__text'),
+		list = $(elem).find('.review__slider');
 
 		var tl = new TimelineMax({
 			pause: true
@@ -655,33 +657,33 @@ $(function() {
 		tl.add("start") // add timeline label
 
 		.fromTo(title, 1.3, {
-				x: '-50px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(text, 1.8, {
-				x: '-50px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(list, 2.3, {
-				x: '-60px',
-				opacity: 0
-			}, {
-				x: 0,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
+			x: '-50px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(text, 1.8, {
+			x: '-50px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(list, 2.3, {
+			x: '-60px',
+			opacity: 0
+		}, {
+			x: 0,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
 
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
@@ -691,7 +693,7 @@ $(function() {
 		})
 
 		.setTween(tl)
-			.addTo(scrollMagicController);
+		.addTo(scrollMagicController);
 		scene.addIndicators();
 	});
 
@@ -701,7 +703,7 @@ $(function() {
 
 		// Create Animations
 		var title = $(elem).find('.news__title'),
-			list = $(elem).find('.news__list');
+		list = $(elem).find('.news__list');
 
 		var tl = new TimelineMax({
 			pause: true
@@ -709,23 +711,23 @@ $(function() {
 		tl.add("start") // add timeline label
 
 		.fromTo(title, 1.4, {
-				x: '50px',
-				opacity: 0,
-				scale: 1.05
-			}, {
-				x: 0,
-				scale: 1,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
-			.fromTo(list, 1.8, {
-				x: '50px',
-				opacity: 0
-			}, {
-				x: 0,
-				opacity: 1,
-				ease: Power2.easeOut
-			}, "start")
+			x: '50px',
+			opacity: 0,
+			scale: 1.05
+		}, {
+			x: 0,
+			scale: 1,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
+		.fromTo(list, 1.8, {
+			x: '50px',
+			opacity: 0
+		}, {
+			x: 0,
+			opacity: 1,
+			ease: Power2.easeOut
+		}, "start")
 
 		// Create the Scene and trigger when visible
 		var scene = new ScrollScene({
@@ -735,7 +737,7 @@ $(function() {
 		})
 
 		.setTween(tl)
-			.addTo(scrollMagicController);
+		.addTo(scrollMagicController);
 		scene.addIndicators();
 	});
 
@@ -767,29 +769,10 @@ $(function() {
 		})
 
 		.setTween(tl)
-			.addTo(scrollMagicController);
+		.addTo(scrollMagicController);
 		scene.addIndicators();
 	});
 });
-
-
-// $(function() {
-// 	// $(".portfolio__list").slice(0, 4).show();
-// 	$("#loadMore").on('click', function(e) {
-// 		e.preventDefault();
-// 		$(".portfolio__figure:hidden").slice(0, 4).slideDown();
-// 		if ($("portfolio__figure:hidden").length == 0) {
-// 			$("#load").fadeOut('slow');
-// 		}
-// 		$('html,body').animate({
-// 			scrollTop: $(this).offset().top
-// 		}, 1000);
-// 		// if ($("portfolio__figure:last").css('display') == 'block') {
-// 		// 	$('#loadMore').hide();
-// 		// 	// $('.totop').show()
-// 		// }
-// 	});
-// });
 
 
 $(function() {
@@ -809,7 +792,6 @@ $(function() {
 		}
 	});
 });
-
 
 
 $(window).scroll(function() {
