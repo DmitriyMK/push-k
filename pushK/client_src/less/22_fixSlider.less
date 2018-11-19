@@ -3,15 +3,16 @@
 	width: 40px;
 	height: 60px;
 	bottom: -64px;
-
 	transition: opacity .3s linear;
-	z-index: 200;
 	outline: none;
 
 	@media @tablet {
 		bottom: inherit;
 		top: 50%;
 		transform: translateY(-50%);	
+	}
+	@media @desktop {
+		z-index: 200;
 	}
 }
 
