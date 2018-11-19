@@ -2982,6 +2982,11 @@ br {
 .footer__logo {
     margin-bottom: 50px;
 }
+@media only screen and (min-width: 768px) {
+    .footer__logo {
+        margin-bottom: 0;
+    }
+}
 .remodal-first {
     padding-top: 95px;
     text-align: center;
