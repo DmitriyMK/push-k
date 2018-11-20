@@ -3528,6 +3528,7 @@ br {
          -o-transition: opacity 0.3s linear;
             transition: opacity 0.3s linear;
     outline: none;
+    z-index: 21;
 }
 @media only screen and (min-width: 768px) {
     .slick-prev, .slick-next {
@@ -3536,11 +3537,6 @@ br {
         -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
-    }
-}
-@media only screen and (min-width: 992px) {
-    .slick-prev, .slick-next {
-        z-index: 200;
     }
 }
 .slick-prev {
