@@ -250,15 +250,14 @@ $(document).ready(function() {
 
 
 	$(document).mouseup(function(e) {
-		if (!$menu.is(e.target) &&
-			$menu.has(e.target).length === 0) {
+		if (!$menu.is(e.target) && $menu.has(e.target).length === 0) {
 
 			$('.overlay').removeClass('open');
-		$('.burger').removeClass('active');
-	}
+			$('.burger').removeClass('active');
+		}
 	});
 
-	// HIDE MENU
+
 	var mainHeader = $('.header__fixed'),
 	secondaryNavigation = $('.header__fixed2'),
 	belowNavHeroContent = $('.sub-nav-hero'),
