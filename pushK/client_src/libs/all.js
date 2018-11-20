@@ -27,7 +27,7 @@ $(document).ready(function() {
 		$(document).ready(function() {
 			var tl = new TimelineMax();
 			tl
-			.fromTo(".header__box", 1, {y: -100, opacity: 0}, {y: 0,opacity: 1})
+			.fromTo(".header", 1, {y: -100, opacity: 0}, {y: 0,opacity: 1})
 			.fromTo(".nav", 1, {y: -50}, {y: 0}, 0.03)
 		});
 
