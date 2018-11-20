@@ -392,45 +392,40 @@ $(function() {
 		});
 
 
-		$('[data-scrollmagic1]').each(function(index, elem) {
-			var scrollMagicController = new ScrollMagic();
+		// $('[data-scrollmagic1]').each(function(index, elem) {
+		// 	var scrollMagicController = new ScrollMagic();
 
-			var scene = new ScrollScene({
-				triggerElement: '#portfolioGallery',
-				reverse: true,
-				// duration: 400,
-				duration: "100%",
-				// duration: $(window).height() - 300,
-				offset: 300
-			})
+		// 	var scene = new ScrollScene({
+		// 		triggerElement: '#portfolioGallery',
+		// 		reverse: true,
+		// 		// duration: 400,
+		// 		duration: "100%",
+		// 		// duration: $(window).height() - 300,
+		// 		offset: 300
+		// 	})
 
-			.setPin("#portfolioContent")
-			.addTo(scrollMagicController);
-			scene.addIndicators();
-		});
-		
-		
+		// 	.setPin("#portfolioContent")
+		// 	.addTo(scrollMagicController);
+		// 	scene.addIndicators();
+		// });
+		// $('[data-scrollmagic31]').each(function(index, elem) {
 
+		// 	var scrollMagicController = new ScrollMagic();
 
-		$('[data-scrollmagic31]').each(function(index, elem) {
+		// 	var scene = new ScrollScene({
+		// 		triggerElement: '#team',
+		// 		reverse: true,
+		// 		duration: 600,
+		// 		offset: 460
+		// 	})
 
-			var scrollMagicController = new ScrollMagic();
-
-			var scene = new ScrollScene({
-				triggerElement: '#team',
-				reverse: true,
-				duration: 600,
-				offset: 460
-			})
-
-			.setPin("#teamContent")
-			.addTo(scrollMagicController);
-			scene.addIndicators();
-		});
+		// 	.setPin("#teamContent")
+		// 	.addTo(scrollMagicController);
+		// 	scene.addIndicators();
+		// });
 		
 
 		$('[data-scrollmagic2]').each(function(index, elem) {
-		// Init ScrollMagic Controller
 		var scrollMagicController = new ScrollMagic();
 
 		// Create Animations
