@@ -176,7 +176,7 @@ $(window).scroll(function() {
 });
 
 
-
+// MENU
 $(document).ready(function() {
 
 	// BURGER RESPONSIVE < 992px
@@ -343,17 +343,20 @@ $(function() {
 			var scrollMagicController = new ScrollMagic();
 
 			var scene = new ScrollScene({
-				triggerElement: '#portfolio',
+				triggerElement: '#portfolioGallery',
 				reverse: true,
-				duration: 400,
-				pushFollowers: false,
-				offset: 360
+				// duration: 400,
+				duration: "100%",
+				// duration: $(window).height() - 300,
+				offset: 300
 			})
 
 			.setPin("#portfolioContent")
 			.addTo(scrollMagicController);
 			scene.addIndicators();
 		});
+		
+		
 
 
 		$('[data-scrollmagic31]').each(function(index, elem) {
@@ -363,8 +366,7 @@ $(function() {
 			var scene = new ScrollScene({
 				triggerElement: '#team',
 				reverse: true,
-				duration: 700,
-				pushFollowers: false,
+				duration: 600,
 				offset: 460
 			})
 
@@ -547,12 +549,11 @@ $(function() {
 	$("#loadMore").on('click', function(e) {
 		e.preventDefault();
 		$(".portfolio__figure:hidden").slice(0, 4).slideDown();
-		if ($(".portfolio__figure:hidden").length == 0) {
-			$("#load").fadeOut('slow');
-		}
+
 		$('html,body').animate({
 			scrollTop: $(this).offset().top
 		}, 1500);
+
 		if ($(".portfolio__figure:last").css('display') == 'block') {
 			$('#loadMore').hide();
 		}

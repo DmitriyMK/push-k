@@ -21,7 +21,9 @@
 }
 
 .portfolio {
+	position: relative;
 	&__box {
+		overflow: hidden; 
 		padding: 0 15px;
 		@media @desktop {
 			padding: 0;
@@ -37,6 +39,8 @@
 		}
 	}
 	&__title {
+		position: -webkit-sticky;
+		position: sticky;
 		@media @desktop {
 			position: relative;
 			padding-left: 30px;
@@ -74,9 +78,6 @@
 
 		@media @desktop {
 			justify-content: inherit;
-		}
-		@media @desktop-xl {
-			margin-top: -15px;
 		}
 	}
 

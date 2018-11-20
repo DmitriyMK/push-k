@@ -319,6 +319,7 @@ body {
     line-height: 1.2;
     font-weight: 400;
     font-family: 'Roboto', fallback, sans-serif;
+    overflow-x: hidden;
 }
 *::-moz-selection {
     background-color: #6b6c70;
@@ -829,6 +830,11 @@ br {
             transition:         transform 0.5s cubic-bezier(0.72, -0.04, 0.14, 1.03);
             transition:         transform 0.5s cubic-bezier(0.72, -0.04, 0.14, 1.03), -webkit-transform 0.5s cubic-bezier(0.72, -0.04, 0.14, 1.03);
     z-index: 100;
+}
+@media only screen and (min-width: 1200px) {
+    .header__fixed {
+        background: transparent;
+    }
 }
 .header__fixed.is-hidden {
     -webkit-transform: translateY(-120%);
@@ -1431,7 +1437,11 @@ br {
         bottom: -150px;
     }
 }
+.portfolio {
+    position: relative;
+}
 .portfolio__box {
+    overflow: hidden;
     padding: 0 15px;
 }
 @media only screen and (min-width: 992px) {
@@ -1453,6 +1463,10 @@ br {
     .portfolio__box {
         padding: 0 100px;
     }
+}
+.portfolio__title {
+    position: -webkit-sticky;
+    position:         sticky;
 }
 @media only screen and (min-width: 992px) {
     .portfolio__title {
@@ -1506,11 +1520,6 @@ br {
         -webkit-box-pack: inherit;
         -ms-flex-pack: inherit;
         justify-content: inherit;
-    }
-}
-@media only screen and (min-width: 1200px) {
-    .portfolio__list {
-        margin-top: -15px;
     }
 }
 .portfolio__img {
@@ -2058,6 +2067,11 @@ br {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
 }
+@media only screen and (min-width: 1200px) {
+    .team__list {
+        margin-bottom: -150px;
+    }
+}
 .team__item {
     position: relative;
     width: 320px;
@@ -2184,6 +2198,11 @@ br {
     .team__person-link svg {
         width: 32px;
         height: 32px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .review {
+        margin-top: 150px;
     }
 }
 .review .slick-list {

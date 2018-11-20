@@ -28,9 +28,6 @@
 	.container {
 		width: 100vw;
 		padding: 0 15px;
-		// @media @desktop {
-		// 	width: 945px;
-		// }
 		@media @desktop-xl {
 			width: 1170px;
 		}
@@ -197,6 +194,9 @@
 	will-change: transform;
 	transition: transform .5s cubic-bezier(.72,-0.04,.14,1.03);
 	z-index: 100;
+	@media @desktop-xl {
+		background: transparent;
+	}
 }
 .header__fixed.is-hidden {
 	transform: translateY(-120%);
