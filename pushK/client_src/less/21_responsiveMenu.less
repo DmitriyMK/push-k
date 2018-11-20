@@ -18,6 +18,11 @@
 	background: #eee;
 	
 
+	&-white {
+		top: 50px;
+		background: #000;
+	}
+
 	@media @desktop {
 		position: inherit;
 		top: inherit;
@@ -158,6 +163,13 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	transition: all 0.2s ease-in-out;
+}
+.burger-white i {
+	background: #fff;
+}
+.burger-white i:before, 
+.burger-white i:after {
+	background: #fff;
 }
 .burger i:before {
 	margin-top: -12px;

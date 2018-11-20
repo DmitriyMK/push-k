@@ -39,8 +39,6 @@
 		}
 	}
 	&__title {
-		position: -webkit-sticky;
-		position: sticky;
 		@media @desktop {
 			position: relative;
 			padding-left: 30px;
@@ -102,15 +100,20 @@
 	&__figure {
 		display: none;
 		position: relative;
-		max-height: 370px;
+		max-height: 350px;
 		margin-left: 10px;
 		margin-bottom: 15px;
 		overflow: hidden;
 		color: #fff;
 
+
 		@media @desktop-xl {
 			margin-left: 20px;
 			margin-bottom: 30px;
+			max-height: 300px;
+		}
+		@media @desktop-xl-2 {
+			max-height: 370px;
 		}
 
 		&:before {

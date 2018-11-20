@@ -38,13 +38,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		background: #eee;
 		width: 100vw;
 		@media @desktop {
 			width: 100%;
-		}
-		@media @desktop-xl {
-			background: transparent;
 		}
 		@media @desktop-xl-2 {
 			height: 86px;
@@ -184,19 +180,24 @@
 	}
 }
 
+.header-gray {
+	.header__box {
+		background: #eee;
+		@media @desktop-xl {
+			background: transparent;
+		}
+	}
+}
+
 .header__fixed {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	transform: translateZ(0);
-	background: #eee;
 	will-change: transform;
 	transition: transform .5s cubic-bezier(.72,-0.04,.14,1.03);
 	z-index: 100;
-	@media @desktop-xl {
-		background: transparent;
-	}
 }
 .header__fixed.is-hidden {
 	transform: translateY(-120%);

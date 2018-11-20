@@ -103,7 +103,7 @@ $(document).ready(function() {
 			}
 		});
 
-		//CURSOR
+		//CURSOR CIRCLE
 		$(function() {
 			var dots = [],
 			mouse = {x: 0, y: 0};
@@ -219,13 +219,31 @@ $(window).scroll(function() {
 	var pos = $(window).scrollTop();
 
 	if (pos > a) {
-		$(".header__fixed").css({
+		$(".header-gray").css({
 			background: '#eee'
 		});
 	} else {
-		$(".header__fixed").css({
+		$(".header-gray").css({
 			background: 'transparent'
 		});
+	}
+});
+
+
+$(window).scroll(function() {
+	if (document.documentElement.clientWidth > 992) {
+		var a = 120;
+		var pos = $(window).scrollTop();
+
+		if (pos > a) {
+			$(".header-white").css({
+				background: '#000'
+			});
+		} else {
+			$(".header-white").css({
+				background: 'inherit'
+			});
+		}
 	}
 });
 
@@ -388,7 +406,7 @@ $(function() {
 
 			.setTween(tl)
 			.addTo(scrollMagicController);
-			scene.addIndicators();
+			// scene.addIndicators();
 		});
 
 
@@ -426,7 +444,7 @@ $(function() {
 		
 
 		$('[data-scrollmagic2]').each(function(index, elem) {
-		var scrollMagicController = new ScrollMagic();
+			var scrollMagicController = new ScrollMagic();
 
 		// Create Animations
 		var title = $(elem).find('.partners__title'),
@@ -451,7 +469,7 @@ $(function() {
 
 		.setTween(tl)
 		.addTo(scrollMagicController);
-		scene.addIndicators();
+		// scene.addIndicators();
 	});
 
 
@@ -498,7 +516,7 @@ $(function() {
 
 		.setTween(tl)
 		.addTo(scrollMagicController);
-		scene.addIndicators();
+		// scene.addIndicators();
 	});
 
 
@@ -529,7 +547,7 @@ $(function() {
 
 		.setTween(tl)
 		.addTo(scrollMagicController);
-		scene.addIndicators();
+		// scene.addIndicators();
 	});
 
 
@@ -558,7 +576,7 @@ $(function() {
 
 		.setTween(tl)
 		.addTo(scrollMagicController);
-		scene.addIndicators();
+		// scene.addIndicators();
 	});
 
 
@@ -584,7 +602,7 @@ $(function() {
 
 		.setTween(tl)
 		.addTo(scrollMagicController);
-		scene.addIndicators();
+		// scene.addIndicators();
 	});
 	};
 });
