@@ -3153,6 +3153,16 @@ br {
     -ms-flex-pack: center;
     justify-content: center;
 }
+@media only screen and (min-width: 480px) {
+    .newsHeader {
+        min-height: 340px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .newsHeader {
+        min-height: 400px;
+    }
+}
 @media only screen and (min-width: 992px) {
     .newsHeader {
         min-height: 520px;
