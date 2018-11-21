@@ -3374,14 +3374,16 @@ br {
 }
 .post {
     max-width: 780px;
-    padding: 100px 0 80px 0;
+    padding: 100px 0 40px 0;
     color: #40403f;
 }
 @media only screen and (min-width: 992px) {
     .post {
         padding-top: 160px;
-        padding-bottom: 80px;
     }
+}
+.post__box {
+    background: #fff;
 }
 .post h1 {
     padding-bottom: 10px;
@@ -3476,10 +3478,12 @@ br {
     padding-bottom: 10px;
 }
 .fb-comments {
-    margin: 25px 0;
+    margin: 50px 0;
+    max-width: 540px!important;
 }
 .share p {
-    padding-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 15px;
     font-size: 20px;
     font-weight: 700;
 }
