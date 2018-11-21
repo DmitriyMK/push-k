@@ -1576,7 +1576,7 @@ br {
 }
 @media only screen and (min-width: 1600px) {
     .portfolio__img {
-        width: 520px;
+        width: 510px;
     }
 }
 @media only screen and (min-width: 1920px) {
@@ -1691,7 +1691,7 @@ br {
 }
 @media only screen and (min-width: 1600px) {
     .portfolio__text {
-        font-size: 19px;
+        font-size: 20px;
         padding: 15px 0;
     }
 }
