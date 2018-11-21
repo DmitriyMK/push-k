@@ -90,3 +90,54 @@
 		}
 	}
 }
+
+
+.error {
+	&__title {
+		padding-bottom: 15px;
+		font-family: @ff2;
+		font-weight: 700;
+		font-size: 19px;
+		text-transform: uppercase;
+
+		@media @mobile-xl {
+			font-size: 21.5px;
+		}
+		@media @tablet {
+			font-size: 36.7px;
+		}
+		@media @desktop {
+			font-size: 42px;
+		}
+		@media @desktop-xl-2 {
+			
+			font-size: 50px;
+		}
+	}
+	&__text {
+		display: block;
+		margin-bottom: 25px;
+		font-size: 23px;
+
+		@media @mobile-xl {
+			font-size: 26px;
+		}
+		@media @tablet {
+			font-size: 44px;
+		}
+		@media @desktop {
+			font-size: 50.5px;
+		}
+		@media @desktop-xl-2 {
+			font-size: 60px;
+		}
+	}
+
+	&__link {
+		font-size: 20px;
+		text-decoration: underline;
+		@media @tablet {
+			font-size: 24px;
+		}
+	}
+}

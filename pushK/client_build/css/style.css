@@ -572,6 +572,27 @@ br {
 .fb-bg:hover {
     fill: #3b5998;
 }
+.mainFull {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+.mainFull img {
+    margin: auto;
+}
 ::-webkit-input-placeholder {
     font-size: 18px;
 }
@@ -3106,6 +3127,67 @@ br {
         max-width: inherit;
     }
 }
+.error__title {
+    padding-bottom: 15px;
+    font-family: 'Russo', fallback, sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+@media only screen and (min-width: 360px) {
+    .error__title {
+        font-size: 21.5px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .error__title {
+        font-size: 36.7px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .error__title {
+        font-size: 42px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .error__title {
+        font-size: 50px;
+    }
+}
+.error__text {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 23px;
+}
+@media only screen and (min-width: 360px) {
+    .error__text {
+        font-size: 26px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .error__text {
+        font-size: 44px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .error__text {
+        font-size: 50.5px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .error__text {
+        font-size: 60px;
+    }
+}
+.error__link {
+    font-size: 20px;
+    text-decoration: underline;
+}
+@media only screen and (min-width: 768px) {
+    .error__link {
+        font-size: 24px;
+    }
+}
 .header-white {
     background: #000;
 }
@@ -3486,6 +3568,9 @@ br {
     font-size: 16px;
     font-weight: 700;
     padding-bottom: 10px;
+}
+.post a {
+    text-decoration: underline;
 }
 .fb-comments {
     margin: 50px 0;
