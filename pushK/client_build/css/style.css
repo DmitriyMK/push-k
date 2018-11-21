@@ -1134,9 +1134,9 @@ br {
     display: block;
     position: absolute;
     top: 77%;
-    -webkit-transform: translateY(-50%) rotate(55deg);
-        -ms-transform: translateY(-50%) rotate(55deg);
-            transform: translateY(-50%) rotate(55deg);
+    -webkit-transform: translateY(-53%) rotate(50deg);
+        -ms-transform: translateY(-53%) rotate(50deg);
+            transform: translateY(-53%) rotate(50deg);
     left: -50px;
     max-width: 320px;
 }
