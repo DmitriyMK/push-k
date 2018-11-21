@@ -51,8 +51,12 @@
 
 .post {
 	max-width: 780px;
-	padding: 100px 0 40px 0;
+	padding: 40px 0;
 	color: #40403f;
+	
+	@media @tablet {
+		padding-top: 60px;
+	}
 
 	@media @desktop {
 		padding-top: 160px;
@@ -203,5 +207,56 @@
 	transition: all .3s linear;
 	svg {
 		display: none!important;
+	}
+}
+
+.postMain {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+.footerPost__copy {
+	order: 3;
+	@media @tablet {
+		order: 2;
+	}
+}
+.footerSocial {
+	&__list {
+		display: flex;
+		margin-bottom: 40px;
+		order: 2;
+		@media @tablet {
+			order: 3;
+			margin-bottom: 0;
+		}
+	}
+	&__item {
+		list-style: none;
+	}
+	&__link {
+		display: block;
+		margin-right: 10px;
+		transition: all .3s linear;
+		&:hover {
+			.fb__circle {
+				fill: #3b5998;
+			}
+			.bh {
+				fill: #1769ff;
+			}
+			.skype {
+				fill: #00aaf2;
+			}
+			.pin {
+				fill: #cb1f24;
+			}
+		}
+	}
+	&__img {
+		width: 50px;
+		max-height: 50px;
+		transition: all .3s linear;
+		fill: #fff;
 	}
 }

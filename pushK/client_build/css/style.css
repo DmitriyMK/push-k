@@ -596,6 +596,11 @@ br {
         width: 1170px;
     }
 }
+@media only screen and (min-width: 1365px) {
+    .header .container {
+        width: 1300px;
+    }
+}
 .header__box {
     height: 60px;
     display: -webkit-box;
@@ -3374,8 +3379,13 @@ br {
 }
 .post {
     max-width: 780px;
-    padding: 100px 0 40px 0;
+    padding: 40px 0;
     color: #40403f;
+}
+@media only screen and (min-width: 768px) {
+    .post {
+        padding-top: 60px;
+    }
 }
 @media only screen and (min-width: 992px) {
     .post {
@@ -3528,10 +3538,83 @@ br {
 .a2a_s_google_plus svg {
     display: none!important;
 }
+.postMain {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.footerPost__copy {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+}
+@media only screen and (min-width: 768px) {
+    .footerPost__copy {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+}
+.footerSocial__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 40px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+}
+@media only screen and (min-width: 768px) {
+    .footerSocial__list {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+        order: 3;
+        margin-bottom: 0;
+    }
+}
+.footerSocial__item {
+    list-style: none;
+}
+.footerSocial__link {
+    display: block;
+    margin-right: 10px;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+}
+.footerSocial__link:hover .fb__circle {
+    fill: #3b5998;
+}
+.footerSocial__link:hover .bh {
+    fill: #1769ff;
+}
+.footerSocial__link:hover .skype {
+    fill: #00aaf2;
+}
+.footerSocial__link:hover .pin {
+    fill: #cb1f24;
+}
+.footerSocial__img {
+    width: 50px;
+    max-height: 50px;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+    fill: #fff;
+}
 .footer {
     padding: 20px 0;
     background: #000;
     color: #fff;
+}
+@media only screen and (min-width: 1365px) {
+    .footer .container {
+        width: 1300px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .footer .container {
+        width: 1440px;
+    }
 }
 .footer__box {
     display: -webkit-box;
@@ -3557,7 +3640,7 @@ br {
     }
 }
 .footer__logo {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 @media only screen and (min-width: 768px) {
     .footer__logo {

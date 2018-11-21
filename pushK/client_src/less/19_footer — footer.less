@@ -22,6 +22,15 @@
 	background: #000;
 	color: #fff;
 
+	.container {
+		@media @desktop-xl15 {
+			width: 1300px;
+		}
+		@media @desktop-xl-2 {
+			width: 1440px;
+		}
+	}
+
 	&__box {
 		display: flex;
 		flex-direction: column;
@@ -33,7 +42,7 @@
 	}
 
 	&__logo {
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 		@media @tablet {
 			margin-bottom: 0;
 		}
