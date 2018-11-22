@@ -100,10 +100,28 @@
 		@media @desktop-xl-2 {
 			width: 295px;
 		}
+
+		&:hover {
+			.team__person-img {
+				display: none;
+				opacity: 0;
+				visibility: hidden;
+			}
+			.team__person-img-hide {
+				display: block;
+				opacity: 1;
+				visibility: visible;
+				@media @desktop-xll {
+					transform: translateX(33px);
+				}
+			}
+		}
 	}
 
 	&__person {
 		&-name {
+			position: relative;
+			z-index: 10;
 			padding-top: 15px;
 			padding-left: 15px;
 			font-size: 18px;
@@ -118,6 +136,8 @@
 			}
 		}
 		&-position {
+			position: relative;
+			z-index: 10;
 			padding-left: 15px;
 			font-size: 10px;
 			@media @tablet {
@@ -138,8 +158,9 @@
 				right: -45px;
 			}
 		}
-		&-img {
+		&-img, &-img-hide {
 			max-height: 180px;
+			transition: all .3s linear;
 			@media @tablet {
 				max-height: 150px;
 			}
@@ -149,6 +170,11 @@
 			@media @desktop-xl15 {
 				max-height: 260px;
 			}
+		}
+		&-img-hide {
+			display: none;
+			opacity: 0;
+			visibility: hidden;
 		}
 		&-social {
 			position: absolute;

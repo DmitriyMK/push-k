@@ -2153,7 +2153,26 @@ br {
         width: 295px;
     }
 }
+.team__item:hover .team__person-img {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+.team__item:hover .team__person-img-hide {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+@media only screen and (min-width: 1920px) {
+    .team__item:hover .team__person-img-hide {
+        -webkit-transform: translateX(33px);
+            -ms-transform: translateX(33px);
+                transform: translateX(33px);
+    }
+}
 .team__person-name {
+    position: relative;
+    z-index: 10;
     padding-top: 15px;
     padding-left: 15px;
     font-size: 18px;
@@ -2171,6 +2190,8 @@ br {
     }
 }
 .team__person-position {
+    position: relative;
+    z-index: 10;
     padding-left: 15px;
     font-size: 10px;
 }
@@ -2199,23 +2220,31 @@ br {
         right: -45px;
     }
 }
-.team__person-img {
+.team__person-img, .team__person-img-hide {
     max-height: 180px;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
 }
 @media only screen and (min-width: 768px) {
-    .team__person-img {
+    .team__person-img, .team__person-img-hide {
         max-height: 150px;
     }
 }
 @media only screen and (min-width: 1200px) {
-    .team__person-img {
+    .team__person-img, .team__person-img-hide {
         max-height: 166px;
     }
 }
 @media only screen and (min-width: 1365px) {
-    .team__person-img {
+    .team__person-img, .team__person-img-hide {
         max-height: 260px;
     }
+}
+.team__person-img-hide {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
 }
 .team__person-social {
     position: absolute;
