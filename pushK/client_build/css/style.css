@@ -2260,6 +2260,7 @@ br {
     display: block;
     width: 32px;
     height: 32px;
+    z-index: 10;
 }
 @media only screen and (min-width: 768px) {
     .team__person-link svg {
