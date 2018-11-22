@@ -168,7 +168,7 @@ function initMap() {
 
 function addMarker(latLng, name, address) {
 
-    var image = 'images/marker.png';
+    var image = '../marker.png';
 
     var marker = new google.maps.Marker({
         position: latLng,

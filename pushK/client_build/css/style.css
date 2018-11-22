@@ -1091,18 +1091,13 @@ br {
     display: block;
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-30%);
-        -ms-transform: translateY(-30%);
-            transform: translateY(-30%);
+    -webkit-transform: translateY(-45%);
+        -ms-transform: translateY(-45%);
+            transform: translateY(-45%);
     right: 15px;
     width: 18px;
     height: 14px;
     background: url(../images/icons/cup.png) no-repeat;
-}
-@media only screen and (min-width: 768px) {
-    .hero .btn:before {
-        right: 30px;
-    }
 }
 .container {
     position: relative;
@@ -1993,11 +1988,6 @@ br {
 @media only screen and (min-width: 1200px) {
     .consult .form__title {
         font-size: 35px;
-    }
-}
-@media only screen and (min-width: 1600px) {
-    .consult .form__title {
-        font-size: 42px;
     }
 }
 .consult .form__text {
