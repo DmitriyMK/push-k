@@ -569,6 +569,12 @@ section {
 .accordions .accordion__line-calc {
     margin-bottom: 26px;
 }
+.accordions .accordion__line-calc:hover .accordion__col-btn1 {
+    border: 1px solid #9c3;
+}
+.accordions .accordion__line-calc2:hover .accordion__col-btn2 {
+    border: 1px solid #9c3;
+}
 .accordions .accordion__col-btn {
     display: -webkit-box;
     display: -ms-flexbox;

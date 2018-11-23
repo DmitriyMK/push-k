@@ -13,7 +13,7 @@ $(document).ready(function() {
   });
 
 
-  $('.phone-mask').mask('+38(999)999-99-99');
+  
 
 
   $(".btn__minus").click(function() {
@@ -46,4 +46,9 @@ $(document).ready(function() {
     var totalPrice = priceAdult * quantityAdult + priceChildren * quantityChildren;
     sumPrice.html(totalPrice);
   };
+
+
+  $('.phone-mask').mask('+38(999)999-99-99');
+
+  
 });
