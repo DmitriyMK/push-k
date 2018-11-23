@@ -2172,7 +2172,6 @@ br {
 }
 .team__person-name {
     position: relative;
-    z-index: 10;
     padding-top: 15px;
     padding-left: 15px;
     font-size: 18px;
@@ -2189,9 +2188,11 @@ br {
         font-size: 23px;
     }
 }
+.team__person-name strong {
+    display: block;
+}
 .team__person-position {
     position: relative;
-    z-index: 10;
     padding-left: 15px;
     font-size: 10px;
 }
