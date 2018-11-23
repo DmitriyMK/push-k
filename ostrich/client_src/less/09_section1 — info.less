@@ -74,7 +74,12 @@
 				left: 0;
 				width: 20px;
 				height: 20px;
-				background: url(../images/icons/minus.png);
+				background: url(../images/icons/plus.png);
+			}
+			span {
+				font-weight: 400;
+				font-size: 20px;
+				color: #9a9a9a;
 			}
 		}
 		&__body {
@@ -189,7 +194,7 @@
 			color: #a6d255;
 		}
 
-	
+
 		&__text-tour {
 			padding-top: 50px;
 			font-weight: 400;
@@ -202,20 +207,15 @@
 	}
 
 	.active {
-		.accordion-body {
+		.accordion__body {
 			display: block; 
 		}
 
-		.accordion__link {
+		.accordion__header {
 			&:before {
-				content: '';
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-				left: 20px;
-
+				background: url(../images/icons/minus.png);
 			}
 		}
+
 	}
-	
 }

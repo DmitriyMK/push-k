@@ -525,7 +525,12 @@ section {
     left: 0;
     width: 20px;
     height: 20px;
-    background: url(../images/icons/minus.png);
+    background: url(../images/icons/plus.png);
+}
+.accordions .accordion__header span {
+    font-weight: 400;
+    font-size: 20px;
+    color: #9a9a9a;
 }
 .accordions .accordion__body {
     padding: 60px 30px;
@@ -654,17 +659,11 @@ section {
     font-weight: 900;
     font-style: normal;
 }
-.accordions .active .accordion-body {
+.accordions .active .accordion__body {
     display: block;
 }
-.accordions .active .accordion__link:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    left: 20px;
+.accordions .active .accordion__header:before {
+    background: url(../images/icons/minus.png);
 }
 .remodal-first {
     padding-top: 95px;

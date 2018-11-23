@@ -5,10 +5,10 @@ $(document).ready(function() {
 
       e.preventDefault();
 
-      $(this).siblings('.accordion-body').slideToggle()
+      $(this).siblings('.accordion__body').slideToggle()
       .parent().toggleClass('active')
       .siblings().removeClass('active')
-      .children('.accordion-body').slideUp();
+      .children('.accordion__body').slideUp();
     });
   });
 
@@ -50,5 +50,5 @@ $(document).ready(function() {
 
   $('.phone-mask').mask('+38(999)999-99-99');
 
-  
+
 });
