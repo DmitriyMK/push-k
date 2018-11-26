@@ -1,0 +1,25 @@
+// MAIN 
+@import "_reset";
+@import "_vars";
+@import "_mixin and function";
+@import "_fonts";
+@import "_general";
+@import "_forms";
+
+
+// COMPONENTS
+@import "components/_keyframes.scss";
+
+
+
+@media only screen and (max-width: 1680px) {}
+
+@media only screen and (max-width: 1366px) {}
+
+@media only screen and (max-width: 1199.98px) {}
+
+@media only screen and (max-width: 991.98px) {}
+
+@media only screen and (max-width: 767.98px) {}
+
+@media only screen and (max-width: 567.98px) {}

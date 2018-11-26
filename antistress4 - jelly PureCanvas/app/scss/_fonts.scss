@@ -1,0 +1,38 @@
+@import "_vars.scss";
+@import "_mixin and function.scss";
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/RobotoLight.woff2') format('woff2');
+    src: url('../fonts/Roboto/RobotoLight.woff') format('woff'), url('../fonts/Roboto/RobotoLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/RobotoRegular.woff2') format('woff2');
+    src: url('../fonts/Roboto/RobotoRegular.woff') format('woff'), url('../fonts/Roboto/RobotoRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/RobotoMedium.woff2') format('woff2');
+    src: url('../fonts/Roboto/RobotoMedium.woff') format('woff'), url('../fonts/Roboto/RobotoMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/RobotoBlack.woff2') format('woff2');
+    src: url('../fonts/Roboto/RobotoBlack.woff') format('woff'), url('../fonts/Roboto/RobotoBlack.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+}
