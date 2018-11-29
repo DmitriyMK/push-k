@@ -1,5 +1,5 @@
 {
-  "name": "choice",
+  "name": "luxury",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
@@ -8,6 +8,9 @@
   "author": "alchimic",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.23.6",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean": "^0.3.2",
@@ -28,13 +31,17 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
     "gulp-watch": "^4.3.5",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
     "yargs": "^4.2.0"
   },
   "dependencies": {
     "gul": "^1.0.0",
     "gulp": "^4.0.0",
     "gulp-filesize": "0.0.6",
+    "gulp-util": "^3.0.8",
+    "path": "^0.12.7",
     "require-dir": "^1.2.0"
   },
   "description": "npm install gulp-sass-glob --save-dev"
-}
+  }

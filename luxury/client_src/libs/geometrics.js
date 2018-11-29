@@ -42,12 +42,12 @@ function init() {
     uniforms: {
       time: { type: 'f', value: 0 }
     },
-    // wireframe: true,
+    wireframe: true,
     vertexShader: vertex,
     fragmentShader: fragment,
   });
 
-  //new THREE.PlaneGeometry( 1,1, 64, 64 )
+  new THREE.PlaneGeometry( 1,1, 64, 64 )
 
   function CustomSinCurve( scale ) {
 
