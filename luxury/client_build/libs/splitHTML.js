@@ -192,5 +192,3 @@ function Splitter(html, LetterTemplate, WordTemplate) {
 	});
 	return index.stringify(ast);
 }
-
-module.exports = Splitter;

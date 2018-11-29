@@ -33,7 +33,8 @@
   "dependencies": {
     "gul": "^1.0.0",
     "gulp": "^4.0.0",
-    "gulp-filesize": "0.0.6"
+    "gulp-filesize": "0.0.6",
+    "require-dir": "^1.2.0"
   },
   "description": "npm install gulp-sass-glob --save-dev"
 }

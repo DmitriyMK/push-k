@@ -1,40 +1,40 @@
-window.onload = function() {
-  var canvasContainer = document.getElementById("canvas");
-  var webGLCurtain = new Curtains("canvas");
+// window.onload = function() {
+//   let canvasContainer = document.getElementById("canvas");
+//   let webGLCurtain = new Curtains("canvas");
 
-  var planeElement = document.getElementsByClassName("hero__animation")[0];
+//   let planeElement = document.getElementsByClassName("hero__animation")[0];
 
-  var params = {
-    vertexShaderID: "plane-vs",
-    fragmentShaderID: "plane-fs", 
+//   let params = {
+//     vertexShaderID: "plane-vs",
+//     fragmentShaderID: "plane-fs", 
 
-    uniforms: {
-      time: {
-        name: "uTime",
-        type: "1f", 
-        value: 0,
-      },
-    }
-  }
+//     uniforms: {
+//       time: {
+//         name: "uTime",
+//         type: "1f", 
+//         value: 0,
+//       },
+//     }
+//   }
 
-  var plane = webGLCurtain.addPlane(planeElement, params);
+//   let plane = webGLCurtain.addPlane(planeElement, params);
 
-  plane.onRender(function() {
-    plane.uniforms.time.value++;
-  });
-};
+//   plane.onRender(function() {
+//     plane.uniforms.time.value++;
+//   });
+// };
 
 
 $(document).ready(function() {
 
 
-  var cardWrap = document.getElementsByClassName('hero__content');
+  let cardWrap = document.getElementsByClassName('hero__content');
   document.body.addEventListener('mousemove', cursorPositionHandler);
 
 
   function cursorPositionHandler(e) {
-    var decimalX = e.clientX / window.innerWidth - 0.5;
-    var decimalY = e.clientY / window.innerHeight - 0.5;
+    let decimalX = e.clientX / window.innerWidth - 0.5;
+    let decimalY = e.clientY / window.innerHeight - 0.5;
 
     TweenMax.to(cardWrap, 0.5, {
       rotationY: 15 * decimalX,
@@ -54,7 +54,7 @@ $(document).ready(function() {
 
 
 
-  var tl = new TimelineMax();
+  let tl = new TimelineMax();
   tl
 
   .fromTo(".header__logo", 1.3, {y: -50, opacity: 0}, {y: 0, opacity: 1, ease: Back.easeOut.config(3)}, 1.2)
@@ -62,80 +62,77 @@ $(document).ready(function() {
   // .staggerFromTo(".hero__title .letter", 0.3, {y: 30, opacity: 0}, {y: 0, opacity: 1, ease: Back.easeOut.config(2)}, 0.1);
   .fromTo(".hero__title", .8, {x: -50, opacity: 0}, {x: 0, opacity: 1, ease: Back.easeOut.config(3)}, 0.9)
 
-
-
-//CURSOR CIRCLE
+  //CURSOR CIRCLE
   $(function() {
-    var dots = [],
-      mouse = {
-        x: 0,
-        y: 0
-      };
+  let dots = [],
+  mouse = {
+    x: 0,
+    y: 0
+  };
 
-    var Dot = function() {
-      this.x = 0;
-      this.y = 0;
-      this.node = (function() {
-        var n = document.createElement("div");
-        n.className = "cursor";
-        document.body.appendChild(n);
-        return n;
-      }());
-    };
+  let Dot = function() {
+    this.x = 0;
+    this.y = 0;
+    this.node = (function() {
+      let n = document.createElement("div");
+      n.className = "cursor";
+      document.body.appendChild(n);
+      return n;
+    }());
+  };
 
-    Dot.prototype.draw = function() {
-      this.node.style.left = this.x + -16 + "px";
-      this.node.style.top = this.y + -16 + "px";
-    };
+  Dot.prototype.draw = function() {
+    this.node.style.left = this.x + -16 + "px";
+    this.node.style.top = this.y + -16 + "px";
+  };
 
-    for (var i = 0; i < 1; i++) {
-      var d = new Dot();
-      dots.push(d);
-    }
+  for (let i = 0; i < 1; i++) {
+    let d = new Dot();
+    dots.push(d);
+  }
 
-    function draw() {
-      var x = mouse.x,
-          y = mouse.y;
+  function draw() {
+    let x = mouse.x,
+    y = mouse.y;
 
-      dots.forEach(function(dot, index, dots) {
-        var nextDot = dots[index + 1] || dots[0];
+    dots.forEach(function(dot, index, dots) {
+      let nextDot = dots[index + 1] || dots[0];
 
-        dot.x = x;
-        dot.y = y;
-        dot.draw();
-        x += (nextDot.x - dot.x) * .16;
-        y += (nextDot.y - dot.y) * .16;
+      dot.x = x;
+      dot.y = y;
+      dot.draw();
+      x += (nextDot.x - dot.x) * .16;
+      y += (nextDot.y - dot.y) * .16;
 
-      });
-    }
-
-    addEventListener("mousemove", function(event) {
-      mouse.x = event.pageX;
-      mouse.y = event.pageY;
     });
+  }
 
-    function animate() {
-      draw();
-      requestAnimationFrame(animate);
-    }
-
-    animate();
+  addEventListener("mousemove", function(event) {
+    mouse.x = event.pageX;
+    mouse.y = event.pageY;
   });
+
+  function animate() {
+    draw();
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+  });
+
 });
 
 
 
-
-
 $(".form").submit(function() {
-  var th = $(this);
+  let th = $(this);
   $.ajax({
     type: "POST",
     url: "mail.php",
     data: th.serialize()
   }).done(function() {
 
-    var inst = $('[data-remodal-id=modal-thanks]').remodal();
+    let inst = $('[data-remodal-id=modal-thanks]').remodal();
     inst.open();
 
     setTimeout(function() {
