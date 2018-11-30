@@ -1,78 +1,78 @@
-import THREE from './three.js';
-import {TimelineMax} from './tweenmax.js';
-var OrbitControls = require('./orbitControls.js')(THREE);
-import {fragment} from './fragment.glsl';
-import {vertex} from './vertex.glsl';
+import * as THREE from 'three';
+import {TimelineMax} from 'gsap';
+var OrbitControls = require('three-orbit-controls')(THREE);
+import fragment from './fragment.glsl';
+import vertex from './vertex.glsl';
 
-import './lib/curves.js';
-
-
+import './curves.js';
 
 
 
-let camera, pos, controls, scene, renderer, geometry, geometry1, material,plane,another;
-let destination = {x:0,y:0};
-let textures = [];
-
-function init() {
-  scene = new THREE.Scene();
-  scene.destination = {x:0,y:0};
-
-  renderer = new THREE.WebGLRenderer({ alpha: true });
-
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerWidth);
-
-  var container = document.getElementById('container');
-  container.appendChild(renderer.domElement);
-
-  camera = new THREE.PerspectiveCamera(
-    70,
-    window.innerWidth / window.innerHeight,
-    0.001, 100
-  );
-  camera.position.set( 0, 0, 32 );
 
 
-  controls = new OrbitControls(camera, renderer.domElement);
+  let camera, pos, controls, scene, renderer, geometry, geometry1, material,plane,another;
+  let destination = {x:0,y:0};
+  let textures = [];
+
+  function init() {
+    scene = new THREE.Scene();
+    scene.destination = {x:0,y:0};
+
+    renderer = new THREE.WebGLRenderer({ alpha: true });
+
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerWidth);
+
+    var container = document.getElementById('container');
+    container.appendChild(renderer.domElement);
+
+    camera = new THREE.PerspectiveCamera(
+      70,
+      window.innerWidth / window.innerHeight,
+      0.001, 100
+      );
+    camera.position.set( 0, 0, 32 );
 
 
-  material = new THREE.ShaderMaterial( {
-    side: THREE.DoubleSide,
-    uniforms: {
-      time: { type: 'f', value: 0 }
-    },
-    wireframe: true,
-    vertexShader: vertex,
-    fragmentShader: fragment,
-  });
+    controls = new OrbitControls(camera, renderer.domElement);
 
-  new THREE.PlaneGeometry( 1,1, 64, 64 )
 
-  function CustomSinCurve( scale ) {
+    material = new THREE.ShaderMaterial( {
+      side: THREE.DoubleSide,
+      uniforms: {
+        time: { type: 'f', value: 0 }
+      },
+      wireframe: true,
+      vertexShader: vertex,
+      fragmentShader: fragment,
+    });
 
-    THREE.Curve.call( this );
+    new THREE.PlaneGeometry( 1,1, 64, 64 )
 
-    this.scale = ( scale === undefined ) ? 1 : scale;
+    function CustomSinCurve( scale ) {
 
-  }
+      THREE.Curve.call( this );
 
-  CustomSinCurve.prototype = Object.create( THREE.Curve.prototype );
-  CustomSinCurve.prototype.constructor = CustomSinCurve;
+      this.scale = ( scale === undefined ) ? 1 : scale;
 
-  CustomSinCurve.prototype.getPoint = function( t ) {
+    }
 
-    t = (Math.PI * 2) * t;
-    var s = Math.sin(t);
-    var c = Math.cos(t);
-    var r = 2 + 6 * c;
-    var ty = 1 + (-r * c) * 0.205 - 0.25;
-    var tx = (-r * s) * 0.205;
-    var tz = s * 0.65;
+    CustomSinCurve.prototype = Object.create( THREE.Curve.prototype );
+    CustomSinCurve.prototype.constructor = CustomSinCurve;
 
-    return new THREE.Vector3(tx, ty, tz).multiplyScalar(this.scale);
+    CustomSinCurve.prototype.getPoint = function( t ) {
 
-  };
+      t = (Math.PI * 2) * t;
+      var s = Math.sin(t);
+      var c = Math.cos(t);
+      var r = 2 + 6 * c;
+      var ty = 1 + (-r * c) * 0.205 - 0.25;
+      var tx = (-r * s) * 0.205;
+      var tz = s * 0.65;
+
+      return new THREE.Vector3(tx, ty, tz).multiplyScalar(this.scale);
+
+    };
 
 
   // first object
@@ -97,7 +97,7 @@ function init() {
 
   resize();
 
- 
+
 }
 
 window.addEventListener('resize', resize); 
