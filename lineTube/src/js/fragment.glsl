@@ -6,8 +6,8 @@ varying vec4 vPosition;
 void main()	{
 
 
-	vec3 color1 = vec3(0.533, 0.847, 0.745);
-	vec3 color2 = vec3(0.192, 0.216, 0.576);
+	vec3 color1 = vec3(1., 1., 1.);
+	vec3 color2 = vec3(0., 0., 0.);
 	float threshold = 0.005;
 
 	float pi = 3.1415926;

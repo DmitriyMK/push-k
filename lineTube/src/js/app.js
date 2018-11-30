@@ -8,7 +8,6 @@ import './lib/curves.js';
 
 
 
-
 let camera, pos, controls, scene, renderer, geometry, geometry1, material,plane,another;
 let destination = {x:0,y:0};
 let textures = [];
@@ -81,22 +80,7 @@ function init() {
   plane.position.x = 10;
   plane.rotation.y = -Math.PI*0.5;
   scene.add(plane);
-
-
-
-  // second object
-  path = new THREE.Curves.KnotCurve( );
-  let geometry1 = new THREE.TubeGeometry( path, 100, 1.5, 100, true );
-  another = new THREE.Mesh(geometry1,material);
-  another.position.x = -16;
-  another.rotation.x = -Math.PI*0.5;
-  another.rotation.z = -Math.PI*0.45;
-  another.rotation.y = Math.PI*0.1;
-  scene.add(another);
-
   resize();
-
- 
 }
 
 window.addEventListener('resize', resize); 

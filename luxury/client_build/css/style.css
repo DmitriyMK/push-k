@@ -388,6 +388,7 @@ body {
     -webkit-transform: rotateY(8deg);
             transform: rotateY(8deg);
     text-transform: uppercase;
+    color: orange;
 }
 .hero__img {
     width: 300px;

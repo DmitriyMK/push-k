@@ -1,28 +1,28 @@
-// window.onload = function() {
-//   let canvasContainer = document.getElementById("canvas");
-//   let webGLCurtain = new Curtains("canvas");
+window.onload = function() {
+  let canvasContainer = document.getElementById("canvas");
+  let webGLCurtain = new Curtains("canvas");
 
-//   let planeElement = document.getElementsByClassName("hero__animation")[0];
+  let planeElement = document.getElementsByClassName("hero__animation")[0];
 
-//   let params = {
-//     vertexShaderID: "plane-vs",
-//     fragmentShaderID: "plane-fs", 
+  let params = {
+    vertexShaderID: "plane-vs",
+    fragmentShaderID: "plane-fs", 
 
-//     uniforms: {
-//       time: {
-//         name: "uTime",
-//         type: "1f", 
-//         value: 0,
-//       },
-//     }
-//   }
+    uniforms: {
+      time: {
+        name: "uTime",
+        type: "1f", 
+        value: 0,
+      },
+    }
+  }
 
-//   let plane = webGLCurtain.addPlane(planeElement, params);
+  let plane = webGLCurtain.addPlane(planeElement, params);
 
-//   plane.onRender(function() {
-//     plane.uniforms.time.value++;
-//   });
-// };
+  plane.onRender(function() {
+    plane.uniforms.time.value++;
+  });
+};
 
 
 $(document).ready(function() {
