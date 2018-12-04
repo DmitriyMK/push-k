@@ -1,8 +1,8 @@
 var markersData = [{
         lat: 48.5075627,
         lng: 34.9882175,
-        name: "AUrum",
-        address: "г. Днепр,  ул.  Шолохова, 7."
+        name: "",
+        address: ""
     },
 ];
 
