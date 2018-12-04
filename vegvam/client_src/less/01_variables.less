@@ -1,0 +1,114 @@
+@dir: 						    	"../images/";
+@dir-fonts: 				  	"../fonts/";
+@html-size-base: 				10px;
+
+@fs: 						      	16px;
+@lh: 						      	1.2;
+
+@ff1: 								'Gilroy', sans-serif;
+@ff2: 								'Gilroy', sans-serif;
+
+@black: 							#191c26;
+@blue: 								#59c6ff;
+@red:                 #df3e51;
+@green:               #337d5a;
+@lime:                #95c557;
+
+@text-color: 						@black;
+@text-margin: 					0 0 0rem;
+
+@mobile:        ~"only screen and (min-width: 320px)";
+@mobile-xl:     ~"only screen and (min-width: 360px)";
+@mobile-land:   ~"only screen and (min-width: 480px)";
+@tablet:        ~"only screen and (min-width: 768px)";
+@desktop:       ~"only screen and (min-width: 992px)";
+@desktop-xl:    ~"only screen and (min-width: 1200px)";
+@desktop-xl-2:  ~"only screen and (min-width: 1600px)";
+@desktop-xll:   ~"only screen and (min-width: 1920px)";
+
+
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/GilroyLight/GilroyLight.woff2') format('woff2'), 
+       url('../fonts/GilroyLight/GilroyLight.woff') format('woff');
+
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/RobotoBlack/RobotoBlack.woff2') format('woff2'), 
+       url('../fonts/RobotoBlack/RobotoBlack.woff') format('woff'); 
+
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+} 
+
+
+@font-face {
+  font-family: 'Fontello';
+  src: url('../fonts/Fontello/fontello.woff2') format('woff2'), 
+       url('../fonts/Fontello/fontello.woff') format('woff'); 
+       
+  font-weight: normal;
+  font-style: normal;
+}
+
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "Fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-left-open:before { content: '\e800'; } /* '' */
+.icon-right-dir:before { content: '\e801'; } /* '' */
+.icon-right-open:before { content: '\e802'; } /* '' */
+.icon-up-open:before { content: '\e803'; } /* '' */
+.icon-down-open:before { content: '\e804'; } /* '' */
+.icon-left-open-big:before { content: '\e805'; } /* '' */
+.icon-right-open-big:before { content: '\e806'; } /* '' */
+.icon-up-open-big:before { content: '\e807'; } /* '' */
+.icon-attach:before { content: '\e808'; } /* '' */
+.icon-down-open-big:before { content: '\e809'; } /* '' */
+.icon-right-dir-1:before { content: '\e80a'; } /* '' */
+.icon-left-dir:before { content: '\e80b'; } /* '' */
+.icon-up-dir:before { content: '\e80c'; } /* '' */
+.icon-down-dir:before { content: '\e80d'; } /* '' */
+.icon-search:before { content: '\e80e'; } /* '' */
+.icon-facebook:before { content: '\f09a'; } /* '' */
+.icon-circle-empty:before { content: '\f10c'; } /* '' */
+.icon-attention-alt:before { content: '\f12a'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-dot-circled:before { content: '\f192'; } /* '' */
