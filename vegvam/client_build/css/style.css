@@ -597,8 +597,8 @@ textarea {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    max-width: 825px;
-    padding: 30px 25px 30px 0;
+    max-width: 870px;
+    padding: 30px 25px 0 0;
     background-color: rgba(255, 255, 255, 0.9);
     -webkit-box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.14);
             box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.14);
@@ -618,6 +618,7 @@ textarea {
     text-decoration: underline;
 }
 .nav__list-submenu {
+    margin-bottom: 42px;
     list-style-type: none;
 }
 .nav__link-submenu {
@@ -648,7 +649,7 @@ textarea {
 }
 .nav__link-submenuLast {
     display: block;
-    padding: 7.5px 0;
+    padding: 6px 0;
     font-size: 14px;
 }
 .search {
