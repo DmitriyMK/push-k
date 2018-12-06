@@ -32,37 +32,7 @@ $(document).ready(function() {
     });
 
 
-
-  /*  $('.scrolling__link').on('click', function(e) {
-      e.preventDefault();
-      var t = 1500;
-      var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
-      $('html,body').stop().animate({
-        scrollTop: $(d).offset().top
-      }, t);
-    });*/
-
-    // $(".scrolling__link").on("click", function (event) {
-    //   event.preventDefault();
-    //   var id  = $(this).attr('href'),
-
-    //   top = $(id).offset().top;
-
-    //   $('body,html').animate({scrollTop: top}, 1000);
-    // });
-
-  // var position = $("#works").offset();
-  // $(document).scroll(function() {
-  //   var y = $(this).scrollTop();
-  //   if (y >= position.top) {
-  //     $("#scroll-block").fadeIn(300);
-  //   } else {
-  //     $("#scroll-block").fadeOut(300);
-  //   }
-  // });
-
-
-  // var bLazy = new Blazy();
+    var bLazy = new Blazy();
 
   // $('.phone-mask').mask('+38(999)999-99-99');
 

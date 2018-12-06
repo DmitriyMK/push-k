@@ -242,18 +242,14 @@
 												</label>
 											</div>
 
-											<button class="basketBtn">
+											<button class="basketBtn btn">
 												<img src="./images/icon/cart.png" alt="Корзина">
 												<span class="basketBtn__text">Корзина</span>
 												<span>
 													(<em class="basketBtn__num">3</em>)
 												</span>
 											</button>											
-										</div>
-
-
-										<div class="nav__bottom">
-										</div>								
+										</div>						
 									</div>
 								</div>
 							</nav>
@@ -274,13 +270,13 @@
 						<div class="hero__box-img">
 							<img class="img-responsive hero__img hero__imgBasket" src="./images/decor/basket.png" alt role="presentation">
 							<img class="img-responsive hero__img hero__imgBranchRight" src="./images/decor/branch-right.png" alt role="presentation" data-enllax-ratio="0.10" data-enllax-type="foreground" data-enllax-direction="vertical">
-							<img class="img-responsive hero__img hero__imgLeaveCurve" src="./images/decor/leave-curve.png" alt role="presentation" data-enllax-ratio="0.25" data-enllax-type="foreground" data-enllax-direction="vertical">
+							<img class="img-responsive hero__img hero__imgLeaveCurve" src="./images/decor/leave-curve.png" alt role="presentation" data-enllax-ratio="0.055" data-enllax-type="foreground" data-enllax-direction="vertical">
 							<img class="img-responsive hero__img hero__imgLeaveBlur" src="./images/decor/leave-blur.png" alt role="presentation" data-enllax-ratio="0.15" data-enllax-type="foreground" data-enllax-direction="vertical">
+
+							<img class="img-responsive hero__img hero__imgBack" src="./images/hero-green.png" alt role="presentation">
+							<img class="img-responsive hero__img hero__imgBranchLeft" src="./images/decor/branch-left.png" alt role="presentation" data-enllax-ratio="0.085" data-enllax-type="foreground" data-enllax-direction="vertical">
 						</div>
 					</div>
-
-					<img class="img-responsive hero__img hero__imgBack" src="./images/hero-green.png" alt role="presentation">
-					<img class="img-responsive hero__img hero__imgBranchLeft" src="./images/decor/branch-left.png" alt role="presentation" data-enllax-ratio="0.25" data-enllax-type="foreground" data-enllax-direction="vertical">
 				</div>
 			</article>
 
@@ -289,28 +285,37 @@
 				<div class="container">
 					<ul class="statistics__list">
 						<li class="statistics__item">
-							<img class="statistics__img" src="./images/icon/plastic.png" alt="Пластик">
+							<div class="statistics__wrap">
+								<img class="statistics__img" src="./images/icon/plastic.png" alt="Пластик">
+							</div>
+							
 							<p class="statistics__text">
 								<em class="statistics__num">50%</em> мире пластика используется единожды
 							</p>
 						</li>
 
 						<li class="statistics__item">
-							<img class="statistics__img" src="./images/icon/recovery.png" alt="Период разложения пластика">
+							<div class="statistics__wrap">
+								<img class="statistics__img" src="./images/icon/recovery.png" alt="Период разложения пластика">
+							</div>
 							<p class="statistics__text">
 								<em class="statistics__num">100 - 500 лет</em> период разложения пластика
 							</p>
 						</li>
 
 						<li class="statistics__item">
-							<img class="statistics__img" src="./images/icon/package.png" alt="160 000 пакетов используются  ежесекундно">
+							<div class="statistics__wrap">
+								<img class="statistics__img" src="./images/icon/package.png" alt="160 000 пакетов используются ежесекундно">
+							</div>
 							<p class="statistics__text">
 								<em class="statistics__num">160 000</em> пакетов используются  ежесекундно
 							</p>
 						</li>
 
 						<li class="statistics__item">
-							<img class="statistics__img" src="./images/icon/ocean.png" alt="Загрязняет океан">
+							<div class="statistics__wrap">
+								<img class="statistics__img" src="./images/icon/ocean.png" alt="Загрязняет океан">
+							</div>
 							<p class="statistics__text">
 								<em class="statistics__num">90% загрязнения</em> в океане составляет пластик
 							</p>
@@ -318,10 +323,98 @@
 					</ul>
 				</div>
 			</div>
-			
-			<!-- <img class="b-lazy" data-src="./" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""> -->
-			<!-- <button class="btn" data-remodal-target="callback">Заказать звонок</button> -->
-			<!-- <img class="img-responsive" src="" alt role="presentation" data-enllax-ratio="0.25" data-enllax-type="foreground" data-enllax-direction="vertical"> -->
+
+
+			<article class="catalogFirst">
+				<div class="container">
+					<div class="catalogFirst__box">
+						<ul class="catalogFirst__list">
+							<li class="catalogFirst_item">
+								<a href="#" class="catalogFirst__link">
+									<img class="catalogFirst__img" src="./images/honeyspoon.png" alt="Деревянные приборы" title="Деревянные приборы">
+								</a>
+								<h2 class="catalogFirst__name">Деревянные приборы</h2>
+								<strong class="catalogFirst__price">200 <span class="catalogFirst__currency">грн</span></strong>
+								<button class="catalogFirst__btn btn">Купить</button>
+							</li>
+
+							<li class="catalogFirst__item">
+								<a href="#" class="catalogFirst__link">
+									<img class="catalogFirst__img" src="./images/cup.png" alt="Термо-чашка" title="Термо-чашка">
+								</a>
+								<h2 class="catalogFirst__name">Термо-чашка</h2>
+								<strong class="catalogFirst__price">200 <span class="catalogFirst__currency">грн</span></strong>
+								<button class="catalogFirst__btn btn">Купить</button>
+							</li>
+						</ul>
+
+						<img class="b-lazy img-responsive catalogFirst__img1" data-src="./images/decor/leave-catalog.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation" data-enllax-ratio="0.155" data-enllax-type="foreground" data-enllax-direction="vertical">
+						<img class="b-lazy img-responsive catalogFirst__img2" data-src="./images/decor/leave-catalog2.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation" data-enllax-ratio="0.115" data-enllax-type="foreground" data-enllax-direction="vertical">
+					</div>
+				</div>
+			</article>
+
+
+			<article class="stringBack">
+				<div class="stringBack__box">
+					<div class="stringBack__top">
+						<div class="container">
+							<div class="stringBack__line">
+								<div class="stringBack__photo">
+									<img class="stringBack__img" src="./images/decor/stringback.png" alt="Авоська">
+								</div>
+								<div class="stringBack__content">
+									<h2 class="stringBack__title">Авоська</h2>
+									<p class="stringBack__text">До 90-х годов люди носили с собой “сетку”, ведь полиэтиленовых пакетов не было. Пора возрождать дружественную планете традицию!</p>
+								</div>
+
+								<img class="b-lazy stringBack__img1" data-src="./images/decor/string-leave.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+								<img class="b-lazy stringBack__img2" data-src="./images/decor/string-leave2.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+								<img class="b-lazy stringBack__img3" data-src="./images/decor/string-leave3.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt role="presentation">
+							</div>
+						</div>
+					</div>
+
+					<div class="stringBackStat">
+						<div class="container">
+							<ul class="stringBackStat__list">
+								<li class="stringBackStat__item">
+									<p class="stringBackStat__text">
+										<em class="stringBackStat__num">1000 шт</em>  - в среднем от такого количества полиэтиленовых пакетов авоська спасает Землю
+									</p>
+								</li>
+
+								<li class="stringBackStat__item">
+									<p class="stringBackStat__text">до
+										<em class="stringBackStat__num">70 кг</em>  - выдерживает нагрузку
+									</p>
+								</li>
+
+								<li class="stringBackStat__item">
+									<p class="stringBackStat__text">
+										<em class="stringBackStat__num">1935</em>  - мир впервые услышал слово “авоська”
+									</p>
+								</li>
+
+								<li class="stringBackStat__item">
+									<p class="stringBackStat__text">от
+										<em class="stringBackStat__num">2-х лет</em> срок службы
+									</p>
+								</li>
+							</div>
+						</div>
+
+						<div class="stringBack__catalog">
+							<div class="container">
+
+							</div>
+						</div>
+					</div>	
+				</article>
+
+				<!-- <img class="b-lazy" data-src="./" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""> -->
+				<!-- <button class="btn" data-remodal-target="callback">Заказать звонок</button> -->
+				<!-- <img class="img-responsive" src="" alt role="presentation" data-enllax-ratio="0.25" data-enllax-type="foreground" data-enllax-direction="vertical"> -->
 
 			<!-- <section class="">
 			<div class="container">
