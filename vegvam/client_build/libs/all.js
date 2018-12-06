@@ -68,17 +68,21 @@ $(document).ready(function() {
 
 
 
-  /*  $('.slider-for-recipe').slick({
+    $('.freeMonday__slider').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false,
+      arrows: true,
       dots: false,
-      asNavFor: '.slider-nav-recipe',
-      fade: true,
-      draggable: false,
       infinite: true,
+    });
 
-    });*/
+    $('.catalogBerry__slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      infinite: true,
+    });
 
 
   /*  $('.slider-nav-recipe').slick({
@@ -117,29 +121,13 @@ $(document).ready(function() {
 
     });
     */
-
-  // $('[data-fancybox]').fancybox({
-  //   loop: true,
-  //   animationEffect: "zoom",
-  //   transitionEffect: "tube",
-  //   transitionDuration: 600,
-  //   clickOutside: "close",
-  //   protect: true,
-  //   modal: false,
-
-  //   touch: {
-  //     vertical: true,
-  //     momentum: true
-  //   },
-  // });
-
 });
 
 
 
-// $(window).on('resize orientationchange', function() {
-//   $('.slider').slick('resize');
-// });
+$(window).on('resize orientationchange', function() {
+  $('.slider').slick('resize');
+ });
 
 
 

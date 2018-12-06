@@ -1,36 +1,50 @@
 .slick-prev,
 .slick-next {
+	top: 50%;
+	transform: translateY(-50%);
+
 	width: 50px;
 	height: 100%;
 	opacity: 1;
-	transition: opacity .3s linear;
+	transition: all .3s linear;
 	z-index: 10;
+
+	&:before {
+		display: block;
+		font-size: 65px;
+		font-family: 'Fontello';
+		color: #fff;
+		transition: all .3s linear;
+	}
+	
+	&:hover, &:focus {
+		&:before {
+			color: @lime;
+		}
+	}
 }
+
 
 
 .slick-prev {
-	top: 152px;
-	left: -50px;
-	// .spritebox(-0px, -174px, 19px, 36px);
+	left: -70px;	
 }
 
 .slick-next {
-	top: 213px;
-	left: -50px; 
-	// .spritebox(-36px, -174px, 19px, 36px);
+	right: -70px; 
 }
 
 
-.slick-prev:before,
+
+.slick-prev:before {
+	content: '\e805';
+}
 .slick-next:before {
-	width: 0;
-	height: 0;
+	content: '\e806';
 }
 
-.slick-prev:focus,
-.slick-next:focus
-{
-    opacity: 1;
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+	opacity: 1;
 }
 
 .slick-disabled {
