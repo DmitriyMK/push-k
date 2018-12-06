@@ -1250,6 +1250,43 @@ textarea {
     width: 170px;
     text-align: center;
 }
+.catalogBerry__top {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #7aa542;
+    text-align: center;
+}
+.catalogBerry__title {
+    padding-bottom: 15px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+.catalogBerry__text {
+    padding-bottom: 40px;
+    font-size: 24px;
+    color: #fff;
+}
+.catalogBerry__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 50%;
+    width: 222px;
+    height: 222px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+}
+.catalogBerry .slide__title {
+    padding-top: 30px;
+}
+.catalogBerry .slide__price {
+    display: block;
+}
 .remodal-first {
     padding-top: 95px;
     text-align: center;
