@@ -34,6 +34,30 @@ $(document).ready(function() {
 
     var bLazy = new Blazy();
 
+
+    $( ".btn" ).mouseenter(function(e) {
+     var parentOffset = $(this).offset(); 
+
+     var relX = e.pageX - parentOffset.left;
+     var relY = e.pageY - parentOffset.top;
+     $(this).prev(".su_button_circle").css({"left": relX, "top": relY });
+     $(this).prev(".su_button_circle").removeClass("desplode-circle");
+     $(this).prev(".su_button_circle").addClass("explode-circle");
+
+   });
+
+    $( ".btn" ).mouseleave(function(e) {
+
+     var parentOffset = $(this).offset(); 
+
+     var relX = e.pageX - parentOffset.left;
+     var relY = e.pageY - parentOffset.top;
+     $(this).prev(".su_button_circle").css({"left": relX, "top": relY });
+     $(this).prev(".su_button_circle").removeClass("explode-circle");
+     $(this).prev(".su_button_circle").addClass("desplode-circle");
+
+   });
+
   // $('.phone-mask').mask('+38(999)999-99-99');
 
 
@@ -121,13 +145,13 @@ $(document).ready(function() {
 
     });
     */
-});
+  });
 
 
 
 $(window).on('resize orientationchange', function() {
   $('.slider').slick('resize');
- });
+});
 
 
 
