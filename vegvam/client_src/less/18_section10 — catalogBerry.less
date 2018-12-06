@@ -23,14 +23,15 @@
 
 .catalogBerry {
 	&__top {
-		padding-top: 60px;
+		padding-top: 90px;
 		padding-bottom: 60px;
 		background: #7aa542;
 		text-align: center;
+		letter-spacing: 1.5px;
 	}
 
 	&__title {
-		padding-bottom: 15px;
+		padding-bottom: 20px;
 		font-size: 36px;
 		font-weight: 700;
 		color: #fff;
@@ -40,6 +41,18 @@
 		padding-bottom: 40px;
 		font-size: 24px;
 		color: #fff;
+	}
+	
+
+	&__slider {
+		position: relative;
+		max-width: 920px;
+		margin: auto;
+	}
+	&__slide {
+		padding: 40px 0;
+		background: #95c557;
+		
 	}
 	&__img {
 		display: block;
@@ -56,10 +69,37 @@
 	}
 
 	.slide__title {
-		padding-top: 30px;
+		padding-top: 40px;
+		padding-bottom: 10px;
+		font-size: 24px;
+		letter-spacing: .5px;
 	}
 	.slide__price {
 		display: block;
+		margin-bottom: 15px;
+		font-size: 24px;
+		color: @green;
+		letter-spacing: 1px;
+	}
+	
+
+	.slick-prev,
+	.slick-next {
+		&:hover, &:focus {
+			box-shadow: none;
+			&:before {
+				color: #181d23;
+			}
+		}
+	}
+
+
+	.slick-prev {
+		left: 70px;	
+	}
+
+	.slick-next {
+		right: 70px; 
 	}
 
 }
