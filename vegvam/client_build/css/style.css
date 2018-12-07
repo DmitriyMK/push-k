@@ -452,18 +452,98 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
     color: #337d5a;
 }
-section {
-    /*     overflow: hidden; */
-    padding: 60px 0;
+.btn {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
 }
-@media only screen and (min-width: 1200px) {
-    section {
-        padding: 80px 0;
+.su_button_circle {
+    background-color: red;
+    border-radius: 1000px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    margin-left: 0;
+    margin-top: 0;
+    pointer-events: none;
+    /*animation-timing-function: ease-in-out; */
+}
+.button_text_container {
+    position: relative;
+    z-index: 10000;
+}
+.explode-circle {
+    -webkit-animation: explode 0.5s forwards;
+            animation: explode 0.5s forwards;
+}
+.desplode-circle {
+    -webkit-animation: desplode 0.5s forwards;
+            animation: desplode 0.5s forwards;
+}
+@-webkit-keyframes explode {
+    0% {
+        width: 0;
+        height: 0;
+        margin-left: 0;
+        margin-top: 0;
+        background-color: rgba(42, 53, 80, 0.2);
+    }
+    100% {
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: rgba(20, 180, 87, 0.8);
     }
 }
-@media only screen and (min-width: 1600px) {
-    section {
-        padding: 110px 0;
+@keyframes explode {
+    0% {
+        width: 0;
+        height: 0;
+        margin-left: 0;
+        margin-top: 0;
+        background-color: rgba(42, 53, 80, 0.2);
+    }
+    100% {
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: rgba(20, 180, 87, 0.8);
+    }
+}
+@-webkit-keyframes desplode {
+    0% {
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: rgba(20, 180, 87, 0.8);
+    }
+    100% {
+        width: 0;
+        height: 0;
+        margin-left: 0;
+        margin-top: 0;
+        background-color: rgba(129, 80, 108, 0.6);
+    }
+}
+@keyframes desplode {
+    0% {
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: rgba(20, 180, 87, 0.8);
+    }
+    100% {
+        width: 0;
+        height: 0;
+        margin-left: 0;
+        margin-top: 0;
+        background-color: rgba(129, 80, 108, 0.6);
     }
 }
 input {
