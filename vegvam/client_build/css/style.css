@@ -518,8 +518,9 @@ textarea {
     color: #fff;
 }
 .header {
-    position: relative;
-    background: #95c557;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 .header__top {
     padding: 15px 10px 15px 20px;
@@ -533,6 +534,14 @@ textarea {
 .header__logo {
     -ms-flex-preferred-size: 105px;
     flex-basis: 105px;
+}
+.header .logoHide {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: width 0.2s linear;
+         -o-transition: width 0.2s linear;
+            transition: width 0.2s linear;
 }
 .header__info {
     display: -webkit-box;
@@ -623,6 +632,7 @@ textarea {
     top: 75px;
     left: -20px;
     z-index: 10;
+    overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -776,20 +786,66 @@ textarea {
     align-items: center;
     margin-left: 15px;
 }
+.basketBtn:hover {
+    color: #337d5a;
+}
+.basketBtn:before {
+    background: transparent;
+}
 .basketBtn__text {
     padding-left: 8px;
     padding-right: 5px;
 }
-.hero {
-    overflow: hidden;
-    position: relative;
-    min-height: 720px;
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background: #95c557;
+    z-index: 200;
+}
+.fixed .logoHide {
+    width: 178px;
+    opacity: 1;
+    visibility: visible;
+}
+.fixed .logoBig {
+    visibility: hidden;
+    -webkit-transform: translateY(-240px);
+        -ms-transform: translateY(-240px);
+            transform: translateY(-240px);
+    height: 0;
+    width: 0;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+}
+.fixed .header__top {
+    padding: 0;
+}
+.fixed .header__line-contact {
+    -webkit-transform: translateY(-240px);
+        -ms-transform: translateY(-240px);
+            transform: translateY(-240px);
+    -webkit-transition: -webkit-transform 0.3s linear;
+            transition: -webkit-transform 0.3s linear;
+         -o-transition:         transform 0.3s linear;
+            transition:         transform 0.3s linear;
+            transition:         transform 0.3s linear, -webkit-transform 0.3s linear;
+    height: 0;
+}
+.hero {
+    position: relative;
+    min-height: 890px;
+    background: #95c557;
+    z-index: 10;
+    overflow: hidden;
 }
 .hero__box {
     position: relative;
-    padding-top: 170px;
-    padding-left: 20px;
+    padding-top: 340px;
+    margin-top: 40px;
+    padding-left: 15px;
 }
 .hero__title {
     font-size: 48px;
@@ -812,24 +868,24 @@ textarea {
 }
 .hero .hero__imgBack {
     position: absolute;
-    top: 135px;
+    top: 285px;
     right: -380px;
 }
 .hero .hero__imgBasket {
     position: absolute;
-    top: 5px;
+    top: 155px;
     right: -380px;
     z-index: 5;
 }
 .hero .hero__imgBranchRight {
     position: absolute;
-    top: 140px;
-    right: -365px;
+    top: 280px;
+    right: -355px;
     z-index: 4;
 }
 .hero .hero__imgLeaveCurve {
     position: absolute;
-    bottom: -150px;
+    bottom: -130px;
     right: 220px;
     z-index: 5;
 }
@@ -1101,11 +1157,13 @@ textarea {
     letter-spacing: 0.6px;
 }
 .fabricBags__btn {
+    position: relative;
     display: block;
     margin-top: 50px;
     width: 220px;
     font-size: 30px;
     text-align: center;
+    z-index: 10;
 }
 .fabricBags__img1 {
     position: absolute;
