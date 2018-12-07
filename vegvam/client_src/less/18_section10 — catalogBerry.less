@@ -22,12 +22,15 @@
 
 
 .catalogBerry {
+	
 	&__top {
+		position: relative;
 		padding-top: 90px;
-		padding-bottom: 60px;
+		padding-bottom: 90px;
 		background: #7aa542;
 		text-align: center;
 		letter-spacing: 1.5px;
+		overflow: hidden;
 	}
 
 	&__title {
@@ -48,11 +51,11 @@
 		position: relative;
 		max-width: 920px;
 		margin: auto;
+		background: #95c557;
 	}
 	&__slide {
+		position: relative;
 		padding: 40px 0;
-		background: #95c557;
-		
 	}
 	&__img {
 		display: block;
@@ -87,19 +90,54 @@
 	.slick-next {
 		&:hover, &:focus {
 			box-shadow: none;
+
 			&:before {
 				color: #181d23;
 			}
-		}
+		}		
 	}
-
-
 	.slick-prev {
-		left: 70px;	
+		left: 0px;	
+		width: 150px;
 	}
-
 	.slick-next {
-		right: 70px; 
+		right: 0px; 
+		width: 150px;
+	}
+	
+	.container {
+		position: relative;
+		z-index: 10;
 	}
 
+	&__parsley {
+		position: absolute;
+		bottom: -180px;
+		left: -370px;
+		z-index: 1;
+	}
+	&__rosemary {
+		position: absolute;
+		top: 140px;
+		right: 190px;
+	}
+	&__saucer {
+		position: absolute;
+		bottom: -80px;
+		right: -40px;
+	}
+
+	.btn {
+		font-size: 23px;
+	}
+	
+
+	&__catalog {
+		padding-top: 30px;
+		padding-bottom: 60px;
+	}
+	&__imgCatalog {
+		height: 270px;
+		width: 270px;
+	}
 }

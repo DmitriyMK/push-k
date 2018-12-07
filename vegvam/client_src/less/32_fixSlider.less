@@ -2,101 +2,43 @@
 .slick-next {
 	top: 50%;
 	transform: translateY(-50%);
-
 	width: 50px;
 	height: 100%;
 	opacity: 1;
 	transition: all .3s linear;
 	z-index: 100;
-
 	&:before {
 		display: block;
 		font-size: 65px;
 		font-family: 'Fontello';
 		color: #fff;
 		transition: all .3s linear;
+		z-index: 20;
 	}
-	
 	&:hover, &:focus {
 		&:before {
 			color: @lime;
 		}
 	}
 }
-
-
-
 .slick-prev {
 	left: -70px;	
 }
-
 .slick-next {
 	right: -70px; 
 }
-
-
-
 .slick-prev:before {
 	content: '\e805';
 }
 .slick-next:before {
 	content: '\e806';
 }
-
 .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
 	opacity: 1;
 }
-
 .slick-disabled {
 	opacity: .35!important;
 }
-
-
-
-.slick-dots {
-	display: inline-block!important;
-	left: -48px;
-	top: 50%;
-	transform: translateY(17%);
-
-	border-image: transparent;
-
-	li {
-		margin: 4px 8px;
-		margin-bottom: 10px;
-
-		width: 13px;
-		height: 13px;
-
-		button {
-			background: #fff;
-			display: block;
-			height: 13px;
-			width: 13px;
-			font-size: 0px;
-			color: #fff;
-			border-radius: 50%;
-			box-shadow: 0px 5px 7px 1px rgba(0, 45, 86, 0.15);
-			opacity: 0.75;
-			&:before {
-				font-size: 0;
-				opacity: 0;
-				display: none;
-			}
-
-		}
-		&.slick-active button {
-			background: #fb0035;
-			border-radius: 50%;
-			opacity: 1;
-			@media @tablet {
-				background: #fff;
-			}
-		}
-	}
-}
-
-
 .slick-current, .slick-slide, .slick-active { 
 	outline: none!important;
 }

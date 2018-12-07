@@ -1,0 +1,141 @@
+@media @mobile-xl {
+
+}
+@media @mobile-land {
+
+}
+@media @tablet {
+
+}
+@media @desktop {
+
+}
+@media @desktop-xl {
+	
+}
+@media @desktop-xl-2 {
+
+}
+@media @desktop-xll {
+	
+}
+
+
+.brand {
+	background: #e7e7e7;
+	
+	&__box {
+		position: relative;
+		padding: 115px 20px;
+	}
+	&__slider {
+		display: flex;
+		align-items: center;
+	}
+	&__slide {
+		padding: 25px 10px;
+		border: 2px solid transparent;
+		border-radius: 5px;
+		transition: all .3s linear;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin: auto;
+			filter: grayscale(1);
+			transition: all .3s linear;
+
+			&:hover {
+				filter: grayscale(.5);
+				cursor: pointer;
+			}
+		}		
+	}
+
+	.slick-current + .slick-active {
+		border: 2px solid @green;
+	}
+	.slick-current + .slick-active  img {
+		filter: grayscale(0);
+	}
+
+	.slick-prev,
+	.slick-next {
+		top: inherit;
+		bottom: -120px;
+		transform: none;
+		&:before {
+			font-size: 40px;
+		}
+
+		&:hover, &:focus {
+			&:before {
+				color: @green;
+			}
+		}
+	}
+	.slick-prev {
+		left: 370px;	
+	}
+	.slick-next {
+		right: 370px; 
+	}
+	.slick-dots {
+		display: inline-block!important;
+		left: 0;
+		top: inherit;
+		bottom: -90px;
+
+		li {
+			margin: 4px 8px;
+			margin-bottom: 10px;
+			width: 13px;
+			height: 13px;
+
+			button {
+				background: #fff;
+				display: block;
+				height: 13px;
+				width: 13px;
+				font-size: 0px;
+				color: #fff;
+				border-radius: 50%;
+				opacity: 0.75;
+				&:before {
+					font-size: 0;
+					opacity: 0;
+					display: none;
+				}
+
+			}
+			&.slick-active button {
+				background: @green;
+				border-radius: 50%;
+				opacity: 1;
+			}
+		}
+	}
+
+
+	&__img1 {
+		position: absolute;
+		top: 40px;
+		left: 90px;
+	}
+	&__img2 {
+		position: absolute;
+		bottom: -40px;
+		left: 370px;
+	}
+	&__img3 {
+		position: absolute;
+		top: 30px;
+		right: 210px;
+	}
+	&__img4 {
+		position: absolute;
+		top: 90px;
+		right: 35px;
+	}
+}

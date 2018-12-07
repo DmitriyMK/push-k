@@ -1,62 +1,39 @@
 $(document).ready(function() {
 
 
-  if (document.documentElement.clientWidth > 1200) {
+	if (document.documentElement.clientWidth > 1200) {
 
-    $(window).enllax();
+	  $(window).enllax();
 
       // new WOW().init();
 
-      // $("body").niceScroll({
-      //   scrollspeed: 60,
-      //   mousescrollstep: 60,
-      //   smoothscroll: true,
-      //   cursorwidth: 8,
-      //   cursorborder: 0,
-      //   cursorcolor: '#ff4200',
-      //   cursorborderradius: 2,
-      //   autohidemode: true,
-      //   horizrailenabled: false,
-      //   cursoropacitymin: 1,
-      //   background: false,
-      //   zindex: "9999"
-      // });
+      $("body").niceScroll({
+      	scrollspeed: 60,
+      	mousescrollstep: 60,
+      	smoothscroll: true,
+      	cursorwidth: 8,
+      	cursorborder: 0,
+      	cursorcolor: '#181d23',
+      	cursorborderradius: 2,
+      	autohidemode: true,
+      	horizrailenabled: false,
+      	cursoropacitymin: 1,
+      	background: false,
+      	zindex: "9999"
+      });
 
-      // $('html').addClass('no-overflow-y');
+      $('html').addClass('no-overflow-y');
+  };
 
-    };
-
-    $("#nav li").hover(function() { 
-      $(this).find(".nav__hide").toggleClass("nav__show"); 
-      $(this).find(".nav__link").toggleClass("nav__link-active"); 
-    });
-
-
-    var bLazy = new Blazy();
+  $("#nav li").hover(function() { 
+  	$(this).find(".nav__hide").toggleClass("nav__show"); 
+  	$(this).find(".nav__link").toggleClass("nav__link-active"); 
+  });
 
 
-    $( ".btn" ).mouseenter(function(e) {
-     var parentOffset = $(this).offset(); 
+  var bLazy = new Blazy();
 
-     var relX = e.pageX - parentOffset.left;
-     var relY = e.pageY - parentOffset.top;
-     $(this).prev(".su_button_circle").css({"left": relX, "top": relY });
-     $(this).prev(".su_button_circle").removeClass("desplode-circle");
-     $(this).prev(".su_button_circle").addClass("explode-circle");
 
-   });
-
-    $( ".btn" ).mouseleave(function(e) {
-
-     var parentOffset = $(this).offset(); 
-
-     var relX = e.pageX - parentOffset.left;
-     var relY = e.pageY - parentOffset.top;
-     $(this).prev(".su_button_circle").css({"left": relX, "top": relY });
-     $(this).prev(".su_button_circle").removeClass("explode-circle");
-     $(this).prev(".su_button_circle").addClass("desplode-circle");
-
-   });
 
   // $('.phone-mask').mask('+38(999)999-99-99');
 
@@ -88,25 +65,41 @@ $(document).ready(function() {
         theme: 'dark'
 
       }
-    });*/
+  });*/
 
 
 
-    $('.freeMonday__slider').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      dots: false,
-      infinite: true,
-    });
+  $('.freeMonday__slider').slick({
+  	slidesToShow: 1,
+  	slidesToScroll: 1,
+  	arrows: true,
+  	dots: false,
+  	infinite: true,
+  	fade: true,
+  	speed: 800,
+  });
 
-    $('.catalogBerry__slider').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      dots: false,
-      infinite: true,
-    });
+
+  $('.catalogBerry__slider').slick({
+  	slidesToShow: 1,
+  	slidesToScroll: 1,
+  	arrows: true,
+  	dots: false,
+  	infinite: true,
+  	fade: true,
+  	speed: 800,
+  });
+
+
+  $('.brand__slider').slick({
+  	slidesToShow: 5,
+  	slidesToScroll: 1,
+  	focusOnSelect: true,
+  	arrows: true,
+  	dots: true,
+  	infinite: true,
+  	initialSlide: 2,
+  });
 
 
   /*  $('.slider-nav-recipe').slick({
@@ -145,30 +138,30 @@ $(document).ready(function() {
 
     });
     */
-  });
+});
 
 
 
 $(window).on('resize orientationchange', function() {
-  $('.slider').slick('resize');
+	$('.slider').slick('resize');
 });
 
 
 
 $(".form").submit(function() {
-  var th = $(this);
-  $.ajax({
-    type: "POST",
-    url: "mail.php",
-    data: th.serialize()
-  }).done(function() {
+	var th = $(this);
+	$.ajax({
+		type: "POST",
+		url: "mail.php",
+		data: th.serialize()
+	}).done(function() {
 
-    var inst = $('[data-remodal-id=modal-thanks]').remodal();
-    inst.open();
+		var inst = $('[data-remodal-id=modal-thanks]').remodal();
+		inst.open();
 
-    setTimeout(function() {
-      th.trigger("reset");
-    }, 1000);
-  });
-  return false;
+		setTimeout(function() {
+			th.trigger("reset");
+		}, 1000);
+	});
+	return false;
 });
