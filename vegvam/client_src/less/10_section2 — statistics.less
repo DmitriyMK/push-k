@@ -24,11 +24,21 @@
 	padding: 80px 0;
 	&__list {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		list-style-type: none;
+
+		@media @tablet {
+			flex-wrap: nowrap;
+		}
 	}
 	&__item {
-		flex-basis: 24%;
+		flex-basis: 48%;
+		margin-bottom: 80px;
+
+		@media @tablet {
+			flex-basis: 24%;
+		}
 	}
 	&__wrap {
 		height: 130px;
@@ -40,11 +50,24 @@
 	}
 	&__text {
 		padding-top: 25px;
+		margin: auto;
+		max-width: 190px;
 		font-size: 18px;
 		text-align: center;
+
+		@media @tablet {
+
+		}
 	}
 	&__num {
-		font-size: 24px;
+		font-size: 21px;
 		color: @green;
+
+		@media @tablet {
+
+		}
+		@media @desktop {
+			font-size: 24px;
+		}
 	}
 }

@@ -1,9 +1,12 @@
 $(document).ready(function() {
 
 
+  $(window).enllax();
+
+  
   if (document.documentElement.clientWidth > 1200) {
 
-    $(window).enllax();
+    
 
 
     $("body").niceScroll({
@@ -26,7 +29,7 @@ $(document).ready(function() {
 
 
   if (document.documentElement.clientWidth > 992) {
-    $("#nav li").hover(function() {
+    $("linkSubmenu").hover(function() {
       $(this).find(".nav__hide").toggleClass("nav__show");
       $(this).find(".nav__link").toggleClass("nav__link-active");
     });
@@ -124,8 +127,10 @@ $(document).ready(function() {
   var $menu = $('.nav');
 
   $('.burger').click(function() {
+
     $(this).toggleClass('active');
-    $('.overlay').toggleClass('open').show;
+    $(this).parents('.header__top').find('.overlay').toggleClass('open');
+    
   });
 
 
@@ -135,13 +140,13 @@ $(document).ready(function() {
   // });
 
 
-  $(document).mouseup(function(e) {
-    if (!$menu.is(e.target) && $menu.has(e.target).length === 0) {
+  // $(document).mouseup(function(e) {
+  //   if (!$menu.is(e.target) && $menu.has(e.target).length === 0) {
 
-      $('.overlay').removeClass('open');
-      $('.burger').removeClass('active');
-    }
-  });
+  //     $('.overlay').removeClass('open');
+  //     $('.burger').removeClass('active');
+  //   }
+  // });
 
 
   /*  $('.slider-nav-recipe').slick({

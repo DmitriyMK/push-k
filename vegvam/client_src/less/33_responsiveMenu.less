@@ -2,7 +2,7 @@
 
 
  .open {
- 	transform: translateX(-100vw);
+ 	transform: translateX(100vw);
  	transition: all .35s cubic-bezier(0.72, -0.04, 0.14, 1.03);
  	position: relative;
  	z-index: 100;
@@ -16,8 +16,8 @@
  	width: 100vw;
  	background: @lime;
  	height: 100vh; 
- 	top: 65px;
- 	right: -100vw;
+ 	top: 60px;
+ 	left: -100vw;
  	overflow-y: scroll;
  	transition: all .3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
 
@@ -25,7 +25,7 @@
  		position: inherit;
  		width: inherit;
  		height: inherit;
- 		right: inherit;
+ 		left: inherit;
  		top: inherit;
  		background: inherit;
  		overflow-y: inherit;
@@ -140,7 +140,6 @@
 
 .burger {
 	display: block;
-	margin-right: 9px;
 	position: relative;
 	width: 50px;
 	height: 50px;
