@@ -5,7 +5,6 @@ $(document).ready(function() {
 
     $(window).enllax();
 
-    // new WOW().init();
 
     $("body").niceScroll({
       scrollspeed: 60,
@@ -25,7 +24,16 @@ $(document).ready(function() {
     $('html').addClass('no-overflow-y');
   };
 
-  $("#nav li").hover(function() {
+
+  if (document.documentElement.clientWidth > 992) {
+    $("#nav li").hover(function() {
+      $(this).find(".nav__hide").toggleClass("nav__show");
+      $(this).find(".nav__link").toggleClass("nav__link-active");
+    });
+  };
+
+
+  $('.linkSubmenu').click(function() {
     $(this).find(".nav__hide").toggleClass("nav__show");
     $(this).find(".nav__link").toggleClass("nav__link-active");
   });
@@ -109,6 +117,30 @@ $(document).ready(function() {
     dots: true,
     infinite: true,
     initialSlide: 2,
+  });
+
+
+  // BURGER RESPONSIVE < 992px
+  var $menu = $('.nav');
+
+  $('.burger').click(function() {
+    $(this).toggleClass('active');
+    $('.overlay').toggleClass('open').show;
+  });
+
+
+  // $('.nav__link').click(function() {
+  //   $('.overlay').removeClass('open');
+  //   $('.burger').removeClass('active');
+  // });
+
+
+  $(document).mouseup(function(e) {
+    if (!$menu.is(e.target) && $menu.has(e.target).length === 0) {
+
+      $('.overlay').removeClass('open');
+      $('.burger').removeClass('active');
+    }
   });
 
 
