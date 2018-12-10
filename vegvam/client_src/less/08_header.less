@@ -32,7 +32,19 @@
 	}
 
 	&__logo {
-		flex-basis: 105px;
+		flex-basis: 85px;
+		@media @desktop-xl {
+			flex-basis: 105px;
+		}
+	}
+	.logoBig {
+		max-height: 90px;
+		@media @desktop-xl {
+			max-height: 159px;
+		}
+		@media @desktop-xl-2 {
+			max-height: 199px;
+		}
 	}
 	.logoHide {
 		width: 0;
@@ -56,6 +68,7 @@
 		font-weight: 700;
 		color:#fff;
 	}
+
 	&__link {
 		transition: color .3s linear;
 		&:hover {
@@ -65,9 +78,6 @@
 	&__link-tel {
 		margin-right: 10px;
 		letter-spacing: 2.5px;
-	}
-	&__link-smm {
-		
 	}
 }
 
@@ -89,11 +99,16 @@
 	}
 	&__link {
 		display: block;
-		font-size: 22px;
-		padding: 25px 10px;
+		font-size: 17.5px;
+		padding: 20px 5px;
 		transition: all .3s linear;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
+		
+		@media @desktop-xl {
+			font-size: 22px;
+			padding: 25px 10px;
+		}
 
 		&:hover, &-active {
 			color: @green;
@@ -114,7 +129,7 @@
 
 	&__box-submenu {
 		position: absolute;
-		top: 75px;
+		top: 60px;
 		left: -20px;
 		z-index: 10;
 		overflow: hidden;
@@ -129,6 +144,10 @@
 		color: #181d23;
 		font-weight: 400;
 		border-radius: 5px;
+
+		@media @desktop-xl {
+			top: 75px;
+		}
 	}
 
 	&__box-col {
@@ -297,10 +316,22 @@
 	z-index: 200;
 
 	.logoHide {
-		width: 178px;
+		width: 150px;
 		opacity: 1;
 		visibility: visible;
+		
+
+		@media @desktop {
+
+		}
+		@media @desktop-xl {
+
+		}
+		@media @desktop-xl-2 {
+			width: 178px;
+		}
 	}
+
 	.logoBig {
 		visibility: hidden;
 		transform: translateY(-240px);

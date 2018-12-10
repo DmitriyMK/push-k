@@ -260,6 +260,7 @@ img {
     -ms-flex-pack: justify;
     justify-content: space-between;
     height: 100%;
+    overflow: hidden;
 }
 .main {
     -webkit-box-flex: 1;
@@ -532,8 +533,27 @@ textarea {
     justify-content: space-between;
 }
 .header__logo {
-    -ms-flex-preferred-size: 105px;
-    flex-basis: 105px;
+    -ms-flex-preferred-size: 85px;
+    flex-basis: 85px;
+}
+@media only screen and (min-width: 1200px) {
+    .header__logo {
+        -ms-flex-preferred-size: 105px;
+        flex-basis: 105px;
+    }
+}
+.header .logoBig {
+    max-height: 90px;
+}
+@media only screen and (min-width: 1200px) {
+    .header .logoBig {
+        max-height: 159px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .header .logoBig {
+        max-height: 199px;
+    }
 }
 .header .logoHide {
     width: 0;
@@ -601,13 +621,19 @@ textarea {
 }
 .nav__link {
     display: block;
-    font-size: 22px;
-    padding: 25px 10px;
+    font-size: 17.5px;
+    padding: 20px 5px;
     -webkit-transition: all 0.3s linear;
          -o-transition: all 0.3s linear;
             transition: all 0.3s linear;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+@media only screen and (min-width: 1200px) {
+    .nav__link {
+        font-size: 22px;
+        padding: 25px 10px;
+    }
 }
 .nav__link:hover, .nav__link-active {
     color: #337d5a;
@@ -629,7 +655,7 @@ textarea {
 }
 .nav__box-submenu {
     position: absolute;
-    top: 75px;
+    top: 60px;
     left: -20px;
     z-index: 10;
     overflow: hidden;
@@ -647,6 +673,11 @@ textarea {
     color: #181d23;
     font-weight: 400;
     border-radius: 5px;
+}
+@media only screen and (min-width: 1200px) {
+    .nav__box-submenu {
+        top: 75px;
+    }
 }
 .nav__box-col {
     margin-left: 35px;
@@ -805,9 +836,14 @@ textarea {
     z-index: 200;
 }
 .fixed .logoHide {
-    width: 178px;
+    width: 150px;
     opacity: 1;
     visibility: visible;
+}
+@media only screen and (min-width: 1600px) {
+    .fixed .logoHide {
+        width: 178px;
+    }
 }
 .fixed .logoBig {
     visibility: hidden;
@@ -836,69 +872,184 @@ textarea {
 }
 .hero {
     position: relative;
-    min-height: 890px;
+    min-height: 720px;
     background: #95c557;
     z-index: 10;
     overflow: hidden;
 }
+@media only screen and (min-width: 1200px) {
+    .hero {
+        min-height: 750px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .hero {
+        min-height: 950px;
+    }
+}
 .hero__box {
     position: relative;
-    padding-top: 340px;
+    padding-top: 200px;
     margin-top: 40px;
     padding-left: 15px;
 }
+@media only screen and (min-width: 1200px) {
+    .hero__box {
+        padding-top: 240px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .hero__box {
+        padding-top: 340px;
+    }
+}
 .hero__title {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 700;
     letter-spacing: 1.1px;
     text-transform: uppercase;
     color: #fff;
 }
+@media only screen and (min-width: 992px) {
+    .hero__title {
+        font-size: 36px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .hero__title {
+        font-size: 42px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .hero__title {
+        font-size: 48px;
+    }
+}
 .hero__title-accent {
     display: block;
-    font-size: 72px;
+    font-size: 56px;
     line-height: 1.1;
     letter-spacing: 1.8px;
 }
+@media only screen and (min-width: 1200px) {
+    .hero__title-accent {
+        font-size: 66px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .hero__title-accent {
+        font-size: 72px;
+    }
+}
 .hero__text {
-    padding-top: 40px;
-    max-width: 650px;
+    padding-top: 30px;
+    max-width: 560px;
     font-size: 24px;
     letter-spacing: 0.6px;
 }
+@media only screen and (min-width: 1200px) {
+    .hero__text {
+        max-width: 650px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .hero__text {
+        padding-top: 40px;
+    }
+}
 .hero .hero__imgBack {
     position: absolute;
-    top: 285px;
-    right: -380px;
+    top: 200px;
+    right: -420px;
+}
+@media only screen and (min-width: 1200px) {
+    .hero .hero__imgBack {
+        right: -300px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .hero .hero__imgBack {
+        top: 285px;
+        right: -380px;
+    }
 }
 .hero .hero__imgBasket {
     position: absolute;
-    top: 155px;
-    right: -380px;
+    top: 120px;
+    right: -310px;
+    max-width: 680px;
     z-index: 5;
+}
+@media only screen and (min-width: 1200px) {
+    .hero .hero__imgBasket {
+        top: 100px;
+        right: -320px;
+        max-width: 780px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .hero .hero__imgBasket {
+        top: 155px;
+        right: -380px;
+    }
 }
 .hero .hero__imgBranchRight {
     position: absolute;
     top: 280px;
-    right: -355px;
+    right: -105px;
+    max-width: 250px;
     z-index: 4;
+}
+@media only screen and (min-width: 1200px) {
+    .hero .hero__imgBranchRight {
+        max-width: 484px;
+        right: -255px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .hero .hero__imgBranchRight {
+        right: -355px;
+    }
 }
 .hero .hero__imgLeaveCurve {
     position: absolute;
     bottom: -130px;
-    right: 220px;
+    right: 240px;
     z-index: 5;
+}
+@media only screen and (min-width: 1200px) {
+    .hero .hero__imgLeaveCurve {
+        right: 280px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .hero .hero__imgLeaveCurve {
+        right: 220px;
+    }
 }
 .hero .hero__imgLeaveBlur {
     position: absolute;
     bottom: -260px;
-    right: -125px;
+    right: -85px;
     z-index: 5;
+}
+@media only screen and (min-width: 1600px) {
+    .hero .hero__imgLeaveBlur {
+        right: -125px;
+    }
 }
 .hero .hero__imgBranchLeft {
     position: absolute;
-    bottom: -330px;
-    left: -380px;
+    bottom: -280px;
+    left: -220px;
+    max-width: 491px;
+}
+@media only screen and (min-width: 1600px) {
+    .hero .hero__imgBranchLeft {
+        left: -380px;
+        bottom: -360px;
+        max-width: 591px;
+    }
 }
 .statistics {
     padding: 80px 0;
