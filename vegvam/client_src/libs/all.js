@@ -3,12 +3,9 @@ $(document).ready(function() {
 
   $(window).enllax();
 
-  
+
   if (document.documentElement.clientWidth > 1200) {
-
     
-
-
     $("body").niceScroll({
       scrollspeed: 60,
       mousescrollstep: 60,
@@ -28,12 +25,16 @@ $(document).ready(function() {
   };
 
 
-  if (document.documentElement.clientWidth > 992) {
-    $("linkSubmenu").hover(function() {
+  
+  $(".linkSubmenu").hover(function() {
+    if (document.documentElement.clientWidth > 992) {
+
       $(this).find(".nav__hide").toggleClass("nav__show");
       $(this).find(".nav__link").toggleClass("nav__link-active");
-    });
-  };
+
+    };
+  });
+
 
 
   $('.linkSubmenu').click(function() {
@@ -53,41 +54,6 @@ $(document).ready(function() {
       $('#header').removeClass('fixed');
     }
   });
-
-
-
-  // $('.phone-mask').mask('+38(999)999-99-99');
-
-
-  /*  $(".js-video-button").modalVideo({
-      youtube: {
-        autoplay: 1,
-        nocookie: false,
-        cc_load_policy: 1,
-        color: null,
-        controls: 1,
-        disablekb: 0,
-        enablejsapi: 0,
-        end: null,
-        fs: 1,
-        h1: null,
-        iv_load_policy: 1,
-        list: null,
-        listType: null,
-        loop: 0,
-        modestbranding: null,
-        origin: null,
-        playlist: null,
-        playsinline: null,
-        rel: 0,
-        showinfo: 1,
-        start: 0,
-        wmode: 'transparent',
-        theme: 'dark'
-
-      }
-    });*/
-
 
 
   $('.freeMonday__slider').slick({
@@ -134,11 +100,6 @@ $(document).ready(function() {
   });
 
 
-  // $('.nav__link').click(function() {
-  //   $('.overlay').removeClass('open');
-  //   $('.burger').removeClass('active');
-  // });
-
 
   // $(document).mouseup(function(e) {
   //   if (!$menu.is(e.target) && $menu.has(e.target).length === 0) {
@@ -147,45 +108,7 @@ $(document).ready(function() {
   //     $('.burger').removeClass('active');
   //   }
   // });
-
-
-  /*  $('.slider-nav-recipe').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      asNavFor: '.slider-for-recipe',
-      arrows: false,
-      dots: false,
-      focusOnSelect: true,
-      infinite: true,
-      centerMode: false,
-
-      responsive: [
-
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          arrows: true,
-
-        }
-      },
-
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-
-          arrows: true,
-        }
-      },
-
-      ]
-
-    });
-    */
-});
+  });
 
 
 

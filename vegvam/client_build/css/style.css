@@ -1490,25 +1490,70 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
     list-style-type: none;
 }
+@media only screen and (min-width: 992px) {
+    .catalogFirst__list {
+        -webkit-box-align: inherit;
+        -ms-flex-align: inherit;
+        align-items: inherit;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    }
+}
 .catalogFirst__item {
-    width: 555px;
+    max-width: 450px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+@media only screen and (min-width: 768px) {
+    .catalogFirst__item {
+        width: 450px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .catalogFirst__item {
+        width: 48%;
+        max-width: inherit;
+        text-align: inherit;
+    }
 }
 .catalogFirst__link {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 555px;
+    width: 320px;
+    padding: 30px;
+    margin: auto;
     background: #f7f6f6;
+}
+@media only screen and (min-width: 768px) {
+    .catalogFirst__link {
+        width: 100%;
+        padding: 80px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .catalogFirst__link {
+        height: 555px;
+    }
 }
 .catalogFirst__img {
     display: block;
     max-width: 100%;
-    max-height: 500px;
+    max-height: 350px;
     height: auto;
     margin: auto;
     -ms-flex-item-align: center;
@@ -1517,6 +1562,11 @@ textarea {
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
+}
+@media only screen and (min-width: 992px) {
+    .catalogFirst__img {
+        max-height: 500px;
+    }
 }
 .catalogFirst__name {
     padding-top: 40px;
@@ -1531,20 +1581,43 @@ textarea {
 }
 .catalogFirst__btn {
     display: block;
-    margin-top: 20px;
+    margin: 25px auto;
     font-size: 23px;
     line-height: 1;
     letter-spacing: 1.25px;
 }
+@media only screen and (min-width: 992px) {
+    .catalogFirst__btn {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
 .catalogFirst__img1 {
-    position: absolute;
-    top: 30px;
-    left: 450px;
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+    .catalogFirst__img1 {
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 50px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .catalogFirst__img1 {
+        left: 450px;
+    }
 }
 .catalogFirst__img2 {
-    position: absolute;
-    bottom: 70px;
-    right: 30px;
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+    .catalogFirst__img2 {
+        display: block;
+        position: absolute;
+        bottom: 70px;
+        right: 30px;
+    }
 }
 .stringBack {
     padding-top: 120px;
