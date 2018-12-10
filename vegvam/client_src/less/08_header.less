@@ -126,16 +126,12 @@
 
 	&__end {
 		// flex: 0 0 auto;
-		margin-bottom: 70px;
+		margin-top: 70px;
 		text-align: center;
 		color: #fff;
 		font-size: 20px;
 		font-weight: 700;
 
-
-		// @media @desktop {
-		// 	margin-bottom: 0;
-		// }
 
 		.tel {
 			display: block;
@@ -194,29 +190,34 @@
 		display: block;
 		position: relative;
 		.nav__link {
-			position: relative;
-			&:before {
-				position: absolute;
-				content: '\e80a';
-				font-family: "Fontello";
-				top: 20px;
-				left: 100px;
-				transition: all .3s linear;
+			.nav__title {
+				position: relative;
+				width: 100px;
+				margin: auto;
+				&:before {
+					position: absolute;
+					content: '\e80a';
+					font-family: "Fontello";
+					top: 0px;
+					left: -15px;
+					transition: all .3s linear;
 
-				@media @desktop {
-					display: none;
+					@media @desktop {
+						display: none;
+					}
 				}
 			}
 		}
 
 		.nav__link-active {
-			&:before {
-				content: '\e80d';
+			.nav__title {
+				&:before {
+					content: '\e80d';
+				}
 			}
 		}
 	}
 
-	
 	
 
 	&__hide {
@@ -245,6 +246,7 @@
 	&__box-submenu {	
 		display: flex;
 		flex-direction: column;
+		padding-top: 25px;
 		padding-left: 25px;
 		
 		background: rgb(255, 255, 255);
