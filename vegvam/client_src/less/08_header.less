@@ -32,8 +32,8 @@
 		justify-content: space-between;
 		background: @lime;
 		@media @desktop {
-			padding: 15px 10px 15px 20px;
 			align-items: inherit;
+			padding: 5px 10px 15px 20px;
 			background: transparent;
 		}
 	}
@@ -47,6 +47,7 @@
 			flex-basis: 105px;
 		}
 	}
+
 	.logoBig {
 		display: none;
 		@media @desktop {
@@ -157,7 +158,7 @@
 	}
 	&__link {
 		display: block;
-		padding: 20px 5px;
+		padding: 25px 5px 45px 5px;
 		width: 100vw;
 		margin: auto;
 		text-align: center;
@@ -438,6 +439,7 @@
 	align-items: center;
 	min-width: 80px;
 	padding: 10px 0;
+	
 	z-index: 1000;
 
 	@media @desktop {
@@ -472,11 +474,15 @@
 
 .fixed {
 	position: fixed;
-	top: 0;
+	top: -10px;
 	left: 0;
 	width: 100%;
 	z-index: 1000;
 	background: @lime;
+
+	.header__top {
+		align-items: center;
+	}
 
 	.logoHide {
 		@media @desktop {

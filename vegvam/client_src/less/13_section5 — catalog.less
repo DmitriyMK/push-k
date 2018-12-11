@@ -26,12 +26,16 @@
 	&__list {
 		padding: 60px 0;
 		display: flex;
+		justify-content: center;
 		flex-wrap: wrap;
 		list-style-type: none;
+		text-align: center;
 
 		@media @desktop-xl {
 			flex-wrap: nowrap;
+			justify-content: inherit;
 			padding: 60px 15px;
+			text-align: inherit;
 		}
 	}
 
@@ -59,7 +63,7 @@
 		width: 270px;
 		height: 275px;
 		background: #f7f6f6;
-		
+
 		@media @desktop-xl {
 			margin: inherit;
 		}
@@ -90,9 +94,15 @@
 	}
 	&__btn {
 		display: block;
+		margin: auto;
 		margin-top: 20px;
 		font-size: 20px;
 		line-height: 1;
 		letter-spacing: 1.25px;
+
+		@media @desktop-xl {
+			margin: inherit;
+			margin-top: 20px;
+		}
 	}
 }

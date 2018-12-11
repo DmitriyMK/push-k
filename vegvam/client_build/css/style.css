@@ -539,10 +539,10 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .header__top {
-        padding: 15px 10px 15px 20px;
         -webkit-box-align: inherit;
         -ms-flex-align: inherit;
         align-items: inherit;
+        padding: 5px 10px 15px 20px;
         background: transparent;
     }
 }
@@ -722,7 +722,7 @@ textarea {
 }
 .nav__link {
     display: block;
-    padding: 20px 5px;
+    padding: 25px 5px 45px 5px;
     width: 100vw;
     margin: auto;
     text-align: center;
@@ -1055,11 +1055,16 @@ textarea {
 }
 .fixed {
     position: fixed;
-    top: 0;
+    top: -10px;
     left: 0;
     width: 100%;
     z-index: 1000;
     background: #95c557;
+}
+.fixed .header__top {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 @media only screen and (min-width: 992px) {
     .fixed .logoHide {
@@ -1930,15 +1935,23 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     list-style-type: none;
+    text-align: center;
 }
 @media only screen and (min-width: 1200px) {
     .catalog__list {
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
+        -webkit-box-pack: inherit;
+        -ms-flex-pack: inherit;
+        justify-content: inherit;
         padding: 60px 15px;
+        text-align: inherit;
     }
 }
 .catalog__item {
@@ -1995,10 +2008,17 @@ textarea {
 }
 .catalog__btn {
     display: block;
+    margin: auto;
     margin-top: 20px;
     font-size: 20px;
     line-height: 1;
     letter-spacing: 1.25px;
+}
+@media only screen and (min-width: 1200px) {
+    .catalog__btn {
+        margin: inherit;
+        margin-top: 20px;
+    }
 }
 .fabricBags {
     padding-top: 30px;
