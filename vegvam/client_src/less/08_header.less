@@ -50,44 +50,26 @@
 	}	
 
 	.logoBig-img {
-		display: block;
-		height: 141px;
-		width: 178px;
-		transition: all .25s linear;
-	}
-	.logoBig-text {
-		display: block;
-		transform: translateY(3px);
-		transition: all .4s linear;
+		display: none;
+
+		@media @desktop {
+			display: block;
+			height: 141px;
+			width: 178px;
+			transition: all .25s linear;
+		}
 	}
 
-	// .logoBig {
-	// 	display: none;
-	// 	@media @desktop {
-	// 		display: block;
-	// 		max-height: 90px;
-	// 	}
-	// 	@media @desktop-xl {
-	// 		max-height: 159px;
-	// 	}
-	// 	@media @desktop-xl-2 {
-	// 		max-height: 199px;
-	// 	}
-	// }
-	// .logoHide {
-	// 	max-width: 120px;
-	// 	@media @desktop {
-	// 		margin-top: 35px;
-	// 		// width: 0;s
-	// 		opacity: 0;
-	// 		max-width: 178px;
-	// 		// visibility: hidden;
-	// 		transition: width .3s linear;
-	// 	}
-	// 	@media @desktop-xl-2 {
-	// 		margin-top: 0;
-	// 	}
-	// }
+	.logoBig-text {
+		display: block;
+		max-width: 120px;
+		transform: translateY(3px);
+		transition: all .4s linear;
+
+		@media @desktop {
+			max-width: 178px;
+		}
+	}
 
 	&__info {
 		display: flex;
