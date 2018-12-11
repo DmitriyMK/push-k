@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 
   if (document.documentElement.clientWidth > 1200) {
-    
+
     $("body").niceScroll({
       scrollspeed: 60,
       mousescrollstep: 60,
@@ -88,21 +88,21 @@ $(document).ready(function() {
 
     responsive: [
 
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-
-      {
-        breakpoint: 400,
-        settings: {
-          slidesToShow: 1,
-          initialSlide: 1,
-          autoplay: true
-        }
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
       }
+    },
+
+    {
+      breakpoint: 400,
+      settings: {
+        slidesToShow: 1,
+        initialSlide: 1,
+        autoplay: true
+      }
+    }
 
     ]
   });
@@ -119,15 +119,13 @@ $(document).ready(function() {
   });
 
 
-
-  // $(document).mouseup(function(e) {
-  //   if (!$menu.is(e.target) && $menu.has(e.target).length === 0) {
-
-  //     $('.overlay').removeClass('open');
-  //     $('.burger').removeClass('active');
-  //   }
-  // });
+  $('#arrowTop').click(function(){
+    $("html, body").animate({ scrollTop: 0 }, 900);
+    return false;
   });
+
+
+});
 
 
 
@@ -154,3 +152,5 @@ $(".form").submit(function() {
   });
   return false;
 });
+
+window.console.log('Made with fun and love ❤️ Push-K solutions ❤️');

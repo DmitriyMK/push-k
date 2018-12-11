@@ -382,6 +382,23 @@ button:-moz-focusring, [type='button']:-moz-focusring, [type='reset']:-moz-focus
     width: 1px;
     overflow: hidden;
 }
+.scrollup {
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 22;
+    color: red;
+}
+@media only screen and (min-width: 992px) {
+    .scrollup {
+        right: 50px;
+        bottom: 100px;
+    }
+}
 /* ONLY FOR IE11 */
 /* ONLY FOR EDGE */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, q, s, strike, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, section, summary, time, mark, audio, video {
@@ -1077,7 +1094,7 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .fixed .logoBig {
-        margin-top: -160px;
+        margin-top: -196px;
         visibility: hidden;
         -webkit-transform: translateY(-240px);
             -ms-transform: translateY(-240px);
