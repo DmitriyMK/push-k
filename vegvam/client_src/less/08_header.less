@@ -31,6 +31,7 @@
 		align-items: center;
 		justify-content: space-between;
 		background: @lime;
+
 		@media @desktop {
 			align-items: inherit;
 			padding: 5px 10px 15px 20px;
@@ -64,12 +65,15 @@
 	.logoHide {
 		max-width: 120px;
 		@media @desktop {
-			// margin-top: 15px;
-			// width: 0;
-			// opacity: 0;
+			margin-top: 15px;
+			// width: 0;s
+			opacity: 0;
 			max-width: 178px;
-			visibility: hidden;
+			// visibility: hidden;
 			transition: width .3s linear;
+		}
+		@media @desktop-xl-2 {
+			margin-top: 0;
 		}
 	}
 
@@ -169,8 +173,7 @@
 			width: inherit;
 			margin: 0;
 			text-align: inherit;
-			border-top-left-radius: 10px;
-			border-top-right-radius: 10px;
+			border-radius: 10px;
 			font-size: 17.5px;
 		}
 		@media @desktop-xl {
@@ -189,6 +192,14 @@
 		position: relative;
 		.nav__link {
 			cursor: pointer;
+
+			@media @desktop {
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+			}
+
 			.nav__title {
 				position: relative;
 				width: 100px;
@@ -478,6 +489,7 @@
 	left: 0;
 	width: 100%;
 	z-index: 1000;
+	height: 80px;
 	background: @lime;
 
 	.header__top {
