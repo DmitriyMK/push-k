@@ -65,7 +65,7 @@
 	.logoHide {
 		max-width: 120px;
 		@media @desktop {
-			margin-top: 15px;
+			margin-top: 35px;
 			// width: 0;s
 			opacity: 0;
 			max-width: 178px;
@@ -196,8 +196,8 @@
 			@media @desktop {
 				border-top-left-radius: 10px;
 				border-top-right-radius: 10px;
-				border-bottom-left-radius: 10px;
-				border-bottom-right-radius: 10px;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
 			}
 
 			.nav__title {
@@ -489,8 +489,12 @@
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-	height: 80px;
+	height: 60px;
 	background: @lime;
+
+	@media @desktop {
+		height: 80px;
+	}
 
 	.header__top {
 		align-items: center;
