@@ -51,8 +51,19 @@
 	box-shadow: 2px 2px 24px 1px rgba(0,0,0,0);
 	&:hover {
 		box-shadow: 2px 2px 24px 1px rgba(0,0,0,0.35);
+	}		
+}
+
+
+.letter {
+	display: inline-block;
+	transform: translateY(0);
+	transition: transform .3s linear;
+	min-width: .2em;
+	&:hover {
+		cursor: pointer;
+		transform: translateY(-15px);
 	}
-		
 }
 
 

@@ -4,7 +4,6 @@ $(document).ready(function() {
 
     $(window).enllax();
 
-
     $("body").niceScroll({
       scrollspeed: 60,
       mousescrollstep: 60,
@@ -21,10 +20,63 @@ $(document).ready(function() {
     });
 
     $('html').addClass('no-overflow-y');
+
+
+    var els = document.querySelectorAll(".js-splitme");
+    [].forEach.call(els, function(el) {
+      el.outerHTML = Splitter(el.outerHTML, '<span class="letter">$</span>');
+    });
+
+
+     // SCROLL ANIMATION
+     $('[data-scrollmagic1]').each(function(index, elem) {
+      var scrollMagicController = new ScrollMagic();
+
+      // Create Animations
+      // var title = $(elem).find('.portfolio__title'),
+      // var text = $(elem).find('.portfolio__texts'),
+      // var btn = $(elem).find('.portfolio__btn'),
+      var 
+      img1 = $(elem).find('.statistics__item1'),
+      img2 = $(elem).find('.statistics__item2'),
+      img3 = $(elem).find('.statistics__item3'),
+      img4 = $(elem).find('.statistics__item4');
+
+      var tl = new TimelineMax({
+        pause: true
+      });
+
+      tl.add("start")
+
+      // .fromTo(title, 1.2, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
+      // .fromTo(text, 1.6, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
+      // .fromTo(btn, 3.6, {y: '80px', opacity: 0, scale: 1.2}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
+      .fromTo(img1, 1.2, {y: '80px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+      .fromTo(img2, 1.6, {y: '80px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+      .fromTo(img3, 2.0, {y: '80px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+      .fromTo(img4, 2.4, {y: '80px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+
+
+      var scene = new ScrollScene({
+        triggerElement: elem,
+        reverse: false,
+        offset: 0
+      })
+
+      .setTween(tl)
+      .addTo(scrollMagicController);
+      scene.addIndicators();
+    });
+    // END data-scrollmagic1
+
+
   };
 
 
-  
+
+
+
+
   $(".linkSubmenu").hover(function() {
     if (document.documentElement.clientWidth > 992) {
 
@@ -35,11 +87,11 @@ $(document).ready(function() {
   });
 
 
-
   $('.linkSubmenu').click(function() {
     $(this).find(".nav__hide").toggleClass("nav__show");
     $(this).find(".nav__link").toggleClass("nav__link-active");
   });
+
 
 
   var bLazy = new Blazy();
@@ -115,14 +167,8 @@ $(document).ready(function() {
     $(this).parents('.header__top').find('.overlay').toggleClass('open');
     
   });
+
 });
-
-
-
-// $(window).on('resize orientationchange', function() {
-//   $('.slider').slick('resize');
-// });
-
 
 
 $(".form").submit(function() {

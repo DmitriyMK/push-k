@@ -412,6 +412,24 @@ button:-moz-focusring, [type='button']:-moz-focusring, [type='reset']:-moz-focus
     -webkit-box-shadow: 2px 2px 24px 1px rgba(0, 0, 0, 0.35);
             box-shadow: 2px 2px 24px 1px rgba(0, 0, 0, 0.35);
 }
+.letter {
+    display: inline-block;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s linear;
+            transition: -webkit-transform 0.3s linear;
+         -o-transition:         transform 0.3s linear;
+            transition:         transform 0.3s linear;
+            transition:         transform 0.3s linear, -webkit-transform 0.3s linear;
+    min-width: 0.2em;
+}
+.letter:hover {
+    cursor: pointer;
+    -webkit-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+            transform: translateY(-15px);
+}
 /* ONLY FOR IE11 */
 /* ONLY FOR EDGE */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, q, s, strike, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, section, summary, time, mark, audio, video {
@@ -1197,7 +1215,7 @@ textarea {
 }
 @media only screen and (min-width: 1600px) {
     .hero__box {
-        padding-top: 340px;
+        padding-top: 290px;
     }
 }
 .hero__title {
@@ -1244,6 +1262,7 @@ textarea {
 @media only screen and (min-width: 992px) {
     .hero__title-accent {
         font-size: 56px;
+        padding-left: 0.1em;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -1274,6 +1293,7 @@ textarea {
 @media only screen and (min-width: 992px) {
     .hero__text {
         max-width: 560px;
+        padding-left: 0.4em;
         font-size: 24px;
     }
 }
