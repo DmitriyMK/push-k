@@ -21,56 +21,191 @@
 }
 
 .stringBack {
-	padding-top: 120px;
+	padding-top: 80px;
+	
+	@media @desktop {
+
+	}
+	@media @desktop-xl {
+
+	}
+	@media @desktop-xl-2 {
+		padding-top: 120px;
+	}
+
 
 	&__top {
 		padding: 15px;
 		background: #7aa542;
+
+		@media @tablet {
+			padding: 15px 0;
+		}
 		.container {
 			position: relative;
 		}
 	}
+
 	&__line {
-		margin-top: -160px;
-		padding-bottom: 20px;
 		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: -220px;
+
+		@media @tablet {
+			margin-top: -160px;
+			padding-bottom: 20px;
+			flex-direction: row;
+			align-items: inherit;
+		}
 	}
 	&__photo {
-		padding-left: 45px;
-		max-width: 280px;
+		padding-left: 0px;
+
+		img {
+			max-width: 180px;
+			margin: auto;
+
+			@media @tablet {
+				max-width: 280px;
+			}
+		}
+
+		@media @tablet {
+			
+		}
+		@media @desktop {
+			padding-left: 45px;
+		}
+		@media @desktop-xl {
+			padding-left: 115px;
+		}
+		@media @desktop-xl-2 {
+			padding-left: 45px;
+		}
 	}
+
 	&__content {
-		padding-top: 245px;
-		padding-left: 130px;
-		max-width: 650px;
+		padding-top: 90px;
+		padding-bottom: 80px;
+		max-width: 400px;
+		text-align: center;
 		color: #fff;
+
+		@media @tablet {
+			padding-top: 245px;
+			padding-left: 40px;
+			max-width: 540px;
+			text-align: inherit;
+		}
+		@media @desktop {
+			padding-left: 80px;
+		}
+		@media @desktop-xl {
+			padding-left: 160px;
+			max-width: 650px;
+		}
+		@media @desktop-xl-2 {
+			padding-left: 130px;
+		}
 	}
 	&__title {
-		font-size: 72px;
+		font-size: 36px;
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 2px;
+
+		@media @tablet {
+			font-size: 46px;
+		}
+		@media @desktop {
+			font-size: 54px;
+		}
+		@media @desktop-xl {
+			font-size: 64px;
+		}
+		@media @desktop-xl-2 {
+			font-size: 72px;
+		}
 	}
 	&__text {
-		padding-top: 35px;
-		font-size: 24px;
+		padding-top: 15px;
+		font-size: 19px;
 		letter-spacing: .6px;
+
+		@media @tablet {
+			font-size: 22px;
+			padding-top: 25px;
+		}
+		@media @desktop {
+			font-size: 23px;
+		}
+		@media @desktop-xl {
+			font-size: 24px;
+		}
+		@media @desktop-xl-2 {
+			padding-top: 35px;
+		}
 	}
 
 	&__img1 {
-		position: absolute;
-		bottom: 20px;
-		left: -370px;
+		display: none;
+
+		@media @desktop-xl {
+			display: block;
+			position: absolute;
+			bottom: 20px;
+			left: -120px;
+			max-width: 240px;
+		}
+		@media @desktop-xl-2 {
+			max-width: 368px;
+			left: -370px;
+		}
 	}
+
 	&__img2 {
-		position: absolute;
-		bottom: -45px;
-		left: -90px;
+		display: none;		
+
+		@media @tablet {
+			display: block;
+			position: absolute;
+			bottom: -40px;
+			left: -60px;
+			max-width: 360px;
+		}
+		@media @desktop {
+			left: -20px;
+			bottom: 0px;
+		}
+		@media @desktop-xl {
+			left: 40px;
+		}
+		@media @desktop-xl-2 {
+			max-width: 442px;
+			left: -90px;
+		}
 	}
+
 	&__img3 {
-		position: absolute;
-		bottom: -60px;
-		right: -120px;
+		display: none;
+		@media @desktop {
+			display: block;
+			position: absolute;
+			bottom: 70px;
+			right: -120px;
+			max-width: 240px;
+		}
+		@media @desktop-xl {
+			max-width: 285px;
+			bottom: 0px;
+			right: -120px;
+		}
+		@media @desktop-xl-2 {
+			max-width: 365px;
+			bottom: -30px;
+			right: -120px;
+		}
 	}
 }
 
@@ -79,14 +214,46 @@
 .stringBackStat {
 	padding-top: 95px;
 
+	@media @tablet {
+
+	}
+	@media @desktop {
+
+	}
+	@media @desktop-xl {
+
+	}
+	@media @desktop-xl-2 {
+
+	}
+
 	&__list {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-between;
 		list-style-type: none;
+
+		@media @tablet {
+			flex-wrap: nowrap;
+		}
 	}
+
 	&__item {
+		max-width: 350px;
+		margin: auto;
+		margin-bottom: 80px;
 		border-top: 2px solid @lime;
-		flex-basis: 24%;
+
+		@media @mobile-land {
+			flex-basis: 48%;
+			max-width: inherit;
+			margin: inherit;
+			margin-bottom: 80px;
+		}
+
+		@media @tablet {
+			flex-basis: 24%;
+		}
 	}
 
 	&__text {
@@ -95,7 +262,14 @@
 		text-align: center;
 	}
 	&__num {
-		font-size: 24px;
+		font-size: 21px;
 		color: @green;
+
+		@media @tablet {
+
+		}
+		@media @desktop {
+			font-size: 24px;
+		}
 	}
 }

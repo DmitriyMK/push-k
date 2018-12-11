@@ -112,9 +112,9 @@ $(document).ready(function() {
 
 
 
-$(window).on('resize orientationchange', function() {
-  $('.slider').slick('resize');
-});
+// $(window).on('resize orientationchange', function() {
+//   $('.slider').slick('resize');
+// });
 
 
 

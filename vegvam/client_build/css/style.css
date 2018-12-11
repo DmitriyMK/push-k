@@ -754,10 +754,14 @@ textarea {
     display: block;
     position: relative;
 }
+.nav .linkSubmenu .nav__link {
+    cursor: pointer;
+}
 .nav .linkSubmenu .nav__link .nav__title {
     position: relative;
     width: 100px;
     margin: auto;
+    text-align: center;
 }
 .nav .linkSubmenu .nav__link .nav__title:before {
     position: absolute;
@@ -1058,7 +1062,7 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .fixed .logoHide {
-        width: 150px;
+        width: 120px;
         opacity: 1;
         visibility: visible;
     }
@@ -1445,9 +1449,17 @@ textarea {
     }
 }
 .statistics__item {
-    -ms-flex-preferred-size: 48%;
-    flex-basis: 48%;
+    max-width: 350px;
+    margin: auto;
     margin-bottom: 80px;
+}
+@media only screen and (min-width: 480px) {
+    .statistics__item {
+        -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+        max-width: inherit;
+        margin-left: 0;
+    }
 }
 @media only screen and (min-width: 768px) {
     .statistics__item {
@@ -1620,57 +1632,233 @@ textarea {
     }
 }
 .stringBack {
-    padding-top: 120px;
+    padding-top: 80px;
+}
+@media only screen and (min-width: 1600px) {
+    .stringBack {
+        padding-top: 120px;
+    }
 }
 .stringBack__top {
     padding: 15px;
     background: #7aa542;
 }
+@media only screen and (min-width: 768px) {
+    .stringBack__top {
+        padding: 15px 0;
+    }
+}
 .stringBack__top .container {
     position: relative;
 }
 .stringBack__line {
-    margin-top: -160px;
-    padding-bottom: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: -220px;
+}
+@media only screen and (min-width: 768px) {
+    .stringBack__line {
+        margin-top: -160px;
+        padding-bottom: 20px;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -webkit-box-align: inherit;
+        -ms-flex-align: inherit;
+        align-items: inherit;
+    }
 }
 .stringBack__photo {
-    padding-left: 45px;
-    max-width: 280px;
+    padding-left: 0;
+}
+.stringBack__photo img {
+    max-width: 180px;
+    margin: auto;
+}
+@media only screen and (min-width: 768px) {
+    .stringBack__photo img {
+        max-width: 280px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .stringBack__photo {
+        padding-left: 45px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .stringBack__photo {
+        padding-left: 115px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .stringBack__photo {
+        padding-left: 45px;
+    }
 }
 .stringBack__content {
-    padding-top: 245px;
-    padding-left: 130px;
-    max-width: 650px;
+    padding-top: 90px;
+    padding-bottom: 80px;
+    max-width: 400px;
+    text-align: center;
     color: #fff;
 }
+@media only screen and (min-width: 768px) {
+    .stringBack__content {
+        padding-top: 245px;
+        padding-left: 40px;
+        max-width: 540px;
+        text-align: inherit;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .stringBack__content {
+        padding-left: 80px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .stringBack__content {
+        padding-left: 160px;
+        max-width: 650px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .stringBack__content {
+        padding-left: 130px;
+    }
+}
 .stringBack__title {
-    font-size: 72px;
+    font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+@media only screen and (min-width: 768px) {
+    .stringBack__title {
+        font-size: 46px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .stringBack__title {
+        font-size: 54px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .stringBack__title {
+        font-size: 64px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .stringBack__title {
+        font-size: 72px;
+    }
+}
 .stringBack__text {
-    padding-top: 35px;
-    font-size: 24px;
+    padding-top: 15px;
+    font-size: 19px;
     letter-spacing: 0.6px;
 }
+@media only screen and (min-width: 768px) {
+    .stringBack__text {
+        font-size: 22px;
+        padding-top: 25px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .stringBack__text {
+        font-size: 23px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .stringBack__text {
+        font-size: 24px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .stringBack__text {
+        padding-top: 35px;
+    }
+}
 .stringBack__img1 {
-    position: absolute;
-    bottom: 20px;
-    left: -370px;
+    display: none;
+}
+@media only screen and (min-width: 1200px) {
+    .stringBack__img1 {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: -120px;
+        max-width: 240px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .stringBack__img1 {
+        max-width: 368px;
+        left: -370px;
+    }
 }
 .stringBack__img2 {
-    position: absolute;
-    bottom: -45px;
-    left: -90px;
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+    .stringBack__img2 {
+        display: block;
+        position: absolute;
+        bottom: -40px;
+        left: -60px;
+        max-width: 360px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .stringBack__img2 {
+        left: -20px;
+        bottom: 0;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .stringBack__img2 {
+        left: 40px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .stringBack__img2 {
+        max-width: 442px;
+        left: -90px;
+    }
 }
 .stringBack__img3 {
-    position: absolute;
-    bottom: -60px;
-    right: -120px;
+    display: none;
+}
+@media only screen and (min-width: 992px) {
+    .stringBack__img3 {
+        display: block;
+        position: absolute;
+        bottom: 70px;
+        right: -120px;
+        max-width: 240px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .stringBack__img3 {
+        max-width: 285px;
+        bottom: 0;
+        right: -120px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .stringBack__img3 {
+        max-width: 365px;
+        bottom: -30px;
+        right: -120px;
+    }
 }
 .stringBackStat {
     padding-top: 95px;
@@ -1679,15 +1867,39 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
     list-style-type: none;
 }
+@media only screen and (min-width: 768px) {
+    .stringBackStat__list {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    }
+}
 .stringBackStat__item {
+    max-width: 350px;
+    margin: auto;
+    margin-bottom: 80px;
     border-top: 2px solid #95c557;
-    -ms-flex-preferred-size: 24%;
-    flex-basis: 24%;
+}
+@media only screen and (min-width: 480px) {
+    .stringBackStat__item {
+        -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+        max-width: inherit;
+        margin: inherit;
+        margin-bottom: 80px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .stringBackStat__item {
+        -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
+    }
 }
 .stringBackStat__text {
     padding-top: 25px;
@@ -1695,8 +1907,13 @@ textarea {
     text-align: center;
 }
 .stringBackStat__num {
-    font-size: 24px;
+    font-size: 21px;
     color: #337d5a;
+}
+@media only screen and (min-width: 992px) {
+    .stringBackStat__num {
+        font-size: 24px;
+    }
 }
 .catalog__list {
     padding: 60px 15px;

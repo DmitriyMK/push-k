@@ -187,10 +187,12 @@
 		display: block;
 		position: relative;
 		.nav__link {
+			cursor: pointer;
 			.nav__title {
 				position: relative;
 				width: 100px;
 				margin: auto;
+				text-align: center;
 				&:before {
 					position: absolute;
 					content: '\e80a';
@@ -478,7 +480,7 @@
 
 	.logoHide {
 		@media @desktop {
-			width: 150px;
+			width: 120px;
 			opacity: 1;
 			visibility: visible;
 		}

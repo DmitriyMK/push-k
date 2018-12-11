@@ -33,8 +33,15 @@
 		}
 	}
 	&__item {
-		flex-basis: 48%;
+		max-width: 350px;
+		margin: auto;
 		margin-bottom: 80px;
+		
+		@media @mobile-land {
+			flex-basis: 48%;
+			max-width: inherit;
+			margin-left: 0;
+		}
 
 		@media @tablet {
 			flex-basis: 24%;
@@ -54,10 +61,6 @@
 		max-width: 190px;
 		font-size: 18px;
 		text-align: center;
-
-		@media @tablet {
-
-		}
 	}
 	&__num {
 		font-size: 21px;
