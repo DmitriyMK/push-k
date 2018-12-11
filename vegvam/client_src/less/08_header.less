@@ -47,35 +47,47 @@
 		@media @desktop-xl {
 			flex-basis: 105px;
 		}
+	}	
+
+	.logoBig-img {
+		display: block;
+		height: 141px;
+		width: 178px;
+		transition: all .25s linear;
+	}
+	.logoBig-text {
+		display: block;
+		transform: translateY(3px);
+		transition: all .4s linear;
 	}
 
-	.logoBig {
-		display: none;
-		@media @desktop {
-			display: block;
-			max-height: 90px;
-		}
-		@media @desktop-xl {
-			max-height: 159px;
-		}
-		@media @desktop-xl-2 {
-			max-height: 199px;
-		}
-	}
-	.logoHide {
-		max-width: 120px;
-		@media @desktop {
-			margin-top: 35px;
-			// width: 0;s
-			opacity: 0;
-			max-width: 178px;
-			// visibility: hidden;
-			transition: width .3s linear;
-		}
-		@media @desktop-xl-2 {
-			margin-top: 0;
-		}
-	}
+	// .logoBig {
+	// 	display: none;
+	// 	@media @desktop {
+	// 		display: block;
+	// 		max-height: 90px;
+	// 	}
+	// 	@media @desktop-xl {
+	// 		max-height: 159px;
+	// 	}
+	// 	@media @desktop-xl-2 {
+	// 		max-height: 199px;
+	// 	}
+	// }
+	// .logoHide {
+	// 	max-width: 120px;
+	// 	@media @desktop {
+	// 		margin-top: 35px;
+	// 		// width: 0;s
+	// 		opacity: 0;
+	// 		max-width: 178px;
+	// 		// visibility: hidden;
+	// 		transition: width .3s linear;
+	// 	}
+	// 	@media @desktop-xl-2 {
+	// 		margin-top: 0;
+	// 	}
+	// }
 
 	&__info {
 		display: flex;
@@ -489,38 +501,48 @@
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-	height: 60px;
+	// height: 60px;
 	background: @lime;
 
 	@media @desktop {
-		height: 80px;
+		// height: 80px;
 	}
 
 	.header__top {
 		align-items: center;
 	}
 
-	.logoHide {
-		@media @desktop {
-			width: 120px;
-			opacity: 1;
-			visibility: visible;
-		}
-		@media @desktop-xl-2 {
-			width: 178px;
-		}
-	}
+	// .logoHide {
+	// 	@media @desktop {
+	// 		width: 120px;
+	// 		opacity: 1;
+	// 		visibility: visible;
+	// 	}
+	// 	@media @desktop-xl-2 {
+	// 		width: 178px;
+	// 	}
+	// }
 
 	.logoBig {
 		@media @desktop {
-			margin-top: -196px;
-			visibility: hidden;
-			transform: translateY(-240px);
-			// height: 0;
-			// width: 0;
-			transition: all .3s linear;
+			// margin-top: -196px;
+			// visibility: hidden;
+			// transform: translateY(-240px);
+			// // height: 0;
+			// // width: 0;
+			// transition: all .3s linear;
 		}
 	}
+
+	.logoBig-img {
+		transform: translateY(-200px);
+		opacity: 0;
+		height: 0;
+	}
+	.logoBig-text {
+		transform: translateY(0px);
+	}
+
 	
 	.header__top {
 		@media @desktop {

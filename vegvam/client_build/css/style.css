@@ -580,42 +580,22 @@ textarea {
         flex-basis: 105px;
     }
 }
-.header .logoBig {
-    display: none;
+.header .logoBig-img {
+    display: block;
+    height: 141px;
+    width: 178px;
+    -webkit-transition: all 0.25s linear;
+         -o-transition: all 0.25s linear;
+            transition: all 0.25s linear;
 }
-@media only screen and (min-width: 992px) {
-    .header .logoBig {
-        display: block;
-        max-height: 90px;
-    }
-}
-@media only screen and (min-width: 1200px) {
-    .header .logoBig {
-        max-height: 159px;
-    }
-}
-@media only screen and (min-width: 1600px) {
-    .header .logoBig {
-        max-height: 199px;
-    }
-}
-.header .logoHide {
-    max-width: 120px;
-}
-@media only screen and (min-width: 992px) {
-    .header .logoHide {
-        margin-top: 35px;
-        opacity: 0;
-        max-width: 178px;
-        -webkit-transition: width 0.3s linear;
-             -o-transition: width 0.3s linear;
-                transition: width 0.3s linear;
-    }
-}
-@media only screen and (min-width: 1600px) {
-    .header .logoHide {
-        margin-top: 0;
-    }
+.header .logoBig-text {
+    display: block;
+    -webkit-transform: translateY(3px);
+        -ms-transform: translateY(3px);
+            transform: translateY(3px);
+    -webkit-transition: all 0.4s linear;
+         -o-transition: all 0.4s linear;
+            transition: all 0.4s linear;
 }
 .header__info {
     display: -webkit-box;
@@ -1088,13 +1068,9 @@ textarea {
     left: 0;
     width: 100%;
     z-index: 1000;
-    height: 60px;
     background: #95c557;
 }
 @media only screen and (min-width: 992px) {
-    .fixed {
-        height: 80px;
-    }
 }
 .fixed .header__top {
     -webkit-box-align: center;
@@ -1102,28 +1078,18 @@ textarea {
     align-items: center;
 }
 @media only screen and (min-width: 992px) {
-    .fixed .logoHide {
-        width: 120px;
-        opacity: 1;
-        visibility: visible;
-    }
 }
-@media only screen and (min-width: 1600px) {
-    .fixed .logoHide {
-        width: 178px;
-    }
+.fixed .logoBig-img {
+    -webkit-transform: translateY(-200px);
+        -ms-transform: translateY(-200px);
+            transform: translateY(-200px);
+    opacity: 0;
+    height: 0;
 }
-@media only screen and (min-width: 992px) {
-    .fixed .logoBig {
-        margin-top: -196px;
-        visibility: hidden;
-        -webkit-transform: translateY(-240px);
-            -ms-transform: translateY(-240px);
-                transform: translateY(-240px);
-        -webkit-transition: all 0.3s linear;
-             -o-transition: all 0.3s linear;
-                transition: all 0.3s linear;
-    }
+.fixed .logoBig-text {
+    -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+            transform: translateY(0px);
 }
 @media only screen and (min-width: 992px) {
     .fixed .header__top {
