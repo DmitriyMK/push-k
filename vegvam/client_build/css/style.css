@@ -2071,6 +2071,7 @@ textarea {
 @media only screen and (min-width: 992px) {
     .fabricBags__content {
         margin: inherit;
+        text-align: inherit;
         margin-left: 190px;
         max-width: 500px;
     }
@@ -2111,11 +2112,7 @@ textarea {
 @media only screen and (min-width: 992px) {
     .fabricBags__btn {
         font-size: 30px;
-    }
-}
-@media only screen and (min-width: 1200px) {
-    .fabricBags__btn {
-        margin: inherit;
+        margin: 0;
         margin-top: 50px;
     }
 }
