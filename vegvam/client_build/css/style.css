@@ -467,6 +467,7 @@ body {
          -o-transition: width 0.3s linear;
             transition: width 0.3s linear;
     z-index: -1;
+    border-radius: 5px;
 }
 .btn:hover {
     color: #fff;
@@ -1958,9 +1959,15 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin: auto;
     width: 270px;
     height: 275px;
     background: #f7f6f6;
+}
+@media only screen and (min-width: 1200px) {
+    .catalog__link {
+        margin: inherit;
+    }
 }
 .catalog__img {
     display: block;
