@@ -1965,11 +1965,17 @@ textarea {
     }
 }
 .catalog__item {
-    -ms-flex-preferred-size: 49%;
-    flex-basis: 49%;
-    margin-bottom: 60px;
+    -ms-flex-preferred-size: 98%;
+    flex-basis: 98%;
     margin-left: 0.5%;
     margin-right: 0.5%;
+    margin-bottom: 60px;
+}
+@media only screen and (min-width: 480px) {
+    .catalog__item {
+        -ms-flex-preferred-size: 49%;
+        flex-basis: 49%;
+    }
 }
 @media only screen and (min-width: 992px) {
     .catalog__item {

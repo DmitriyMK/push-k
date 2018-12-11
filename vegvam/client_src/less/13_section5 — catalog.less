@@ -40,11 +40,16 @@
 	}
 
 	&__item {
-		flex-basis: 49%;
-		margin-bottom: 60px;
+		// flex-basis: 49%;
+		
+		flex-basis: 98%;
 		margin-left: .5%;
 		margin-right: .5%;
-
+		margin-bottom: 60px;
+		
+		@media @mobile-land {
+			flex-basis: 49%;
+		}
 		@media @desktop {
 			flex-basis: 38%;
 		}
