@@ -1605,6 +1605,7 @@ textarea {
     }
 }
 .catalogFirst__price {
+    display: block;
     font-size: 24px;
     font-weight: 700;
     color: #337d5a;
@@ -2325,6 +2326,7 @@ textarea {
     }
 }
 .catalogPlasticFree__price {
+    display: block;
     font-size: 24px;
     font-weight: 700;
     color: #337d5a;
