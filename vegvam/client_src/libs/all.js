@@ -85,6 +85,26 @@ $(document).ready(function() {
     dots: true,
     infinite: true,
     initialSlide: 2,
+
+    responsive: [
+
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          initialSlide: 1,
+          autoplay: true
+        }
+      }
+
+    ]
   });
 
 

@@ -21,18 +21,46 @@
 }
 
 .recipes {
-	padding: 80px 0;
+	padding: 60px 0;
+
+	@media @desktop-xl {
+		padding: 80px 0;
+	}
 
 	&__title {
-		font-size: 36px;
+		font-size: 31px;
 		font-weight: 700;
 		text-align: center;
 		text-transform: uppercase;
 		letter-spacing: 2px;
+
+		@media @tablet {
+			font-size: 36px;
+		}
 	}
 	&__list {
 		padding: 30px 0;
 	}
+
+	&__item {
+		flex-basis: 98%;
+		margin-bottom: 30px;
+		margin-left: .5%;
+		margin-right: .5%;
+		
+		@media @tablet {
+			flex-basis: 49%;
+		}
+		@media @desktop {
+			flex-basis: 38%;
+			margin-bottom: 60px;
+		}
+		@media @desktop-xl {
+			flex-basis: 24%;
+		}
+	}
+
+
 	&__link {
 		width: inherit;
 		max-width: 285px;

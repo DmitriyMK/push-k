@@ -86,16 +86,22 @@
 		object-position: center;
 		
 		@media @desktop {
-			max-height: 500px;
+			max-height: 400px;
 		}
 	}
 
 	&__name {
 		padding-top: 40px;
 		padding-bottom: 10px;
-		font-size: 24px;
+		font-size: 20px;
 		letter-spacing: 1.25px;
+
+		@media @tablet {
+			min-height: 134px;
+			font-size: 24px;
+		}
 	}
+
 	&__price {
 		font-size: 24px;
 		font-weight: 700;

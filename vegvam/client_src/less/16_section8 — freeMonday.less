@@ -32,57 +32,154 @@
 	}
 
 	&__title {
+		position: relative;
+		z-index: 10;
 		padding-bottom: 20px;
-		font-size: 36px;
+		font-size: 31px;
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 1.8px;
+
+		@media @tablet {
+
+		}
+		@media @desktop {
+			font-size: 36px;
+		}
 	}
 	&__text {
-		font-size: 24px;
+		position: relative;
+		z-index: 10;
+		font-size: 19px;
 		letter-spacing: 1.3px;
+
+		@media @tablet {
+			font-size: 24px;
+		}
 	}
 
 	&__slider {
 		position: relative;
-		margin-top: 75px;
-		margin-left:  250px;
-		margin-right: 250px;
+		margin-top: 35px;
+		z-index: 10;
+
+		@media @tablet {
+			margin-left: 150px;
+			margin-right: 150px;
+		}
+		@media @desktop {
+			margin-top: 75px;
+			margin-left:  250px;
+			margin-right: 250px;
+		}
 	}
 
 	&__accent {
 		color: @lime;
-		font-size: 48px;
+		font-size: 40px;
 		font-weight: 700;
+
+		@media @tablet {
+			font-size: 48px;
+		}
 	}
+
 	&__fact {
-		padding: 25px 0;
-		font-size: 24px;
+		padding: 15px 0;
+		font-size: 20px;
 		letter-spacing: 1px;
+
+		@media @tablet {
+			padding: 25px 0;
+			font-size: 24px;
+		}
 	}
 
 	&__paprika {
-		position: absolute;
-		top: -220px;
-		left: -380px;
+		display: none;
+
+		@media @tablet {
+			display: block;
+			position: absolute;
+			top: 95px;
+			left: -170px;
+			max-width: 300px;
+		}
+		@media @desktop {
+			top: 0px;
+			max-width: 350px;
+		}
+		@media @desktop-xl {
+			top: -220px;
+			left: -380px;
+			max-width: 609px;
+		}
 	}
 	&__pepper {
 		position: absolute;
-		top: -170px;
-		right: -140px;
+		top: -210px;
+		left: 10px;
+		max-width: 121px;
+
+		@media @tablet {
+			top: -100px;
+			left: inherit;
+			right: -60px;
+			max-width: 141px;
+		}
+		@media @desktop {
+			max-width: 181px;
+			right: -20px;
+		}
+		@media @desktop-xl {
+			max-width: 291px;
+			top: -170px;
+			right: -140px;
+		}
 	}
 	&__avocado1 {
-		position: absolute;
-		right: -130px;
-		top: 200px;
+		display: none;
+
+		@media @desktop {
+			display: block;
+			position: absolute;
+			right: -80px;
+			top: 200px;
+		}
+		@media @desktop-xl {
+			right: -180px;
+		}
 	}
 	&__avocado2 {
 		position: absolute;
-		right: 0;
+		bottom: 0px;
+		right: 0px;
+		max-width: 124px;
+
+		@media @tablet {
+			bottom: -160px;
+			right: -90px;
+			max-width: 224px;
+		}
+		@media @desktop {
+			right: 70px;
+		}
+		@media @desktop-xl {
+			right: 0;
+		}
 	}
 	&__spices {
 		position: absolute;
-		top: 150px;
-		right: -380px;
+		top: -100px;
+		right: -25px;
+
+		@media @tablet {
+			top: 50px;
+			right: -40px;
+		}
+		@media @desktop-xl {
+			top: 150px;
+			right: -380px;
+		}
 	}
 }

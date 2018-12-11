@@ -1,12 +1,16 @@
 .slick-prev,
 .slick-next {
 	top: 50%;
-	transform: translateY(-50%);
+	transform: translateY(-82%);
 	width: 50px;
 	height: 100%;
 	opacity: 1;
 	transition: all .3s linear;
 	z-index: 100;
+
+	@media @tablet {
+		transform: translateY(-50%);
+	}
 	&:before {
 		display: block;
 		font-size: 65px;
@@ -22,10 +26,16 @@
 	}
 }
 .slick-prev {
-	left: -70px;	
+	left: 0px;
+	@media @tablet {
+		left: -70px;
+	}	
 }
 .slick-next {
-	right: -70px; 
+	right: 0px; 
+	@media @tablet {
+		right: -70px; 
+	}
 }
 .slick-prev:before {
 	content: '\e805';

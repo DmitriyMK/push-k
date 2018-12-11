@@ -22,16 +22,33 @@
 	background: @green;
 	color: #fff;
 	&__box {
-		padding: 25px 10px;
+		padding: 30px 10px;
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+
+		@media @tablet {
+
+		}
+		@media @desktop {
+			flex-direction: row;
+			justify-content: space-between;
+			text-align: inherit;
+		}
 	}
 
 	&__accent {
 		display: block;
-		font-size: 24px;
+		margin-bottom: 10px;
+		font-size: 20px;
 		font-weight: 700;
 		letter-spacing: .55px;
+
+		@media @tablet {
+			margin-bottom: 0;
+			font-size: 24px;
+		}
 	}
 
 	&__copy {
@@ -40,14 +57,25 @@
 	}
 
 	&__line-top {
+		margin-top: 30px;
 		padding-bottom: 10px;
-		font-size: 24px;
+		font-size: 21px;
 		font-weight: 700;
 		letter-spacing: 2px;
+
+		@media @tablet {
+			font-size: 24px;
+		}
+		@media @desktop {
+			margin-top: 0;
+		}
 	}
+
 	&__line-bottom {
 		font-size: 20px;
-		text-align: right;
+		@media @desktop {
+			text-align: right;
+		}
 	}
 
 	&__link {

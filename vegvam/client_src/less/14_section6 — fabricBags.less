@@ -26,134 +26,114 @@
 	padding-bottom: 30px;
 
 	&__top {
-		background: url(../images/ecoBag__back.jpg)no-repeat center/cover;
+		background: url(../images/ecoBag__back.jpg)no-repeat;
+		background-size: cover;
+		background-position: 45% 50%;
 		min-height: 430px;
 		overflow: hidden;
-	}
 
+		@media @tablet {
+			background-position: center center;
+		}
+	}
 	&__content {
 		position: relative;
-		padding-top: 70px;
-		margin-left: 190px;
-		max-width: 500px;
+		padding-top: 100px;
+		padding-bottom: 50px;
+		max-width: 350px;
+		margin: auto;
+		text-align: center;
 
 		@media @tablet {
-
+			padding-top: 70px;
+			padding-bottom: 0;
+			max-width: 500px;
 		}
 		@media @desktop {
-
-		}
-		@media @desktop-xl {
-
+			margin: inherit;
+			margin-left: 190px;
+			max-width: 500px;
 		}
 	}
-
 	&__title {
+		position: relative;
 		display: inline;
-		font-size: 30px;
+		font-size: 24px;
 		letter-spacing: 1.7px;
+		z-index: 20;
 
 		@media @tablet {
-
-		}
-		@media @desktop {
-
-		}
-		@media @desktop-xl {
-
+			font-size: 30px;
 		}
 	}
 	&__text {
+		position: relative;
 		display: inline;
-		font-size: 30px;
+		font-size: 22px;
 		letter-spacing: .6px;
 
 		@media @tablet {
-
-		}
-		@media @desktop {
-
-		}
-		@media @desktop-xl {
-
+			font-size: 30px;
 		}
 	}
-
 	&__btn {
 		position: relative;
 		display: block;
+		margin: auto;
 		margin-top: 50px;
 		width: 220px;
-		font-size: 30px;
+		font-size: 26px;
 		text-align: center;
 		z-index: 10;
 
-		@media @tablet {
-
-		}
 		@media @desktop {
-
+			font-size: 30px;
 		}
 		@media @desktop-xl {
-
+			margin: inherit;
+			margin-top: 50px;
 		}
 	}
-
 	&__img1 {
-		position: absolute;
-		top: -15px;
-		left: -145px;
+		display: none;
 
 		@media @tablet {
-
-		}
-		@media @desktop {
-
+			display: block;
+			position: absolute;
+			top: -15px;
+			left: -145px;
 		}
 		@media @desktop-xl {
 			left: -105px;
 		}
 	}
 	&__img2 {
-		position: absolute;
-		bottom: -125px;
-		left: -195px;
-
+		display: none;
 		@media @tablet {
-
-		}
-		@media @desktop {
-
-		}
-		@media @desktop-xl {
-
+			display: block;
+			position: absolute;
+			bottom: -125px;
+			left: -195px;
 		}
 	}
 	&__img3 {
-		position: absolute;
-		bottom: -80px;
-		right: -15px;
+		display: none;
 
 		@media @tablet {
-
-		}
-		@media @desktop {
-
-		}
-		@media @desktop-xl {
-
+			display: block;
+			position: absolute;
+			bottom: -80px;
+			right: -15px;
 		}
 	}
 	&__img4 {
-		position: absolute;
-		top: -50px;
-		right: -150px;
+		display: none;
 
 		@media @tablet {
-
-		}
-		@media @desktop {
-
+			display: block;
+			position: absolute;
+			top: -50px;
+			right: -150px;
 		}
 		@media @desktop-xl {
 			top: 40px;

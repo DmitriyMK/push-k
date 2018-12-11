@@ -25,25 +25,36 @@
 	
 	&__top {
 		position: relative;
-		padding-top: 90px;
-		padding-bottom: 90px;
+		padding: 80px 0;
 		background: #7aa542;
 		text-align: center;
 		letter-spacing: 1.5px;
 		overflow: hidden;
+
+		@media @desktop {
+			padding: 90px 0;
+		}
 	}
 
 	&__title {
 		padding-bottom: 20px;
-		font-size: 36px;
+		font-size: 31px;
 		font-weight: 700;
 		color: #fff;
 		text-transform: uppercase;
+
+		@media @tablet {
+			font-size: 36px;
+		}
 	}
 	&__text {
 		padding-bottom: 40px;
-		font-size: 24px;
+		font-size: 21px;
 		color: #fff;
+
+		@media @tablet {
+			font-size: 24px;
+		}
 	}
 	
 
@@ -64,11 +75,15 @@
 		margin: auto;
 		border-radius: 50%;
 
-		border-radius: 50%;
-		width: 222px;
-		height: 222px;
+		width: 200px;
+		height: 200px;
 		object-fit: cover;
 		object-position: center;
+
+		@media @tablet {
+			width: 222px;
+			height: 222px;
+		}
 	}
 
 	.slide__title {
@@ -88,6 +103,7 @@
 
 	.slick-prev,
 	.slick-next {
+		transform: translateY(-68%);
 		&:hover, &:focus {
 			box-shadow: none;
 
@@ -95,14 +111,24 @@
 				color: #181d23;
 			}
 		}		
+
+		@media @tablet {
+			transform: translateY(-50%);
+		}
 	}
 	.slick-prev {
 		left: 0px;	
-		width: 150px;
+		width: 50px;
+		@media @tablet {
+			width: 150px;
+		}
 	}
 	.slick-next {
 		right: 0px; 
-		width: 150px;
+		width: 50px;
+		@media @tablet {
+			width: 150px;
+		}
 	}
 	
 	.container {
@@ -111,33 +137,83 @@
 	}
 
 	&__parsley {
-		position: absolute;
-		bottom: -180px;
-		left: -370px;
-		z-index: 1;
+		display: none;
+
+		@media @tablet {
+			display: block;
+			position: absolute;
+			bottom: -180px;
+			left: -310px;
+			max-width: 650px;
+			z-index: 1;
+		}
+		@media @desktop-xl {
+			max-width: 881px;
+			bottom: -180px;
+			left: -370px;
+		}
 	}
 	&__rosemary {
-		position: absolute;
-		top: 140px;
-		right: 190px;
+		display: none;
+
+		@media @desktop {
+			display: block;
+			position: absolute;
+			top: 40px;
+			right: -40px;
+		}
+		@media @desktop-xl {
+			top: 140px;
+			right: 190px;
+		}
 	}
 	&__saucer {
-		position: absolute;
-		bottom: -80px;
-		right: -40px;
+		display: none;
+
+		@media @tablet {
+			position: absolute;
+			bottom: -30px;
+			right: 0px;
+			max-width: 200px;
+		}
+		@media @desktop {
+			max-width: 249px;
+			right: -40px;
+			bottom: -80px;
+		}
 	}
 
 	.btn {
+		position: relative;
+		z-index: 20;
 		font-size: 23px;
 	}
 	
 
 	&__catalog {
 		padding-top: 30px;
-		padding-bottom: 60px;
+		padding-bottom: 30px;
+		
+		@media @desktop {
+			padding-bottom: 60px;
+		}
 	}
 	&__imgCatalog {
 		height: 270px;
 		width: 270px;
+	}
+
+	.catalog__item {
+		flex-basis: 98%;
+		
+		@media @tablet {
+			flex-basis: 49%;
+		}
+		@media @desktop {
+			flex-basis: 38%;
+		}
+		@media @desktop-xl {
+			flex-basis: 24%;
+		}
 	}
 }
