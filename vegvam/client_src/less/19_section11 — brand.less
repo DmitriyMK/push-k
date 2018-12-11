@@ -27,12 +27,18 @@
 	&__box {
 		position: relative;
 		padding: 115px 20px;
+		overflow: hidden;
 	}
 	&__slider {
-		display: flex;
-		align-items: center;
+		// display: flex;
+		// align-items: center;
+		position: relative;
+		width: 100%;
+		
 	}
+
 	&__slide {
+		display: inline-block;
 		padding: 25px 10px;
 		border: 2px solid transparent;
 		border-radius: 5px;
@@ -118,13 +124,20 @@
 			right: 370px; 
 		}
 	}
-	.slick-dots {
-		display: inline-block!important;
-		left: 0;
-		top: inherit;
-		bottom: -90px;
 
+	.slick-dots {
+		display: flex!important;
+		justify-content: center;
+
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: inherit;
+		bottom: -88px;
+
+	
 		li {
+			display: inline;
 			margin: 4px 8px;
 			margin-bottom: 10px;
 			width: 13px;
