@@ -64,12 +64,13 @@
 	.logoHide {
 		max-width: 120px;
 		@media @desktop {
-			margin-top: 15px;
-			width: 0;
+			// margin-top: 15px;
+			// width: 0;
+			// opacity: 0;
 			max-width: 178px;
-			opacity: 0;
+
 			visibility: hidden;
-			transition: width .2s linear;
+			transition: width .3s linear;
 		}
 	}
 
@@ -480,10 +481,6 @@
 	z-index: 1000;
 	background: @lime;
 
-	@media @desktop {
-		top: -10px;
-	}
-
 	.header__top {
 		align-items: center;
 	}
@@ -501,10 +498,11 @@
 
 	.logoBig {
 		@media @desktop {
+			margin-top: -160px;
 			visibility: hidden;
 			transform: translateY(-240px);
-			height: 0;
-			width: 0;
+			// height: 0;
+			// width: 0;
 			transition: all .3s linear;
 		}
 	}
@@ -516,9 +514,10 @@
 	}
 	.header__line-contact {
 		@media @desktop {
-			transform: translateY(-240px);
-			transition: transform .3s linear;
-			height: 0;
+			position: absolute;
+			top: -240px;
+			right: 0;
+			transition: all .5s linear;
 		}
 	}
 }

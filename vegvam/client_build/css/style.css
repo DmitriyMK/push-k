@@ -585,14 +585,11 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .header .logoHide {
-        margin-top: 15px;
-        width: 0;
         max-width: 178px;
-        opacity: 0;
         visibility: hidden;
-        -webkit-transition: width 0.2s linear;
-             -o-transition: width 0.2s linear;
-                transition: width 0.2s linear;
+        -webkit-transition: width 0.3s linear;
+             -o-transition: width 0.3s linear;
+                transition: width 0.3s linear;
     }
 }
 .header__info {
@@ -1061,11 +1058,6 @@ textarea {
     z-index: 1000;
     background: #95c557;
 }
-@media only screen and (min-width: 992px) {
-    .fixed {
-        top: -10px;
-    }
-}
 .fixed .header__top {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1085,12 +1077,11 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .fixed .logoBig {
+        margin-top: -160px;
         visibility: hidden;
         -webkit-transform: translateY(-240px);
             -ms-transform: translateY(-240px);
                 transform: translateY(-240px);
-        height: 0;
-        width: 0;
         -webkit-transition: all 0.3s linear;
              -o-transition: all 0.3s linear;
                 transition: all 0.3s linear;
@@ -1103,15 +1094,12 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .fixed .header__line-contact {
-        -webkit-transform: translateY(-240px);
-            -ms-transform: translateY(-240px);
-                transform: translateY(-240px);
-        -webkit-transition: -webkit-transform 0.3s linear;
-                transition: -webkit-transform 0.3s linear;
-             -o-transition:         transform 0.3s linear;
-                transition:         transform 0.3s linear;
-                transition:         transform 0.3s linear, -webkit-transform 0.3s linear;
-        height: 0;
+        position: absolute;
+        top: -240px;
+        right: 0;
+        -webkit-transition: all 0.5s linear;
+             -o-transition: all 0.5s linear;
+                transition: all 0.5s linear;
     }
 }
 .hero {
@@ -1600,7 +1588,6 @@ textarea {
 }
 @media only screen and (min-width: 768px) {
     .catalogFirst__name {
-        min-height: 134px;
         font-size: 24px;
     }
 }
@@ -2666,6 +2653,7 @@ textarea {
             box-shadow: none;
 }
 .catalogBerry .slick-prev:hover:before, .catalogBerry .slick-next:hover:before, .catalogBerry .slick-prev:focus:before, .catalogBerry .slick-next:focus:before {
+    opacity: 1;
     color: #181d23;
 }
 @media only screen and (min-width: 768px) {
@@ -2850,12 +2838,12 @@ textarea {
     }
 }
 @media only screen and (min-width: 768px) {
-    .brand .slick-current + .slick-active {
+    .brand .slick-current + .slick-active + .slick-active {
         border: 2px solid #337d5a;
     }
 }
 @media only screen and (min-width: 768px) {
-    .brand .slick-current + .slick-active img {
+    .brand .slick-current + .slick-active + .slick-active img {
         -webkit-filter: grayscale(0);
                 filter: grayscale(0);
     }
