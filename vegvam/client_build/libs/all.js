@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
   if (document.documentElement.clientWidth > 1200) {
 
     $(window).enllax();

@@ -230,8 +230,6 @@ img {
 .container, .container-fluid {
     margin-right: auto;
     margin-left: auto;
-    padding-left: 2px;
-    padding-right: 3px;
 }
 @media (min-width: 768px) {
     .container {
@@ -401,6 +399,19 @@ button:-moz-focusring, [type='button']:-moz-focusring, [type='reset']:-moz-focus
         bottom: 100px;
     }
 }
+.shdw {
+    -webkit-transition: -webkit-box-shadow 0.3s linear;
+            transition: -webkit-box-shadow 0.3s linear;
+         -o-transition:         box-shadow 0.3s linear;
+            transition:         box-shadow 0.3s linear;
+            transition:         box-shadow 0.3s linear, -webkit-box-shadow 0.3s linear;
+    -webkit-box-shadow: 2px 2px 24px 1px rgba(0, 0, 0, 0);
+            box-shadow: 2px 2px 24px 1px rgba(0, 0, 0, 0);
+}
+.shdw:hover {
+    -webkit-box-shadow: 2px 2px 24px 1px rgba(0, 0, 0, 0.35);
+            box-shadow: 2px 2px 24px 1px rgba(0, 0, 0, 0.35);
+}
 /* ONLY FOR IE11 */
 /* ONLY FOR EDGE */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, q, s, strike, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, section, summary, time, mark, audio, video {
@@ -444,7 +455,6 @@ body {
     position: relative;
     margin: 0;
     min-height: 100vh;
-    padding-right: 0 !important;
     color: #181d23;
     font-size: 16px;
     line-height: 1.2;
@@ -586,11 +596,18 @@ textarea {
 @media only screen and (min-width: 992px) {
     .header .logoBig-img {
         display: block;
-        height: 141px;
-        width: 178px;
+        height: 95px;
+        width: 120px;
+        margin-left: 0;
         -webkit-transition: all 0.25s linear;
              -o-transition: all 0.25s linear;
                 transition: all 0.25s linear;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .header .logoBig-img {
+        width: 178px;
+        height: 141px;
     }
 }
 .header .logoBig-text {
@@ -603,7 +620,7 @@ textarea {
          -o-transition: all 0.4s linear;
             transition: all 0.4s linear;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
     .header .logoBig-text {
         max-width: 178px;
     }
@@ -1124,6 +1141,9 @@ textarea {
     z-index: 10;
     overflow: hidden;
 }
+.hero .container {
+    padding: 0;
+}
 @media only screen and (min-width: 480px) {
     .hero {
         min-height: 450px;
@@ -1153,7 +1173,6 @@ textarea {
     position: relative;
     padding-top: 80px;
     margin-top: 40px;
-    padding-left: 15px;
 }
 @media only screen and (min-width: 480px) {
     .hero__box {
@@ -1168,6 +1187,7 @@ textarea {
 @media only screen and (min-width: 992px) {
     .hero__box {
         padding-top: 200px;
+        padding-left: 15px;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -1268,7 +1288,13 @@ textarea {
     }
 }
 .hero .hero__imgBack {
-    display: none;
+    position: absolute;
+    top: 390px;
+}
+@media only screen and (min-width: 480px) {
+    .hero .hero__imgBack {
+        top: 300px;
+    }
 }
 @media only screen and (min-width: 768px) {
     .hero .hero__imgBack {
@@ -1301,7 +1327,7 @@ textarea {
     -webkit-transform: translateX(-25%);
         -ms-transform: translateX(-25%);
             transform: translateX(-25%);
-    max-width: 350px;
+    max-width: 380px;
     z-index: 5;
 }
 @media only screen and (min-width: 480px) {
@@ -2295,7 +2321,7 @@ textarea {
 }
 @media only screen and (min-width: 1600px) {
     .catalogPlasticFree__link {
-        height: 555px;
+        height: 545px;
     }
 }
 .catalogPlasticFree__img {
@@ -2488,18 +2514,19 @@ textarea {
 }
 .freeMonday__avocado1 {
     display: none;
+    z-index: 10;
 }
 @media only screen and (min-width: 992px) {
     .freeMonday__avocado1 {
         display: block;
         position: absolute;
-        right: -80px;
+        right: -150px;
         top: 200px;
     }
 }
 @media only screen and (min-width: 1200px) {
     .freeMonday__avocado1 {
-        right: -180px;
+        right: -230px;
     }
 }
 .freeMonday__avocado2 {
