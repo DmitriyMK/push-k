@@ -930,14 +930,14 @@ textarea {
     font-size: 14px;
 }
 .nav__box-picture {
-    position: relative;
-    max-width: 215px;
-    max-height: 215px;
-    margin-bottom: 25px;
+    display: none;
 }
 @media only screen and (min-width: 992px) {
     .nav__box-picture {
-        margin-bottom: 0;
+        display: block;
+        position: relative;
+        max-width: 215px;
+        max-height: 215px;
     }
 }
 .nav__box-picture:before {
@@ -1497,6 +1497,11 @@ textarea {
     font-size: 18px;
     text-align: center;
 }
+@media only screen and (min-width: 992px) {
+    .statistics__text {
+        max-width: 240px;
+    }
+}
 .statistics__num {
     font-size: 21px;
     color: #337d5a;
@@ -1574,6 +1579,11 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .catalogFirst__link {
+        height: 420px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .catalogFirst__link {
         height: 555px;
     }
 }
@@ -1592,11 +1602,16 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .catalogFirst__img {
+        max-height: 300px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .catalogFirst__img {
         max-height: 400px;
     }
 }
 .catalogFirst__name {
-    padding-top: 40px;
+    padding-top: 30px;
     padding-bottom: 10px;
     font-size: 20px;
     letter-spacing: 1.25px;
@@ -1682,11 +1697,10 @@ textarea {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: -220px;
+    margin-top: -160px;
 }
 @media only screen and (min-width: 768px) {
     .stringBack__line {
-        margin-top: -160px;
         padding-bottom: 20px;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -1725,7 +1739,7 @@ textarea {
     }
 }
 .stringBack__content {
-    padding-top: 80px;
+    padding-top: 30px;
     padding-bottom: 60px;
     max-width: 400px;
     text-align: center;
@@ -2274,8 +2288,13 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .catalogPlasticFree__link {
-        height: 555px;
         padding: 0;
+        height: 420px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .catalogPlasticFree__link {
+        height: 555px;
     }
 }
 .catalogPlasticFree__img {
@@ -2293,18 +2312,24 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .catalogPlasticFree__img {
+        max-height: inherit;
+        max-height: 420px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .catalogPlasticFree__img {
         max-height: 555px;
     }
 }
 .catalogPlasticFree__name {
-    padding-top: 40px;
+    padding-top: 30px;
     padding-bottom: 10px;
     font-size: 20px;
     letter-spacing: 1.25px;
 }
 @media only screen and (min-width: 768px) {
     .catalogPlasticFree__name {
-        min-height: 134px;
+        min-height: 100px;
         font-size: 24px;
     }
 }
@@ -2435,7 +2460,7 @@ textarea {
 }
 .freeMonday__pepper {
     position: absolute;
-    top: -210px;
+    top: -115px;
     left: 10px;
     max-width: 121px;
 }
@@ -2478,7 +2503,7 @@ textarea {
 }
 .freeMonday__avocado2 {
     position: absolute;
-    bottom: 0;
+    bottom: -120px;
     right: 0;
     max-width: 124px;
 }
@@ -2968,8 +2993,8 @@ textarea {
 }
 .brand__img3 {
     position: absolute;
-    top: -15px;
-    left: 30px;
+    top: -45px;
+    left: 10px;
 }
 @media only screen and (min-width: 768px) {
     .brand__img3 {
@@ -2980,8 +3005,8 @@ textarea {
 }
 .brand__img4 {
     position: absolute;
-    bottom: -90px;
-    right: 35px;
+    bottom: -70px;
+    right: 5px;
 }
 @media only screen and (min-width: 768px) {
     .brand__img4 {
@@ -3102,8 +3127,7 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .info__img {
-        max-height: 614px;
-        width: 555px;
+        max-height: 450px;
     }
 }
 .info__btn {
@@ -3205,7 +3229,7 @@ textarea {
 .vegans .catalog__item {
     -ms-flex-preferred-size: 98%;
     flex-basis: 98%;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     margin-left: 0.5%;
     margin-right: 0.5%;
 }
@@ -3219,7 +3243,6 @@ textarea {
     .vegans .catalog__item {
         -ms-flex-preferred-size: 38%;
         flex-basis: 38%;
-        margin-bottom: 60px;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -3239,7 +3262,7 @@ textarea {
     margin: inherit;
 }
 .vegans__name {
-    padding-top: 30px;
+    padding-top: 15px;
     padding-bottom: 0;
 }
 .vegans .btn {

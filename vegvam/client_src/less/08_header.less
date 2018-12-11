@@ -128,7 +128,6 @@
 		font-size: 20px;
 		font-weight: 700;
 
-
 		.tel {
 			display: block;
 			width: 100%;
@@ -335,13 +334,13 @@
 		font-size: 14px;
 	}
 	&__box-picture {
-		position: relative;
-		max-width: 215px;
-		max-height: 215px;
-		margin-bottom: 25px;
+		display: none;
 
 		@media @desktop {
-			margin-bottom: 0;
+			display: block;
+			position: relative;
+			max-width: 215px;
+			max-height: 215px;
 		}
 
 		&:before {

@@ -94,8 +94,11 @@
 			width: 100%;
 		}
 		@media @desktop {
-			height: 555px;
 			padding: 0;
+			height: 420px;
+		}
+		@media @desktop-xl-2 {
+			height: 555px;
 		}
 	}
 	&__img {
@@ -108,18 +111,23 @@
 		object-fit: cover;
 		object-position: center;
 		
+
 		@media @desktop {
+			max-height: inherit;
+			max-height: 420px;
+		}
+		@media @desktop-xl-2 {
 			max-height: 555px;
 		}
 	}
 	&__name {
-		padding-top: 40px;
+		padding-top: 30px;
 		padding-bottom: 10px;
 		font-size: 20px;
 		letter-spacing: 1.25px;
 
 		@media @tablet {
-			min-height: 134px;
+			min-height: 100px;
 			font-size: 24px;
 		}
 	}

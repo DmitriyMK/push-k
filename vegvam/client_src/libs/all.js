@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
-  $(window).enllax();
-
 
   if (document.documentElement.clientWidth > 1200) {
+
+    $(window).enllax();
+
 
     $("body").niceScroll({
       scrollspeed: 60,
