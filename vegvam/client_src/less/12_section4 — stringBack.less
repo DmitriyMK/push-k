@@ -23,17 +23,9 @@
 .stringBack {
 	padding-top: 80px;
 	
-	@media @desktop {
-
-	}
-	@media @desktop-xl {
-
-	}
 	@media @desktop-xl-2 {
 		padding-top: 120px;
 	}
-
-
 	&__top {
 		padding: 15px;
 		background: #7aa542;
@@ -70,10 +62,6 @@
 				max-width: 280px;
 			}
 		}
-
-		@media @tablet {
-			
-		}
 		@media @desktop {
 			padding-left: 45px;
 		}
@@ -86,14 +74,15 @@
 	}
 
 	&__content {
-		padding-top: 90px;
-		padding-bottom: 80px;
+		padding-top: 80px;
+		padding-bottom: 60px;
 		max-width: 400px;
 		text-align: center;
 		color: #fff;
 
 		@media @tablet {
 			padding-top: 245px;
+			padding-bottom: 0;
 			padding-left: 40px;
 			max-width: 540px;
 			text-align: inherit;
@@ -110,10 +99,12 @@
 		}
 	}
 	&__title {
+		position: relative;
 		font-size: 36px;
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 2px;
+		z-index: 10;
 
 		@media @tablet {
 			font-size: 46px;
@@ -163,7 +154,6 @@
 			left: -370px;
 		}
 	}
-
 	&__img2 {
 		display: none;		
 
@@ -186,7 +176,6 @@
 			left: -90px;
 		}
 	}
-
 	&__img3 {
 		display: none;
 		@media @desktop {
@@ -212,19 +201,10 @@
 
 
 .stringBackStat {
-	padding-top: 95px;
+	padding-top: 80px;
 
 	@media @tablet {
-
-	}
-	@media @desktop {
-
-	}
-	@media @desktop-xl {
-
-	}
-	@media @desktop-xl-2 {
-
+		padding-top: 95px;
 	}
 
 	&__list {

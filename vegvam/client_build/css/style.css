@@ -1458,7 +1458,8 @@ textarea {
         -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
         max-width: inherit;
-        margin-left: 0;
+        margin: inherit;
+        margin-bottom: 80px;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -1705,8 +1706,8 @@ textarea {
     }
 }
 .stringBack__content {
-    padding-top: 90px;
-    padding-bottom: 80px;
+    padding-top: 80px;
+    padding-bottom: 60px;
     max-width: 400px;
     text-align: center;
     color: #fff;
@@ -1714,6 +1715,7 @@ textarea {
 @media only screen and (min-width: 768px) {
     .stringBack__content {
         padding-top: 245px;
+        padding-bottom: 0;
         padding-left: 40px;
         max-width: 540px;
         text-align: inherit;
@@ -1736,10 +1738,12 @@ textarea {
     }
 }
 .stringBack__title {
+    position: relative;
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
+    z-index: 10;
 }
 @media only screen and (min-width: 768px) {
     .stringBack__title {
@@ -1861,7 +1865,12 @@ textarea {
     }
 }
 .stringBackStat {
-    padding-top: 95px;
+    padding-top: 80px;
+}
+@media only screen and (min-width: 768px) {
+    .stringBackStat {
+        padding-top: 95px;
+    }
 }
 .stringBackStat__list {
     display: -webkit-box;
@@ -1916,17 +1925,34 @@ textarea {
     }
 }
 .catalog__list {
-    padding: 60px 15px;
+    padding: 60px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     list-style-type: none;
 }
+@media only screen and (min-width: 1200px) {
+    .catalog__list {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        padding: 60px 15px;
+    }
+}
 .catalog__item {
-    -ms-flex-preferred-size: 24%;
-    flex-basis: 24%;
+    -ms-flex-preferred-size: 49%;
+    flex-basis: 49%;
+    margin-bottom: 60px;
     margin-left: 0.5%;
     margin-right: 0.5%;
+}
+@media only screen and (min-width: 1200px) {
+    .catalog__item {
+        -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
+        margin-bottom: 0;
+    }
 }
 .catalog__link {
     display: -webkit-box;

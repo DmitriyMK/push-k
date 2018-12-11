@@ -24,15 +24,33 @@
 
 .catalog {
 	&__list {
-		padding: 60px 15px;
+		padding: 60px 0;
 		display: flex;
+		flex-wrap: wrap;
 		list-style-type: none;
+
+		@media @desktop-xl {
+			flex-wrap: nowrap;
+			padding: 60px 15px;
+		}
 	}
 
 	&__item {
-		flex-basis: 24%;
+		flex-basis: 49%;
+		margin-bottom: 60px;
 		margin-left: .5%;
 		margin-right: .5%;
+
+		@media @tablet {
+
+		}
+		@media @desktop {
+
+		}
+		@media @desktop-xl {
+			flex-basis: 24%;
+			margin-bottom: 0;
+		}
 	}
 
 	&__link {
