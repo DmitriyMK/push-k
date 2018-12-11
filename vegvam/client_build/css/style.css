@@ -123,69 +123,6 @@
     content: '\f192';
 }
 /* '' */
-.ico_arr-down {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    height: 95px;
-    width: 77px;
-}
-.ico_arr-left {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -77px 0;
-    height: 45px;
-    width: 24px;
-}
-.ico_arr-right {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -77px -45px;
-    height: 45px;
-    width: 24px;
-}
-.ico_tel {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -101px 0;
-    height: 42px;
-    width: 24px;
-}
-.ico_phone {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -101px -42px;
-    height: 23px;
-    width: 23px;
-}
-.ico_user {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -101px -65px;
-    height: 23px;
-    width: 19px;
-}
-.ico_diameter {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: 0 -95px;
-    height: 16px;
-    width: 16px;
-}
-.ico_weight {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -16px -95px;
-    height: 16px;
-    width: 16px;
-}
-.ico_height {
-    background-image: url(../images/icons/spritebox-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -120px -65px;
-    height: 14px;
-    width: 5px;
-}
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -2055,6 +1992,7 @@ textarea {
     width: 270px;
     height: 275px;
     background: #f7f6f6;
+    overflow: hidden;
 }
 @media only screen and (min-width: 1200px) {
     .catalog__link {
@@ -2458,6 +2396,10 @@ textarea {
         margin-left: 250px;
         margin-right: 250px;
     }
+}
+.freeMonday__slide {
+    display: inline-block;
+    width: 100%;
 }
 .freeMonday__accent {
     color: #95c557;
