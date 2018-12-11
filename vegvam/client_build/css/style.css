@@ -2012,7 +2012,8 @@ textarea {
 }
 @media only screen and (min-width: 1200px) {
     .catalog__link {
-        margin: inherit;
+        margin: 0;
+        margin-bottom: 10px;
     }
 }
 .catalog__img {

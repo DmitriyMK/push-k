@@ -110,22 +110,12 @@ $(document).ready(function() {
 
 
   // BURGER RESPONSIVE < 992px
-  var $menu = $('.nav');
-
   $('.burger').click(function() {
 
     $(this).toggleClass('active');
     $(this).parents('.header__top').find('.overlay').toggleClass('open');
     
   });
-
-
-  $('#arrowTop').click(function(){
-    $("html, body").animate({ scrollTop: 0 }, 900);
-    return false;
-  });
-
-
 });
 
 
@@ -153,5 +143,6 @@ $(".form").submit(function() {
   });
   return false;
 });
+
 
 window.console.log('Made with fun and love ❤️ Push-K solutions ❤️');
