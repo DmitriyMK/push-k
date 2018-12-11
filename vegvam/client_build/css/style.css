@@ -722,7 +722,7 @@ textarea {
 }
 .nav__link {
     display: block;
-    padding: 25px 5px 45px 5px;
+    padding: 25px 5px;
     width: 100vw;
     margin: auto;
     text-align: center;
@@ -1055,11 +1055,16 @@ textarea {
 }
 .fixed {
     position: fixed;
-    top: -10px;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     background: #95c557;
+}
+@media only screen and (min-width: 992px) {
+    .fixed {
+        top: -10px;
+    }
 }
 .fixed .header__top {
     -webkit-box-align: center;
@@ -2057,7 +2062,12 @@ textarea {
 .fabricBags__img1 {
     position: absolute;
     top: -15px;
-    left: -105px;
+    left: -145px;
+}
+@media only screen and (min-width: 1200px) {
+    .fabricBags__img1 {
+        left: -105px;
+    }
 }
 .fabricBags__img2 {
     position: absolute;
@@ -2071,8 +2081,14 @@ textarea {
 }
 .fabricBags__img4 {
     position: absolute;
-    top: 40px;
-    right: -450px;
+    top: -50px;
+    right: -150px;
+}
+@media only screen and (min-width: 1200px) {
+    .fabricBags__img4 {
+        top: 40px;
+        right: -450px;
+    }
 }
 .catalogPlasticFree {
     padding-top: 10px;
