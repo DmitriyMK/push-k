@@ -141,6 +141,11 @@ td, th {
 a {
     text-decoration: none;
 }
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: table;
+}
 .btn:focus {
     outline: none;
     -webkit-box-shadow: 0 0 10px 1px rgba(51, 125, 90, 0.85);
@@ -3476,9 +3481,24 @@ textarea {
 }
 .headerInner {
     padding-top: 10px;
+    z-index: 2000;
 }
 .headerInner .logoBig-text {
     padding-top: 50px;
+}
+.fixedInner .logoBig-text {
+    padding-top: 0;
+}
+@media only screen and (min-width: 992px) {
+    .fixedInner .header__line-contact {
+        position: absolute;
+        top: -240px;
+        right: 0;
+        height: 0;
+        -webkit-transition: all 0.3s linear;
+             -o-transition: all 0.3s linear;
+                transition: all 0.3s linear;
+    }
 }
 .breadCrumbs {
     padding-top: 170px;
@@ -3674,6 +3694,9 @@ textarea {
     top: 295px;
     left: -350px;
 }
+.peoplePageAbout .container {
+    position: relative;
+}
 .peoplePageAbout__box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3682,11 +3705,13 @@ textarea {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 21px 15px;
+    margin-bottom: 80px;
 }
 .peoplePageAbout__picture {
     margin-top: 20px;
     width: 555px;
     height: 570px;
+    overflow: hidden;
 }
 .peoplePageAbout__picture img {
     display: block;
@@ -3711,8 +3736,120 @@ textarea {
     text-align: right;
 }
 .peoplePageAbout__description {
+    position: relative;
+    padding: 60px 40px 60px 30px;
     font-size: 24px;
     color: #181d23;
+}
+.peoplePageAbout__description:before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 88%;
+    height: 150%;
+    background: #f3f3f3;
+    z-index: -1;
+}
+.peoplePageAbout__img1 {
+    position: absolute;
+    top: 485px;
+    right: -105px;
+}
+.peoplePageAbout__img2 {
+    position: absolute;
+    top: 205px;
+    right: -380px;
+}
+.peoplePageAbout__img3 {
+    position: absolute;
+    top: -55px;
+    right: -360px;
+}
+.peopleInterview {
+    padding-bottom: 80px;
+}
+.peopleInterview .container {
+    position: relative;
+}
+.peopleInterview dl {
+    padding-left: 15px;
+    font-size: 18px;
+}
+.peopleInterview dl span {
+    display: inline-block;
+    width: 110px;
+    text-transform: uppercase;
+    z-index: 10;
+}
+.peopleInterview dt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+.peopleInterview dd {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 60px;
+    font-weight: 300;
+}
+.peopleInterview dd span {
+    padding-right: 55px;
+}
+.peopleInterview__img1 {
+    position: absolute;
+    top: 315px;
+    left: -385px;
+}
+.peopleBonus {
+    position: relative;
+    padding-top: 60px;
+}
+.peopleBonus .container {
+    position: relative;
+}
+.peopleBonus__picture {
+    position: absolute;
+    top: 0;
+    left: -380px;
+    max-width: 1131px;
+    overflow: hidden;
+}
+.peopleBonus__picture img {
+    display: block;
+    max-width: 100%;
+    max-height: 560px;
+    height: auto;
+}
+.peopleBonus__content img {
+    position: relative;
+    z-index: 10;
+}
+.peopleBonus__title {
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: right;
+}
+.peopleBonus__text {
+    position: relative;
+    float: right;
+    max-width: 570px;
+    padding-top: 30px;
+    font-size: 24px;
+}
+.peopleBonus__text:before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -70px;
+    width: 100%;
+    height: 150%;
+    background: #f3f3f3;
+    z-index: -1;
 }
 .slick-prev, .slick-next {
     position: absolute;

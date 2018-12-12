@@ -306,6 +306,15 @@ $(window).scroll(function() {
 });
 
 
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 30) {
+    $('#headerInner').addClass('fixedInner');
+  } else if ($(this).scrollTop() < 30) {
+    $('#headerInner').removeClass('fixedInner');
+  }
+});
+
+
 $(".form").submit(function() {
 	let th = $(this);
 	$.ajax({

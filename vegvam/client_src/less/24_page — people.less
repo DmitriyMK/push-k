@@ -202,16 +202,21 @@
 
 
 .peoplePageAbout {
+	.container {
+		position: relative;
+	}
 	&__box {
 		display: flex;
 		justify-content: space-between;
 		padding: 21px 15px;
+		margin-bottom: 80px;
 	}
 
 	&__picture {
 		margin-top: 20px;
 		width: 555px;
 		height: 570px;
+		overflow: hidden;
 		
 		img {
 			display: block;
@@ -238,7 +243,140 @@
 		text-align: right;
 	}
 	&__description {
+		position: relative;
+		padding: 60px 40px 60px 30px;
 		font-size: 24px;
 		color: #181d23;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -30px;
+			left: -30px;
+			width: 88%;
+			height: 150%;
+			background: #f3f3f3;
+			z-index: -1;
+		}
 	}
+
+
+	&__img1 {
+		position: absolute;
+		top: 485px;
+		right: -105px;
+	}
+	&__img2 {
+		position: absolute;
+		top: 205px;
+		right: -380px;
+	}
+	&__img3 {
+		position: absolute;
+		top: -55px;
+		right: -360px;
+	}
+}
+
+
+.peopleInterview {
+	padding-bottom: 80px;
+
+	.container {
+		position: relative;
+	}
+
+	dl {
+		padding-left: 15px;
+		font-size: 18px;
+
+		span {
+			display: inline-block;
+			width: 110px;
+			text-transform: uppercase;
+			z-index: 10;
+		}
+	}
+
+	dt {
+		display: flex;
+		padding-bottom: 15px;
+		font-weight: 700;
+	}
+
+	dd {
+		display: flex;
+		padding-bottom: 60px;
+		font-weight: 300;
+		span {
+			padding-right: 55px;
+		}
+	}
+
+	&__img1 {
+		position: absolute;
+		top: 315px;
+		left: -385px;
+	}
+}
+
+
+.peopleBonus {
+	position: relative;
+	padding-top: 60px;
+
+	.container {
+		position: relative;
+	}
+
+	&__picture {
+		position: absolute;
+		top: 0;
+		left: -380px;
+		max-width: 1131px;
+		overflow: hidden;
+
+		img {
+			display: block;
+			max-width: 100%;
+			max-height: 560px;
+			height: auto;
+		}
+	}
+
+
+	&__content {
+		img {
+			position: relative;
+			z-index: 10;
+		}
+	}
+
+	&__title {
+		font-size: 60px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: right;
+	}
+	&__text {
+		position: relative;
+		float: right;
+		max-width: 570px;
+		padding-top: 30px;
+		font-size: 24px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: -30px;
+			left: -70px;
+			width: 100%;
+			height: 150%;
+			background: #f3f3f3;
+			z-index: -1;
+		}
+	}
+
+	
+	
 }
