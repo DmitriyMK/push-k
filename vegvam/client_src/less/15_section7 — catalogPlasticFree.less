@@ -66,7 +66,11 @@
 
 		@media @desktop {
 			align-items: inherit;
+			justify-content: space-around;
 			flex-direction: row;
+		}
+		@media @desktop-xl-2 {
+			
 		}
 	}
 	&__item {
@@ -78,29 +82,39 @@
 			width: 450px;
 		}
 		@media @desktop {
-			width: 48%;
+			width: 330px;
 			max-width: inherit;
 			text-align: inherit;
 		}
+		@media @desktop-xl {
+			width: 450px;
+		}
+		@media @desktop-xl-2 {
+			width: 42%;
+		}
 	}
+
 	&__link {
 		display: flex;
 		width: 320px;
 		margin: auto;
-		padding: 40px 0;
 		background: #f7f6f6;
+		overflow: hidden;
 		
 		@media @tablet {
 			width: 100%;
 		}
 		@media @desktop {
-			padding: 0;
-			height: 450px;
+			height: 365px;
+		}
+		@media @desktop-xl {
+			height: 495px;
 		}
 		@media @desktop-xl-2 {
-			height: 545px;
+			height: 525px;
 		}
 	}
+
 	&__img {
 		display: block;
 		max-width: 100%;
@@ -111,15 +125,17 @@
 		object-fit: cover;
 		object-position: center;
 		
-
 		@media @desktop {
-			max-height: inherit;
-			max-height: 400px;
+			max-height: 370px;
+		}
+		@media @desktop-xl {
+			max-height: 530px;
 		}
 		@media @desktop-xl-2 {
-			max-height: 555px;
+			max-height: 530px;
 		}
 	}
+
 	&__name {
 		padding-top: 30px;
 		padding-bottom: 10px;
@@ -128,9 +144,12 @@
 
 		@media @tablet {
 			min-height: 100px;
-			font-size: 22px;
+			font-size: 20px;
 		}
-		@media @desktop-xl {
+		@media @desktop {
+
+		}
+		@media @desktop-xl-2 {
 			font-size: 24px;
 		}
 	}

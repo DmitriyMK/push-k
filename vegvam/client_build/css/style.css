@@ -349,6 +349,19 @@ button:-moz-focusring, [type='button']:-moz-focusring, [type='reset']:-moz-focus
     -webkit-box-shadow: 2px 2px 24px 1px rgba(0, 0, 0, 0.35);
             box-shadow: 2px 2px 24px 1px rgba(0, 0, 0, 0.35);
 }
+.shdwDeep {
+    -webkit-transition: -webkit-box-shadow 0.3s linear;
+            transition: -webkit-box-shadow 0.3s linear;
+         -o-transition:         box-shadow 0.3s linear;
+            transition:         box-shadow 0.3s linear;
+            transition:         box-shadow 0.3s linear, -webkit-box-shadow 0.3s linear;
+    -webkit-box-shadow: 2px 2px 30px 1px rgba(0, 0, 0, 0);
+            box-shadow: 2px 2px 30px 1px rgba(0, 0, 0, 0);
+}
+.shdwDeep:hover {
+    -webkit-box-shadow: 2px 2px 30px 1px rgba(0, 0, 0, 0.455);
+            box-shadow: 2px 2px 30px 1px rgba(0, 0, 0, 0.455);
+}
 .letter {
     display: inline-block;
     -webkit-transform: translateY(0);
@@ -1543,6 +1556,8 @@ textarea {
         -webkit-box-align: inherit;
         -ms-flex-align: inherit;
         align-items: inherit;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1561,9 +1576,19 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .catalogFirst__item {
-        width: 48%;
+        width: 330px;
         max-width: inherit;
         text-align: inherit;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .catalogFirst__item {
+        width: 450px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .catalogFirst__item {
+        width: 42%;
     }
 }
 .catalogFirst__link {
@@ -1571,24 +1596,28 @@ textarea {
     display: -ms-flexbox;
     display: flex;
     width: 320px;
-    padding: 30px;
     margin: auto;
     background: #f7f6f6;
+    overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
     .catalogFirst__link {
         width: 100%;
-        padding: 80px;
     }
 }
 @media only screen and (min-width: 992px) {
     .catalogFirst__link {
-        height: 420px;
+        height: 365px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .catalogFirst__link {
+        height: 495px;
     }
 }
 @media only screen and (min-width: 1600px) {
     .catalogFirst__link {
-        height: 555px;
+        height: 525px;
     }
 }
 .catalogFirst__img {
@@ -1606,12 +1635,17 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .catalogFirst__img {
-        max-height: 300px;
+        max-height: 370px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .catalogFirst__img {
+        max-height: 530px;
     }
 }
 @media only screen and (min-width: 1600px) {
     .catalogFirst__img {
-        max-height: 400px;
+        max-height: 530px;
     }
 }
 .catalogFirst__name {
@@ -1621,6 +1655,12 @@ textarea {
     letter-spacing: 1.25px;
 }
 @media only screen and (min-width: 768px) {
+    .catalogFirst__name {
+        min-height: 100px;
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width: 1600px) {
     .catalogFirst__name {
         font-size: 24px;
     }
@@ -1652,11 +1692,11 @@ textarea {
         display: block;
         position: absolute;
         top: -50px;
-        left: 50px;
+        left: -20px;
         z-index: -1;
     }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
     .catalogFirst__img1 {
         left: 450px;
     }
@@ -1668,9 +1708,15 @@ textarea {
     .catalogFirst__img2 {
         display: block;
         position: absolute;
-        bottom: 60px;
-        right: 30px;
+        bottom: 120px;
+        right: -30px;
         z-index: -1;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .catalogFirst__img2 {
+        right: 30px;
+        bottom: 60px;
     }
 }
 .stringBack {
@@ -2264,6 +2310,8 @@ textarea {
         -webkit-box-align: inherit;
         -ms-flex-align: inherit;
         align-items: inherit;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2282,9 +2330,19 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .catalogPlasticFree__item {
-        width: 48%;
+        width: 330px;
         max-width: inherit;
         text-align: inherit;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .catalogPlasticFree__item {
+        width: 450px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .catalogPlasticFree__item {
+        width: 42%;
     }
 }
 .catalogPlasticFree__link {
@@ -2293,8 +2351,8 @@ textarea {
     display: flex;
     width: 320px;
     margin: auto;
-    padding: 40px 0;
     background: #f7f6f6;
+    overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
     .catalogPlasticFree__link {
@@ -2303,13 +2361,17 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .catalogPlasticFree__link {
-        padding: 0;
-        height: 450px;
+        height: 365px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .catalogPlasticFree__link {
+        height: 495px;
     }
 }
 @media only screen and (min-width: 1600px) {
     .catalogPlasticFree__link {
-        height: 545px;
+        height: 525px;
     }
 }
 .catalogPlasticFree__img {
@@ -2327,13 +2389,17 @@ textarea {
 }
 @media only screen and (min-width: 992px) {
     .catalogPlasticFree__img {
-        max-height: inherit;
-        max-height: 400px;
+        max-height: 370px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .catalogPlasticFree__img {
+        max-height: 530px;
     }
 }
 @media only screen and (min-width: 1600px) {
     .catalogPlasticFree__img {
-        max-height: 555px;
+        max-height: 530px;
     }
 }
 .catalogPlasticFree__name {
@@ -2345,10 +2411,10 @@ textarea {
 @media only screen and (min-width: 768px) {
     .catalogPlasticFree__name {
         min-height: 100px;
-        font-size: 22px;
+        font-size: 20px;
     }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1600px) {
     .catalogPlasticFree__name {
         font-size: 24px;
     }
@@ -2620,10 +2686,13 @@ textarea {
 }
 .recipes__link {
     width: inherit;
-    max-width: 285px;
+    max-width: 250px;
     background: transparent;
+    overflow: hidden;
 }
 .recipes__img {
+    margin: 0;
+    min-height: 275px;
     max-height: 100%;
 }
 .recipes__name {
@@ -2824,6 +2893,7 @@ textarea {
     }
 }
 .catalogBerry__imgCatalog {
+    margin: 0;
     height: 270px;
     width: 270px;
 }
@@ -2848,6 +2918,9 @@ textarea {
         -ms-flex-preferred-size: 24%;
         flex-basis: 24%;
     }
+}
+.catalogBerry .recipes__link {
+    max-height: 230px;
 }
 .brand {
     background: #e7e7e7;
@@ -3292,12 +3365,13 @@ textarea {
 }
 .vegans__link {
     width: inherit;
-    max-width: 285px;
+    max-width: 250px;
     background: transparent;
 }
 .vegans__img {
+    margin: 0;
+    min-height: 275px;
     max-height: 100%;
-    margin: inherit;
 }
 .vegans__name {
     padding-top: 15px;

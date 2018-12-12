@@ -35,12 +35,13 @@
 		justify-content: space-between;
 		list-style-type: none;
 
-		@media @tablet {
-
-		}
 		@media @desktop {
 			align-items: inherit;
+			justify-content: space-around;
 			flex-direction: row;
+		}
+		@media @desktop-xl-2 {
+			
 		}
 	}
 	
@@ -53,28 +54,36 @@
 			width: 450px;
 		}
 		@media @desktop {
-			width: 48%;
+			width: 330px;
 			max-width: inherit;
 			text-align: inherit;
+		}
+		@media @desktop-xl {
+			width: 450px;
+		}
+		@media @desktop-xl-2 {
+			width: 42%;
 		}
 	}
 
 	&__link {
 		display: flex;
 		width: 320px;
-		padding: 30px;
 		margin: auto;
 		background: #f7f6f6;
+		overflow: hidden;
 		
 		@media @tablet {
 			width: 100%;
-			padding: 80px;
 		}
 		@media @desktop {
-			height: 420px;
+			height: 365px;
+		}
+		@media @desktop-xl {
+			height: 495px;
 		}
 		@media @desktop-xl-2 {
-			height: 555px;
+			height: 525px;
 		}
 	}
 
@@ -89,10 +98,13 @@
 		object-position: center;
 		
 		@media @desktop {
-			max-height: 300px;
+			max-height: 370px;
+		}
+		@media @desktop-xl {
+			max-height: 530px;
 		}
 		@media @desktop-xl-2 {
-			max-height: 400px;
+			max-height: 530px;
 		}
 	}
 
@@ -103,7 +115,13 @@
 		letter-spacing: 1.25px;
 
 		@media @tablet {
-			// min-height: 134px;
+			min-height: 100px;
+			font-size: 20px;
+		}
+		@media @desktop {
+
+		}
+		@media @desktop-xl-2 {
 			font-size: 24px;
 		}
 	}
@@ -134,10 +152,10 @@
 			display: block;
 			position: absolute;
 			top: -50px;	
-			left: 50px;
+			left: -20px;
 			z-index: -1;
 		}
-		@media @desktop {
+		@media @desktop-xl {
 			left: 450px;
 		}
 	}
@@ -147,9 +165,13 @@
 		@media @tablet {
 			display: block;
 			position: absolute;
-			bottom: 60px;	
-			right: 30px;
+			bottom: 120px;	
+			right: -30px;
 			z-index: -1;
+		}
+		@media @desktop-xl {
+			right: 30px;
+			bottom: 60px;	
 		}
 	}
 }
