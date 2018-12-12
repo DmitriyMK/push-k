@@ -294,17 +294,4 @@ $(".form").submit(function() {
 
 
 
-$(window).load(function() {
-
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 30) {
-      $('#header').addClass('fixed');
-    } else if ($(this).scrollTop() < 30) {
-      $('#header').removeClass('fixed');
-    }
-  });
-  
-});
-
-
 window.console.log('Made with fun and love ❤️ Push-K solutions ❤️');

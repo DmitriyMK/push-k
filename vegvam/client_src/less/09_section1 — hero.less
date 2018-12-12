@@ -22,7 +22,7 @@
 
 .hero {
 	position: relative;
-	min-height: 580px;
+	min-height: 680px;
 	background: @lime;
 	z-index: 10;
 	overflow: hidden;
@@ -33,7 +33,7 @@
 	
 
 	@media @mobile-land {
-		min-height: 450px;
+		min-height: 600px;
 	}
 	@media @tablet {
 		min-height: 650px;
@@ -144,10 +144,10 @@
 
 	.hero__imgBack {
 		position: absolute;
-		top: 390px;
+		top: 500px;
 
 		@media @mobile-land {
-			top: 300px;
+			top: 380px;
 		}
 
 		@media @tablet {
@@ -172,11 +172,11 @@
 		top: 330px;
 		left: 50%;
 		transform: translateX(-25%);
-		max-width: 380px;
+		max-width: 450px;
 		z-index: 5;
 		
 		@media @mobile-land {
-			top: 250px;
+			top: 275px;
 		}
 		@media @tablet {
 			top: 70px;
@@ -201,15 +201,23 @@
 		}
 	}
 	.hero__imgBranchRight {
-		display: none;
+		position: absolute;
+		top: 450px;
+		right: 0;
+		max-width: 250px;
+		z-index: 4;
 		
-		@media @desktop {
-			display: block;
-			position: absolute;
+		@media @mobile-land {
+			top: 400px;
+			right: 100px;
+		}
+		@media @tablet {
 			top: 280px;
 			right: -105px;
 			max-width: 250px;
-			z-index: 4;
+		}
+		@media @desktop {
+
 		}
 		@media @desktop-xl {
 			max-width: 484px;
@@ -220,12 +228,19 @@
 		}
 	}
 	.hero__imgLeaveCurve {
-		display: none;
-		
+		position: absolute;
+		bottom: -370px;
+		left: 60px;
+		max-width: 160px;
+		z-index: 5;
+
+		@media @mobile-land {
+			bottom: -330px;
+			left: 135px;
+		}
 		@media @tablet {
-			display: block;
-			position: absolute;
 			bottom: -130px;
+			left: inherit;
 			right: 150px;
 			max-width: 200px;
 			z-index: 5;
