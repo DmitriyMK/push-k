@@ -1,0 +1,244 @@
+@media @mobile-xl {
+
+}
+@media @mobile-land {
+
+}
+@media @tablet {
+
+}
+@media @desktop {
+
+}
+@media @desktop-xl {
+	
+}
+@media @desktop-xl-2 {
+
+}
+@media @desktop-xll {
+	
+}
+
+
+.peoplePage {
+	position: relative;
+
+	.container {
+		position: relative;
+	}
+
+	&__box {
+		padding: 42px 15px;
+	}
+
+	&__title {
+		font-size: 36px;
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+
+		strong {
+			color: @green;
+		}
+	}
+	
+	&__slider {
+		position: relative;
+		padding: 45px 25px;
+	}
+
+	&__slide {
+		.peoplePage__imgWrap {
+			border: 3px solid transparent;
+			transition: all .3s linear;
+
+			img {
+				filter: grayscale(1);
+			}
+		}
+		&:hover {
+			.peoplePage__imgWrap {
+				border: 3px solid @green;
+				cursor: pointer;
+
+				img {
+					filter: grayscale(.5);
+				}
+			}
+		}
+	}
+
+	.slick-current + .slick-active {
+		.peoplePage__imgWrap {
+			border: 3px solid @green;
+			img {
+				filter: grayscale(0);
+			}
+		}
+	}
+
+	&__imgWrap {
+		max-height: 255px;
+		max-width: 255px;
+		margin-bottom: 15px;
+		overflow: hidden;
+	}
+
+
+	&__img {
+		display: block;
+		max-width: 100%;
+		width: 255px;
+		height: 255px;
+		// height: auto;
+		// 
+		object-fit: cover;
+		object-position: top;
+		transition: transform .5s cubic-bezier(.87,.32,.69,.87);
+	}
+	&__name {
+		font-size: 18px;
+	}
+
+	.slick-prev,
+	.slick-next {
+		bottom: 0px;
+		transform: inherit;
+
+		&:before {
+			font-size: 38px;
+			color: @green;
+		}
+		&:hover, &:focus {
+			&:before {
+				color: @green;
+				opacity: .35;
+			}
+		}
+	}
+	.slick-prev {
+		left: 0px;
+	}
+	.slick-next {
+		right: 0px; 
+	}
+	.slick-dots {
+		display: flex!important;
+		justify-content: center;
+
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: inherit;
+		bottom: -13px;
+
+
+		li {
+			display: inline;
+			margin: 4px 8px;
+			margin-bottom: 10px;
+			counter-increment: li; 
+
+			button {
+				
+				display: block;
+				height: 0;
+				width: 0;
+				padding: 15px;
+				border: 2px solid transparent;
+				border-radius: 50%;
+				background: transparent;
+				opacity: 0.75;
+				font-size: 0;
+				color: #fff;
+
+				&:before {
+					font-size: 0;
+					opacity: 0;
+					display: none;
+				}
+
+				&:after {
+					position: absolute;
+					top: 15.5px;
+					left: 14px;
+					content: counter(li); 
+					font-size: 14px;
+					color: #181d23;
+				}
+
+			}
+			&.slick-active button {
+				border: 2px solid @green;
+				opacity: 1;
+			}
+		}
+	}
+
+
+	&__img1 {
+		position: absolute;
+		top: 255px;
+		left: -235px;
+	}
+	&__img2 {
+		position: absolute;
+		top: 205px;
+		left: -380px;
+	}
+	&__img3 {
+		position: absolute;
+		top: 5px;
+		left: -360px;
+	}
+	&__img4 {
+		position: absolute;
+		top: 295px;
+		left: -350px;
+	}
+}
+
+
+.peoplePageAbout {
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		padding: 21px 15px;
+	}
+
+	&__picture {
+		margin-top: 20px;
+		width: 555px;
+		height: 570px;
+		
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	&__content {
+		width: 50%;
+	}
+
+	&__title {
+		font-size: 40px;
+		line-height: 1.6;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: right;
+	}
+	&__experience {
+		display: block;
+		font-size: 60px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-align: right;
+	}
+	&__description {
+		font-size: 24px;
+		color: #181d23;
+	}
+}
