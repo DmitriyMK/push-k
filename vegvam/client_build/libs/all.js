@@ -272,6 +272,15 @@ $(document).ready(function() {
 });
 
 
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 30) {
+    $('#header').addClass('fixed');
+  } else if ($(this).scrollTop() < 30) {
+    $('#header').removeClass('fixed');
+  }
+});
+
+
 $(".form").submit(function() {
 	let th = $(this);
 	$.ajax({
@@ -289,8 +298,5 @@ $(".form").submit(function() {
 	});
 	return false;
 });
-
-
-
 
 window.console.log('Made with fun and love ❤️ Push-K solutions ❤️');
