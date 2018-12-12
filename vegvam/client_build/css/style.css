@@ -1019,9 +1019,7 @@ textarea {
     font-family: 'Fontello';
 }
 .basketBtn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -1044,6 +1042,10 @@ textarea {
 }
 .basketBtn:before {
     background: transparent;
+}
+.basketBtn__img {
+    display: inline-block;
+    margin-bottom: -3px;
 }
 .basketBtn__text {
     display: none;
@@ -1071,14 +1073,10 @@ textarea {
     z-index: 1000;
     background: #95c557;
 }
-@media only screen and (min-width: 992px) {
-}
 .fixed .header__top {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-}
-@media only screen and (min-width: 992px) {
 }
 .fixed .logoBig-img {
     -webkit-transform: translateY(-200px);

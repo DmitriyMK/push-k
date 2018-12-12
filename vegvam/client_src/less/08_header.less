@@ -447,7 +447,7 @@
 
 
 .basketBtn {
-	display: flex;
+	display: block;
 	justify-content: center;
 	align-items: center;
 	min-width: 80px;
@@ -468,6 +468,10 @@
 		background: transparent;
 	}
 	
+	&__img {
+		display: inline-block;
+		margin-bottom: -3px;
+	}
 	&__text {
 		display: none;
 		@media @desktop {
@@ -491,39 +495,11 @@
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-	// height: 60px;
 	background: @lime;
-
-	@media @desktop {
-		// height: 80px;
-	}
 
 	.header__top {
 		align-items: center;
 	}
-
-	// .logoHide {
-	// 	@media @desktop {
-	// 		width: 120px;
-	// 		opacity: 1;
-	// 		visibility: visible;
-	// 	}
-	// 	@media @desktop-xl-2 {
-	// 		width: 178px;
-	// 	}
-	// }
-
-	.logoBig {
-		@media @desktop {
-			// margin-top: -196px;
-			// visibility: hidden;
-			// transform: translateY(-240px);
-			// // height: 0;
-			// // width: 0;
-			// transition: all .3s linear;
-		}
-	}
-
 	.logoBig-img {
 		transform: translateY(-200px);
 		opacity: 0;
