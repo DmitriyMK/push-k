@@ -23,7 +23,6 @@
 
 .brand {
 	background: #e7e7e7;
-	
 	&__box {
 		position: relative;
 		padding: 115px 20px;
@@ -35,7 +34,7 @@
 		position: relative;
 		margin-bottom: 40px;
 		width: 100%;
-		
+		z-index: 10;
 	}
 
 	&__slide {
@@ -44,6 +43,7 @@
 		border: 2px solid transparent;
 		border-radius: 5px;
 		transition: all .3s linear;
+
 
 		img {
 			display: block;
@@ -184,8 +184,8 @@
 		@media @tablet {
 			display: block;
 			position: absolute;
-			bottom: -40px;
-			left: 370px;
+			top: 0px;
+			left: 35%;
 		}
 	}
 	&__img3 {

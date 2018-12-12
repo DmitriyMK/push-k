@@ -236,11 +236,10 @@ $(document).ready(function() {
   $('.brand__slider').slick({
    slidesToShow: 5,
    slidesToScroll: 1,
-   focusOnSelect: true,
+   // focusOnSelect: true,
    arrows: true,
    dots: true,
    infinite: true,
-   initialSlide: 2,
 
    responsive: [
 
