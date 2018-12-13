@@ -71,14 +71,12 @@ $(document).ready(function() {
       title = $(elem).find('.articleTitle'),
       text = $(elem).find('.articleText'),
 
-      img1 = $(elem).find('.catalogFirst__linkLeft'),
-      img2 = $(elem).find('.catalogFirst__imgLeft'),
-      img3 = $(elem).find('.catalogFirst__linkRight'),
-      img4 = $(elem).find('.catalogFirst__imgRight'),
+      img1 = $(elem).find('.catalog__link'),
+      img2 = $(elem).find('.catalog__img'),
 
-      productName = $(elem).find('.productName'),
-      productPrice = $(elem).find('.productPrice'),
-      productBtn = $(elem).find('.productBtn');
+      productName = $(elem).find('.catalog__name'),
+      productPrice = $(elem).find('.catalog__price'),
+      productBtn = $(elem).find('.catalog__btn');
 
       let tl = new TimelineMax({
       	pause: true
@@ -88,10 +86,8 @@ $(document).ready(function() {
 
       .fromTo(title, 1.2, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
       .fromTo(text, 1.6, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
-      .fromTo(img1, 1.2, {x: '-40px', opacity: 0}, {x: 0, opacity: 1, ease: Power2.easeOut}, "start")
-      .fromTo(img2, 2.0, {y: '80px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
-      .fromTo(img3, 1.2, {x: '40px', opacity: 0}, {x: 0, opacity: 1, ease: Power2.easeOut}, "start")
-      .fromTo(img4, 2.4, {y: '80px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+      .fromTo(img1, 1.2, {y: '40px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
+      .fromTo(img2, 2.0, {y: '40px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
       .fromTo(productName, 1.6, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
       .fromTo(productPrice, 2.0, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
       .fromTo(productBtn, 2.4, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
