@@ -25,8 +25,15 @@
 	z-index: 2000;
 
 	.logoBig-text {
-		transform: translateY(50px);
-		transition: transform .3s linear;
+		@media @desktop {
+			transform: translateY(60px);
+			transition: transform .3s linear;
+		}
+
+		@media @desktop-xl-2 {
+			transform: translateY(50px);
+		}
+		
 	}
 
 	.header__line-contact {
@@ -49,7 +56,14 @@
 	}
 
 	.logoBig-text {
-		transform: translateY(15px);
+		transform: translateY(0px);
+		
+		@media @desktop {
+			transform: translateY(27px);
+		}
+		@media @desktop-xl-2 {
+			transform: translateY(16px);
+		}
 	}
 
 	
@@ -69,36 +83,54 @@
 }
 
 .breadCrumbs {
-	padding-top: 170px;
+	padding-top: 100px;
+	@media @desktop {
+		padding-top: 170px;
+	}
 }
 
 .breadcrumb {
-	padding-left: 15px;
 	list-style: none;
+	margin-bottom: 35px;
+	@media @desktop {
+		padding-left: 15px;
+	}
 
 	li {
 		display: inline-block;
 		font-size: 16px;
 		font-weight: 400;
-		letter-spacing: 2.2px;
+		letter-spacing: 1px;
 		text-transform: uppercase;
+
+		@media @desktop {
+			letter-spacing: 2.2px;
+		}
 	}
 	a {
 		display: block;
-		padding-right: 50px;
+		padding-right: 20px;
 		position: relative;		
 		color: @green;
+
+		@media @desktop {
+			padding-right: 50px;
+		}
 		
 		&:before {
 			content: '\e801';
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
-			right: 20px;
+			right: 2px;
 			
 			font-family: 'Fontello';
 			font-size: 16px;
 			color: #181d23;
+
+			@media @desktop {
+				right: 20px;
+			}
 		}
 	}
 }
@@ -107,25 +139,33 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 55px 0;
+	margin: 30px 0;
 	list-style-type: none;
+
+	@media @desktop {
+		margin: 55px 0;
+	}
+
+
 	li {
 		margin-left: 7.5px;
 		margin-right: 7.5px;
-		padding-top: 8px;
-		min-width: 35px;
-		min-height: 35px;
+		padding-top: 5px;
+		min-width: 30px;
+		min-height: 30px;
 		border: 1px solid transparent;
 		border-radius: 50%;
 		text-align: center;
 	}
 	i {
 		display: block;
-		margin-left: 10px;
-		margin-right: 10px;
-		font-size: 36px;
+		font-size: 30px;
 		color: @green;
 		font-weight: 700;
+
+		@media @desktop {
+			font-size: 36px;
+		}
 	}
 	.active {
 		border: 1px solid @green;

@@ -270,18 +270,23 @@ $('.peoplePage__slider').slick({
 
 	responsive: [
 	{
-		breakpoint: 768,
+		breakpoint: 1200,
 		settings: {
 			slidesToShow: 3,
 		}
 	},
 
+  {
+    breakpoint: 801,
+    settings: {
+      slidesToShow: 2,
+    }
+  },
+
 	{
-		breakpoint: 400,
+		breakpoint: 600,
 		settings: {
-			slidesToShow: 1,
-			initialSlide: 1,
-			autoplay: true
+			slidesToShow: 1
 		}
 	}
 
