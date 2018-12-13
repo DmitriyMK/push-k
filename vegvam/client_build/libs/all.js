@@ -240,6 +240,10 @@ $('.brand__slider').slick({
 	dots: true,
 	infinite: true,
 
+  focusOnSelect: true,
+  centerMode: true,
+  centerPadding: "20px",
+
 	responsive: [
 	{
 		breakpoint: 768,
