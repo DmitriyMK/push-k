@@ -54,7 +54,7 @@ $(document).ready(function() {
       	let scene = new ScrollScene({
       		triggerElement: elem,
       		reverse: false,
-      		offset: 0
+      		offset: -440
       	})
 
       	.setTween(tl)
@@ -99,7 +99,7 @@ $(document).ready(function() {
       let scene = new ScrollScene({
       	triggerElement: elem,
       	reverse: false,
-      	offset: 0
+      	offset: -240
       })
 
       .setTween(tl)
@@ -177,7 +177,7 @@ $(document).ready(function() {
       let scene = new ScrollScene({
       	triggerElement: elem,
       	reverse: false,
-      	offset: 0
+      	offset: -120
       })
 
       .setTween(tl)
@@ -207,7 +207,7 @@ $('.linkSubmenu').click(function() {
 
 
 
-let bLazy = new Blazy();
+// let bLazy = new Blazy();
 
 
 

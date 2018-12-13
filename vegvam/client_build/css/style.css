@@ -344,32 +344,6 @@ button:-moz-focusring, [type='button']:-moz-focusring, [type='reset']:-moz-focus
         bottom: 100px;
     }
 }
-.shdw {
-    -webkit-transition: -webkit-box-shadow 0.3s linear;
-            transition: -webkit-box-shadow 0.3s linear;
-         -o-transition:         box-shadow 0.3s linear;
-            transition:         box-shadow 0.3s linear;
-            transition:         box-shadow 0.3s linear, -webkit-box-shadow 0.3s linear;
-    -webkit-box-shadow: 2px 2px 24px 1px rgba(0, 0, 0, 0);
-            box-shadow: 2px 2px 24px 1px rgba(0, 0, 0, 0);
-}
-.shdw:hover {
-    -webkit-box-shadow: 2px 2px 24px 1px rgba(0, 0, 0, 0.35);
-            box-shadow: 2px 2px 24px 1px rgba(0, 0, 0, 0.35);
-}
-.shdwDeep {
-    -webkit-transition: -webkit-box-shadow 0.3s linear;
-            transition: -webkit-box-shadow 0.3s linear;
-         -o-transition:         box-shadow 0.3s linear;
-            transition:         box-shadow 0.3s linear;
-            transition:         box-shadow 0.3s linear, -webkit-box-shadow 0.3s linear;
-    -webkit-box-shadow: 2px 2px 30px 1px rgba(0, 0, 0, 0);
-            box-shadow: 2px 2px 30px 1px rgba(0, 0, 0, 0);
-}
-.shdwDeep:hover {
-    -webkit-box-shadow: 2px 2px 30px 1px rgba(0, 0, 0, 0.455);
-            box-shadow: 2px 2px 30px 1px rgba(0, 0, 0, 0.455);
-}
 .letter {
     display: inline-block;
     -webkit-transform: translateY(0);
@@ -453,33 +427,15 @@ body {
     border: 2px solid #337d5a;
     border-radius: 10px;
     color: #337d5a;
-    -webkit-transition: color 0.3s linear, -webkit-box-shadow 0.2s linear;
-            transition: color 0.3s linear, -webkit-box-shadow 0.2s linear;
-         -o-transition: color 0.3s linear, box-shadow 0.2s linear;
-            transition: color 0.3s linear, box-shadow 0.2s linear;
-            transition: color 0.3s linear, box-shadow 0.2s linear, -webkit-box-shadow 0.2s linear;
-}
-.btn:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #337d5a;
-    width: 0;
-    height: 100%;
-    -webkit-transition: width 0.3s linear;
-         -o-transition: width 0.3s linear;
-            transition: width 0.3s linear;
-    z-index: -1;
-    border-radius: 5px;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
 }
 .btn:hover {
     color: #fff;
+    background: #337d5a;
     -webkit-box-shadow: 0 0 10px 1px rgba(51, 125, 90, 0.85);
             box-shadow: 0 0 10px 1px rgba(51, 125, 90, 0.85);
-}
-.btn:hover:before {
-    width: 100%;
 }
 input {
     line-height: normal;
@@ -1046,6 +1002,7 @@ textarea {
 }
 .basketBtn:hover {
     color: #337d5a;
+    background: transparent;
 }
 .basketBtn:before {
     background: transparent;
@@ -2044,6 +2001,16 @@ textarea {
     margin-left: 0.5%;
     margin-right: 0.5%;
     margin-bottom: 60px;
+    -webkit-transition: -webkit-transform 0.3s linear;
+            transition: -webkit-transform 0.3s linear;
+         -o-transition:         transform 0.3s linear;
+            transition:         transform 0.3s linear;
+            transition:         transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+.catalog__item:hover {
+    -webkit-transform: scale(1.04) !important;
+        -ms-transform: scale(1.04) !important;
+            transform: scale(1.04) !important;
 }
 @media only screen and (min-width: 480px) {
     .catalog__item {
@@ -2559,6 +2526,7 @@ textarea {
     top: -115px;
     left: 10px;
     max-width: 121px;
+    z-index: 9;
 }
 @media only screen and (min-width: 768px) {
     .freeMonday__pepper {
@@ -2603,6 +2571,7 @@ textarea {
     bottom: -120px;
     right: 0;
     max-width: 124px;
+    z-index: 9;
 }
 @media only screen and (min-width: 768px) {
     .freeMonday__avocado2 {
@@ -2636,6 +2605,23 @@ textarea {
     .freeMonday__spices {
         top: 150px;
         right: -380px;
+    }
+}
+.freeMonday__thyme {
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+    .freeMonday__thyme {
+        display: block;
+        position: absolute;
+        top: -150px;
+        right: -215px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .freeMonday__thyme {
+        top: -120px;
+        right: -315px;
     }
 }
 .recipes {

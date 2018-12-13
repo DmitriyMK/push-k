@@ -39,13 +39,17 @@
 		}
 	}
 
-	&__item {
-		// flex-basis: 49%;
-		
+	&__item {	
 		flex-basis: 98%;
 		margin-left: .5%;
 		margin-right: .5%;
 		margin-bottom: 60px;
+		transition: transform .3s linear;
+
+
+		&:hover {
+			transform: scale(1.04) !important;
+		}
 		
 		@media @mobile-land {
 			flex-basis: 49%;
