@@ -23,6 +23,7 @@
 .headerInner {
 	padding-top: 10px;
 	z-index: 2000;
+	background: @lime;
 	.logoBig-text {
 		padding-top: 50px;
 	}
@@ -77,3 +78,32 @@
 		}
 	}
 }
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 55px 0;
+	list-style-type: none;
+	li {
+		margin-left: 7.5px;
+		margin-right: 7.5px;
+		padding-top: 8px;
+		min-width: 35px;
+		min-height: 35px;
+		border: 1px solid transparent;
+		border-radius: 50%;
+		text-align: center;
+	}
+	i {
+		display: block;
+		margin-left: 10px;
+		margin-right: 10px;
+		font-size: 36px;
+		color: @green;
+		font-weight: 700;
+	}
+	.active {
+		border: 1px solid @green;
+	}
+} 

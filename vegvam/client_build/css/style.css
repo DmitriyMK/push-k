@@ -527,7 +527,6 @@ textarea {
     position: fixed;
     width: 100%;
     z-index: 100;
-    background: #95c557;
 }
 .header__top {
     padding: 5px;
@@ -3482,6 +3481,7 @@ textarea {
 .headerInner {
     padding-top: 10px;
     z-index: 2000;
+    background: #95c557;
 }
 .headerInner .logoBig-text {
     padding-top: 50px;
@@ -3532,6 +3532,40 @@ textarea {
     font-size: 16px;
     color: #181d23;
 }
+.pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 55px 0;
+    list-style-type: none;
+}
+.pagination li {
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    padding-top: 8px;
+    min-width: 35px;
+    min-height: 35px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+}
+.pagination i {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 36px;
+    color: #337d5a;
+    font-weight: 700;
+}
+.pagination .active {
+    border: 1px solid #337d5a;
+}
 .peoplePage {
     position: relative;
 }
@@ -3581,16 +3615,16 @@ textarea {
             filter: grayscale(0);
 }
 .peoplePage__imgWrap {
-    max-height: 255px;
-    max-width: 255px;
+    max-width: 290px;
+    max-height: 275px;
     margin-bottom: 15px;
     overflow: hidden;
 }
 .peoplePage__img {
     display: block;
     max-width: 100%;
-    width: 255px;
-    height: 255px;
+    width: 290px;
+    height: 275px;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: top;
@@ -3665,7 +3699,7 @@ textarea {
 .peoplePage .slick-dots li button:after {
     position: absolute;
     top: 15.5px;
-    left: 14px;
+    left: 13.5px;
     content: counter(li);
     font-size: 14px;
     color: #181d23;
@@ -3705,7 +3739,7 @@ textarea {
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 21px 15px;
-    margin-bottom: 80px;
+    margin-bottom: 85px;
 }
 .peoplePageAbout__picture {
     margin-top: 20px;
@@ -3737,8 +3771,10 @@ textarea {
 }
 .peoplePageAbout__description {
     position: relative;
-    padding: 60px 40px 60px 30px;
+    padding: 50px 20px 50px 20px;
     font-size: 24px;
+    line-height: 1.22;
+    letter-spacing: 1.15px;
     color: #181d23;
 }
 .peoplePageAbout__description:before {
@@ -3753,21 +3789,18 @@ textarea {
 }
 .peoplePageAbout__img1 {
     position: absolute;
-    top: 485px;
-    right: -105px;
+    top: 535px;
+    right: -130px;
 }
 .peoplePageAbout__img2 {
     position: absolute;
-    top: 205px;
-    right: -380px;
+    top: 50px;
+    right: -365px;
 }
 .peoplePageAbout__img3 {
     position: absolute;
     top: -55px;
     right: -360px;
-}
-.peopleInterview {
-    padding-bottom: 80px;
 }
 .peopleInterview .container {
     position: relative;
@@ -3780,6 +3813,7 @@ textarea {
     display: inline-block;
     width: 110px;
     text-transform: uppercase;
+    letter-spacing: 1.2px;
     z-index: 10;
 }
 .peopleInterview dt {
@@ -3788,6 +3822,7 @@ textarea {
     display: flex;
     padding-bottom: 15px;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 .peopleInterview dd {
     display: -webkit-box;
@@ -3795,6 +3830,8 @@ textarea {
     display: flex;
     padding-bottom: 60px;
     font-weight: 300;
+    line-height: 1.25;
+    letter-spacing: 1px;
 }
 .peopleInterview dd span {
     padding-right: 55px;
@@ -3806,7 +3843,7 @@ textarea {
 }
 .peopleBonus {
     position: relative;
-    padding-top: 60px;
+    padding-top: 55px;
 }
 .peopleBonus .container {
     position: relative;
@@ -3821,35 +3858,159 @@ textarea {
 .peopleBonus__picture img {
     display: block;
     max-width: 100%;
-    max-height: 560px;
+    max-height: 580px;
     height: auto;
 }
 .peopleBonus__content img {
+    margin-top: -95px;
+    margin-left: -55px;
     position: relative;
     z-index: 10;
 }
 .peopleBonus__title {
+    position: relative;
+    padding-top: 45px;
+    padding-right: 15px;
     font-size: 60px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: right;
+    z-index: 12;
 }
 .peopleBonus__text {
     position: relative;
     float: right;
     max-width: 570px;
-    padding-top: 30px;
+    padding-top: 53px;
     font-size: 24px;
+    letter-spacing: 1.2px;
+    z-index: 11;
 }
 .peopleBonus__text:before {
     content: '';
     position: absolute;
     top: -30px;
-    left: -70px;
-    width: 100%;
-    height: 150%;
+    left: -28px;
+    width: 87%;
+    height: 108%;
     background: #f3f3f3;
     z-index: -1;
+}
+.peopleBonus__recipe {
+    padding: 0 15px;
+    margin-top: -255px;
+    position: relative;
+    z-index: 20;
+}
+.peopleBonus__recipe ul {
+    padding-bottom: 22px;
+}
+.peopleBonus__recipe li {
+    position: relative;
+    padding-bottom: 7px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    list-style-type: none;
+}
+.peopleBonus__recipe li:before {
+    content: ' - ';
+}
+.peopleBonus__recipe strong {
+    font-size: 18px;
+    letter-spacing: 0.9px;
+}
+.peopleBonus__recipe blockquote {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 17px 0;
+    margin: 50px 0;
+    border-top: 1px solid #337d5a;
+    border-bottom: 1px solid #337d5a;
+    letter-spacing: 1.22px;
+    font-weight: 700;
+}
+.peopleBonus__recipe blockquote cite {
+    min-width: 90px;
+    margin-right: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.peopleBonus__recipe blockquote p {
+    font-size: 24px;
+    line-height: 1;
+}
+.peopleBonus__img1 {
+    position: absolute;
+    top: 130px;
+    right: -255px;
+}
+.peopleRecomend {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.peopleRecomend .container {
+    position: relative;
+}
+.peopleRecomend__title {
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.peopleRecomend__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 52px;
+    margin-bottom: 5px;
+    list-style-type: none;
+}
+.peopleRecomend__item {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.peopleRecomend__imgWrap {
+    max-width: 290px;
+    max-height: 275px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.peopleRecomend__img {
+    display: block;
+    max-width: 100%;
+    width: 290px;
+    height: 275px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.87, 0.32, 0.69, 0.87);
+            transition: -webkit-transform 0.5s cubic-bezier(0.87, 0.32, 0.69, 0.87);
+         -o-transition:         transform 0.5s cubic-bezier(0.87, 0.32, 0.69, 0.87);
+            transition:         transform 0.5s cubic-bezier(0.87, 0.32, 0.69, 0.87);
+            transition:         transform 0.5s cubic-bezier(0.87, 0.32, 0.69, 0.87), -webkit-transform 0.5s cubic-bezier(0.87, 0.32, 0.69, 0.87);
+}
+.peopleRecomend__name {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 18px;
+    letter-spacing: 1.45px;
+}
+.peopleRecomend__img1 {
+    position: absolute;
+    top: -40px;
+    left: -80px;
+}
+.peopleRecomend .btn {
+    display: block;
+    width: 170px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 1.45px;
 }
 .slick-prev, .slick-next {
     position: absolute;

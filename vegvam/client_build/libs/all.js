@@ -266,6 +266,7 @@ $('.peoplePage__slider').slick({
 	slidesToScroll: 1,
 	arrows: true,
 	dots: true,
+  lazyLoad: 'ondemand',
 
 	responsive: [
 	{

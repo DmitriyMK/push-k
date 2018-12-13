@@ -80,8 +80,8 @@
 	}
 
 	&__imgWrap {
-		max-height: 255px;
-		max-width: 255px;
+		max-width: 290px;
+		max-height: 275px;
 		margin-bottom: 15px;
 		overflow: hidden;
 	}
@@ -90,10 +90,10 @@
 	&__img {
 		display: block;
 		max-width: 100%;
-		width: 255px;
-		height: 255px;
+		width: 290px;
+		height: 275px;
 		// height: auto;
-		// 
+
 		object-fit: cover;
 		object-position: top;
 		transition: transform .5s cubic-bezier(.87,.32,.69,.87);
@@ -163,7 +163,7 @@
 				&:after {
 					position: absolute;
 					top: 15.5px;
-					left: 14px;
+					left: 13.5px;
 					content: counter(li); 
 					font-size: 14px;
 					color: #181d23;
@@ -209,7 +209,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 21px 15px;
-		margin-bottom: 80px;
+		margin-bottom: 85px;
 	}
 
 	&__picture {
@@ -244,8 +244,10 @@
 	}
 	&__description {
 		position: relative;
-		padding: 60px 40px 60px 30px;
+		padding: 50px 20px 50px 20px;
 		font-size: 24px;
+		line-height: 1.22;
+		letter-spacing: 1.15px;
 		color: #181d23;
 
 		&:before {
@@ -263,13 +265,13 @@
 
 	&__img1 {
 		position: absolute;
-		top: 485px;
-		right: -105px;
+		top: 535px;
+		right: -130px;
 	}
 	&__img2 {
 		position: absolute;
-		top: 205px;
-		right: -380px;
+		top: 50px;
+		right: -365px;
 	}
 	&__img3 {
 		position: absolute;
@@ -280,8 +282,6 @@
 
 
 .peopleInterview {
-	padding-bottom: 80px;
-
 	.container {
 		position: relative;
 	}
@@ -294,6 +294,7 @@
 			display: inline-block;
 			width: 110px;
 			text-transform: uppercase;
+			letter-spacing: 1.2px;
 			z-index: 10;
 		}
 	}
@@ -302,12 +303,15 @@
 		display: flex;
 		padding-bottom: 15px;
 		font-weight: 700;
+		letter-spacing: 1px;
 	}
 
 	dd {
 		display: flex;
 		padding-bottom: 60px;
 		font-weight: 300;
+		line-height: 1.25;
+		letter-spacing: 1px;
 		span {
 			padding-right: 55px;
 		}
@@ -323,7 +327,7 @@
 
 .peopleBonus {
 	position: relative;
-	padding-top: 60px;
+	padding-top: 55px;
 
 	.container {
 		position: relative;
@@ -339,7 +343,7 @@
 		img {
 			display: block;
 			max-width: 100%;
-			max-height: 560px;
+			max-height: 580px;
 			height: auto;
 		}
 	}
@@ -347,36 +351,167 @@
 
 	&__content {
 		img {
+			margin-top: -95px;
+			margin-left: -55px;
 			position: relative;
 			z-index: 10;
 		}
 	}
 
 	&__title {
+		position: relative;
+		padding-top: 45px;
+		padding-right: 15px;
 		font-size: 60px;
 		font-weight: 700;
 		text-transform: uppercase;
 		text-align: right;
+		z-index: 12;
 	}
 	&__text {
 		position: relative;
 		float: right;
 		max-width: 570px;
-		padding-top: 30px;
+		padding-top: 53px;
 		font-size: 24px;
+		letter-spacing: 1.2px;
+		z-index: 11;
 
 		&:before {
 			content: '';
 			position: absolute;
 			top: -30px;
-			left: -70px;
-			width: 100%;
-			height: 150%;
+			left: -28px;
+			width: 87%;
+			height: 108%;
 			background: #f3f3f3;
 			z-index: -1;
 		}
 	}
 
-	
-	
+
+	&__recipe {
+		position: relative;
+		padding: 0 15px;
+		margin-top: -255px;
+		position: relative;
+		z-index: 20;
+		ul {
+			padding-bottom: 22px;
+		}
+		li {
+			position: relative;
+			padding-bottom: 7px;
+			font-size: 18px;
+			letter-spacing: 1.5px;
+			list-style-type: none;
+			&:before {
+				content: " - ";
+			}
+		}
+
+		strong {
+			font-size: 18px;
+			letter-spacing: 0.9px;
+		}
+
+		blockquote {
+			display: flex;
+			padding: 17px 0;
+			margin: 50px 0;
+
+			border-top: 1px solid @green;
+			border-bottom: 1px solid @green;
+			letter-spacing: 1.22px;
+			font-weight: 700;
+
+			cite {
+				min-width: 90px;
+				margin-right: 20px;
+				font-size: 18px;
+				text-transform: uppercase;
+			}
+			p {
+				font-size: 24px;
+				line-height: 1;
+			}
+		}
+	}	
+
+	&__img1 {
+		position: absolute;
+		top: 130px;
+		right: -255px;
+	}
+}
+
+
+.peopleRecomend {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	.container {
+		position: relative;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 30px;
+		letter-spacing: 1.5px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	&__list {
+		display: flex;
+		margin-top: 52px;
+		margin-bottom: 5px;
+		list-style-type: none;
+	}
+
+	&__item {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	&__imgWrap {
+		max-width: 290px;
+		max-height: 275px;
+		margin-bottom: 15px;
+		overflow: hidden;
+	}
+
+
+	&__img {
+		display: block;
+		max-width: 100%;
+		width: 290px;
+		height: 275px;
+		// height: auto;
+
+		object-fit: cover;
+		object-position: top;
+		transition: transform .5s cubic-bezier(.87,.32,.69,.87);
+	}
+	&__name {
+		padding-top: 25px;
+		padding-bottom: 25px;
+		font-size: 18px;
+		letter-spacing: 1.45px;
+	}
+
+	&__img1 {
+		position: absolute;
+		top: -40px;
+		left: -80px;
+	}
+
+	.btn {
+		display: block;
+		width: 170px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		text-align: center;
+		font-size: 20px;
+		letter-spacing: 1.45px;
+	}
 }
