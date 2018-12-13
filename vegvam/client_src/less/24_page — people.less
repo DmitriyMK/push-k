@@ -46,7 +46,7 @@
 	
 	&__slider {
 		position: relative;
-		padding: 45px 25px;
+		padding: 45px;
 	}
 
 	&__slide {
@@ -77,11 +77,15 @@
 				filter: grayscale(0);
 			}
 		}
+		.people__name {
+			color: @green;
+			font-weight: 700;
+		}
 	}
 
 	&__imgWrap {
-		max-width: 290px;
-		max-height: 275px;
+		max-width: 260px;
+		max-height: 245px;
 		margin-bottom: 15px;
 		overflow: hidden;
 	}
@@ -92,20 +96,21 @@
 		max-width: 100%;
 		width: 290px;
 		height: 275px;
-		// height: auto;
+		margin: auto;
 
 		object-fit: cover;
 		object-position: top;
 		transition: transform .5s cubic-bezier(.87,.32,.69,.87);
 	}
 	&__name {
+		padding-left: 7px;
 		font-size: 18px;
 	}
 
 	.slick-prev,
 	.slick-next {
-		bottom: 0px;
-		transform: inherit;
+		top: 50%;
+		transform: translateY(-50%);
 
 		&:before {
 			font-size: 38px;

@@ -21,27 +21,49 @@
 }
 
 .headerInner {
-	// padding-top: 10px;
-	z-index: 2000;
 	background: @lime;
+	z-index: 2000;
+
 	.logoBig-text {
-		padding-top: 50px;
+		transform: translateY(50px);
+		transition: transform .3s linear;
+	}
+
+	.header__line-contact {
+		transform: translateY(0px);
+		transition: transform .3s linear;
 	}
 }
 
 .fixedInner {
-	max-height: 76px;
-	
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2000;
+	background: @lime;
+
+	.header__top {
+		padding: 0;
+		position: relative;
+	}
+
 	.logoBig-text {
-		padding-top: 0;
+		transform: translateY(15px);
+	}
+
+	
+	.header__top {
+		@media @desktop {
+			padding: 0;
+		}
 	}
 	.header__line-contact {
 		@media @desktop {
-			position: absolute;
-			top: -240px;
-			right: 0;
+			transform: translateY(-120px);
 			height: 0;
-			transition: all .3s linear;
+			right: 0;
+			transition: transform .25s linear;
 		}
 	}
 }
