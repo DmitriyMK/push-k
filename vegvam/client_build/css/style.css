@@ -5119,6 +5119,9 @@ textarea {
         bottom: -40px;
         left: -60px;
         max-width: 360px;
+        -webkit-transform: none;
+            -ms-transform: none;
+                transform: none;
     }
 }
 @media only screen and (min-width: 992px) {
