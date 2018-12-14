@@ -43,3 +43,23 @@ textarea {
 	font-size: 14px;
     color: #fff;
 }
+
+#phone-error,
+#name-error,
+#email-error,
+#message-error {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    font-size: red!important;
+    font-size: 10px;
+    transition: all .3s linear;
+}
+
+.form__input {
+    position: relative;
+    .error {
+        color: red;
+        letter-spacing: 1px;
+    }
+}

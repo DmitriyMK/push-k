@@ -321,22 +321,45 @@ $(window).scroll(function() {
 });
 
 
-$(".form").submit(function() {
-	var th = $(this);
-	$.ajax({
-		type: "POST",
-		url: "mail.php",
-		data: th.serialize()
-	}).done(function() {
 
-		var inst = $('[data-remodal-id=modal-thanks]').remodal();
-		inst.open();
+$("#feedbackForm").validate({
 
-		setTimeout(function() {
-			th.trigger("reset");
-		}, 1000);
-	});
-	return false;
+  rules: {
+    name: "required",
+    email: {
+      required: true,
+      email: true,
+    },
+    phone: {
+      required: true,
+    }
+
+  },
+  messages: {
+    name: "Введите как минимум два символа",
+    email: "Проверьте правильность ввода",
+    phone: "Введите корректный номер телефона",
+    message: "Поле для сообщения не может быть пустым"
+  },
+
+  submitHandler: function() {
+    var th = $("#feedbackForm");
+
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: th.serialize()
+    }).done(function() {
+
+      // window.location = 'thank.html';
+
+      setTimeout(function() {
+        th.trigger("reset");
+      }, 1000);
+  });
+
+    return false;
+  }
 });
 
 window.console.log('Made with fun and love ❤️ Push-K solutions ❤️');
