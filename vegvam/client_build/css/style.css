@@ -3952,7 +3952,7 @@ textarea {
 }
 .peoplePage .slick-prev:hover:before, .peoplePage .slick-next:hover:before, .peoplePage .slick-prev:focus:before, .peoplePage .slick-next:focus:before {
     color: #337d5a;
-    opacity: 0.35;
+    opacity: 0.55;
 }
 .peoplePage .slick-prev {
     left: 0;
