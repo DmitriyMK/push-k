@@ -3801,6 +3801,8 @@ textarea {
 @media only screen and (min-width: 1600px) {
     .recomend__img {
         width: 290px;
+        height: 275px;
+        max-height: inherit;
     }
 }
 .recomend__name {
