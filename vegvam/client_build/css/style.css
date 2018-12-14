@@ -3950,9 +3950,12 @@ textarea {
     font-size: 38px;
     color: #337d5a;
 }
-.peoplePage .slick-prev:hover:before, .peoplePage .slick-next:hover:before, .peoplePage .slick-prev:focus:before, .peoplePage .slick-next:focus:before {
+.peoplePage .slick-prev:hover:before, .peoplePage .slick-next:hover:before {
     color: #337d5a;
     opacity: 0.55;
+}
+.peoplePage .slick-prev:focus:before, .peoplePage .slick-next:focus:before {
+    opacity: 1;
 }
 .peoplePage .slick-prev {
     left: 0;

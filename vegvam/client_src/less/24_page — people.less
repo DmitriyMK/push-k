@@ -137,10 +137,15 @@
 			font-size: 38px;
 			color: @green;
 		}
-		&:hover, &:focus {
+		&:hover {
 			&:before {
 				color: @green;
 				opacity: .55;
+			}
+		}
+		&:focus {
+			&:before {
+				opacity: 1;
 			}
 		}
 	}
