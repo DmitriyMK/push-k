@@ -139,7 +139,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 30px 0;
+	margin: 15px 0;
 	list-style-type: none;
 
 	@media @desktop {
@@ -171,3 +171,106 @@
 		border: 1px solid @green;
 	}
 } 
+
+.recomend {
+	padding: 80px 0;
+
+
+	@media @desktop {
+		padding: 100px 0;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 20px;
+		letter-spacing: 1.5px;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		@media @tablet {
+			font-size: 24px;
+		}
+		@media @desktop {
+			font-size: 30px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+
+		margin-top: 52px;
+		margin-bottom: 5px;
+		list-style-type: none;
+	}
+
+	&__item {
+		margin-bottom: 60px;
+		width: 98%;
+
+		@media @mobile-land {
+			width: 48%;
+			margin-left: 1%;
+			margin-right: 1%;
+		}
+		@media @desktop {
+			width: 23%;
+			margin-bottom: 0;
+		}
+	}
+
+	&__imgWrap {
+		margin-bottom: 15px;
+		overflow: hidden;
+	}
+
+
+	&__img {
+		display: block;
+		max-width: 100%;
+		width: 300px;
+		margin: auto;
+		// height: 260px;
+		max-height: 260px;
+		height: auto;
+
+		object-fit: cover;
+		object-position: top;
+		transition: transform .5s cubic-bezier(.87,.32,.69,.87);
+
+		@media @desktop {
+			width: 270px;
+		}
+		@media @desktop-xl-2 {
+			width: 290px;
+		}
+	}
+	&__name {
+		padding-top: 25px;
+		padding-bottom: 25px;
+		font-size: 18px;
+		letter-spacing: 1.45px;
+		text-align: center;
+
+		@media @desktop {
+			text-align: inherit;
+		}
+	}
+
+	
+
+	.btn {
+		display: block;
+		width: 170px;
+		margin: auto;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		text-align: center;
+		font-size: 20px;
+		letter-spacing: 1.45px;
+
+		@media @desktop {
+			margin: 0;
+		}
+	}
+}
