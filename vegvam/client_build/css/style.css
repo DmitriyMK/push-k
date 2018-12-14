@@ -3621,6 +3621,31 @@ textarea {
                 transition:         transform 0.25s linear, -webkit-transform 0.25s linear;
     }
 }
+.pageTitle {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+@media only screen and (min-width: 768px) {
+    .pageTitle {
+        font-size: 24px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .pageTitle {
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .pageTitle {
+        font-size: 36px;
+    }
+}
+.pageTitle strong {
+    color: #337d5a;
+}
 .breadCrumbs {
     padding-top: 100px;
 }
@@ -3845,31 +3870,6 @@ textarea {
     .peoplePage__box {
         padding: 42px 15px;
     }
-}
-.peoplePage__title {
-    font-size: 21px;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-@media only screen and (min-width: 768px) {
-    .peoplePage__title {
-        font-size: 24px;
-    }
-}
-@media only screen and (min-width: 992px) {
-    .peoplePage__title {
-        font-size: 30px;
-    }
-}
-@media only screen and (min-width: 1200px) {
-    .peoplePage__title {
-        font-size: 36px;
-    }
-}
-.peoplePage__title strong {
-    color: #337d5a;
 }
 .peoplePage__slider {
     position: relative;
@@ -4779,6 +4779,394 @@ textarea {
         top: -40px;
         left: -80px;
         max-width: 99px;
+    }
+}
+.aboutPage .about__box {
+    padding: 30px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+@media only screen and (min-width: 992px) {
+    .aboutPage .about__box {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -webkit-box-align: inherit;
+        -ms-flex-align: inherit;
+        align-items: inherit;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 50px 0;
+    }
+}
+.aboutPage .about__picture {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+}
+@media only screen and (min-width: 992px) {
+    .aboutPage .about__picture {
+        width: 50%;
+        -webkit-box-ordinal-group: inherit;
+        -ms-flex-order: inherit;
+        order: inherit;
+    }
+}
+.aboutPage .about__img {
+    max-height: 560px;
+}
+.aboutPage .about__content {
+    position: relative;
+    padding: 15px 5px;
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .about__content {
+        padding: 15px 35px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .aboutPage .about__content {
+        width: 50%;
+        padding-top: 33px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .aboutPage .about__content {
+        width: 45%;
+    }
+}
+.aboutPage .about__content:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 5px;
+    width: 55px;
+    height: 2px;
+    background: #95c557;
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .about__content:before {
+        left: 30px;
+    }
+}
+.aboutPage .about__title {
+    padding-bottom: 15px;
+    font-size: 21px;
+    letter-spacing: 1.3px;
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .about__title {
+        font-size: 22px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .aboutPage .about__title {
+        padding-bottom: 30px;
+        font-size: 24px;
+    }
+}
+.aboutPage .about__text {
+    font-size: 18px;
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+.aboutPage .about__slogan {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    border-bottom: 1px solid #95c557;
+}
+@media only screen and (min-width: 480px) {
+    .aboutPage .about__slogan {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .about__slogan {
+        padding-bottom: 82px;
+    }
+}
+.aboutPage .about__slogan-content {
+    max-width: 400px;
+    font-weight: 700;
+}
+@media only screen and (min-width: 1200px) {
+    .aboutPage .about__slogan-content {
+        max-width: 420px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .aboutPage .about__slogan-content {
+        margin-left: -10px;
+    }
+}
+.aboutPage .about__slogan-content strong {
+    position: relative;
+    font-size: 26px;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .about__slogan-content strong {
+        font-size: 34px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .aboutPage .about__slogan-content strong {
+        font-size: 40px;
+    }
+}
+.aboutPage .about__slogan-content strong:before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 55px;
+    height: 2px;
+    background: #95c557;
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .about__slogan-content strong:before {
+        top: -37px;
+    }
+}
+.aboutPage .about__slogan-content p {
+    padding-top: 10px;
+    font-size: 26px;
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .about__slogan-content p {
+        font-size: 32px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .aboutPage .about__slogan-content p {
+        font-size: 36px;
+    }
+}
+.aboutPage .about__slogan-picture {
+    margin-top: 45px;
+    max-width: 267px;
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .about__slogan-picture {
+        max-width: 347px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .aboutPage .about__slogan-picture {
+        margin-right: -10px;
+    }
+}
+.aboutPage .team {
+    padding: 70px 0;
+}
+.aboutPage .team__box {
+    padding-top: 45px;
+    padding-bottom: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.aboutPage .team__img {
+    max-height: 400px;
+}
+.aboutPage .team__name {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    letter-spacing: 0.7px;
+    font-size: 18px;
+    font-weight: 700;
+}
+@media only screen and (min-width: 992px) {
+    .aboutPage .team__name {
+        padding-top: 35px;
+    }
+}
+.aboutPage .team__job {
+    padding-bottom: 60px;
+    letter-spacing: 0.7px;
+}
+@media only screen and (min-width: 992px) {
+    .aboutPage .team__job {
+        padding-bottom: 0;
+    }
+}
+.aboutPage .mission {
+    margin-bottom: 80px;
+    background: #7aa542;
+    color: #fff;
+}
+.aboutPage .mission .container {
+    position: relative;
+}
+.aboutPage .mission__box {
+    position: relative;
+    padding: 60px 5px;
+    text-align: center;
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .mission__box {
+        padding: 80px 60px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .aboutPage .mission__box {
+        padding: 80px;
+    }
+}
+.aboutPage .mission__text {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 21px;
+    letter-spacing: 0.65px;
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .mission__text {
+        padding-bottom: 15px;
+        font-size: 22px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .aboutPage .mission__text {
+        font-size: 24px;
+    }
+}
+.aboutPage .mission__subTitle {
+    font-size: 22px;
+    letter-spacing: 1.3px;
+    line-height: 2;
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .mission__subTitle {
+        font-size: 24px;
+    }
+}
+.aboutPage .mission__list {
+    padding-bottom: 20px;
+}
+.aboutPage .mission__item {
+    position: relative;
+    padding-bottom: 20px;
+    font-size: 21px;
+    letter-spacing: 0.4px;
+    list-style-type: none;
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .mission__item {
+        padding-bottom: 13px;
+        font-size: 24px;
+    }
+}
+.aboutPage .mission__img1 {
+    display: none;
+}
+@media only screen and (min-width: 1200px) {
+    .aboutPage .mission__img1 {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: -120px;
+        max-width: 240px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .aboutPage .mission__img1 {
+        max-width: 368px;
+        left: -370px;
+    }
+}
+.aboutPage .mission__img2 {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    -webkit-transform: translateX(-55%);
+        -ms-transform: translateX(-55%);
+            transform: translateX(-55%);
+    max-width: 350px;
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .mission__img2 {
+        bottom: -40px;
+        left: -60px;
+        max-width: 360px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .aboutPage .mission__img2 {
+        left: -20px;
+        bottom: -40px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .aboutPage .mission__img2 {
+        left: 40px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .aboutPage .mission__img2 {
+        max-width: 442px;
+        left: -90px;
+    }
+}
+.aboutPage .mission__img3 {
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+    .aboutPage .mission__img3 {
+        display: block;
+        position: absolute;
+        bottom: -40px;
+        right: 0;
+        max-width: 240px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .aboutPage .mission__img3 {
+        bottom: -40px;
+        right: -40px;
+        max-width: 240px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .aboutPage .mission__img3 {
+        max-width: 285px;
+        right: -120px;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    .aboutPage .mission__img3 {
+        max-width: 365px;
+        right: -220px;
     }
 }
 .slick-prev, .slick-next {

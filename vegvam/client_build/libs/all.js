@@ -22,24 +22,24 @@ $(document).ready(function() {
 		$('html').addClass('no-overflow-y');
 
 
-		let els = document.querySelectorAll(".js-splitme");
+		var els = document.querySelectorAll(".js-splitme");
 		[].forEach.call(els, function(el) {
-			el.outerHTML = Splitter(el.outerHTML, '<span class="letter">$</span>');
+			el.outerHTML = Splitter(el.outerHTML, '<span class="varter">$</span>');
 		});
 
 
      // SCROLL ANIMATION
      $('[data-scrollmagic1]').each(function(index, elem) {
-     	let scrollMagicController = new ScrollMagic();
+     	  var scrollMagicController = new ScrollMagic();
 
       	// Create Animations
-      	let 
+      	var 
       	img1 = $(elem).find('.statistics__item1'),
       	img2 = $(elem).find('.statistics__item2'),
       	img3 = $(elem).find('.statistics__item3'),
       	img4 = $(elem).find('.statistics__item4');
 
-      	let tl = new TimelineMax({
+      	var tl = new TimelineMax({
       		pause: true
       	});
 
@@ -51,7 +51,7 @@ $(document).ready(function() {
       	.fromTo(img4, 2.4, {y: '80px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
 
 
-      	let scene = new ScrollScene({
+      	var scene = new ScrollScene({
       		triggerElement: elem,
       		reverse: false,
       		offset: -440
@@ -64,12 +64,12 @@ $(document).ready(function() {
     
 
     $('[data-scrollmagic2]').each(function(index, elem) {
-    	let scrollMagicController = new ScrollMagic();
+    	var scrollMagicController = new ScrollMagic();
 
       // Create Animations
-      let 
-      title = $(elem).find('.articleTitle'),
-      text = $(elem).find('.articleText'),
+      var 
+      title = $(elem).find('.articvaritle'),
+      text = $(elem).find('.articvarext'),
 
       img1 = $(elem).find('.catalog__link'),
       img2 = $(elem).find('.catalog__img'),
@@ -78,7 +78,7 @@ $(document).ready(function() {
       productPrice = $(elem).find('.catalog__price'),
       productBtn = $(elem).find('.catalog__btn');
 
-      let tl = new TimelineMax({
+      var tl = new TimelineMax({
       	pause: true
       });
 
@@ -92,7 +92,7 @@ $(document).ready(function() {
       .fromTo(productPrice, 2.0, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
       .fromTo(productBtn, 2.4, {y: '40px', opacity: 0, scale: 1.05}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
 
-      let scene = new ScrollScene({
+      var scene = new ScrollScene({
       	triggerElement: elem,
       	reverse: false,
       	offset: -240
@@ -101,22 +101,22 @@ $(document).ready(function() {
       .setTween(tl)
       .addTo(scrollMagicController);
       // scene.addIndicators();
-  });
+      });
   	// END data-scrollmagic2
 
 
   	$('[data-scrollmagic3]').each(function(index, elem) {
-  		let scrollMagicController = new ScrollMagic();
+  		var scrollMagicController = new ScrollMagic();
 
       // Create Animations
-      let 
+      var 
       img1 = $(elem).find('.stringBackStat__item1'),
       img2 = $(elem).find('.stringBackStat__item2'),
       img3 = $(elem).find('.stringBackStat__item3'),
       img4 = $(elem).find('.stringBackStat__item4');
 
 
-      let tl = new TimelineMax({
+      var tl = new TimelineMax({
       	pause: true
       });
 
@@ -129,7 +129,7 @@ $(document).ready(function() {
       .fromTo(img4, 2.4, {y: '80px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
 
 
-      let scene = new ScrollScene({
+      var scene = new ScrollScene({
       	triggerElement: elem,
       	reverse: false,
       	offset: 0
@@ -138,17 +138,17 @@ $(document).ready(function() {
       .setTween(tl)
       .addTo(scrollMagicController);
       // scene.addIndicators();
-  });
+      });
     // END data-scrollmagic3
     
 
     $('[data-scrollmagic4]').each(function(index, elem) {
-    	let scrollMagicController = new ScrollMagic();
+    	var scrollMagicController = new ScrollMagic();
 
       // Create Animations
-      let 
-      title = $(elem).find('.articleTitle'),
-      text = $(elem).find('.articleText'),
+      var 
+      title = $(elem).find('.articvaritle'),
+      text = $(elem).find('.articvarext'),
 
       img1 = $(elem).find('.catalog__item1'),
       img2 = $(elem).find('.catalog__item2'),
@@ -156,7 +156,7 @@ $(document).ready(function() {
       img4 = $(elem).find('.catalog__item4'),
       btn = $(elem).find('.articleBtn');
 
-      let tl = new TimelineMax({
+      var tl = new TimelineMax({
       	pause: true
       });
 
@@ -170,7 +170,7 @@ $(document).ready(function() {
       .fromTo(img4, 2.4, {y: '80px', opacity: 0}, {y: 0, opacity: 1, ease: Power2.easeOut}, "start")
       .fromTo(btn, 3.6, {y: '80px', opacity: 0, scale: 1.2}, {y: 0, scale: 1, opacity: 1, ease: Power2.easeOut}, "start")
 
-      let scene = new ScrollScene({
+      var scene = new ScrollScene({
       	triggerElement: elem,
       	reverse: false,
       	offset: -120
@@ -179,7 +179,7 @@ $(document).ready(function() {
       .setTween(tl)
       .addTo(scrollMagicController);
       // scene.addIndicators();
-  });
+      });
     // END data-scrollmagic4
 };
 
@@ -203,7 +203,7 @@ $('.linkSubmenu').click(function() {
 
 
 
-// let bLazy = new Blazy();
+// var bLazy = new Blazy();
 
 
 
@@ -322,14 +322,14 @@ $(window).scroll(function() {
 
 
 $(".form").submit(function() {
-	let th = $(this);
+	var th = $(this);
 	$.ajax({
 		type: "POST",
 		url: "mail.php",
 		data: th.serialize()
 	}).done(function() {
 
-		let inst = $('[data-remodal-id=modal-thanks]').remodal();
+		var inst = $('[data-remodal-id=modal-thanks]').remodal();
 		inst.open();
 
 		setTimeout(function() {
