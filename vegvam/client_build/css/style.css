@@ -498,6 +498,7 @@ textarea {
 }
 option[disabled] {
     display: none;
+    background: transparent;
 }
 .header {
     position: fixed;
@@ -6011,12 +6012,13 @@ option[disabled] {
     }
 }
 .overlay {
+    padding-top: 10px;
     position: fixed;
     width: 100vw;
-    background: #95c557;
     height: 100vh;
-    top: 60px;
+    top: 50px;
     left: -100vw;
+    background: #95c557;
     overflow-y: scroll;
     -webkit-transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
          -o-transition: all 0.3s cubic-bezier(0.72, -0.04, 0.14, 1.03);
