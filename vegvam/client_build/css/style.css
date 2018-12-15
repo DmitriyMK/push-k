@@ -500,6 +500,45 @@ option[disabled] {
     display: none;
     background: transparent;
 }
+/* reset style For Chrome */
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+/* Для Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+.select-wrapper {
+    position: relative;
+}
+option {
+    border: 1px solid #337d5a;
+    border-radius: 10px;
+}
+select {
+    background: transparent;
+    border: 0;
+            appearance: none;
+    /* remove arrow        */
+    -webkit-appearance: none;
+    /* remove arrow Chrome */
+       -moz-appearance: none;
+    /* remove arrow FF     */
+    z-index: 10;
+}
+select::-ms-expand {
+    display: none;
+    /* remove arrow IE     */
+}
+.select-icon {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    color: rgba(24, 29, 35, 0.5);
+    z-index: -9999;
+}
 .header {
     position: fixed;
     width: 100%;
@@ -727,7 +766,7 @@ option[disabled] {
         margin: 0;
         text-align: inherit;
         border-radius: 5px;
-        font-size: 17.5px;
+        font-size: 16px;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -3565,9 +3604,9 @@ option[disabled] {
 }
 @media only screen and (min-width: 992px) {
     .headerInner .logoBig-text {
-        -webkit-transform: translateY(60px);
-            -ms-transform: translateY(60px);
-                transform: translateY(60px);
+        -webkit-transform: translateY(55px);
+            -ms-transform: translateY(55px);
+                transform: translateY(55px);
         -webkit-transition: -webkit-transform 0.3s linear;
                 transition: -webkit-transform 0.3s linear;
              -o-transition:         transform 0.3s linear;
@@ -3611,9 +3650,9 @@ option[disabled] {
 }
 @media only screen and (min-width: 992px) {
     .fixedInner .logoBig-text {
-        -webkit-transform: translateY(27px);
-            -ms-transform: translateY(27px);
-                transform: translateY(27px);
+        -webkit-transform: translateY(25px);
+            -ms-transform: translateY(25px);
+                transform: translateY(25px);
     }
 }
 @media only screen and (min-width: 1600px) {
