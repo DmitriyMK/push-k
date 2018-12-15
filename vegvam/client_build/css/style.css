@@ -5968,6 +5968,18 @@ select::-ms-expand {
         bottom: 0;
     }
 }
+.recipePage .recipes__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.recipePage .recipes__item {
+    margin-bottom: 50px;
+}
+.recipePage .btn {
+    display: block;
+    width: 170px;
+    text-align: center;
+}
 .slick-prev, .slick-next {
     position: absolute;
     display: block;
