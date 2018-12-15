@@ -170,13 +170,17 @@
 		display: block;
 		width: 245px;
 		margin: 20px auto;
-		font-size: 30px;
-		letter-spacing: 4px;
+		font-size: 24px;
+		letter-spacing: 3px;
 		background: transparent;
 		&:hover {
 			background: @green;
 		}
 
+		@media @tablet {
+			font-size: 30px;
+			letter-spacing: 4px;
+		}
 		@media @desktop-xl {
 			margin: 45px auto;
 		}
@@ -218,6 +222,7 @@
 
 	.form__img1 {
 		display: none;
+
 		@media @tablet {
 			display: block;
 			position: absolute;

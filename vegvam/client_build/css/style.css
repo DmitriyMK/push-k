@@ -5597,12 +5597,18 @@ option[disabled] {
     display: block;
     width: 245px;
     margin: 20px auto;
-    font-size: 30px;
-    letter-spacing: 4px;
+    font-size: 24px;
+    letter-spacing: 3px;
     background: transparent;
 }
 .contactPage .feedback .form__btn:hover {
     background: #337d5a;
+}
+@media only screen and (min-width: 768px) {
+    .contactPage .feedback .form__btn {
+        font-size: 30px;
+        letter-spacing: 4px;
+    }
 }
 @media only screen and (min-width: 1200px) {
     .contactPage .feedback .form__btn {
@@ -5864,12 +5870,18 @@ option[disabled] {
     display: block;
     width: 245px;
     margin: 20px auto;
-    font-size: 30px;
-    letter-spacing: 4px;
+    font-size: 24px;
+    letter-spacing: 3px;
     background: transparent;
 }
 .servicesPage .form__btn:hover {
     background: #337d5a;
+}
+@media only screen and (min-width: 768px) {
+    .servicesPage .form__btn {
+        font-size: 30px;
+        letter-spacing: 4px;
+    }
 }
 @media only screen and (min-width: 1200px) {
     .servicesPage .form__btn {
