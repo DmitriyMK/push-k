@@ -326,8 +326,11 @@
 			}
 
 			&-width {
-				width: 100%;
 				min-height: 112px;
+
+				@media @desktop {
+					width: 100%;
+				}
 			}
 			
 			&:focus {

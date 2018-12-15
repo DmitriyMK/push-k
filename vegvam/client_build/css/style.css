@@ -496,6 +496,9 @@ textarea {
     color: red;
     letter-spacing: 1px;
 }
+option[disabled] {
+    display: none;
+}
 .header {
     position: fixed;
     width: 100%;
@@ -5547,8 +5550,12 @@ textarea {
     }
 }
 .contactPage .feedback .form__line-width {
-    width: 100%;
     min-height: 112px;
+}
+@media only screen and (min-width: 992px) {
+    .contactPage .feedback .form__line-width {
+        width: 100%;
+    }
 }
 .contactPage .feedback .form__line:focus {
     border: 1px solid transparent;
@@ -5673,6 +5680,241 @@ textarea {
 }
 .contactPage .feedback .inputfile + label {
     cursor: pointer;
+}
+.servicesPage__title {
+    padding-bottom: 40px;
+}
+.servicesPage__list {
+    padding-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    list-style: none;
+}
+@media only screen and (min-width: 992px) {
+    .servicesPage__list {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding-bottom: 40px;
+    }
+}
+.servicesPage__item {
+    position: relative;
+    margin-bottom: 90px;
+}
+@media only screen and (min-width: 992px) {
+    .servicesPage__item {
+        margin-bottom: 0;
+    }
+}
+.servicesPage__img {
+    width: 280px;
+    height: 440px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+.servicesPage__titles {
+    margin-top: -70px;
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 10;
+}
+.servicesPage__content {
+    position: relative;
+    padding-bottom: 100px;
+    border-bottom: 1px solid #95c557;
+}
+@media only screen and (min-width: 768px) {
+    .servicesPage__content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .servicesPage__content {
+        padding-top: 60px;
+    }
+}
+.servicesPage__content p {
+    padding-bottom: 30px;
+    letter-spacing: 1.1px;
+    font-size: 18px;
+    line-height: 1.25;
+}
+.servicesPage__img1 {
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+}
+@media only screen and (min-width: 768px) {
+    .servicesPage__img1 {
+        right: inherit;
+        bottom: -10px;
+        left: -180px;
+    }
+}
+.servicesPage__form {
+    margin-bottom: 60px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.servicesPage .form__title {
+    padding-top: 25px;
+    padding-bottom: 23px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #337d5a;
+    text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+    .servicesPage .form__title {
+        padding-top: 35px;
+        padding-bottom: 33px;
+    }
+}
+.servicesPage .form__line {
+    width: 290px;
+    padding: 11px 15px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(24, 29, 35, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+    .servicesPage .form__line {
+        width: 380px;
+    }
+}
+.servicesPage .form__line-width {
+    width: 290px;
+}
+@media only screen and (min-width: 768px) {
+    .servicesPage .form__line-width {
+        width: 380px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .servicesPage .form__line-width {
+        width: 790px;
+    }
+}
+.servicesPage .form__line:focus {
+    border: 1px solid transparent;
+}
+.servicesPage .form__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    .servicesPage .form__row {
+        width: 700px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .servicesPage .form__row {
+        width: 790px;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -webkit-box-align: inherit;
+        -ms-flex-align: inherit;
+        align-items: inherit;
+    }
+}
+.servicesPage .form__btn {
+    display: block;
+    width: 245px;
+    margin: 20px auto;
+    font-size: 30px;
+    letter-spacing: 4px;
+    background: transparent;
+}
+.servicesPage .form__btn:hover {
+    background: #337d5a;
+}
+@media only screen and (min-width: 1200px) {
+    .servicesPage .form__btn {
+        margin: 45px auto;
+    }
+}
+.servicesPage ::-webkit-input-placeholder {
+    font-size: 16px;
+    color: #181d23;
+    opacity: 0.45;
+    letter-spacing: 1px;
+}
+.servicesPage ::-moz-placeholder {
+    font-size: 16px;
+    color: #181d23;
+    opacity: 0.45;
+    letter-spacing: 1px;
+}
+.servicesPage :-ms-input-placeholder {
+    font-size: 16px;
+    color: #181d23;
+    opacity: 0.45;
+    letter-spacing: 1px;
+}
+.servicesPage :-moz-placeholder {
+    font-size: 16px;
+    color: #181d23;
+    opacity: 0.45;
+    letter-spacing: 1px;
+}
+.servicesPage select {
+    font-size: 16px;
+    color: rgba(24, 29, 35, 0.45);
+    letter-spacing: 1px;
+}
+.servicesPage .form__img1 {
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+    .servicesPage .form__img1 {
+        display: block;
+        position: absolute;
+        right: -200px;
+        bottom: 0;
+    }
 }
 .slick-prev, .slick-next {
     position: absolute;
