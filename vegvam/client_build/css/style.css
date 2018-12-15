@@ -6026,6 +6026,7 @@ option[disabled] {
 }
 @media only screen and (min-width: 992px) {
     .overlay {
+        padding-top: 0;
         position: inherit;
         width: inherit;
         height: inherit;
