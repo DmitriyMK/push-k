@@ -183,6 +183,59 @@
 				right: -40px; 
 			}
 		}
+
+		.slick-dots {
+			display: flex!important;
+			justify-content: center;
+
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: inherit;
+			bottom: -13px;
+
+
+			li {
+				display: inline;
+				margin: 4px 8px;
+				margin-bottom: 10px;
+				counter-increment: li; 
+
+				button {
+
+					display: block;
+					height: 0;
+					width: 0;
+					padding: 15px;
+					border: 2px solid transparent;
+					border-radius: 50%;
+					background: transparent;
+					opacity: 0.75;
+					font-size: 0;
+					color: #fff;
+
+					&:before {
+						font-size: 0;
+						opacity: 0;
+						display: none;
+					}
+
+					&:after {
+						position: absolute;
+						top: 15.5px;
+						left: 13.5px;
+						content: counter(li); 
+						font-size: 14px;
+						color: #181d23;
+					}
+
+				}
+				&.slick-active button {
+					border: 2px solid @green;
+					opacity: 1;
+				}
+			}
+		}
 	}
 
 	// fixing style for catalog 

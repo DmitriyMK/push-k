@@ -243,6 +243,7 @@
 	}
 
 	&__imgWrap {
+		display: flex;
 		margin-bottom: 15px;
 		overflow: hidden;
 	}
@@ -250,16 +251,21 @@
 
 	&__img {
 		display: block;
+		margin: auto;
+		
 		max-width: 100%;
 		width: 300px;
-		margin: auto;
-		// height: 260px;
-		max-height: 260px;
-		height: auto;
+		height: 260px;
+		// max-height: 260px;
+		// height: auto;
 
 		object-fit: cover;
 		object-position: top;
 		transition: transform .5s cubic-bezier(.87,.32,.69,.87);
+
+		&:hover {
+			transform: scale(1.1);
+		}
 
 		@media @desktop {
 			width: 270px;
