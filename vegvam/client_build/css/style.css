@@ -5600,6 +5600,11 @@ select::-ms-expand {
 .contactPage .feedback .form__line:focus {
     border: 1px solid transparent;
 }
+.contactPage .feedback .form__line:focus:required:invalid {
+    border: 1px solid red;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
 .contactPage .feedback .form__row {
     display: -webkit-box;
     display: -ms-flexbox;

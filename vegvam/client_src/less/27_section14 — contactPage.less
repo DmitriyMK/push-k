@@ -336,6 +336,11 @@
 			&:focus {
 				border: 1px solid transparent;
 			}
+
+			&:focus:required:invalid {
+				border: 1px solid red;
+				box-shadow: none;
+			}
 		}
 
 		.form__row {
@@ -365,7 +370,7 @@
 			&:hover {
 				background: @green;
 			}
-			
+
 			@media @tablet {
 				font-size: 30px;
 				letter-spacing: 4px;
@@ -435,7 +440,7 @@
 				background: url(../images/clip.png);
 			}
 		}
-		
+
 		// .inputfile + label:hover,
 		.inputfile:focus + label {
 			outline: none;
