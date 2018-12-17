@@ -21,13 +21,15 @@
 }
 
 .contactPage {
+	padding-top: 80px;
 	.contact {
 		margin-bottom: 60px;
 		.container {
 			position: relative;
 		}
 
-		&__title {
+		h2 {
+			.pageTitle;
 			color: @green;
 			@media @desktop-xl {
 				font-size: 30px;
@@ -333,14 +335,9 @@
 				}
 			}
 			
-			&:focus {
-				border: 1px solid transparent;
-			}
-
-			&:focus:required:invalid {
-				border: 1px solid red;
-				box-shadow: none;
-			}
+			// &:focus {
+			// 	border: 1px solid transparent;
+			// }
 		}
 
 		.form__row {

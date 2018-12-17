@@ -47,7 +47,10 @@ textarea {
 #phone-error,
 #name-error,
 #email-error,
-#message-error {
+#message-error,
+#typeEvents-error,
+#guest-error,
+#budget-error {
     position: absolute;
     top: -15px;
     left: 10px;
@@ -113,4 +116,11 @@ select::-ms-expand{
     right: 15px;
     color: rgba(24, 29, 35, 0.5);
     z-index: -9999;
+}
+
+.error {
+    &:focus:required:invalid {
+        border: 1px solid red;
+        box-shadow: none;
+    }
 }

@@ -193,6 +193,7 @@
 	.linkSubmenu  {
 		display: block;
 		position: relative;
+		transition: all .3s ease;
 		.nav__link {
 			cursor: pointer;
 
@@ -227,6 +228,16 @@
 			.nav__title {
 				&:before {
 					content: '\e80d';
+				}
+			}
+		}
+		
+		@media @desktop {
+			&:hover {
+				.nav__hide {
+					display: block;
+					height: auto;
+					visibility: visible;
 				}
 			}
 		}
@@ -267,8 +278,9 @@
 		color: #181d23;
 		font-weight: 400;
 		border-radius: 5px;
-		z-index: 10;
+		z-index: 20;
 		overflow: hidden;
+
 
 		@media @desktop {
 			flex-direction: inherit;
