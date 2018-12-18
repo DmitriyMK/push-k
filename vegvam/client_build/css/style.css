@@ -7068,16 +7068,10 @@ select::-ms-expand {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
         flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     padding-top: 30px;
 }
 @media only screen and (min-width: 992px) {
     .productPageBag__box {
-        -webkit-box-align: inherit;
-        -ms-flex-align: inherit;
-        align-items: inherit;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -7090,6 +7084,31 @@ select::-ms-expand {
 @media only screen and (min-width: 1600px) {
     .productPageBag__box {
         padding-top: 50px;
+    }
+}
+.productPageBag__box h2 {
+    padding-bottom: 5px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #181d23;
+    max-width: 400px;
+}
+@media only screen and (min-width: 992px) {
+    .productPageBag__box h2 {
+        display: none;
+    }
+}
+.productPageBag__box small {
+    display: inline-block;
+    padding-bottom: 25px;
+    font-size: 12px;
+    line-height: 2;
+    margin-left: 0;
+    margin-right: 0;
+}
+@media only screen and (min-width: 992px) {
+    .productPageBag__box small {
+        display: none;
     }
 }
 .productPageBag .productSlider-big {
@@ -7189,7 +7208,7 @@ select::-ms-expand {
     border-bottom: 2px solid #337d5a;
 }
 .productPageBag .productPageBag__brand {
-    padding: 30px 0;
+    padding: 30px 0 15px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7235,7 +7254,7 @@ select::-ms-expand {
     padding-top: 20px;
     border-bottom: 1px solid #95c557;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
     .productPageBag article {
         padding-top: 40px;
     }
@@ -7246,21 +7265,27 @@ select::-ms-expand {
     }
 }
 .productPageBag article h2 {
-    padding-bottom: 5px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: #181d23;
+    display: none;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 992px) {
     .productPageBag article h2 {
-        max-width: 420px;
+        display: inline-block;
+        padding-bottom: 5px;
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: #181d23;
     }
 }
 .productPageBag article small {
-    display: inline-block;
-    padding-bottom: 25px;
-    font-size: 12px;
-    line-height: 2;
+    display: none;
+}
+@media only screen and (min-width: 992px) {
+    .productPageBag article small {
+        display: inline-block;
+        padding-bottom: 25px;
+        font-size: 12px;
+        line-height: 2;
+    }
 }
 .productPageBag article p {
     padding-bottom: 25px;
