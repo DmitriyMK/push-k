@@ -391,56 +391,89 @@
 								<div class="line">
 									<div class="productNumber">
 										<h3>Количество:</h3>
+
+										<div class="input-number" min="0">
+											<span class="input-number-decrement"></span>
+											<input class="input-number" type="number" value="1" min="1">
+											<span class="input-number-increment"></span>
+										</div>
 									</div>
 								</div>
-								
-							</form>
-							
-						</div>
 
+								<strong class="price">200 грн</strong>
+								<button class="btn">Добавить в корзину</button>
+							</form>
+						</div>
+					</div>
+
+					<div class="productPage__details">
+						<ul class="tabs">
+							<li class="tabs__link tabs__link-active" data-tabs="1">Описание</li>
+							<li class="tabs__link" data-tabs="2">Материал</li>
+							<li class="tabs__link" data-tabs="3">Доставка и воврат</li>
+						</ul>
+
+						<div class="tabs__box">
+							<div id="tabs-1" class="tabs__content tabs__content-active">
+								<p>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.</p>
+								<p>Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором.</p>
+							</div>
+							<div id="tabs-2" class="tabs__content">
+								<p>Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором.</p>
+							</div>
+							<div id="tabs-3" class="tabs__content">
+								<p>Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
 			
 
 
-
-
 			<article class="recomend peopleRecomend">
 				<div class="container">				
-					<h2 class="recomend__title peopleRecomend__title">Вам могут понравиться эти истории</h2>
+					<img class="img-responsive productPageBag__img1" src="./images/decor/product__leaf.png" alt role="presentation" data-enllax-ratio="-0.045" data-enllax-type="foreground" data-enllax-direction="vertical">
+					<img class="img-responsive productPageBag__img2" src="./images/decor/product__leaf2.png" alt role="presentation" data-enllax-ratio="-0.121" data-enllax-type="foreground" data-enllax-direction="vertical">
 
-					<ul class="recomend__list peopleRecomend__list">
-						<li class="recomend__item">
-							<a href="#" class="recomend__imgWrap">
-								<img class="recomend__img" src="./images/vegans/photoMain1.jpg" alt role="presentation">
+
+					<h2 class="recomend__title peopleRecomend__title">похожие товары:</h2>
+
+					<ul class="catalog__list">
+						<li class="catalog__item catalog__item1">
+							<a href="#" class="catalog__link shdw">
+								<img class="catalog__img" src="./images/bagcloth1.png" alt="Тканевый мешочек" title="Тканевый мешочек">
 							</a>
-							<h3 class="recomend__name">Мирослава Ульянина</h3>
-							<a class="recomend__link btn" href="#">Читать</a>
+							<h2 class="catalog__name">Тканевый мешочек</h2>
+							<strong class="catalog__price">200 <span class="catalog__currency">грн</span></strong>
+							<button class="catalog__btn btn">Купить</button>
 						</li>
 
-						<li class="recomend__item">
-							<a href="#" class="recomend__imgWrap">
-								<img class="recomend__img" src="./images/vegans/photo5.jpg" alt role="presentation">
+						<li class="catalog__item catalog__item2">
+							<a href="#" class="catalog__link shdw">
+								<img class="catalog__img" src="./images/cia.jpg" alt="Тканевый мешочек" title="Тканевый мешочек">
 							</a>
-							<h3 class="recomend__name">Мирослава Ульянина</h3>
-							<a class="recomend__link btn" href="#">Читать</a>
+							<h2 class="catalog__name">Тканевый мешочек</h2>
+							<strong class="catalog__price">200 <span class="catalog__currency">грн</span></strong>
+							<button class="catalog__btn btn">Купить</button>
 						</li>
 
-						<li class="recomend__item">
-							<a href="#" class="recomend__imgWrap">
-								<img class="recomend__img" src="./images/vegans/photoBig.jpg" alt role="presentation">
+						<li class="catalog__item catalog__item3">
+							<a href="#" class="catalog__link shdw">
+								<img class="catalog__img" src="./images/stringback1.png" alt="Тканевый мешочек" title="Тканевый мешочек">
 							</a>
-							<h3 class="recomend__name">Мирослава Ульянина</h3>
-							<a class="recomend__link btn" href="#">Читать</a>
+							<h2 class="catalog__name">Тканевый мешочек</h2>
+							<strong class="catalog__price">200 <span class="catalog__currency">грн</span></strong>
+							<button class="catalog__btn btn">Купить</button>
 						</li>
 
-						<li class="recomend__item">
-							<a href="#" class="recomend__imgWrap">
-								<img class="recomend__img" src="./images/vegans/photoMain1.jpg" alt role="presentation">
+						<li class="catalog__item catalog__item4">
+							<a href="#" class="catalog__link shdw">
+								<img class="catalog__img" src="./images/honeyspoon.png" alt="Тканевый мешочек" title="Тканевый мешочек">
 							</a>
-							<h3 class="recomend__name">Мирослава Ульянина</h3>
-							<a class="recomend__link btn" href="#">Читать</a>
+							<h2 class="catalog__name">Тканевый мешочек</h2>
+							<strong class="catalog__price">200 <span class="catalog__currency">грн</span></strong>
+							<button class="catalog__btn btn">Купить</button>
 						</li>
 					</ul>
 				</div>

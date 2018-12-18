@@ -59,7 +59,7 @@ $(document).ready(function() {
 
       .setTween(tl)
       .addTo(scrollMagicController);
-  });
+    });
     // END data-scrollmagic1
 
 
@@ -101,7 +101,7 @@ $(document).ready(function() {
       .setTween(tl)
       .addTo(scrollMagicController);
       // scene.addIndicators();
-  });
+    });
     // END data-scrollmagic2
 
 
@@ -138,7 +138,7 @@ $(document).ready(function() {
       .setTween(tl)
       .addTo(scrollMagicController);
       // scene.addIndicators();
-  });
+    });
     // END data-scrollmagic3
 
 
@@ -179,9 +179,9 @@ $(document).ready(function() {
       .setTween(tl)
       .addTo(scrollMagicController);
       // scene.addIndicators();
-  });
+    });
     // END data-scrollmagic4
-};
+  };
 
 
 
@@ -196,8 +196,8 @@ $(document).ready(function() {
   	if (document.documentElement.clientWidth > 992) {
       // $(this).find(".nav__hide").toggleClass("nav__show");
       $(this).find(".nav__link").toggleClass("nav__link-active");
-  };
-});
+    };
+  });
 
 
   $('.linkSubmenu').click(function() {
@@ -366,7 +366,7 @@ $(document).ready(function() {
   	infinite: false,
     // centerMode: true,
     focusOnSelect: true
-});
+  });
 
 
 
@@ -427,7 +427,7 @@ $("#feedbackForm").validate({
       setTimeout(function() {
       	th.trigger("reset");
       }, 1000);
-  });
+    });
 
 		return false;
 	}
@@ -473,21 +473,13 @@ $("#ServicesForm").validate({
       setTimeout(function() {
       	th.trigger("reset");
       }, 1000);
-  });
+    });
 
 		return false;
 	}
 });
 
 
-
-// $(window).load(function() {
-
-//   $(window).on('resize orientationchange', function() {
-//     $('.slider').slick('resize');
-//   });
-
-// });
 
 // SELECT FUNCTION
 var x, i, j, selElmnt, a, b, c;
@@ -558,6 +550,60 @@ function closeAllSelect(elmnt) {
 
 document.addEventListener("click", closeAllSelect);
 // END  SELECT FUNCTION
+
+
+// FUNCTION FOR NUMBER
+(function() {
+
+  window.inputNumber = function(el) {
+
+    var min = el.attr('min') || false;
+    var max = el.attr('max') || false;
+
+    var els = {};
+
+    els.dec = el.prev();
+    els.inc = el.next();
+
+    el.each(function() {
+      init($(this));
+    });
+
+    function init(el) {
+
+      els.dec.on('click', decrement);
+      els.inc.on('click', increment);
+
+      function decrement() {
+        var value = el[0].value;
+        value--;
+        if(!min || value >= min) {
+          el[0].value = value;
+        }
+      }
+
+      function increment() {
+        var value = el[0].value;
+        value++;
+        if(!max || value <= max) {
+          el[0].value = value++;
+        }
+      }
+    }
+  }
+})();
+
+inputNumber($('.input-number'));
+// END FUNCTION FOR NUMBER
+
+
+// TABS
+$('.tabs__link').click(function() {
+  var tabID = $(this).attr('data-tabs');
+
+  $(this).addClass('tabs__link-active').siblings().removeClass('tabs__link-active');
+  $('#tabs-' + tabID).addClass('tabs__content-active').siblings().removeClass('tabs__content-active');
+});
 
 
 window.console.log('Made with fun and love ❤️ Push-K solutions ❤️');
