@@ -161,7 +161,8 @@
 		}
 
 		.productSize {
-
+			position: relative;
+			display: flex;
 		}
 
 		h3 {
@@ -171,6 +172,65 @@
 			letter-spacing: 1.5px;
 			vertical-align: top;
 			line-height: 40px;
+		}
+
+		.custom-select select {
+			display: none; /*hide original SELECT element:*/
+		}
+
+		.select-selected {
+			min-width: 80px;
+			background-color: #f6f6f6;
+			border-radius: 21px;
+			border: none;
+		}
+
+
+		.select-selected:after {
+			position: absolute;
+			content: "";
+			top: 14px;
+			right: 14px;
+			width: 0;
+			height: 0;
+			border: 6px solid transparent;
+			border-color: #000 transparent transparent transparent;
+		}
+
+
+		.select-selected.select-arrow-active:after {
+			border-color: transparent transparent #000 transparent;
+			top: 7px;
+		}
+
+
+		.select-items div,.select-selected {
+			padding: 8px 16px;
+			color: #000;
+			border: 1px solid transparent;
+			border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+			cursor: pointer;
+			user-select: none;
+			border-radius: 21px;
+		}
+
+		/*style items (options):*/
+		.select-items {
+			position: absolute;
+			// background-color: #f6f6f6;
+			top: 87%;
+			right: 0;
+			z-index: 99;
+			width: 80px;
+		}
+
+		/*hide the items when the select box is closed:*/
+		.select-hide {
+			display: none;
+		}
+
+		.select-items div:hover, .same-as-selected {
+			background-color: rgba(0, 0, 0, 0.1);
 		}
 	}
 }

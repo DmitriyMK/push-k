@@ -7161,6 +7161,8 @@ select::-ms-expand {
 }
 .productPageBag form {
     padding-top: 50px;
+    /*style items (options):*/
+    /*hide the items when the select box is closed:*/
 }
 .productPageBag form .line {
     display: -webkit-box;
@@ -7197,6 +7199,12 @@ select::-ms-expand {
 .productPageBag form .productColor label input:checked ~ img {
     border: 2px solid #1f2835;
 }
+.productPageBag form .productSize {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
 .productPageBag form h3 {
     display: inline-block;
     padding-right: 20px;
@@ -7204,6 +7212,55 @@ select::-ms-expand {
     letter-spacing: 1.5px;
     vertical-align: top;
     line-height: 40px;
+}
+.productPageBag form .custom-select select {
+    display: none;
+    /*hide original SELECT element:*/
+}
+.productPageBag form .select-selected {
+    min-width: 80px;
+    background-color: #f6f6f6;
+    border-radius: 21px;
+    border: none;
+}
+.productPageBag form .select-selected:after {
+    position: absolute;
+    content: '';
+    top: 14px;
+    right: 14px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #000 transparent transparent transparent;
+}
+.productPageBag form .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #000 transparent;
+    top: 7px;
+}
+.productPageBag form .select-items div, .productPageBag form .select-selected {
+    padding: 8px 16px;
+    color: #000;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    border-radius: 21px;
+}
+.productPageBag form .select-items {
+    position: absolute;
+    top: 87%;
+    right: 0;
+    z-index: 99;
+    width: 80px;
+}
+.productPageBag form .select-hide {
+    display: none;
+}
+.productPageBag form .select-items div:hover, .productPageBag form .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 .slick-prev, .slick-next {
     position: absolute;
