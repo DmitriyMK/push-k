@@ -20,4 +20,110 @@
 	
 }
 
+.recipeDrink {
 
+	.recipePage__box {
+		display: flex;
+		flex-direction: column;
+		padding: 40px 0;
+
+		@media @desktop {
+			flex-direction: row;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			max-width: 400px;
+			height: auto;
+			object-fit: cover;
+			object-position: 20%;
+			margin: auto;
+			margin-top: 0;
+			margin-bottom: 30px;
+			
+			@media @tablet {
+				height: 500px;
+				max-width: inherit;
+			}
+			@media @desktop {
+				width: 450px;
+				margin-bottom: 0;
+			}
+			@media @desktop-xl {
+				width: 600px;
+				height: 630px;
+			}
+		}
+	}
+
+
+	.recipePage__about {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 60px;
+
+		aside {
+			order: 2;
+			margin-top: 40px;
+
+			@media @mobile-land {
+				order: 2;
+				margin-left: 20px;
+				margin-right: 0;
+				margin-top: 25px;
+			}
+			@media @desktop {
+				margin-left: 40px;
+			}
+			@media @desktop-xl {
+				margin-left: 80px;
+			}
+
+			// aside__item
+			> div {
+
+			}
+			
+			img {
+				display: block;
+				width: 100%;
+				height: 130px;
+				margin: auto;
+				margin-top: 0;
+				object-fit: cover;
+
+				transition: transform .5s cubic-bezier(.87,.32,.69,.87);
+
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+		}
+		// end aside
+		
+
+		// recipePage__info
+		> div {
+			@media @mobile-land {
+				margin-left: 40px;
+			}
+			@media @desktop {
+				margin-left: 40px;
+			}
+			@media @desktop-xl {
+				margin-left: 80px;
+			}
+
+			em {
+				display: inline-block;
+				padding-top: 0;
+				padding-bottom: 25px;
+			}
+			p {
+				padding-top: 0;
+			}
+		}
+		// end recipePage__info
+	}
+}
