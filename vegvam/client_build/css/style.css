@@ -7028,6 +7028,183 @@ select::-ms-expand {
 .recipeDrink .recipePage__about > div p {
     padding-top: 0;
 }
+.productPageBag h1 {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+@media only screen and (min-width: 768px) {
+    .productPageBag h1 {
+        font-size: 24px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .productPageBag h1 {
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .productPageBag h1 {
+        font-size: 36px;
+    }
+}
+.productPageBag h1 strong {
+    color: #337d5a;
+}
+.productPageBag ul {
+    list-style: none;
+}
+.productPageBag__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+.productPageBag .productSlider-big {
+    width: 460px;
+}
+.productPageBag .productSlider-big img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 550px;
+}
+.productPageBag .productSlider-small {
+    position: relative;
+    width: 460px;
+    padding: 0 5px;
+    margin: 0 auto;
+    border: 1px solid #e7e7e7;
+}
+.productPageBag .productSlider-small li {
+    position: relative;
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    height: 95px;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+    border-bottom: 2px solid transparent;
+}
+.productPageBag .productSlider-small img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    margin: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+.productPageBag .productSlider-small .slick-current {
+    border-bottom: 2px solid #337d5a;
+}
+.productPageBag .productPageBag__brand {
+    padding: 35px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.productPageBag .productPageBag__brand img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    opacity: 0.45;
+    -webkit-transition: opacity 0.3s linear;
+         -o-transition: opacity 0.3s linear;
+            transition: opacity 0.3s linear;
+    margin: auto;
+}
+.productPageBag .productPageBag__brand img:hover {
+    opacity: 1;
+}
+.productPageBag__info {
+    padding-left: 40px;
+}
+.productPageBag article {
+    padding-top: 76px;
+    border-bottom: 1px solid #95c557;
+}
+.productPageBag article h2 {
+    padding-bottom: 5px;
+    max-width: 420px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #181d23;
+}
+.productPageBag article small {
+    display: inline-block;
+    padding-bottom: 25px;
+    font-size: 12px;
+    line-height: 2;
+}
+.productPageBag article p {
+    padding-bottom: 25px;
+    font-size: 15px;
+    line-height: 1.55;
+}
+.productPageBag form {
+    padding-top: 50px;
+}
+.productPageBag form .line {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.productPageBag form .productColor {
+    padding-right: 100px;
+}
+.productPageBag form .productColor label {
+    padding-right: 10px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.productPageBag form .productColor label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.productPageBag form .productColor img {
+    padding: 5px;
+    border: 2px solid #e0e3e7;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+}
+.productPageBag form .productColor label input:checked ~ img {
+    border: 2px solid #1f2835;
+}
+.productPageBag form h3 {
+    display: inline-block;
+    padding-right: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    vertical-align: top;
+    line-height: 40px;
+}
 .slick-prev, .slick-next {
     position: absolute;
     display: block;

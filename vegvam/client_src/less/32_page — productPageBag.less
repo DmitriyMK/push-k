@@ -1,0 +1,176 @@
+@media @mobile-xl {
+
+}
+@media @mobile-land {
+
+}
+@media @tablet {
+
+}
+@media @desktop {
+
+}
+@media @desktop-xl {
+	
+}
+@media @desktop-xl-2 {
+
+}
+@media @desktop-xll {
+	
+}
+
+.productPageBag {
+	h1 {
+		.pageTitle;
+	}
+	ul {
+		list-style: none;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 50px;
+	}
+
+	.productSlider-big {
+		width: 460px;
+
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			max-height: 550px;
+		}
+	}
+
+	.productSlider-small {
+		position: relative;
+		width: 460px;
+		padding: 0px 5px;
+		margin: 0 auto;
+		border: 1px solid #e7e7e7;
+
+		li {
+			position: relative;
+			margin-left: 15px;
+			margin-top: 20px;
+			margin-bottom: 0px;
+			padding-bottom: 10px;
+			height: 95px;
+			transition: all .3s linear;
+			border-bottom: 2px solid transparent;
+		}
+		img {
+			display: flex;
+			align-items: center;
+			max-width: 100%;
+			height: auto;
+			cursor: pointer;
+			margin: auto;
+			object-fit: cover;
+		}
+
+		.slick-current {
+			border-bottom: 2px solid @green;
+		}
+	}
+
+	.productPageBag__brand {
+		padding: 35px 15px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		img {
+			.img-responsive;
+			opacity: .45;
+			transition: opacity .3s linear;
+			margin: auto;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	
+	&__info {
+		padding-left: 40px;
+	}
+
+	article {
+		
+		padding-top: 76px;
+		border-bottom: 1px solid @lime;
+
+		h2 {
+			padding-bottom: 5px;
+			max-width: 420px;
+			font-size: 20px;
+			letter-spacing: 1px;
+			color: #181d23;
+		}
+		small {
+			display: inline-block;
+			padding-bottom: 25px;
+			font-size: 12px;
+			line-height: 2;
+		}
+		p {
+			padding-bottom: 25px;
+			font-size: 15px;
+			line-height: 1.55;
+		}
+	}
+
+	form {
+		padding-top: 50px;
+
+		.line {
+			display: flex;
+		}
+		.productColor {
+			padding-right: 100px;
+			label {
+				padding-right: 10px;
+				display: inline-block;
+				position: relative;
+				cursor: pointer;
+				user-select: none;
+			}
+
+			label input {
+				position: absolute;
+				opacity: 0;
+				cursor: pointer;
+				height: 0;
+				width: 0;
+			}
+
+			img {
+				padding: 5px;
+				border: 2px solid #e0e3e7;
+				transition: all .3s linear;
+			}
+
+			label input:checked ~ img{
+				border: 2px solid #1f2835;
+			}
+		}
+
+		.productSize {
+
+		}
+
+		h3 {
+			display: inline-block;
+			padding-right: 20px;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			vertical-align: top;
+			line-height: 40px;
+		}
+	}
+}
