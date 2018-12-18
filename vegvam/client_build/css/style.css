@@ -7269,7 +7269,7 @@ select::-ms-expand {
 }
 @media only screen and (min-width: 992px) {
     .productPageBag article h2 {
-        display: inline-block;
+        display: block;
         padding-bottom: 5px;
         font-size: 20px;
         letter-spacing: 1px;
