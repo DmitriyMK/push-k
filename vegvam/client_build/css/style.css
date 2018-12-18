@@ -7419,7 +7419,7 @@ select::-ms-expand {
 }
 @media only screen and (min-width: 1200px) {
     .productPageBag form .productSize .select-items {
-        top: 87%;
+        top: 100%;
         right: 0;
     }
 }
