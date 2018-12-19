@@ -7111,6 +7111,33 @@ select::-ms-expand {
         display: none;
     }
 }
+.productPageBag__picture {
+    position: relative;
+}
+.productPageBag__picture em {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: 11;
+    padding: 10px 15px;
+    width: 96px;
+    background: #95c557;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.productPageBag__picture em:after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25px 48px 0 48px;
+    border-color: #95c557 transparent transparent transparent;
+}
 .productPageBag .productSlider-big {
     width: 300px;
     margin: auto;
