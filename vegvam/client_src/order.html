@@ -259,39 +259,148 @@
 
 		<main class="main">
 
-
 			<section class="orderPage">
 				<div class="container">
 					<h1>Оформление заказа</h1>
 
 					<div class="orderPage__box">
 						<div>
-							<form class="formRegistration" id="formRegistration" name="formRegistration">
+							<form class="formRegistration" id="formRegistration" name="formRegistration" novalidate="novalidate">
 								<h2>Контактные данные</h2>
-								
-								<div class="productColor">
-									<label for="newCustomer">
-										<input type="radio" id="newCustomer" checked="checked" name="ocart" />
-									</label> 
+								<div class="form__wrap">
+									<div class="inputRadio">
+										<label for="newCustomer">
+											<input type="radio" id="newCustomer" checked="checked" name="ocart" />
+											<span>Я новый покупатель</span>
+										</label> 
 
-									<label for="customer">
-										<input type="radio" id="customer" name="ocart" />
-									</label> 				
+										<label for="customer">
+											<input type="radio" id="customer" name="ocart" />
+											<span>Я постоянный клиент</span>
+										</label> 				 
+									</div>
+
+									<div class="form__input">
+										<input class="form__line form__line name" type="text" name="name" placeholder="Ваше имя" minlength="2" required aria-required="true" >
+									</div>
+
+									<div class="form__input">
+										<input class="form__line phone-mask" type="tel" name="phone" placeholder="Контактный телефон" minlength="10" required aria-required="true">
+									</div>
+
+									<div class="form__input">
+										<input class="form__line" type="email" name="email" placeholder="Ваш E-mail" required aria-required="true">
+									</div>
+
+									<input class="form__btn btn" type="submit" value="Далее"> 
 								</div>
+							</form>
 
 
+							<form class="formDelivery" id="formDelivery" name="formDelivery" novalidate="novalidate">
+								<h2>Выбор способа доставки и оплаты</h2>
+								<div class="form__wrap">
+									<div class="form__row">
+										<label for="deliveryOffice">
+											<input type="radio" id="deliveryOffice" name="ocart" />
+											<span>Самовывоз </span>
+										</label> 
+										<address>
+											ул. Ямская 72
+										</address>
+									</div>
+
+
+									<label for="deliveryPost">
+										<input type="radio" id="deliveryPost" name="ocart" />
+										<span>Отправка Новой Почтой </span>
+									</label>
+
+
+									<div class="form__input">
+										<input class="form__line" type="text" name="ocart" placeholder="Город" minlength="2" required aria-required="true">
+									</div> 
+									<div class="form__input">
+										<input class="form__line" type="text" name="ocart" placeholder="Склад новой почты" minlength="2" required aria-required="true">
+									</div>
+									<div class="form__input">
+										<input class="form__line" type="text" name="ocart" placeholder="Ф.И.О." minlength="2" required aria-required="true">
+									</div>
+									<div class="form__input">
+										<input class="form__line phone-mask" type="tel" name="ocart" placeholder="Контактный телефон" minlength="10" required aria-required="true">
+									</div>
+
+									<h3>Оплата</h3>
+									
+									<div class="form__row">
+										<label for="payCash">
+											<input type="radio" id="payCash" name="ocart" />
+											<span>Наличными</span>
+										</label>
+										<label for="payPrivat">
+											<input type="radio" id="payPrivat" name="ocart" />
+											<span>Приват 24 </span>
+										</label>
+										<label for="payPost">
+											<input type="radio" id="payPost" name="ocart" />
+											<span>Наложенный платеж</span>
+										</label>
+									</div>
+
+									<div class="formSurprise">
+										<em>Хотите сделать подарок для ваших близких?</em>
+										<p>Мы сделаем это для вас! Красиво упаковываем, завязываем ленточкой и дарим эмоцию!</p>
+
+										<label for="giftPack">
+											<input type="radio" id="giftPack" name="ocart" />
+											<span>Заказать с упаковкой</span>
+										</label>
+									</div>
+
+									<input class="form__btn form__btn-big btn" type="submit" value="Отправить">
+								</div>
+								
+								<!-- PARALLAX LEAF -->
+								<img class="img-responsive order__img1" src="./images/decor/leave-catalog.png"  alt role="presentation" data-enllax-ratio="-0.045" data-enllax-type="foreground" data-enllax-direction="vertical">
+								<!-- END PARALLAX LEAF -->
 							</form>
 						</div>
 
 
-						<aside>
-							
+						<aside class="orderCart">
+							<div class="orderCart__box">
+								<div class="orderCart__row">
+									<div class="orderCart__picture">
+										<img src="./images/recipe.jpg" alt="">
+									</div>
+
+									<div class="orderCart__info">
+										<h3>Эко-торба</h3>
+										<small>Артикул: #65422224</small>
+										
+										<div>
+											<p>Цвет:</p> 
+											<img src="./images/product/color-red.jpg" alt="Red">
+										</div>
+
+										<div>
+											<p>1 штука</p> 
+											<strong>200 грн</strong>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="orderCart__total">
+									<em>ИТОГО:</em> <strong>200 грн</strong>
+								</div>
+							</div>
 						</aside>
+
+						<img class="img-responsive order__img2" src="./images/decor/leave-order.png" alt role="presentation">
 					</div>
 
-					<!-- PARALLAX LEAF -->
-					<!-- <img class="img-responsive order__img1" src="./images/decor/leave-catalog.png"  alt role="presentation" data-enllax-ratio="-0.045" data-enllax-type="foreground" data-enllax-direction="vertical"> -->
-					<!-- END PARALLAX LEAF -->
+					
 				</div>
 			</section>
 
@@ -344,6 +453,7 @@
 	<script src="./libs/scrollUp.js"></script>   
 	<script src="./libs/splitHTML.js"></script>   
 	<script src="./libs/jquery.nicescroll.min.js"></script>  
+	<script src="./libs/masked-input.js"></script>  
 	<!-- 	<script src="./libs/blazy.js"></script>   -->
 	<script src="./libs/jquery.validate.min.js"></script>
 
@@ -351,5 +461,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/1.3.0/jquery.scrollmagic.js"></script>
 
 	<script src="./libs/all.js"></script>
+
+	<script>
+		$('.phone-mask').mask('+380(99)999-99-99');
+	</script>
 </body>
 </html>
