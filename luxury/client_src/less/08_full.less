@@ -1,0 +1,122 @@
+@media @mobile-xl {
+
+}
+@media @mobile-land {
+
+}
+@media @tablet {
+
+}
+@media @desktop {
+
+}
+@media @desktop-xl {
+	
+}
+@media @desktop-xl-2 {
+
+}
+@media @desktop-xll {
+	
+}
+
+
+.main {
+	min-height: 100vh;
+	overflow: hidden;
+	background: url(../images/wallHero5.jpg)no-repeat center/cover;
+}
+
+
+.header {
+	position: fixed;
+	top: 15px;
+	width: 100%;
+	z-index: 10;
+	&__top {
+		padding: 15px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo { 
+		
+	}
+	&__list {
+		display: flex;
+	}
+	&__link {
+		margin-right: 15px;
+	}
+}
+
+.hero {
+	position: relative;
+	overflow: hidden;
+	&__box {
+		height: 100vh;
+		min-height: 660px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		transition: all .3s linear;
+	}
+	&__content {
+		display: flex;
+		align-items: center;
+		position: relative;
+		z-index: 10;
+		perspective: 700px;
+	}
+	&__title {
+		max-width: 700px;
+		font-size: 48px;
+		line-height: 1.5;
+		font-weight: 900;
+		perspective: 700px;
+		transform: rotateY(8deg);
+		text-transform: uppercase;
+		color: orange;
+	}
+
+	&__img {
+		width: 300px;
+		height: 300px;
+		fill: #fff;
+		object-fit: cover;
+	}
+
+
+	// STYLE FOR CANVASIK
+	&__animation {
+		position: absolute;
+		width: 100vw;
+		height: 100%;
+		left: 0;
+		top: 0;
+
+		img {
+			display: none;
+		}
+	}
+
+	#canvas {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;	
+	}
+}
+
+.letter {
+	display: inline-block;
+	transform: translateY(0);
+	transition: transform .3s linear;
+	min-width: .2em;
+	&:hover {
+		cursor: pointer;
+		transform: translateY(-15px);
+	}
+}
