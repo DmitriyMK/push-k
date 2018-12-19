@@ -7945,6 +7945,7 @@ select::-ms-expand {
 @media only screen and (min-width: 1200px) {
     .productPageList .catalog__filter button {
         margin-right: 30px;
+        min-width: 80px;
         max-width: 280px;
     }
 }
