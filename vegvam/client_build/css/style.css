@@ -146,16 +146,6 @@ a {
     clear: both;
     display: table;
 }
-.btn:focus {
-    outline: none;
-    -webkit-box-shadow: 0 0 10px 1px rgba(51, 125, 90, 0.85);
-            box-shadow: 0 0 10px 1px rgba(51, 125, 90, 0.85);
-}
-input:focus, select:focus, textarea:focus {
-    outline: none;
-    -webkit-box-shadow: 0 0 10px 1px rgba(51, 125, 90, 0.85);
-            box-shadow: 0 0 10px 1px rgba(51, 125, 90, 0.85);
-}
 button, input, select, textarea {
     -webkit-transition: all 0.3s linear;
          -o-transition: all 0.3s linear;
@@ -8012,6 +8002,53 @@ select::-ms-expand {
 }
 .productPageList .catalog__item {
     margin-bottom: 60px;
+}
+.orderPage {
+    padding-top: 100px;
+}
+@media only screen and (min-width: 992px) {
+    .orderPage {
+        padding-top: 170px;
+    }
+}
+.orderPage h1 {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+@media only screen and (min-width: 768px) {
+    .orderPage h1 {
+        font-size: 24px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .orderPage h1 {
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .orderPage h1 {
+        font-size: 36px;
+    }
+}
+.orderPage h1 strong {
+    color: #337d5a;
+}
+.orderPage__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.orderPage__box > div {
+    margin-right: 80px;
+}
+.orderPage__box aside {
+    max-width: 395px;
 }
 .slick-prev, .slick-next {
     position: absolute;
