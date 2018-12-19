@@ -153,16 +153,18 @@
 
 		.slick-prev,
 		.slick-next {
-			top: 50%;
-			transform: translateY(-82%);
+			top: inherit;
+			bottom: -25px;
+			transform: none;
 			width: 50px;
+			height: 50px;
 
 			@media @tablet {
-				transform: translateY(-51%);
+				// transform: translateY(-51%);
 			}
 
 			&:before {
-				font-size: 65px;
+				font-size: 34px;
 				color: @green;
 			}
 			&:hover, &:focus {
@@ -174,13 +176,13 @@
 		.slick-prev {
 			left: 0px;
 			@media @tablet {
-				left: -40px;
+				left: 5vw;
 			}	
 		}
 		.slick-next {
 			right: 0px; 
 			@media @tablet {
-				right: -40px; 
+				right: 5vw; 
 			}
 		}
 

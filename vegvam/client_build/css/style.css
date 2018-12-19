@@ -6208,21 +6208,18 @@ select::-ms-expand {
     position: relative;
 }
 .recipePage__slider .slick-prev, .recipePage__slider .slick-next {
-    top: 50%;
-    -webkit-transform: translateY(-82%);
-        -ms-transform: translateY(-82%);
-            transform: translateY(-82%);
+    top: inherit;
+    bottom: -25px;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
     width: 50px;
+    height: 50px;
 }
 @media only screen and (min-width: 768px) {
-    .recipePage__slider .slick-prev, .recipePage__slider .slick-next {
-        -webkit-transform: translateY(-51%);
-            -ms-transform: translateY(-51%);
-                transform: translateY(-51%);
-    }
 }
 .recipePage__slider .slick-prev:before, .recipePage__slider .slick-next:before {
-    font-size: 65px;
+    font-size: 34px;
     color: #337d5a;
 }
 .recipePage__slider .slick-prev:hover:before, .recipePage__slider .slick-next:hover:before, .recipePage__slider .slick-prev:focus:before, .recipePage__slider .slick-next:focus:before {
@@ -6233,7 +6230,7 @@ select::-ms-expand {
 }
 @media only screen and (min-width: 768px) {
     .recipePage__slider .slick-prev {
-        left: -40px;
+        left: 5vw;
     }
 }
 .recipePage__slider .slick-next {
@@ -6241,7 +6238,7 @@ select::-ms-expand {
 }
 @media only screen and (min-width: 768px) {
     .recipePage__slider .slick-next {
-        right: -40px;
+        right: 5vw;
     }
 }
 .recipePage__slider .slick-dots {
