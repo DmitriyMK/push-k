@@ -299,7 +299,9 @@
 							</form>
 
 
-							<form class="formDelivery" id="formDelivery" name="formDelivery" novalidate="novalidate">
+							<!-- ФОРМА НЕ АКТИВНАЯ, ПОКА НЕ отправлена предыдущая.
+							класс неактивной формы -> form-disabled -->
+							<form class="formDelivery form-disabled" id="formDelivery" name="formDelivery" novalidate="novalidate">
 								<h2>Выбор способа доставки и оплаты</h2>
 								<div class="form__wrap">
 									<div class="form__row">
@@ -314,7 +316,7 @@
 
 
 									<label for="deliveryPost">
-										<input type="radio" id="deliveryPost" name="ocart" />
+										<input type="radio" id="deliveryPost" name="ocart"/>
 										<span>Отправка Новой Почтой </span>
 									</label>
 
@@ -336,21 +338,21 @@
 									
 									<div class="form__row">
 										<label for="payCash">
-											<input type="radio" id="payCash" name="ocart" />
+											<input type="radio" id="payCash" name="ocart"/>
 											<span>Наличными</span>
 										</label>
 									</div>
 
 									<div class="form__row">
 										<label for="payPrivat">
-											<input type="radio" id="payPrivat" name="ocart" />
+											<input type="radio" id="payPrivat" name="ocart"/>
 											<span>Приват 24 </span>
 										</label>
 									</div>
 
 									<div class="form__row">
 										<label for="payPost">
-											<input type="radio" id="payPost" name="ocart" />
+											<input type="radio" id="payPost" name="ocart"/>
 											<span>Наложенный платеж</span>
 										</label>
 									</div>
@@ -360,12 +362,12 @@
 										<p>Мы сделаем это для вас! Красиво упаковываем, завязываем ленточкой и дарим эмоцию!</p>
 
 										<label for="giftPack">
-											<input type="radio" id="giftPack" name="ocart" />
+											<input type="radio" id="giftPack" name="ocart"/>
 											<span>Заказать с упаковкой</span>
 										</label>
 									</div>
 
-									<input class="form__btn form__btn-big btn" type="submit" value="Отправить">
+									<input class="form__btn form__btn-big btn" type="submit" value="Отправить" disabled>
 								</div>
 								
 								<!-- PARALLAX LEAF -->

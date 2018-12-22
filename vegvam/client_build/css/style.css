@@ -8042,12 +8042,57 @@ select::-ms-expand {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
+@media only screen and (min-width: 480px) {
+    .orderPage__box {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+        -webkit-box-align: inherit;
+        -ms-flex-align: inherit;
+        align-items: inherit;
+    }
+}
 .orderPage__box > div {
-    margin-right: 80px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-top: 60px;
+}
+@media only screen and (min-width: 480px) {
+    .orderPage__box > div {
+        margin-top: 0;
+        margin-right: 30px;
+        -webkit-box-ordinal-group: inherit;
+        -ms-flex-order: inherit;
+        order: inherit;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .orderPage__box > div {
+        margin-right: 60px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .orderPage__box > div {
+        margin-right: 30px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .orderPage__box > div {
+        margin-right: 80px;
+    }
 }
 .orderPage__box > div form {
     counter-increment: form;
@@ -8118,7 +8163,7 @@ select::-ms-expand {
 }
 .orderPage__box > div h2:before {
     display: inline-block;
-    margin-right: 50px;
+    margin-right: 22px;
     width: 36px;
     height: 36px;
     background: #95c557;
@@ -8130,18 +8175,38 @@ select::-ms-expand {
     font-weight: 700;
     text-align: center;
 }
+@media only screen and (min-width: 1200px) {
+    .orderPage__box > div h2:before {
+        margin-right: 50px;
+    }
+}
 .orderPage__box > div h3 {
-    padding-top: 50px;
+    padding-top: 25px;
     padding-bottom: 25px;
     font-size: 15px;
     font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+    .orderPage__box > div h3 {
+        padding-top: 50px;
+    }
 }
 .orderPage__box > div .inputRadio label {
     padding-right: 10px;
     letter-spacing: 1px;
 }
 .orderPage__box > div .form__wrap {
-    padding-left: 86px;
+    padding-left: 11px;
+}
+@media only screen and (min-width: 992px) {
+    .orderPage__box > div .form__wrap {
+        padding-left: 56px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .orderPage__box > div .form__wrap {
+        padding-left: 86px;
+    }
 }
 .orderPage__box > div .form__input {
     position: relative;
@@ -8159,7 +8224,7 @@ select::-ms-expand {
 }
 .orderPage__box > div .form__btn {
     display: block;
-    margin: 20px auto 60px auto;
+    margin: 20px 0 60px 0;
     font-size: 20px;
     letter-spacing: 1px;
     background: transparent;
@@ -8175,7 +8240,7 @@ select::-ms-expand {
 .orderPage__box > div .form__btn-big {
     display: block;
     width: 245px;
-    margin: 20px auto;
+    margin: 20px 0;
     font-size: 24px;
     letter-spacing: 3px;
     background: transparent;
@@ -8201,6 +8266,8 @@ select::-ms-expand {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .orderPage__box > div .formSurprise {
     position: relative;
@@ -8247,18 +8314,17 @@ select::-ms-expand {
     opacity: 0.45;
     letter-spacing: 1px;
 }
-.orderPage__box > div :-moz-placeholder {
-    font-size: 16px;
-    color: #181d23;
-    opacity: 0.45;
-    letter-spacing: 1px;
-}
 .orderPage__box .orderCart {
-    margin-top: 65px;
-    width: 395px;
+    width: 290px;
     height: 100%;
     background: #fff;
     z-index: 10;
+}
+@media only screen and (min-width: 992px) {
+    .orderPage__box .orderCart {
+        margin-top: 65px;
+        width: 395px;
+    }
 }
 .orderPage__box .orderCart__box {
     border: 1px solid #95c557;
@@ -8268,11 +8334,34 @@ select::-ms-expand {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+}
+@media only screen and (min-width: 992px) {
+    .orderPage__box .orderCart__row {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    }
 }
 .orderPage__box .orderCart__picture {
-    margin-right: 30px;
+    margin: auto;
     width: 175px;
     height: 180px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+}
+@media only screen and (min-width: 992px) {
+    .orderPage__box .orderCart__picture {
+        margin-right: 30px;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
 }
 .orderPage__box .orderCart__picture img {
     display: block;
@@ -8280,8 +8369,18 @@ select::-ms-expand {
     height: auto;
 }
 .orderPage__box .orderCart__info {
-    width: 40%;
-    padding-top: 18px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+}
+@media only screen and (min-width: 992px) {
+    .orderPage__box .orderCart__info {
+        width: 40%;
+        padding-top: 18px;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+    }
 }
 .orderPage__box .orderCart__info h3 {
     font-size: 20px;
@@ -8338,15 +8437,50 @@ select::-ms-expand {
 .orderPage__box .orderCart__total strong {
     color: #337d5a;
 }
+.orderPage__box .form-disabled {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
+.orderPage__box .form-disabled *:disabled:hover {
+    background: #fff;
+    color: #191c26;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.orderPage__box .form-disabled input[type='radio']:after {
+    width: 0;
+    height: 0;
+    background-color: #fff;
+    opacity: 1;
+}
+.orderPage__box .form-disabled .form__line {
+    color: #f3f4f4;
+    background: #f3f4f4;
+}
+.orderPage__box .form-disabled ::-webkit-input-placeholder {
+    color: #f3f4f4;
+}
+.orderPage__box .form-disabled ::-moz-placeholder {
+    color: #f3f4f4;
+}
+.orderPage__box .form-disabled :-ms-input-placeholder {
+    color: #f3f4f4;
+}
 .orderPage__box .order__img1 {
     position: absolute;
     bottom: 120px;
     left: 540px;
 }
 .orderPage__box .order__img2 {
-    position: absolute;
-    bottom: 200px;
-    right: -250px;
+    display: none;
+}
+@media only screen and (min-width: 992px) {
+    .orderPage__box .order__img2 {
+        display: block;
+        position: absolute;
+        bottom: 200px;
+        right: -250px;
+    }
 }
 .slick-prev, .slick-next {
     position: absolute;

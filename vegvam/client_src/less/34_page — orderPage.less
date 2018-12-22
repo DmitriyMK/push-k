@@ -32,11 +32,35 @@
 		position: relative;
 		padding: 40px 15px;
 		display: flex;
+		align-items: center;
+		flex-direction: column;
 		justify-content: space-between;
 		
+		@media @mobile-land {
+			flex-direction: row;
+			align-items: inherit;
+
+		}
 
 		> div {
-			margin-right: 80px;
+			order: 2;
+			margin-top: 60px;
+
+			@media @mobile-land {
+				margin-top: 0;
+				margin-right: 30px;
+				order: inherit;
+			}
+			@media @tablet {
+				margin-right: 60px;
+			}
+			@media @desktop {
+				margin-right: 30px;
+			}
+			@media @desktop-xl {
+				margin-right: 80px;
+			}
+
 			form {
 				counter-increment: form;
 				max-width: 585px;
@@ -101,7 +125,6 @@
 				align-items: center;
 				position: relative;
 				padding-bottom: 30px;
-
 				font-size: 15px;
 				line-height: 1.5;
 				font-weight: 700;
@@ -109,7 +132,7 @@
 
 				&:before {
 					display: inline-block;
-					margin-right: 50px;
+					margin-right: 22px;
 					width: 36px;
 					height: 36px;
 
@@ -121,13 +144,21 @@
 					line-height: 36px;
 					font-weight: 700;
 					text-align: center;
+
+					@media @desktop-xl {
+						margin-right: 50px;
+					}
 				} 
 			}
 			h3 {
-				padding-top: 50px;
+				padding-top: 25px;
 				padding-bottom: 25px;
 				font-size: 15px;
 				font-weight: 700;
+
+				@media @tablet {
+					padding-top: 50px;
+				}
 			}
 			
 
@@ -138,7 +169,17 @@
 				}
 			}
 			.form__wrap {
-				padding-left: 86px;
+				padding-left: 11px;				
+
+				@media @tablet {
+
+				}
+				@media @desktop {
+					padding-left: 56px;
+				}
+				@media @desktop-xl {
+					padding-left: 86px;
+				}
 			}
 			.form__input {
 				position: relative;
@@ -157,7 +198,7 @@
 			}
 			.form__btn {
 				display: block;
-				margin: 20px auto 60px auto;
+				margin: 20px 0 60px 0;
 				font-size: 20px;
 				letter-spacing: 1px;
 				background: transparent;
@@ -175,7 +216,7 @@
 				&-big {
 					display: block;
 					width: 245px;
-					margin: 20px auto;
+					margin: 20px 0;
 					font-size: 24px;
 					letter-spacing: 3px;
 					background: transparent;
@@ -195,9 +236,8 @@
 			.form__row {
 				display: flex;
 				justify-content: space-between;
+				flex-wrap: wrap;
 			}
-
-
 			.formSurprise {
 				position: relative;
 				margin-top: 35px;
@@ -230,8 +270,6 @@
 				}
 			}
 
-
-
 			::-webkit-input-placeholder { 
 				font-size: 16px;
 				color: #181d23;
@@ -250,21 +288,23 @@
 				opacity: .45;
 				letter-spacing: 1px;
 			}
-			:-moz-placeholder {
-				font-size: 16px;
-				color: #181d23;
-				opacity: .45;
-				letter-spacing: 1px;
-			}
-		}
+		}	
 
 		// ASIDE
 		.orderCart{
-			margin-top: 65px;
-			width: 395px; 
+			
+			width: 290px; 
 			height: 100%;
 			background: #fff;
 			z-index: 10;
+
+			@media @tablet {
+
+			}
+			@media @desktop {
+				margin-top: 65px;
+				width: 395px; 
+			}
 			
 			&__box {
 				border: 1px solid @lime;
@@ -272,19 +312,38 @@
 			&__row {
 				padding: 30px 15px 20px 15px;
 				display: flex;
+				flex-direction: column;
+
+				@media @desktop {
+					flex-direction: row;
+				}
 			}
 			&__picture {
-				margin-right: 30px;
+				margin: auto;
 				width: 175px;
 				height: 180px;
+				order: 2;
+
+				@media @desktop {
+					margin-right: 30px;
+					order: 1;
+				}
 
 				img {
 					.img-responsive;
 				}
 			}
 			&__info {
-				width: 40%;
-				padding-top: 18px;
+				order: 2;
+
+				@media @tablet {
+
+				}
+				@media @desktop {
+					width: 40%;
+					padding-top: 18px;
+					order: 1;
+				}
 
 
 				h3 {
@@ -337,8 +396,38 @@
 			}
 		}
 		// ASIDE
+		
+		.form-disabled {
+			filter: grayscale(100%);
+			*:disabled {
+				&:hover {
+					background: #fff;
+					color: @black;
+					box-shadow: none;
+				}
+			}
 
+			input[type="radio"]:after {
+				width: 0;
+				height: 0;
+				background-color: #fff;
+				opacity: 1;
+			}
+			.form__line {
+				color: #f3f4f4;
+				background: #f3f4f4;
+			}
 
+			::-webkit-input-placeholder { 
+				color: #f3f4f4;
+			}
+			::-moz-placeholder { 
+				color: #f3f4f4;
+			}
+			:-ms-input-placeholder { 
+				color: #f3f4f4;
+			}
+		}
 
 		.order__img1 {
 			position: absolute;
@@ -346,11 +435,14 @@
 			left: 540px;
 		}	
 		.order__img2 {
-			position: absolute;
-			bottom: 200px;
-			right: -250px;
+			display: none;
+
+			@media @desktop {
+				display: block;
+				position: absolute;
+				bottom: 200px;
+				right: -250px;
+			}
 		}
-
-
 	}
 }
