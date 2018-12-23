@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="./images/favicon/android-chrome-144x144.pnh" sizes="192x192">
+	<link rel="icon" type="image/png" href="./images/favicon/android-chrome-144x144.png" sizes="192x192">
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
 
@@ -260,18 +260,85 @@
 		<main class="main">
 
 
-			<section class="orderPage">
+			<section class="basketPage">
 				<div class="container">
-					<h1>Оформление заказа</h1>
+					<h1>корзина</h1>
 
+					<div class="basketPage__box">
+						<div class="basketPage__row basketPage__row-header">
+							<div class="basketPage__col basketPage__col-width">
+								<h2>продукт</h2>
+							</div>
+							<div class="basketPage__col">
+								<h2>размер</h2>
+							</div>
+							<div class="basketPage__col">
+								<h2>количество</h2>
+							</div>
+							<div class="basketPage__col">
+								<h2>цена</h2>
+							</div>
+						</div>
 
+						<div class="basketPage__row">
+							<div class="basketPage__col basketPage__col-width">
+								<div class="basketPage__product">
+									<a href="#" class="basketPage__picture">
+										<img src="./images/recipe.jpg" alt="">
+									</a>
 
-					<!-- PARALLAX LEAF -->
-					<img class="img-responsive catalog__img1" src="./images/decor/leave-catalog.png"  alt role="presentation" data-enllax-ratio="-0.045" data-enllax-type="foreground" data-enllax-direction="vertical">
-					<!-- END PARALLAX LEAF -->
+									<div class="basketPage__info">
+										<h3>Эко-торба</h3>
+										<small>Артикул: #65422224</small>
+										
+										<div>
+											<small>Цвет:</small>
+											<img src="./images/product/color-red.jpg" alt="Red">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="basketPage__col">
+								<div class="basketPage__size" id="basketSize">
+									<p>S</p>
+								</div>
+							</div>
+
+							<div class="basketPage__col">
+								<div class="basketAmount productNumber" id="basketAmount">
+									<div class="input-number" min="1">
+										<span class="input-number-decrement btn__minus">-</span>
+										<input class="input-number" type="number" value="1" min="1">
+										<span class="input-number-increment btn__plus">+</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="basketPage__col">
+								<div class="basketPage__price" id="basketPrice">
+									<p class="productPrice">200 грн</p>
+
+									<button class="basketPage__btn-cancel">x</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="basketPage__promo">
+						<!-- ПРИ ВВЕДЕНИИ ПРОМОКОДА НУЖЕН КЛАСС ДОБАВИТЬ "form__input-active" -->
+						<div class="form__input">
+							<input class="form__line" type="text" name="promoCode" placeholder="Промо - код">
+						</div>
+
+						<div class="basketPage__totalPrice">
+							<p>ИТОГО: <strong class="totalPrice">800грн</strong></p>
+						</div>
+					</div>
+
+					<button class="btn">Оформить заказ</button>
 				</div>
 			</section>
-
 		</main>
 
 

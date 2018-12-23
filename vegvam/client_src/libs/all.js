@@ -597,6 +597,7 @@ inputNumber($('.input-number'));
 // END FUNCTION FOR NUMBER
 
 
+
 // TABS
 $('.tabs__link').click(function() {
   var tabID = $(this).attr('data-tabs');
