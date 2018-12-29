@@ -480,6 +480,81 @@ $("#ServicesForm").validate({
 });
 
 
+$("#formRegistrationNewClient").validate({
+
+	rules: {
+		name: "required",
+		email: {
+			required: true,
+			email: true,
+		},
+		phone: {
+			required: true,
+		}
+	},
+
+	messages: {
+		name: "Введите как минимум два символа",
+		email: "Проверьте правильность ввода",
+		phone: "Введите корректный номер телефона",
+	},
+
+	submitHandler: function() {
+		var th = $("#formRegistrationNewClient");
+
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: th.serialize()
+		}).done(function() {
+
+      // window.location = 'thank.html';
+
+      setTimeout(function() {
+      	th.trigger("reset");
+      }, 1000);
+    });
+
+		return false;
+	}
+});
+
+
+$("#formRegistrationRegularClient").validate({
+
+	rules: {
+		name: "required",
+		password: {
+			required: true,
+		},
+	},
+
+	messages: {
+		name: "Введите как минимум один символ",
+		password: "Введите как минимум один символ",
+	},
+
+	submitHandler: function() {
+		var th = $("#formRegistrationRegularClient");
+
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: th.serialize()
+		}).done(function() {
+
+      // window.location = 'thank.html';
+
+      setTimeout(function() {
+      	th.trigger("reset");
+      }, 1000);
+    });
+
+		return false;
+	}
+});
+
+
 
 // SELECT FUNCTION
 var x, i, j, selElmnt, a, b, c;
@@ -553,47 +628,47 @@ document.addEventListener("click", closeAllSelect);
 
 
 // FUNCTION FOR NUMBER
-(function() {
+// (function() {
 
-  window.inputNumber = function(el) {
+//   window.inputNumber = function(el) {
 
-    var min = el.attr('min') || false;
-    var max = el.attr('max') || false;
+//     var min = el.attr('min') || false;
+//     var max = el.attr('max') || false;
 
-    var els = {};
+//     var els = {};
 
-    els.dec = el.prev();
-    els.inc = el.next();
+//     els.dec = el.prev();
+//     els.inc = el.next();
 
-    el.each(function() {
-      init($(this));
-    });
+//     el.each(function() {
+//       init($(this));
+//     });
 
-    function init(el) {
+//     function init(el) {
 
-      els.dec.on('click', decrement);
-      els.inc.on('click', increment);
+//       els.dec.on('click', decrement);
+//       els.inc.on('click', increment);
 
-      function decrement() {
-        var value = el[0].value;
-        value--;
-        if(!min || value >= min) {
-          el[0].value = value;
-        }
-      }
+//       function decrement() {
+//         var value = el[0].value;
+//         value--;
+//         if(!min || value >= min) {
+//           el[0].value = value;
+//         }
+//       }
 
-      function increment() {
-        var value = el[0].value;
-        value++;
-        if(!max || value <= max) {
-          el[0].value = value++;
-        }
-      }
-    }
-  }
-})();
+//       function increment() {
+//         var value = el[0].value;
+//         value++;
+//         if(!max || value <= max) {
+//           el[0].value = value++;
+//         }
+//       }
+//     }
+//   }
+// })();
 
-inputNumber($('.input-number'));
+// inputNumber($('.input-number'));
 // END FUNCTION FOR NUMBER
 
 
@@ -605,6 +680,14 @@ $('.tabs__link').click(function() {
   $(this).addClass('tabs__link-active').siblings().removeClass('tabs__link-active');
   $('#tabs-' + tabID).addClass('tabs__content-active').siblings().removeClass('tabs__content-active');
 });
+
+
+$('.label-input').click(function() {
+	var tabID = $(this).attr('data-tabs');
+  
+	$('#tabs-' + tabID).addClass('formRegistrationBox-active').siblings().removeClass('formRegistrationBox-active');
+  });
+  
 
 
 window.console.log('Made with fun and love ❤️ Push-K solutions ❤️');

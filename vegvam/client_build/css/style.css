@@ -470,7 +470,7 @@ textarea {
     font-size: 14px;
     color: #fff;
 }
-#phone-error, #name-error, #email-error, #message-error, #typeEvents-error, #guest-error, #budget-error {
+#phone-error, #name-error, #email-error, #message-error, #typeEvents-error, #guest-error, #budget-error, #login-error, #password-error {
     position: absolute;
     top: -15px;
     left: 10px;
@@ -8037,6 +8037,40 @@ select::-ms-expand {
 .orderPage h1 strong {
     color: #337d5a;
 }
+.orderPage h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 30px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 700;
+    letter-spacing: 1px;
+    counter-increment: h2;
+}
+.orderPage h2:before {
+    display: inline-block;
+    margin-right: 22px;
+    width: 36px;
+    height: 36px;
+    background: #95c557;
+    border-radius: 50%;
+    content: counter(h2);
+    color: #fff;
+    font-size: 16px;
+    line-height: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+@media only screen and (min-width: 1200px) {
+    .orderPage h2:before {
+        margin-right: 50px;
+    }
+}
 .orderPage__box {
     position: relative;
     padding: 40px 15px;
@@ -8064,6 +8098,55 @@ select::-ms-expand {
         -ms-flex-align: inherit;
         align-items: inherit;
     }
+}
+.orderPage__box label {
+    display: inline-block;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.orderPage__box label input:checked ~ span {
+    color: #337d5a;
+}
+.orderPage__box span {
+    -webkit-transition: color 0.25s linear;
+         -o-transition: color 0.25s linear;
+            transition: color 0.25s linear;
+}
+.orderPage__box input[type='radio'] {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 0 0 1px #191c26;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 0 0 1px #191c26;
+    cursor: pointer;
+    -webkit-appearance: none;
+    outline: none;
+}
+.orderPage__box input[type='radio']:after {
+    content: '';
+    display: block;
+    position: relative;
+    left: 4px;
+    top: 4px;
+    width: 7px;
+    height: 7px;
+    background-color: #337d5a;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: all 0.3s linear;
+         -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+}
+.orderPage__box input[type='radio']:checked:after {
+    opacity: 1;
+}
+.orderPage__box input[type='radio']:checked {
+    -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 0 0 1px #337d5a;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 0 0 1px #337d5a;
 }
 .orderPage__box > div {
     -webkit-box-ordinal-group: 3;
@@ -8096,90 +8179,7 @@ select::-ms-expand {
     }
 }
 .orderPage__box > div form {
-    counter-increment: form;
     max-width: 585px;
-}
-.orderPage__box > div form label {
-    display: inline-block;
-    margin-bottom: 30px;
-    cursor: pointer;
-}
-.orderPage__box > div form label input:checked ~ span {
-    color: #337d5a;
-}
-.orderPage__box > div form span {
-    -webkit-transition: color 0.25s linear;
-         -o-transition: color 0.25s linear;
-            transition: color 0.25s linear;
-}
-.orderPage__box > div form input[type='radio'] {
-    position: relative;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin-right: 10px;
-    background: #fff;
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 0 0 1px #191c26;
-            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 0 0 1px #191c26;
-    cursor: pointer;
-    -webkit-appearance: none;
-    outline: none;
-}
-.orderPage__box > div form input[type='radio']:after {
-    content: '';
-    display: block;
-    position: relative;
-    left: 4px;
-    top: 4px;
-    width: 7px;
-    height: 7px;
-    background-color: #337d5a;
-    border-radius: 50%;
-    opacity: 0;
-    -webkit-transition: all 0.3s linear;
-         -o-transition: all 0.3s linear;
-            transition: all 0.3s linear;
-}
-.orderPage__box > div form input[type='radio']:checked:after {
-    opacity: 1;
-}
-.orderPage__box > div form input[type='radio']:checked {
-    -webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 0 0 1px #337d5a;
-            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 0 0 1px #337d5a;
-}
-.orderPage__box > div h2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-    padding-bottom: 30px;
-    font-size: 15px;
-    line-height: 1.5;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-.orderPage__box > div h2:before {
-    display: inline-block;
-    margin-right: 22px;
-    width: 36px;
-    height: 36px;
-    background: #95c557;
-    border-radius: 50%;
-    content: counter(form);
-    color: #fff;
-    font-size: 16px;
-    line-height: 36px;
-    font-weight: 700;
-    text-align: center;
-}
-@media only screen and (min-width: 1200px) {
-    .orderPage__box > div h2:before {
-        margin-right: 50px;
-    }
 }
 .orderPage__box > div h3 {
     padding-top: 25px;
@@ -8482,6 +8482,22 @@ select::-ms-expand {
         bottom: 200px;
         right: -250px;
     }
+}
+.orderPage .formRegistrationBox {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    -webkit-transition: opacity 0.3s linear;
+         -o-transition: opacity 0.3s linear;
+            transition: opacity 0.3s linear;
+}
+.orderPage .formRegistrationBox-active {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    -webkit-transition: opacity 0.3s linear;
+         -o-transition: opacity 0.3s linear;
+            transition: opacity 0.3s linear;
 }
 .basketPage {
     padding-top: 100px;

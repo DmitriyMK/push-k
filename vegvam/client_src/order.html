@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="utf-8">
 	<title>Vegvam</title>
@@ -7,7 +8,7 @@
 	<meta name="keywords" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" href="./images/favicon/android-chrome-144x144.pnh" sizes="192x192">
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
@@ -15,7 +16,7 @@
 
 	<meta name="msapplication-TileColor" content="#95c557">
 	<meta name="theme-color" content="#95c557">
-	<meta property="og:type" content="website"/> 
+	<meta property="og:type" content="website" />
 	<meta property="og:image" content="photo-og.png">
 	<meta property="og:image:width" content="200">
 	<meta property="og:image:height" content="200">
@@ -28,13 +29,14 @@
 	<link rel="stylesheet" href="./css/slick.css">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
 	<div class="mainwrap">
-		<header class="header headerInner" id="headerInner">	
+		<header class="header headerInner" id="headerInner">
 			<div class="container">
 				<div class="header__top">
-					
+
 					<!-- burger Menu -->
 					<button class="burger" id="burger">
 						<i></i>
@@ -42,7 +44,8 @@
 
 					<div class="header__logo">
 						<a href="./index.html">
-							<img class="logoBig logoBig-text" src="./images/logo-text.png" alt="Vegvam - Интернет-магазин/каталог эко товаров" title="Vegvam - Интернет-магазин/каталог эко товаров">
+							<img class="logoBig logoBig-text" src="./images/logo-text.png" alt="Vegvam - Интернет-магазин/каталог эко товаров"
+							 title="Vegvam - Интернет-магазин/каталог эко товаров">
 						</a>
 					</div>
 
@@ -58,7 +61,7 @@
 						<div class="header__line">
 							<nav class="nav" id="nav">
 								<h2 class="offscreen">Навигационное меню</h2>
-								
+
 								<div class="overlay" id="overlay">
 									<div class="overlay__wrap">
 										<div class="nav__top">
@@ -190,7 +193,7 @@
 													</div>
 													<!-- end nav__box-submenu -->
 												</li>
-												
+
 												<li class="nav__item">
 													<a class="nav__link" href="./about.html">
 														<h2 class="nav__title">О нас</h2>
@@ -219,14 +222,14 @@
 													<a class="nav__link" href="./contact.html">
 														<h2 class="nav__title">Контакты</h2>
 													</a>
-												</li>												                   
+												</li>
 											</ul>
 
 											<div class="search">
 												<button class="search__btn" id="searchBtn"></button>
 												<label for="siteSearch">
-													<input class="search__line" type="search" id="siteSearch" name="search"
-													aria-label="Search through site content" placeholder="Поиск">
+													<input class="search__line" type="search" id="siteSearch" name="search" aria-label="Search through site content"
+													 placeholder="Поиск">
 												</label>
 											</div>
 										</div>
@@ -237,10 +240,10 @@
 												<a href="#" class="navEnd__link" target="_blank" rel="noopener noreferrer"><span class="icon-facebook"></span></a>
 												<a href="#" class="navEnd__link" target="_blank" rel="noopener noreferrer"><span class="icon-instagram"></span></a>
 											</div>
-										</div>						
+										</div>
 									</div>
 								</div>
-								
+
 								<button class="basketBtn btn">
 									<span class="su_button_circle"></span>
 									<img class="basketBtn__img" src="./images/icon/cart.png" alt="Корзина">
@@ -248,14 +251,14 @@
 									<span class="basketBtn__textLast">
 										(<em class="basketBtn__num">3</em>)
 									</span>
-								</button>	
+								</button>
 							</nav>
 						</div>
 					</div>
 				</div>
 			</div>
 		</header>
-		
+
 
 		<main class="main">
 
@@ -265,38 +268,73 @@
 
 					<div class="orderPage__box">
 						<div>
-							<form class="formRegistration" id="formRegistration" name="formRegistration" novalidate="novalidate">
-								<h2>Контактные данные</h2>
-								<div class="form__wrap">
-									<div class="inputRadio">
-										<div class="form__row">
-											<label for="newCustomer">
-												<input type="radio" id="newCustomer" checked="checked" name="ocart" />
-												<span>Я новый покупатель</span>
-											</label> 
+							<h2>Контактные данные</h2>
+							<div class="form__wrap">
+								<div class="inputRadio">
+									<div class="form__row">
+										<label for="newCustomer">
+											<input class="label-input" type="radio" id="newCustomer" checked="checked" name="ocart" data-tabs="1" />
+											<span>Я новый покупатель</span>
+										</label>
 
-											<label for="customer">
-												<input type="radio" id="customer" name="ocart" />
-												<span>Я постоянный клиент</span>
-											</label> 
-										</div>				 
+										<label for="customer">
+											<input class="label-input" type="radio" id="customer" name="ocart" data-tabs="2" />
+											<span>Я постоянный клиент</span>
+										</label>
 									</div>
-
-									<div class="form__input">
-										<input class="form__line form__line name" type="text" name="name" placeholder="Ваше имя" minlength="2" required aria-required="true" >
-									</div>
-
-									<div class="form__input">
-										<input class="form__line phone-mask" type="tel" name="phone" placeholder="Контактный телефон" minlength="10" required aria-required="true">
-									</div>
-
-									<div class="form__input">
-										<input class="form__line" type="email" name="email" placeholder="Ваш E-mail" required aria-required="true">
-									</div>
-
-									<input class="form__btn btn" type="submit" value="Далее"> 
 								</div>
-							</form>
+							</div>
+
+							<div class="formRegistrationBox formRegistrationBox-active" id="tabs-1">
+								<form class="formRegistration " id="formRegistrationNewClient" name="formRegistrationNewClient" novalidate="novalidate">
+									<input type="hidden" name="project_name" value="">
+									<input type="hidden" name="admin_email" value="dm@push-k.ua">
+									<input type="hidden" name="form_subject" value="">
+									<input type="hidden" name="whatform" value="">
+
+									<div class="form__wrap">
+										<div class="form__input">
+											<input class="form__line form__line name" type="text" name="name" placeholder="Ваше имя" minlength="2"
+											 required aria-required="true">
+										</div>
+
+										<div class="form__input">
+											<input class="form__line phone-mask" type="tel" name="phone" placeholder="Контактный телефон" minlength="10"
+											 required aria-required="true">
+										</div>
+
+										<div class="form__input">
+											<input class="form__line" type="email" name="email" placeholder="Ваш E-mail" required aria-required="true">
+										</div>
+
+										<input class="form__btn btn" type="submit" value="Далее">
+									</div>
+								</form>
+							</div>
+
+							<div class="formRegistrationBox" id="tabs-2">
+								<form class="formRegistration" id="formRegistrationRegularClient" name="formRegistrationRegularClient"
+								 novalidate="novalidate">
+									<input type="hidden" name="project_name" value="">
+									<input type="hidden" name="admin_email" value="dm@push-k.ua">
+									<input type="hidden" name="form_subject" value="">
+									<input type="hidden" name="whatform" value="">
+
+									<div class="form__wrap">
+										<div class="form__input">
+											<input class="form__line form__line name" type="text" name="login" placeholder="Ваш логин" minlength="1"
+											 required aria-required="true">
+										</div>
+
+										<div class="form__input">
+											<input class="form__line" type="password" name="password" placeholder="Пароль" minlength="1" required
+											 aria-required="true">
+										</div>
+
+										<input class="form__btn btn" type="submit" value="Далее">
+									</div>
+								</form>
+							</div>
 
 
 							<!-- ФОРМА НЕ АКТИВНАЯ, ПОКА НЕ отправлена предыдущая.
@@ -308,7 +346,7 @@
 										<label for="deliveryOffice">
 											<input type="radio" id="deliveryOffice" name="ocart" />
 											<span>Самовывоз </span>
-										</label> 
+										</label>
 										<address>
 											ул. Ямская 72
 										</address>
@@ -316,43 +354,45 @@
 
 
 									<label for="deliveryPost">
-										<input type="radio" id="deliveryPost" name="ocart"/>
+										<input type="radio" id="deliveryPost" name="ocart" />
 										<span>Отправка Новой Почтой </span>
 									</label>
 
 
 									<div class="form__input">
 										<input class="form__line" type="text" name="ocart" placeholder="Город" minlength="2" required aria-required="true">
-									</div> 
+									</div>
 									<div class="form__input">
-										<input class="form__line" type="text" name="ocart" placeholder="Склад новой почты" minlength="2" required aria-required="true">
+										<input class="form__line" type="text" name="ocart" placeholder="Склад новой почты" minlength="2" required
+										 aria-required="true">
 									</div>
 									<div class="form__input">
 										<input class="form__line" type="text" name="ocart" placeholder="Ф.И.О." minlength="2" required aria-required="true">
 									</div>
 									<div class="form__input">
-										<input class="form__line phone-mask" type="tel" name="ocart" placeholder="Контактный телефон" minlength="10" required aria-required="true">
+										<input class="form__line phone-mask" type="tel" name="ocart" placeholder="Контактный телефон" minlength="10"
+										 required aria-required="true">
 									</div>
 
 									<h3>Оплата</h3>
-									
+
 									<div class="form__row">
 										<label for="payCash">
-											<input type="radio" id="payCash" name="ocart"/>
+											<input type="radio" id="payCash" name="ocart" />
 											<span>Наличными</span>
 										</label>
 									</div>
 
 									<div class="form__row">
 										<label for="payPrivat">
-											<input type="radio" id="payPrivat" name="ocart"/>
+											<input type="radio" id="payPrivat" name="ocart" />
 											<span>Приват 24 </span>
 										</label>
 									</div>
 
 									<div class="form__row">
 										<label for="payPost">
-											<input type="radio" id="payPost" name="ocart"/>
+											<input type="radio" id="payPost" name="ocart" />
 											<span>Наложенный платеж</span>
 										</label>
 									</div>
@@ -362,16 +402,17 @@
 										<p>Мы сделаем это для вас! Красиво упаковываем, завязываем ленточкой и дарим эмоцию!</p>
 
 										<label for="giftPack">
-											<input type="radio" id="giftPack" name="ocart"/>
+											<input type="radio" id="giftPack" name="ocart" />
 											<span>Заказать с упаковкой</span>
 										</label>
 									</div>
 
 									<input class="form__btn form__btn-big btn" type="submit" value="Отправить" disabled>
 								</div>
-								
+
 								<!-- PARALLAX LEAF -->
-								<img class="img-responsive order__img1" src="./images/decor/leave-catalog.png"  alt role="presentation" data-enllax-ratio="-0.045" data-enllax-type="foreground" data-enllax-direction="vertical">
+								<img class="img-responsive order__img1" src="./images/decor/leave-catalog.png" alt role="presentation"
+								 data-enllax-ratio="-0.045" data-enllax-type="foreground" data-enllax-direction="vertical">
 								<!-- END PARALLAX LEAF -->
 							</form>
 						</div>
@@ -387,14 +428,14 @@
 									<div class="orderCart__info">
 										<h3>Эко-торба</h3>
 										<small>Артикул: #65422224</small>
-										
+
 										<div>
 											<small>Цвет:</small>
 											<img src="./images/product/color-red.jpg" alt="Red">
 										</div>
 
 										<div>
-											<p>1 штука</p> 
+											<p>1 штука</p>
 											<strong>200 грн</strong>
 										</div>
 									</div>
@@ -408,19 +449,19 @@
 									<div class="orderCart__info">
 										<h3>Эко-торба</h3>
 										<small>Артикул: #65422224</small>
-										
+
 										<div>
 											<small>Цвет:</small>
 											<img src="./images/product/color-red.jpg" alt="Red">
 										</div>
 
 										<div>
-											<p>1 штука</p> 
+											<p>1 штука</p>
 											<strong>200 грн</strong>
 										</div>
 									</div>
 								</div>
-								
+
 								<div class="orderCart__row">
 									<div class="orderCart__picture">
 										<img src="./images/recipe.jpg" alt="">
@@ -429,14 +470,14 @@
 									<div class="orderCart__info">
 										<h3>Эко-торба</h3>
 										<small>Артикул: #65422224</small>
-										
+
 										<div>
 											<small>Цвет:</small>
 											<img src="./images/product/color-red.jpg" alt="Red">
 										</div>
 
 										<div>
-											<p>1 штука</p> 
+											<p>1 штука</p>
 											<strong>200 грн</strong>
 										</div>
 									</div>
@@ -452,7 +493,7 @@
 						<img class="img-responsive order__img2" src="./images/decor/leave-order.png" alt role="presentation">
 					</div>
 
-					
+
 				</div>
 			</section>
 
@@ -460,11 +501,14 @@
 
 
 		<div class="scrollup">
-			<svg version="1.1" id="arrow-top" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-100 -100 400 400" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+			<svg version="1.1" id="arrow-top" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+			 y="0px" viewBox="-100 -100 400 400" style="enable-background:new 0 0 256 256;" xml:space="preserve">
 				<g>
 					<circle cx="100" cy="100" r="180" stroke="#ededed" fill="#f9f9f9" stroke-width="20"></circle>
-					<path id="path-anim" d="M 100,-80 A180,180   0  0, 1 137.1589814449927,276.12271318024455" stroke="#181d23" fill="#f9f9f9" stroke-width="23"></path>
-					<polygon points="128,48.907 0,176.907 30.187,207.093 128,109.28 225.813,207.093 256,176.907 " fill="#000" transform="translate(   45,30),
+					<path id="path-anim" d="M 100,-80 A180,180   0  0, 1 137.1589814449927,276.12271318024455" stroke="#181d23" fill="#f9f9f9"
+					 stroke-width="23"></path>
+					<polygon points="128,48.907 0,176.907 30.187,207.093 128,109.28 225.813,207.093 256,176.907 " fill="#000"
+					 transform="translate(   45,30),
 					scale(0.45)"></polygon>
 				</g>
 			</svg>
@@ -480,9 +524,9 @@
 					</div>
 					<div class="footer__right">
 						<div class="footer__line-top">
-							<a href="tel:+120345678910" class="footer__link">063 158 50 65</a> 
+							<a href="tel:+120345678910" class="footer__link">063 158 50 65</a>
 							<span>/</span>
-							<a href="mailto:vegvam@gmail.com" class="footer__link">vegvam@gmail.com</a> 
+							<a href="mailto:vegvam@gmail.com" class="footer__link">vegvam@gmail.com</a>
 						</div>
 						<div class="footer__line-bottom">
 							<a href="#" class="footer__link" target="_blank" rel="noopener noreferrer"><span class="icon-facebook"></span></a>
@@ -501,11 +545,11 @@
 	<!-- Load Scripts -->
 	<script src="./libs/jquery-2.2.4.min.js"></script>
 	<script src="./libs/slick.js"></script>
-	<script src="./libs/jquery.enllax.min.js"></script> 
-	<script src="./libs/scrollUp.js"></script>   
-	<script src="./libs/splitHTML.js"></script>   
-	<script src="./libs/jquery.nicescroll.min.js"></script>  
-	<script src="./libs/masked-input.js"></script>  
+	<script src="./libs/jquery.enllax.min.js"></script>
+	<script src="./libs/scrollUp.js"></script>
+	<script src="./libs/splitHTML.js"></script>
+	<script src="./libs/jquery.nicescroll.min.js"></script>
+	<script src="./libs/masked-input.js"></script>
 	<!-- 	<script src="./libs/blazy.js"></script>   -->
 	<script src="./libs/jquery.validate.min.js"></script>
 
@@ -518,4 +562,5 @@
 		$('.phone-mask').mask('+380(99)999-99-99');
 	</script>
 </body>
+
 </html>
