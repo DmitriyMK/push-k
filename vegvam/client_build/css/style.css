@@ -1506,6 +1506,9 @@ select::-ms-expand {
 .statistics {
     padding: 80px 0;
 }
+.statistics .container {
+    position: relative;
+}
 .statistics__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1764,7 +1767,7 @@ select::-ms-expand {
     .catalogFirst__img1 {
         display: block;
         position: absolute;
-        top: -50px;
+        bottom: -220px;
         left: -20px;
         z-index: -1;
     }
@@ -1781,14 +1784,14 @@ select::-ms-expand {
     .catalogFirst__img2 {
         display: block;
         position: absolute;
-        bottom: 120px;
+        bottom: -220px;
         right: -30px;
     }
 }
 @media only screen and (min-width: 1200px) {
     .catalogFirst__img2 {
         right: -30px;
-        bottom: 60px;
+        bottom: -260px;
     }
 }
 .stringBack {
@@ -2081,6 +2084,9 @@ select::-ms-expand {
     .stringBackStat__num {
         font-size: 24px;
     }
+}
+.stringBackCatalog {
+    padding: 60px 0;
 }
 .catalog__list {
     padding: 60px 0;
