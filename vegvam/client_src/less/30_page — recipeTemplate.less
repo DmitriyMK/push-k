@@ -1,335 +1,330 @@
-@media @mobile-xl {
-
-}
-@media @mobile-land {
-
-}
-@media @tablet {
-
-}
-@media @desktop {
-
-}
-@media @desktop-xl {
-	
-}
-@media @desktop-xl-2 {
-
-}
-@media @desktop-xll {
-	
-}
-
+@media @mobile-xl {}
+@media @mobile-land {}
+@media @tablet {}
+@media @desktop {}
+@media @desktop-xl {}
+@media @desktop-xl-2 {}
+@media @desktop-xll {}
 
 .recipePage {
-	h2 {
-		.pageTitle;
+  
+  h2 {
+    .pageTitle;
+  }
+
+  &__box {
+    padding: 40px 0;
+    
+    .container {
+      position: relative;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 623px;
+      object-fit: cover;
+      object-position: 20%;
+      margin: auto;
+      @media @desktop {
+        height: 440px;
+      }
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    @media @mobile-land {
+      flex-direction: row;
+    }
+
+    aside {
+      width: 300px;
+      order: 2;
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      @media @mobile-land {
+        order: inherit;
+        margin-left: 0;
+        margin-right: 40px;
+        margin-top: 0;
+      }
+      @media @desktop {
+        margin-right: 80px;
+      }
+
+      // aside__item
+      > div {
+        padding: 15px 10px;
+        margin-bottom: 30px;
+        border: 1px solid @lime;
+        text-align: center;
+        @media @desktop {
+          text-align: inherit;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          padding: 26px 0;
+          font-size: 18px;
+          letter-spacing: 1px;
+          @media @desktop {
+            flex-direction: row;
+            justify-content: space-between;
+          }
+
+          strong {
+            color: @green;
+            text-align: inherit;
+          }
+        }
+      }
+
+      a {
+        display: flex;
+        overflow: hidden;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 130px;
+        margin: auto;
+        object-fit: cover;
+
+        transition: transform .5s cubic-bezier(.87,.32,.69,.87);
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      button {
+        min-width: 145px;
+        padding: 8px;
+        border: 2px solid @green;
+        border-radius: 10px;
+        font-size: 20px;
+        letter-spacing: 2.5px;
+        color: @green;
+        transition: all .3s linear;
+
+        &:hover {
+          color: #fff;
+          background: @green;
+          box-shadow: 0 0 10px 1px rgba(51,125,90,.85);
+        }
+      }
+    }
+    // end aside
+
+    // recipePage__info
+    > div {
+      padding-top: 10px;
+      max-width: 760px;
+
+      em {
+        font-size: 23px;
+        letter-spacing: 1px;
+        @media @desktop {
+          font-size: 24px;
+        }
+      }
+
+      p {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+    }
+    // end recipePage__info
+  }
+
+  &__img1 {
+    position: absolute;
+    left: 50%;
+	  bottom: 0;
+	  transform: translateX(-55%);
+	
+	@media @tablet {
+		left: -80px;
+		transform: none;
 	}
-
-	&__box {
-		padding: 40px 0;
-
-		img {
-			display: block;
-			width: 100%;
-			height: 623px;
-			object-fit: cover;
-			object-position: 20%;
-			margin: auto;
-
-			@media @desktop {
-				height: 440px;
-			}
-		}
+	@media @desktop-xl {
+		left: -140px;
 	}
+  }
 
+  &__consist {
+    padding: 40px 15px;
+    position: relative;
+    border-top: 1px solid @lime;
+    border-bottom: 1px solid @lime;
 
-	&__about {
-		display: flex;
-		flex-direction: column;
-		padding-top: 30px;
-		padding-bottom: 60px;
+    h3 {
+	    padding-top: 25px;
+      padding-bottom: 25px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: @green;
+      text-transform: uppercase;
 
-		@media @mobile-land {
-			flex-direction: row;
-		}
+      &:not(:first-of-type) {
+        position: relative;
 
-		aside {
-			width: 300px;
-			order: 2;
-			margin-top: 40px;
-			margin-left: auto;
-			margin-right: auto;
+        &:before {
+          content: '';
+          position: absolute;
+          top: -15px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: @lime;
+        }
+      }
+    }
 
-			@media @mobile-land {
-				order: inherit;
-				margin-left: 0;
-				margin-right: 40px;
-				margin-top: 0;
-			}
-			@media @desktop {
-				margin-right: 80px;
-			}
-			
-			// aside__item
-			> div {
-				padding: 15px 10px;
-				margin-bottom: 30px;
-				border: 1px solid @lime;
-				text-align: center;
+    ul {
+      list-style: none;
+    }
 
-				@media @desktop {
-					text-align: inherit;
-				}
+    ol,
+    ul {
+      padding-bottom: 10px;
+    }
 
-				div {
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: center;
-					flex-wrap: wrap;
-					padding: 26px 0;
-					font-size: 18px;
-					letter-spacing: 1px;
+    ul li {
+      display: block;
+      position: relative;
+      padding-bottom: 15px;
+      font-size: 21px;
+      letter-spacing: 1px;
+      @media @tablet {
+        padding-left: 35px;
+        padding-bottom: 0;
+        margin-bottom: 15px;
+        font-size: 24px;
+      }
 
-					@media @desktop {
-						flex-direction: row;
-						justify-content: space-between;
-					}
+      &:before {
+        content: '•';
+        color: @green;
+        font-size: 24px;
+        @media @tablet {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 12px;
+          height: 12px;
+          background: @green;
+          border-radius: 50%;
+          transform: translateY(-45%);
+        }
 
-					strong {
-						color: @green;
-						text-align: inherit;
-					}
-				}
-			}
-			
-			a {
-				display: flex;
-				overflow: hidden;
-			}
-			img {
-				display: block;
-				width: 100%;
-				height: 130px;
-				margin: auto;
-				object-fit: cover;
+      }
+    }
 
-				transition: transform .5s cubic-bezier(.87,.32,.69,.87);
+    ol li {
+      position: relative;
+      padding-bottom: 25px;
+      font-size: 21px;
+      letter-spacing: 1.5px;
+      list-style: none;
+      counter-increment: li;
+      @media @tablet {
+        font-size: 24px;
+      }
 
-				&:hover {
-					transform: scale(1.1);
-				}
-			}
+      span {
+        padding-left: 5px;
+        @media @tablet {
+          padding-left: 15px;
+        }
+      }
 
-			button {				
-				min-width: 145px;
-				padding: 8px;
-				border: 2px solid @green;
-				border-radius: 10px;
-				font-size: 20px;
-				letter-spacing: 2.5px;
-				color: @green;
-				transition: all .3s linear;
+      &:before {
+        content: counter(li) + ".";
+        color: @green;
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
 
-				&:hover {
-					color: #fff;
-					background: @green;
-					box-shadow: 0px 0px 10px 1px rgba(51,125,90,.85);
-				}
-			}
-		}
-		// end aside
-		
+    ol b {
+      color: @green;
+    }
 
-		// recipePage__info
-		> div {
-			padding-top: 10px;
-			max-width: 760px;
+    p {
+      padding-bottom: 25px;
+      font-size: 21px;
+      letter-spacing: 1px;
+      @media @tablet {
+        padding-left: 35px;
+        margin-bottom: 25px;
+        font-size: 24px;
+      }
+    }
 
-			em {
-				font-size: 23px;
-				letter-spacing: 1px;
-				
-				@media @desktop {
-					font-size: 24px;
-				}
-			}
-			p {
-				padding-top: 25px;
-				padding-bottom: 25px;
-				font-size: 18px;
-				line-height: 24px;
-				letter-spacing: 1px;
-			}
-		}
-		// end recipePage__info
-	}
+    b {
+      font-weight: 700;
+    }
+  }
 
-	&__consist {
-		padding: 40px 15px;
-		position: relative;
-		border-top: 1px solid @lime;
-		
+  &__img2 {
+    display: none;
+    @media @tablet {
+      display: block;
+      position: absolute;
+      top: -100px;
+      left: -30px;
+      max-width: 99px;
+    }
+    @media @desktop {
+      top: -100px;
+      left: -30px;
+    }
+    @media @desktop-xl {
+      top: 0;
+      left: -100px;
+    }
+    @media @desktop-xl-2 {
+      top: 80px;
+    }
 
-		img {
-			position: absolute;
-			left: -190px;
-			top: -70px;
-		}
+  }
 
-		h3 {
-			padding-bottom: 25px;
-			font-size: 24px;
-			font-weight: 700;
-			letter-spacing: 1px;
-			color: @green;
-			text-transform: uppercase;
+  &__img3 {
+    display: none;
+    @media @tablet {
+      display: block;
+      position: absolute;
+      top: -100px;
+      right: -150px;
+      max-width: 245px;
+    }
+    @media @desktop-xl {
+      max-width: 285px;
+      top: -150px;
+      right: -200px;
+    }
+    @media @desktop-xl-2 {
+      right: -250px;
+    }
+  }
 
-			&:nth-of-type(2) {
-				padding-top: 25px;
-			} 
-		}
-
-		ul {
-			list-style: none;
-		}
-		
-		ul, ol {
-			padding-bottom: 10px;
-		}
-
-		ul li {
-			display: block;
-			position: relative;
-			padding-bottom: 15px;
-			font-size: 21px;
-			letter-spacing: 1px;
-
-			@media @tablet {
-				padding-left: 35px;
-				padding-bottom: 0;
-				margin-bottom: 15px;
-				font-size: 24px;
-			}
-
-			&:before {
-				content: '•';
-				color: @green;
-				font-size: 24px;
-				
-				@media @tablet {
-					content: '';
-					position: absolute;
-					top: 50%;
-					left: 0;
-					width: 12px;
-					height: 12px;
-					background: @green;
-					border-radius: 50%;
-					transform: translateY(-45%);
-				}
-
-			}
-		}
-		ol li {
-			position: relative;
-			padding-bottom: 25px;
-			font-size: 21px;
-			letter-spacing: 1.5px;
-			list-style: none;
-			counter-increment: li; 
-
-			@media @tablet {
-				font-size: 24px;
-			}
-
-			span {
-				padding-left: 5px;
-
-				@media @tablet {
-					padding-left: 15px;
-				}
-			}
-
-			&:before {
-				content: counter(li) + ".";
-				color: @green;
-				font-size: 24px;
-				font-weight: 700;
-			}
-		}	
-		ol b {
-			color: @green;
-		}
-
-		p {
-			padding-bottom: 25px;
-			border-bottom: 1px solid @lime;
-			font-size: 21px;
-			letter-spacing: 1px;
-
-			@media @tablet {
-				padding-left: 35px;
-				padding-bottom: 35px;
-				margin-bottom: 15px;
-				font-size: 24px;
-			}
-		}
-
-		b {
-			font-weight: 700;
-		}
-	}
-
-	.recomend {
-		position: relative;
-
-		.recipePage__img2 {
-			display: none;
-
-			@media @tablet {
-				display: block;
-				position: absolute;
-				top: -100px;
-				left: -30px;
-				max-width: 99px;
-			}
-			@media @desktop {
-				top: -100px;
-				left: -30px;
-			}
-			@media @desktop-xl {
-				top: 0px;
-				left: -100px;
-			}
-			@media @desktop-xl-2 {
-				top: 80px;
-				left: -150px;
-				max-width: 99px;
-			}
-
-		}
-		.recipePage__img3 {
-			display: none;
-
-			@media @tablet {
-				display: block;
-				position: absolute;
-				top: -150px;
-				right: -150px;
-				max-width: 245px;
-			}
-
-			@media @desktop-xl {
-				max-width: 285px;
-				right: -200px;
-			}
-			@media @desktop-xl-2 {
-				right: -250px;
-				max-width: 365px;
-			}
-
-		}
-	}
+  .recomend {
+    position: relative;
+  }
 }
