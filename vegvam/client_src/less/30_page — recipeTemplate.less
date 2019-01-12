@@ -47,6 +47,7 @@
 	&__about {
 		display: flex;
 		flex-direction: column;
+		padding-top: 30px;
 		padding-bottom: 60px;
 
 		@media @mobile-land {
@@ -169,7 +170,7 @@
 		padding: 40px 15px;
 		position: relative;
 		border-top: 1px solid @lime;
-		border-bottom: 1px solid @lime;
+		
 
 		img {
 			position: absolute;
@@ -184,13 +185,21 @@
 			letter-spacing: 1px;
 			color: @green;
 			text-transform: uppercase;
+
+			&:nth-of-type(2) {
+				padding-top: 25px;
+			} 
 		}
 
 		ul {
 			list-style: none;
 		}
+		
+		ul, ol {
+			padding-bottom: 10px;
+		}
 
-		li {
+		ul li {
 			display: block;
 			position: relative;
 			padding-bottom: 15px;
@@ -223,40 +232,7 @@
 
 			}
 		}
-
-		p {
-			padding-bottom: 15px;
-			font-size: 21px;
-			letter-spacing: 1px;
-
-			@media @tablet {
-				padding-left: 35px;
-				padding-bottom: 0;
-				margin-bottom: 15px;
-				font-size: 24px;
-			}
-		}
-
-		b {
-			font-weight: 700;
-		}
-	}
-
-	&__cooking {
-		position: relative;
-		padding: 30px 30px 30px 15px;
-
-		h3 {
-			padding-bottom: 35px;
-			font-size: 24px;
-			font-weight: 700;
-			letter-spacing: 1px;
-			color: @green;
-			text-transform: uppercase;
-		}
-
-
-		li {
+		ol li {
 			position: relative;
 			padding-bottom: 25px;
 			font-size: 21px;
@@ -283,15 +259,19 @@
 				font-weight: 700;
 			}
 		}	
+		ol b {
+			color: @green;
+		}
 
 		p {
-			padding-bottom: 15px;
+			padding-bottom: 25px;
+			border-bottom: 1px solid @lime;
 			font-size: 21px;
 			letter-spacing: 1px;
 
 			@media @tablet {
 				padding-left: 35px;
-				padding-bottom: 0;
+				padding-bottom: 35px;
 				margin-bottom: 15px;
 				font-size: 24px;
 			}
@@ -299,10 +279,8 @@
 
 		b {
 			font-weight: 700;
-			color: @green;
 		}
 	}
-
 
 	.recomend {
 		position: relative;
