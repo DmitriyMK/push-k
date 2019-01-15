@@ -252,6 +252,10 @@
 			margin-bottom: 35px;
 		}
 	}
+	.recipes__name {
+		height: 74px;
+		overflow: hidden;
+	}
 	.recipes__link {
 		max-width: inherit;
 		overflow: hidden;
@@ -275,8 +279,6 @@
 	// END fixing style for catalog 
 	
 	
-	
-
 	.recipeDay {
 		padding-top: 60px;
 		position: relative;
@@ -414,16 +416,16 @@
 
 		@media @tablet {
 			display: block;
-			top: 78px;
-			left: 0px;
+			top: 78px !important;
+			left: 0px !important;
 			position: absolute;
+			max-width: 270px !important;
 			z-index: 10;
-			max-width: 270px;
 		}
 		@media @desktop {
-			top: 85px;
-			left: 55px;
-			max-width: 330px;
+			top: 85px !important;
+			left: 55px !important;
+			max-width: 330px !important;
 		}
 	}
 	&__img3 {

@@ -355,6 +355,10 @@ button:-moz-focusring, [type='button']:-moz-focusring, [type='reset']:-moz-focus
 }
 /* ONLY FOR IE11 */
 /* ONLY FOR EDGE */
+h1 b, h2 b, h3 b, h4 b, li b {
+    color: #337d5a;
+    font-weight: bold;
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, q, s, strike, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -6301,6 +6305,10 @@ select::-ms-expand {
         margin-bottom: 35px;
     }
 }
+.recipePage .recipes__name {
+    height: 74px;
+    overflow: hidden;
+}
 .recipePage .recipes__link {
     max-width: inherit;
     overflow: hidden;
@@ -6477,18 +6485,18 @@ select::-ms-expand {
 @media only screen and (min-width: 768px) {
     .recipePage__img2 {
         display: block;
-        top: 78px;
-        left: 0;
+        top: 78px !important;
+        left: 0 !important;
         position: absolute;
+        max-width: 270px !important;
         z-index: 10;
-        max-width: 270px;
     }
 }
 @media only screen and (min-width: 992px) {
     .recipePage__img2 {
-        top: 85px;
-        left: 55px;
-        max-width: 330px;
+        top: 85px !important;
+        left: 55px !important;
+        max-width: 330px !important;
     }
 }
 .recipePage__img3 {
