@@ -3968,6 +3968,7 @@ select::-ms-expand {
     }
 }
 .peoplePage__slide .peoplePage__imgWrap {
+    display: block;
     border: 3px solid transparent;
     -webkit-transition: all 0.3s linear;
          -o-transition: all 0.3s linear;
@@ -6079,7 +6080,7 @@ select::-ms-expand {
         font-size: 24px;
     }
 }
-.recipePage__center h2 {
+.recipePage__center h1 {
     font-size: 21px;
     font-weight: 700;
     text-align: center;
@@ -6087,21 +6088,21 @@ select::-ms-expand {
     letter-spacing: 2px;
 }
 @media only screen and (min-width: 768px) {
-    .recipePage__center h2 {
+    .recipePage__center h1 {
         font-size: 24px;
     }
 }
 @media only screen and (min-width: 992px) {
-    .recipePage__center h2 {
+    .recipePage__center h1 {
         font-size: 30px;
     }
 }
 @media only screen and (min-width: 1200px) {
-    .recipePage__center h2 {
+    .recipePage__center h1 {
         font-size: 36px;
     }
 }
-.recipePage__center h2 strong {
+.recipePage__center h1 strong {
     color: #337d5a;
 }
 .recipePage__center h3 {
